@@ -1,0 +1,23 @@
+/* === PRIMARY FONT === */
+@font-face {
+  font-family: "Lenos Thin";
+  src: url("/fonts/LenosThin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === SECONDARY FONT === */
+@font-face {
+  font-family: "Readex Pro";
+  src: url("/fonts/ReadexPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lenos Thin", sans-serif;
+}
+
+.secondary-text {
+  font-family: "Readex Pro", sans-serif;
+}
