@@ -1,13 +1,17 @@
 import { Container } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Scrollbar } from "swiper/modules"
+import firstSlideBG from "../../../assets/images/firstSlideBG.png"
 import threePeople from '../../../assets/images/threePeople.png';
 import twoPeople from '../../../assets/images/twoPeople.png';
-import firstSlideBG from "../../../assets/images/firstSlideBG.png"
+import mathBoy from '../../../assets/images/mathBoy.png';
 import secondSlideBG from "../../../assets/images/secondSlideBG.png"
+import firstChart from "../../../assets/images/firstChart.png"
+import secondChart from "../../../assets/images/secondChart.png"
+import thirdChart from "../../../assets/images/thirdChart.png"
 import thirdSlideBG from "../../../assets/images/thirdSlideBG.png"
 import comPerson from "../../../assets/images/comPerson.png"
-import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton } from "./slider.style"
+import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./slider.style"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -31,7 +35,7 @@ export function Slider() {
     >
       <SwiperSlide>
         <StyledSlide bg={firstSlideBG}>
-          <Container maxWidth="lg">
+          <Container>
             <ContentWrapper>
               <Heading variant="h1">Where champions begin.</Heading>
               <Subtext>
@@ -43,6 +47,7 @@ export function Slider() {
               </ButtonGroup>
               <img src={threePeople} alt="Three People" />
               <img src={twoPeople} alt="Two People" />
+              <MathBoy src={mathBoy} alt="Math" />
             </ContentWrapper>
           </Container>
         </StyledSlide>
@@ -50,7 +55,7 @@ export function Slider() {
 
       <SwiperSlide>
         <StyledSlide bg={secondSlideBG} overlay>
-          <Container maxWidth="lg">
+          <Container>
             <ContentWrapper>
               <SecondHeading variant="h1">
                 From Palestine..
@@ -64,12 +69,16 @@ export function Slider() {
             </ContentWrapper>
           </Container>
         </StyledSlide>
+        <ChartWrapper>
+          <img src={firstChart} alt="First Chart" />
+          <img src={secondChart} alt="Second Chart" />
+          <img src={thirdChart} alt="Third Chart" />
+        </ChartWrapper>
       </SwiperSlide>
 
       <SwiperSlide>
-        <StyledSlide bg={thirdSlideBG} overlay>
-          <img src={comPerson} alt="Programs illustration" />
-          <ThirdSlideContent>
+        <StyledSlide bg={thirdSlideBG}>
+          <ComPersonImg src={comPerson} alt="Programs illustration" />          <ThirdSlideContent>
             <ThirdSlideHeading variant="h2">
               Programs, camps,
               <br />
@@ -83,6 +92,11 @@ export function Slider() {
             </ButtonGroup>
           </ThirdSlideContent>
         </StyledSlide>
+        <ChartWrapper>
+          <img src={firstChart} alt="Two People" />
+          <img src={secondChart} alt="Two People" />
+          <img src={thirdChart} alt="Two People" />
+        </ChartWrapper>
       </SwiperSlide>
 
     </Swiper>
