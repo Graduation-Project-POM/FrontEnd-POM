@@ -5,7 +5,9 @@ import threePeople from '../../../assets/images/threePeople.png';
 import twoPeople from '../../../assets/images/twoPeople.png';
 import firstSlideBG from "../../../assets/images/firstSlideBG.png"
 import secondSlideBG from "../../../assets/images/secondSlideBG.png"
-import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading } from "./slider.style"
+import thirdSlideBG from "../../../assets/images/thirdSlideBG.png"
+import comPerson from "../../../assets/images/comPerson.png"
+import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton } from "./slider.style"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -52,8 +54,8 @@ export function Slider() {
             <ContentWrapper>
               <SecondHeading variant="h1">
                 From Palestine..
-              <br />
-              to the World Stage.
+                <br />
+                to the World Stage.
               </SecondHeading>
               <ButtonGroup>
                 <ExploreButton variant="outlined">Explore</ExploreButton>
@@ -61,6 +63,25 @@ export function Slider() {
               </ButtonGroup>
             </ContentWrapper>
           </Container>
+        </StyledSlide>
+      </SwiperSlide>
+
+      <SwiperSlide>
+        <StyledSlide bg={thirdSlideBG} overlay>
+          <img src={comPerson} alt="Programs illustration" />
+          <ThirdSlideContent>
+            <ThirdSlideHeading variant="h2">
+              Programs, camps,
+              <br />
+              competitions
+              <br />
+              all in one place
+            </ThirdSlideHeading>
+            <ButtonGroup >
+              <WhiteExploreButton variant="outlined">Explore</WhiteExploreButton>
+              <WhiteStartButton variant="contained">Start</WhiteStartButton>
+            </ButtonGroup>
+          </ThirdSlideContent>
         </StyledSlide>
       </SwiperSlide>
 
