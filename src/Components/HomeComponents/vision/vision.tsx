@@ -47,9 +47,9 @@ function Vision() {
             >
                 <Typography
                     style={styles.title}
-                    sx={{ 
-                        fontSize: { xs: "40px", sm: "46px", md: "52px",lg:"64px" },
-                        padding: { xs: "0 10px", md: "70px 150px"  }
+                    sx={{
+                        fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
+                        padding: { xs: "0 10px", md: "70px 150px" },
                     }}
                 >
                     Our Vision
@@ -62,8 +62,7 @@ function Vision() {
                     justifyContent={{ xs: "center", md: "flex-start" }}
                     gap={{ xs: 1.5, sm: 2, md: 3 }}
                     mt={{ xs: 1.5, md: 0 }}
-                    p={{ xs: "0 10px", md: "70px 150px"  }}
-                    
+                    p={{ xs: "0 10px", md: "70px 150px" }}
                 >
                     <IconButton
                         onClick={handlePrev}
@@ -101,6 +100,18 @@ function Vision() {
                 gap={1}
             >
                 <Box
+                    component="img"
+                    src="/images/vision.png"
+                    alt="vision"
+                    sx={{
+                        width: { xs: "150px", sm: "250px", md: "400px" },
+                        height: "auto",
+                        margin: { xs: 0, md: "10px -70px" },
+                        zIndex: 10,
+                    }}
+                />
+
+                <Box
                     display="flex"
                     justifyContent="center"
                     gap={{ xs: 1, sm: 2, md: 3 }}
@@ -133,7 +144,7 @@ function Vision() {
                             </Typography>
                             <Typography color="gray">{slide.text}</Typography>
                         </Paper>
-                    ))}
+                    ))}{" "}
                 </Box>
             </Box>
         </>
