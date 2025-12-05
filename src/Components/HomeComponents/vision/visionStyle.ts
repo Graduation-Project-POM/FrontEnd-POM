@@ -2,12 +2,13 @@ export const styles = {
     visionContainer: {
         display: "flex",
         justifyContent: "space-between",
-        marginTop: "50px",
         flexDirection: { xs: "column", md: "row" },
         alignItems: { xs: "center", md: "flex-start" },
         gap: { xs: 1.5, md: 0 },
         textAlign: { xs: "center", md: "left" },
         mb: 3,
+        marginTop:{xs:"0" , md:"200px"},
+
     },
 
     title: {
@@ -15,7 +16,7 @@ export const styles = {
         fontWeight: "bold",
         flex: 1,
         fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
-        padding: { xs: "0 10px", md: "120px 150px" },
+        padding: { xs: "0 10px", md: "70px 150px" },
         textAlign: { xs: "center", md: "left" },
         textShadow: "0px 3px 6px rgba(27, 27, 27, 0.15)",
     },
