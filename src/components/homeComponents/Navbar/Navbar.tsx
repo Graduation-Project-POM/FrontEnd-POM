@@ -1,5 +1,5 @@
 import { Toolbar, Container } from "@mui/material"
-import { LoginButton, Logo, NavLink, NavLinks, StyledAppBar } from "../Navbar.style"
+import { LoginButton, Logo, NavLink, NavLinks, StyledAppBar } from "./Navbar.style"
 
 
 export function Navbar() {
