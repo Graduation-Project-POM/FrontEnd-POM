@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 interface StyledSlideProps {
+<<<<<<< HEAD
   bg: string
   overlay?: boolean
 }
@@ -10,10 +11,22 @@ export const StyledSlide = styled(Box)<StyledSlideProps>(({ theme, bg, overlay }
   position: "relative",
   backgroundImage: overlay ? `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bg})` : `url(${bg})`,
   display: "flex",
+=======
+  bg: string;
+  overlay?: boolean;
+}
+
+export const StyledSlide = styled(Box)<StyledSlideProps>(({ bg, overlay }) => ({
+  position: "relative",
+  backgroundImage: overlay
+    ? `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bg})`
+    : `url(${bg})`, display: "flex",
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   alignItems: "center",
   backgroundSize: "cover",
   backgroundPosition: "center",
   height: "530px",
+<<<<<<< HEAD
   [theme.breakpoints.down("md")]: {
     height: "400px",
   },
@@ -35,11 +48,23 @@ export const ContentWrapper = styled(Box)(({ theme }) => ({
 }))
 
 export const Heading = styled(Typography)(({ theme }) => ({
+=======
+}));
+
+export const ContentWrapper = styled(Box)({
+  position: "relative",
+  zIndex: 1,
+  marginTop: "10rem",
+})
+
+export const Heading = styled(Typography)({
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   color: "#7A1E3C",
   fontWeight: 600,
   fontSize: "48px",
   marginBottom: "1.5rem",
   textAlign: "center",
+<<<<<<< HEAD
   [theme.breakpoints.down("md")]: {
     fontSize: "36px",
     marginBottom: "2rem",
@@ -51,10 +76,16 @@ export const Heading = styled(Typography)(({ theme }) => ({
 }))
 
 export const SecondHeading = styled(Typography)(({ theme }) => ({
+=======
+})
+
+export const SecondHeading = styled(Typography)({
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   color: "#ffffff",
   textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
   fontWeight: 700,
   fontSize: "48px",
+<<<<<<< HEAD
   marginBottom: "4rem",
   marginTop: "-15rem",
   display: "flex",
@@ -73,10 +104,20 @@ export const SecondHeading = styled(Typography)(({ theme }) => ({
 }))
 
 export const Subtext = styled(Typography)(({ theme }) => ({
+=======
+  marginBottom: "10rem",
+  marginTop: "-10rem",
+  display: "flex",
+  justifyContent: "flex-end",
+})
+
+export const Subtext = styled(Typography)({
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   color: "#9CA3AF",
   fontSize: "34px",
   marginBottom: "2rem",
   textAlign: "center",
+<<<<<<< HEAD
   [theme.breakpoints.down("md")]: {
     fontSize: "24px",
     marginBottom: "1.5rem",
@@ -100,6 +141,17 @@ export const ButtonGroup = styled(Box)(({ theme }) => ({
 }))
 
 export const ExploreButton = styled(Button)(({ theme }) => ({
+=======
+})
+
+export const ButtonGroup = styled(Box)({
+  display: "flex",
+  gap: "1rem",
+  justifyContent: "center",
+})
+
+export const ExploreButton = styled(Button)({
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   borderColor: "#7A1E3C",
   color: "#7A1E3C",
   padding: "0.75rem 2.5rem",
@@ -110,12 +162,18 @@ export const ExploreButton = styled(Button)(({ theme }) => ({
     borderColor: "#5A0E2C",
     backgroundColor: "rgba(122, 30, 60, 0.04)",
   },
+<<<<<<< HEAD
   [theme.breakpoints.down("sm")]: {
     fontSize: "14px",
   },
 }))
 
 export const StartButton = styled(Button)(({ theme }) => ({
+=======
+})
+
+export const StartButton = styled(Button)({
+>>>>>>> e7cca9c (feat: add two slides to the slider)
   backgroundColor: "#7A1E3C",
   color: "#fff",
   padding: "0.75rem 3rem",
@@ -125,6 +183,7 @@ export const StartButton = styled(Button)(({ theme }) => ({
   "&:hover": {
     backgroundColor: "#5A0E2C",
   },
+<<<<<<< HEAD
   [theme.breakpoints.down("sm")]: {
     fontSize: "14px",
   },
@@ -254,3 +313,6 @@ export const MathBoy = styled("img")(({ theme }) => ({
     marginBottom: "1rem",
   },
 }))
+=======
+})
+>>>>>>> e7cca9c (feat: add two slides to the slider)
