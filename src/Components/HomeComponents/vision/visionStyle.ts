@@ -15,7 +15,7 @@ export const styles = {
         fontWeight: "bold",
         flex: 1,
         fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
-        padding: { xs: "0 10px", md: "70px 150px" },
+        padding: { xs: "0 10px", md: "120px 150px" },
         textAlign: { xs: "center", md: "left" },
         textShadow: "0px 3px 6px rgba(27, 27, 27, 0.15)",
     },
