@@ -16,6 +16,8 @@
 
 body {
   font-family: "Lenos Thin", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .secondary-text {
