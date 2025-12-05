@@ -36,8 +36,8 @@ export const SecondHeading = styled(Typography)({
   textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
   fontWeight: 700,
   fontSize: "48px",
-  marginBottom: "10rem",
-  marginTop: "-10rem",
+  marginBottom: "4rem",
+  marginTop: "-15rem",
   display: "flex",
   justifyContent: "flex-end",
 })
@@ -93,6 +93,7 @@ export const ThirdSlideHeading = styled(Typography)({
   fontWeight: 600,
   fontSize: "2.5rem",
   marginBottom: "2rem",
+  marginTop: "-4rem",
 })
 
 export const WhiteExploreButton = styled(Button)({
@@ -121,4 +122,30 @@ export const WhiteStartButton = styled(Button)({
   "&:hover": {
     backgroundColor: "rgba(255, 255, 255, 0.9)",
   },
+})
+
+export const ChartWrapper = styled(Box)({
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "2rem",
+  marginTop: "-10rem",
+  zIndex: 2,
+  opacity: 0.9,
+})
+
+export const ComPersonImg = styled("img")({
+  width: "520px",
+  height: "auto",
+  objectFit: "contain",
+  marginBottom: "8rem",
+  marginLeft: "10rem",
+});
+
+export const MathBoy = styled("img")({
+  height: "340px",
+  objectFit: "contain",
+  marginBottom: "2rem",
+  marginLeft: "18rem",
+  marginTop: "-5rem",
 })
