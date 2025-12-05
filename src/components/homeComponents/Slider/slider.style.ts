@@ -79,3 +79,46 @@ export const StartButton = styled(Button)({
     backgroundColor: "#5A0E2C",
   },
 })
+
+export const ThirdSlideContent = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  padding: "0 4rem",
+  color: "#fff",
+})
+
+export const ThirdSlideHeading = styled(Typography)({
+  color: "#fff",
+  fontWeight: 600,
+  fontSize: "2.5rem",
+  marginBottom: "2rem",
+})
+
+export const WhiteExploreButton = styled(Button)({
+  borderColor: "#fff",
+  color: "#fff",
+  backgroundColor: "transparent",
+  padding: "0.75rem 2.5rem",
+  borderRadius: "25px",
+  textTransform: "none",
+  fontSize: "1rem",
+  fontWeight: 500,
+  "&:hover": {
+    borderColor: "#fff",
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+  },
+})
+
+export const WhiteStartButton = styled(Button)({
+  backgroundColor: "#fff",
+  color: "#7A1E3C",
+  padding: "0.75rem 2.5rem",
+  borderRadius: "25px",
+  textTransform: "none",
+  fontSize: "1rem",
+  fontWeight: 500,
+  "&:hover": {
+    backgroundColor: "rgba(255, 255, 255, 0.9)",
+  },
+})
