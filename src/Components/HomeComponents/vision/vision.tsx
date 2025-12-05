@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Typography, IconButton, Paper } from "@mui/material";
 import {
     ArrowBackIosNew as ArrowBackIosNewIcon,
     ArrowForwardIos as ArrowForwardIosIcon,
 } from "@mui/icons-material";
 import { styles } from "./visionStyle";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Vision() {
     const slides = [
@@ -24,16 +26,20 @@ function Vision() {
 
     const [index, setIndex] = useState(1);
 
+    useEffect(() => {
+        AOS.init({ duration: 900, once: true });
+    }, []);
+
     const handleNext = () => setIndex((prev) => (prev + 1) % slides.length);
     const handlePrev = () =>
         setIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
-    const getScale = (i: number) => (i === index ? 1.2 : 0.8);
-    const getOpacity = (i: number) => (i === index ? 1 : 0.7);
+    const getScale = (i: number) => (i === index ? 1.15 : 0.88);
+    const getOpacity = (i: number) => (i === index ? 1 : 0.55);
 
     return (
         <>
-            <Box sx={styles.visionContainer}>
+            <Box sx={styles.visionContainer} data-aos="fade-up">
                 <Typography sx={styles.title}>Our Vision</Typography>
 
                 <Box sx={styles.controlsWrapper}>
@@ -46,25 +52,48 @@ function Vision() {
                 </Box>
             </Box>
 
-            <Box display="flex" alignItems="center" justifyContent="center" flexWrap="wrap" gap={1}>
-                <Box component="img" src="/images/vision.png" alt="vision" sx={styles.image} />
+            <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                flexWrap="wrap"
+                gap={1}
+                data-aos="zoom-in"
+            >
+                <Box
+                    component="img"
+                    src="/images/vision.png"
+                    alt="vision"
+                    sx={styles.image}
+                    className="floating-img"
+                />
 
                 <Box sx={styles.slidesWrapper}>
                     {slides.map((slide, i) => (
                         <Paper
                             key={i}
-                            elevation={index === i ? 6 : 1}
+                            elevation={index === i ? 8 : 2}
                             sx={{
                                 ...styles.slideCard,
                                 transform: `scale(${getScale(i)})`,
                                 opacity: getOpacity(i),
-                                margin: "auto",
+                                boxShadow:
+                                    index === i
+                                        ? "0px 10px 25px rgba(125,28,72,0.25)"
+                                        : "0px 3px 10px rgba(0,0,0,0.1)",
+                                border:
+                                    i === index
+                                        ? "2px solid #7A1731"
+                                        : "2px solid #e7c7d2",
                             }}
+                            className={i === index ? "active-slide" : ""}
                         >
                             <Typography sx={styles.slideTitle} variant="h5">
                                 {slide.title}
                             </Typography>
-                            <Typography sx={styles.slideText}>{slide.text}</Typography>
+                            <Typography sx={styles.slideText}>
+                                {slide.text}
+                            </Typography>
                         </Paper>
                     ))}
                 </Box>

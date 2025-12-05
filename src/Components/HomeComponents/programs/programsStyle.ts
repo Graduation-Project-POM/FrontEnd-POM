@@ -1,4 +1,4 @@
-export const styles= {
+export const styles = {
     container: {
         textAlign: "center",
         py: 5,
@@ -20,14 +20,9 @@ export const styles= {
     card: {
         p: 3,
         textAlign: "center",
-        boxShadow: "none",
-        background: "transparent",
-        transition: "0.3s ease",
         borderRadius: "20px",
-        "&:hover": {
-            transform: "translateY(-10px) scale(1.05)",
-            boxShadow: "0px 10px 25px rgba(0,0,0,0.15)",
-        },
+        transition: "0.4s ease",
+        transform: "perspective(700px) rotateX(0deg)",
     },
 
     image: {
@@ -36,7 +31,7 @@ export const styles= {
     },
 
     cardTitle: {
-        fontWeight: "700",
+        fontWeight: "900",
         fontSize: "18px",
         textTransform: "uppercase",
         color: "#5A1F3D",
@@ -44,10 +39,12 @@ export const styles= {
     },
 
     cardDesc: {
-        color: "#555",
+        color: "#333",
         fontSize: "15px",
         maxWidth: "280px",
         margin: "0 auto",
+        opacity: 0.9,
+        lineHeight: "1.5",
     },
 
     exploreBtnWrapper: {
@@ -65,6 +62,7 @@ export const styles= {
         display: "inline-block",
         cursor: "pointer",
         transition: "0.3s",
+        animation: "pulse 1.8s infinite",
         "&:hover": { background: "#5A1F3D", color: "#fff" },
     },
 };

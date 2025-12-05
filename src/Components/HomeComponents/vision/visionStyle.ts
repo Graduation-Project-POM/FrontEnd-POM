@@ -17,6 +17,7 @@ export const styles = {
         fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
         padding: { xs: "0 10px", md: "70px 150px" },
         textAlign: { xs: "center", md: "left" },
+        textShadow: "0px 3px 6px rgba(27, 27, 27, 0.15)",
     },
 
     controlsWrapper: {
@@ -34,6 +35,7 @@ export const styles = {
         "&:hover": { background: "#5a0f24" },
         p: { xs: 0.8, sm: 1.2, md: 1.8 },
         borderRadius: "50%",
+        transition: "0.3s",
     },
 
     image: {
@@ -41,6 +43,7 @@ export const styles = {
         height: "auto",
         margin: { xs: 0, md: "10px -70px" },
         zIndex: 10,
+        animation: "float 3.8s ease-in-out infinite",
     },
 
     slidesWrapper: {
@@ -55,15 +58,14 @@ export const styles = {
     slideCard: {
         width: { sm: "200px", md: "240px" },
         height: { sm: "160px", md: "280px" },
-        padding: "10px",
+        padding: "12px",
         borderRadius: "16px",
-        border: "2px solid #ddb5b5",
         backgroundColor: "white",
         textAlign: "center",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        transition: "all 0.35s ease-in-out",
+        transition: "all 0.35s ease",
     },
 
     slideTitle: {
@@ -74,5 +76,7 @@ export const styles = {
 
     slideText: {
         color: "gray",
+        px: 1,
+        fontSize: "15px",
     },
 };

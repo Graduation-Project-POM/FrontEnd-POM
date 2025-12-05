@@ -20,6 +20,7 @@ function Partner() {
                     src="/images/Partner1.png"
                     alt="partner1"
                     sx={styles.partnerImage1}
+                    className="partner-img"
                 />
 
                 <Box sx={styles.verticalLine} />
@@ -29,6 +30,7 @@ function Partner() {
                     src="/images/Partner2.png"
                     alt="partner2"
                     sx={styles.partnerImage2}
+                    className="partner-img"
                 />
 
                 <Box sx={styles.verticalLine} />
@@ -38,6 +40,7 @@ function Partner() {
                     src="/images/Partner3.jpg"
                     alt="partner3"
                     sx={styles.partnerImage3}
+                    className="partner-img"
                 />
             </Box>
         </>

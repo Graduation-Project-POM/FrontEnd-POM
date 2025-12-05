@@ -38,23 +38,24 @@ function TrainingField() {
                 {resourceData.map((card, i) => (
                     <Paper
                         key={i}
-                        elevation={i === index ? 6 : 1}
+                        elevation={i === index ? 8 : 1}
                         sx={{
                             ...styles.card,
-                            transform: `scale(${i === index ? 1.2 : 1})`,
-                            opacity: i === index ? 1 : 0.9,
+                            transform: `scale(${i === index ? 1.15 : 1})`,
+                            opacity: i === index ? 1 : 0.8,
+                            boxShadow: i === index ? "0px 8px 25px rgba(122,28,73,0.35)" : "0px 2px 8px rgba(0,0,0,0.15)",
+                            transition: "all 0.35s ease",
                         }}
                     >
                         {card.icon}
                         <Typography sx={styles.cardTitle}>{card.title}</Typography>
                         <Typography sx={styles.cardSubtitle}>{card.subtitle}</Typography>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 2, cursor: "pointer", color: "#fff" }}>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 2, cursor: "pointer", color: "#fff", transition: "0.3s", "&:hover": { gap: 2 } }}>
                             <Typography sx={{ fontWeight: 500, fontSize: 14 }}>Learn More</Typography>
                             <ArrowForwardIcon sx={{ fontSize: 18 }} />
                         </Box>
                     </Paper>
                 ))}
-
             </Box>
         </Box>
     );
