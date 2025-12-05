@@ -1,29 +1,82 @@
-export const styles: Record<string, React.CSSProperties> = {
-    partner: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        marginTop: "20px",
-        gap: "50px",
-        padding: "20px",
-    },
-
-    partnerImage: {
-        width: "320px",
-        objectFit: "cover",
-        borderRadius: "10px",
-        marginLeft: "10px",
-    },
+export const styles = {
     title: {
         marginBottom: "10px",
         color: "#7D1C48",
         fontWeight: "bold",
         textAlign: "center",
         marginTop: "80px",
+
+        fontSize: {
+            xs: "30px",
+            sm: "50px",
+            md: "90px",
+        },
+        marginBottomResponsive: {
+            xs: "20px",
+            md: "40px",
+        },
     },
-    line: {
+
+    partnerWrapper: {
+        display: "flex",
+        flexDirection: {
+            xs: "column",
+            sm: "row",
+            md: "row"
+        },
+        alignItems: "center",
+        justifyContent: "center",
+        flexWrap: "wrap",
+
+        gap: {
+            xs: "20px",
+            sm: "40px",
+            md: "50px"
+        },
+
+        padding: {
+            xs: "0 10px",
+            md: "0"
+        },
+    },
+
+    partnerImage1: {
+        width: {
+            xs: "100px",
+            sm: "170px",
+            md: "290px"
+        },
+        height: "auto",
+        borderRadius: "10px",
+    },
+
+    partnerImage2: {
+        width: {
+            xs: "100px",
+            sm: "200px",
+            md: "320px"
+        },
+        height: "auto",
+        borderRadius: "10px",
+    },
+
+    partnerImage3: {
+        width: {
+            xs: "100px",
+            sm: "200px",
+            md: "320px"
+        },
+        height: "auto",
+        borderRadius: "10px",
+    },
+
+    verticalLine: {
+        display: {
+            xs: "none",
+            lg: "block"
+        },
         width: "5px",
         height: "250px",
         backgroundColor: "#7D1C48",
-    },
+    }
 };
