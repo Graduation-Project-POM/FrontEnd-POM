@@ -1,10 +1,4 @@
 import { Container } from "@mui/material"
-
-import firstBGAch from "../../../assest/images/firstBGAch.png"
-import secondBGAch from "../../../assest/images/secondBGAch.png"
-import firstStud from "../../../assest/images/firstStud.png"
-import secStud from "../../../assest/images/secStud.png"
-import thirdStud from "../../../assest/images/thirdStud.png"
 import {
   AchievementsWrapper,
   Card,
@@ -19,20 +13,20 @@ const achievements = [
   {
     title: "Third Place",
     name: "Yousef Barakat",
-    studentImage: firstStud,
-    backgroundImage: firstBGAch,
+    studentImage: "https://whatsmylevel.com/firstStud.png",
+    backgroundImage: "https://whatsmylevel.com/firstBGAch.png",
   },
   {
     title: "Special Recognition",
     name: "Kareem Mahmmoud",
-    studentImage: secStud,
-    backgroundImage: secondBGAch,
+    studentImage: "https://whatsmylevel.com/secStud.png",
+    backgroundImage: "https://whatsmylevel.com/secondBGAch.png",
   },
   {
     title: "Second Place",
     name: "Reem Haddad",
-    studentImage: thirdStud,
-    backgroundImage: firstBGAch,
+    studentImage: "https://whatsmylevel.com/thirdStud.png",
+    backgroundImage: "https://whatsmylevel.com/firstBGAch.png",
   },
 ]
 
