@@ -20,6 +20,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .secondary-text {
   font-family: "Readex Pro", sans-serif;
 }
