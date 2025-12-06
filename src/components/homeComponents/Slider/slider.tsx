@@ -10,13 +10,13 @@ import secondChart from "../../../assest/images/secondChart.png"
 import thirdChart from "../../../assest/images/thirdChart.png"
 import thirdSlideBG from "../../../assest/images/thirdSlideBG.png"
 import comPerson from "../../../assest/images/comPerson.png"
-import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./slider.style"
+import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./sliderStyle"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 
-export function Slider() {
+function Slider() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar]}
@@ -103,3 +103,5 @@ export function Slider() {
     </Swiper>
   )
 }
+
+export default Slider
