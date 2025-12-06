@@ -17,7 +17,7 @@ function Partner() {
             <Box className="partner" sx={styles.partnerWrapper}>
                 <Box
                     component="img"
-                    src="/images/Partner1.png"
+                    src="https://whatsmylevel.com/Partner1.png"
                     alt="partner1"
                     sx={styles.partnerImage1}
                     className="partner-img"
@@ -27,7 +27,7 @@ function Partner() {
 
                 <Box
                     component="img"
-                    src="/images/Partner2.png"
+                    src="https://whatsmylevel.com/Partner2.png"
                     alt="partner2"
                     sx={styles.partnerImage2}
                     className="partner-img"
@@ -37,7 +37,7 @@ function Partner() {
 
                 <Box
                     component="img"
-                    src="/images/Partner3.jpg"
+                    src="https://whatsmylevel.com/Partner3.jpg"
                     alt="partner3"
                     sx={styles.partnerImage3}
                     className="partner-img"
