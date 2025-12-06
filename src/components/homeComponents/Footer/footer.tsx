@@ -23,8 +23,9 @@ import {
 function Footer() {
   return (
     <FooterWrapper component="footer">
+      <br /><br /><br /><br /><br />
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
+        <Grid container spacing={8} justifyContent="center" >
           <Grid>
             <BrandTitle>Palestine Math Olympiad</BrandTitle>
             <BrandDescription>
