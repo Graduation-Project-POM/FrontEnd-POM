@@ -62,7 +62,7 @@ function Vision() {
             >
                 <Box
                     component="img"
-                    src="https://whatsmylevel.com/vision.png"
+                    src="/vision.png"
                     alt="vision"
                     sx={styles.image}
                     className="floating-img"
