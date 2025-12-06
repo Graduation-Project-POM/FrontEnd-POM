@@ -48,9 +48,9 @@ function Slider() {
           <Container>
             <ContentWrapper>
               <SecondHeading variant="h1">
-                From Palestine..
+                From Palestine’s PMO
                 <br />
-                to the World Stage.
+                to the World’s IMO
               </SecondHeading>
               <ButtonGroup>
                 <ExploreButton variant="outlined">Explore</ExploreButton>
