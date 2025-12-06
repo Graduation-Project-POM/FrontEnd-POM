@@ -21,14 +21,15 @@ export const NavLinks = styled(Box)({
   marginLeft: "auto",
 })
 
-export const NavLink = styled(Button)({
-  color: "#ffffff",
+export const NavLink = styled(Button)<{ active?: boolean }>(({ active }) => ({
+  color: active ? "#FFD1DC" : "#ffffff",
+  fontWeight: active ? "bold" : "normal",
   fontSize: "16px",
   textTransform: "none",
   "&:hover": {
     backgroundColor: "transparent",
   },
-})
+}))
 
 export const LoginButton = styled(Button)({
   backgroundColor: "#ffffff",

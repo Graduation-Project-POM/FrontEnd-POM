@@ -32,7 +32,7 @@ export function Navbar() {
           <Logo>PMO</Logo>
 
           <NavLinks sx={{ display: { xs: "none", md: "flex" } }}>
-            <NavLink>Home</NavLink>
+            <NavLink active>Home</NavLink>
             <NavLink>Services</NavLink>
             <NavLink>Program</NavLink>
             <NavLink>About</NavLink>
