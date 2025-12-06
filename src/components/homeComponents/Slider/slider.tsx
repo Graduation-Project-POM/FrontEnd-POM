@@ -1,6 +1,5 @@
 import { Container } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 import firstSlideBG from "../../../assets/images/firstSlideBG.png"
 import threePeople from '../../../assets/images/threePeople.png';
 import twoPeople from '../../../assets/images/twoPeople.png';
@@ -15,7 +14,7 @@ import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButt
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 
 export function Slider() {
   return (

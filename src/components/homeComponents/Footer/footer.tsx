@@ -74,11 +74,11 @@ export function Footer() {
             <ColumnTitle>Contact</ColumnTitle>
             <Column>
               <ContactRow>
-                <PhoneIcon sx={{ fontSize: "1rem", color: "#8B1538" }} />
+                <PhoneIcon sx={{ fontSize: "1rem", color: "#6E0B2A" }} />
                 <FooterLink href="tel:+324847890">+32 484 7890</FooterLink>
               </ContactRow>
               <ContactRow>
-                <EmailIcon sx={{ fontSize: "1rem", color: "#8B1538" }} />
+                <EmailIcon sx={{ fontSize: "1rem", color: "#6E0B2A" }} />
                 <FooterLink href="mailto:support@mmm.com">
                   support@mmm.com
                 </FooterLink>
