@@ -1,6 +1,5 @@
 import { Container } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
-<<<<<<< HEAD
 import firstSlideBG from "../../../assest/images/firstSlideBG.png"
 import threePeople from '../../../assest/images/threePeople.png';
 import twoPeople from '../../../assest/images/twoPeople.png';
@@ -12,9 +11,7 @@ import thirdChart from "../../../assest/images/thirdChart.png"
 import thirdSlideBG from "../../../assest/images/thirdSlideBG.png"
 import comPerson from "../../../assest/images/comPerson.png"
 import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./sliderStyle"
-=======
 import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./slider.style"
->>>>>>> 332348195b1359a2bfe631a809fca3f0a76b3e68
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
