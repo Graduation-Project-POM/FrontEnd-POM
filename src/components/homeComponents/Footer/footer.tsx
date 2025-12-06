@@ -18,9 +18,9 @@ import {
   SocialIcons,
   SocialButton,
   ContactRow,
-} from "./footer.style";
+} from "./footerStyle";
 
-export function Footer() {
+function Footer() {
   return (
     <FooterWrapper component="footer">
       <Container maxWidth="lg">
@@ -115,3 +115,6 @@ export function Footer() {
     </FooterWrapper>
   );
 }
+
+
+export default Footer

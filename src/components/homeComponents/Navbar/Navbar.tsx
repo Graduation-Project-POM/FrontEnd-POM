@@ -1,8 +1,8 @@
 import { Toolbar, Container } from "@mui/material"
-import { LoginButton, Logo, NavLink, NavLinks, StyledAppBar } from "./Navbar.style"
+import { LoginButton, Logo, NavLink, NavLinks, StyledAppBar } from "./NavbarStyle"
 
 
-export function Navbar() {
+function Navbar() {
   return (
 
     <StyledAppBar position="static">
@@ -21,3 +21,5 @@ export function Navbar() {
     </StyledAppBar>
   )
 }
+
+export default Navbar

@@ -1,12 +1,23 @@
 import { Container } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react"
+import firstSlideBG from "../../../assest/images/firstSlideBG.png"
+import threePeople from '../../../assest/images/threePeople.png';
+import twoPeople from '../../../assest/images/twoPeople.png';
+import mathBoy from '../../../assest/images/mathBoy.png';
+import secondSlideBG from "../../../assest/images/secondSlideBG.png"
+import firstChart from "../../../assest/images/firstChart.png"
+import secondChart from "../../../assest/images/secondChart.png"
+import thirdChart from "../../../assest/images/thirdChart.png"
+import thirdSlideBG from "../../../assest/images/thirdSlideBG.png"
+import comPerson from "../../../assest/images/comPerson.png"
+import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./sliderStyle"
 import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./slider.style"
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Scrollbar } from "swiper/modules"
 
-export function Slider() {
+function Slider() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar]}
@@ -93,3 +104,5 @@ export function Slider() {
     </Swiper>
   )
 }
+
+export default Slider

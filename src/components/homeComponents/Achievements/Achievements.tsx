@@ -7,7 +7,7 @@ import {
   ActionWrapper,
   ViewButton,
   AchievementsTitle,
-} from "./Achievements.style"
+} from "./AchievementsStyle"
 
 const achievements = [
   {
@@ -30,7 +30,7 @@ const achievements = [
   },
 ]
 
-export function Achievements() {
+function Achievements() {
   return (
     <Container maxWidth="md">
       <AchievementsTitle variant="h2">
@@ -66,3 +66,5 @@ export function Achievements() {
     </Container>
   )
 }
+
+export default Achievements
