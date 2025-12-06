@@ -48,7 +48,7 @@ function About() {
             >
                 <Box
                     component="img"
-                    src="/images/image-removebg-preview 1.png"
+                    src="https://whatsmylevel.com/image-removebg-preview 1.png"
                     alt="about-image"
                     sx={styles.aboutImage}
                 />
