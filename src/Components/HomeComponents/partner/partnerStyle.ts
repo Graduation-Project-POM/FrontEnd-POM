@@ -27,13 +27,11 @@ export const styles = {
         alignItems: "center",
         justifyContent: "center",
         flexWrap: "wrap",
-
         gap: {
             xs: "20px",
             sm: "40px",
             md: "50px"
         },
-
         padding: {
             xs: "0 10px",
             md: "0"
@@ -48,6 +46,10 @@ export const styles = {
         },
         height: "auto",
         borderRadius: "10px",
+        transition: "transform 0.4s ease, box-shadow 0.4s ease",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
     },
 
     partnerImage2: {
@@ -58,6 +60,10 @@ export const styles = {
         },
         height: "auto",
         borderRadius: "10px",
+        transition: "transform 0.4s ease, box-shadow 0.4s ease",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
     },
 
     partnerImage3: {
@@ -68,6 +74,10 @@ export const styles = {
         },
         height: "auto",
         borderRadius: "10px",
+        transition: "transform 0.4s ease, box-shadow 0.4s ease",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
     },
 
     verticalLine: {
@@ -78,5 +88,9 @@ export const styles = {
         width: "5px",
         height: "250px",
         backgroundColor: "#7D1C48",
+        transition: "transform 0.3s ease",
+        "&:hover": {
+            transform: "scaleY(1.1)",
+        }
     }
 };

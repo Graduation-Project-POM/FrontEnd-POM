@@ -1,7 +1,13 @@
 import { Box, Paper, Typography, Grid } from "@mui/material";
 import { styles } from "./programsStyle";
+import AOS from "aos";
+import { useEffect } from "react";
 
 function Programs() {
+
+    useEffect(() => {
+        AOS.init({ duration: 900, once: true });
+    },);
 
     const programs = [
         {
@@ -45,7 +51,12 @@ function Programs() {
                 sx={styles.gridContainer}
             >
                 {programs.map((p, index) => (
-                    <Grid xs={12} sm={6} md={4} key={index}>
+                    <Grid 
+                        xs={12} sm={6} md={4} 
+                        key={index}
+                        data-aos="zoom-in-up"
+                        data-aos-delay={index * 150}
+                    >
                         <Paper elevation={0} sx={styles.card}>
                             
                             <img 
@@ -61,6 +72,7 @@ function Programs() {
                             <Typography sx={styles.cardDesc}>
                                 {p.desc}
                             </Typography>
+
                         </Paper>
                     </Grid>
                 ))}
