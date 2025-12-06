@@ -13,20 +13,20 @@ const achievements = [
   {
     title: "Third Place",
     name: "Yousef Barakat",
-    studentImage: "https://whatsmylevel.com/firstStud.png",
-    backgroundImage: "https://whatsmylevel.com/firstBGAch.png",
+    studentImage: "/firstStud.png",
+    backgroundImage: "/firstBGAch.png",
   },
   {
     title: "Special Recognition",
     name: "Kareem Mahmmoud",
-    studentImage: "https://whatsmylevel.com/secStud.png",
-    backgroundImage: "https://whatsmylevel.com/secondBGAch.png",
+    studentImage: "/secStud.png",
+    backgroundImage: "/secondBGAch.png",
   },
   {
     title: "Second Place",
     name: "Reem Haddad",
-    studentImage: "https://whatsmylevel.com/thirdStud.png",
-    backgroundImage: "https://whatsmylevel.com/firstBGAch.png",
+    studentImage: "/thirdStud.png",
+    backgroundImage: "/firstBGAch.png",
   },
 ]
 

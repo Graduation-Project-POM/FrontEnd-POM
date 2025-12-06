@@ -8,11 +8,11 @@ import {
 import { styles } from "./training";
 
 const resourceData = [
-    { title: "Work", subtitle: "Sheets", icon: <Box sx={styles.image} component="img" src="https://whatsmylevel.com/training1.png" /> },
-    { title: "External", subtitle: "Resources", icon: <Box sx={styles.image} component="img" src="https://whatsmylevel.com/training2.png" /> },
-    { title: "Practice", subtitle: "Problems", icon: <Box sx={styles.image} component="img" src="https://whatsmylevel.com/training3.png" /> },
-    { title: "Video", subtitle: "Tutorials", icon: <Box sx={styles.image} component="img" src="https://whatsmylevel.com/training4.png" /> },
-    { title: "Math", subtitle: "Books", icon: <Box sx={styles.image} component="img" src="https://whatsmylevel.com/training5.png" /> },
+    { title: "Work", subtitle: "Sheets", icon: <Box sx={styles.image} component="img" src="/training1.png" /> },
+    { title: "External", subtitle: "Resources", icon: <Box sx={styles.image} component="img" src="/training2.png" /> },
+    { title: "Practice", subtitle: "Problems", icon: <Box sx={styles.image} component="img" src="/training3.png" /> },
+    { title: "Video", subtitle: "Tutorials", icon: <Box sx={styles.image} component="img" src="/training4.png" /> },
+    { title: "Math", subtitle: "Books", icon: <Box sx={styles.image} component="img" src="/training5.png" /> },
 ];
 
 function TrainingField() {

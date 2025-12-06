@@ -11,27 +11,27 @@ function Programs() {
 
     const programs = [
         {
-            img: "https://whatsmylevel.com/program1.png",
+            img: "/program1.png",
             title: "preparation stage",
             desc: "Students join trainings and practice problems to build strong math skills before the competition starts."
         },
         {
-            img: "https://whatsmylevel.com/program2.png",
+            img: "/program2.png",
             title: "Preliminary Rounds",
             desc: "Participants take qualifying exams to select the top students for the advanced stages."
         },
         {
-            img: "https://whatsmylevel.com/program3.png",
+            img: "/program3.png",
             title: "Finals",
             desc: "Top students compete in the final round with challenging problems testing logic and creativity."
         },
         {
-            img: "https://whatsmylevel.com/program4.png",
+            img: "/program4.png",
             title: "Awards & Recognition",
             desc: "Winners receive medals, certificates, and public recognition for their achievements."
         },
         {
-            img: "https://whatsmylevel.com/program5.png",
+            img: "/program5.png",
             title: "Finish Stage",
             desc: "The competition concludes, results are published, and preparations begin for the next Olympiad."
         }

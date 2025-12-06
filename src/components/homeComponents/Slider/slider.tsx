@@ -35,7 +35,7 @@ function Slider() {
       }
     >
       <SwiperSlide>
-        <StyledSlide bg={"https://whatsmylevel.com/firstSlideBG.png"}>
+        <StyledSlide bg={"/firstSlideBG.png"}>
           <Container>
             <ContentWrapper>
               <Heading variant="h1">Where champions begin.</Heading>
@@ -46,22 +46,22 @@ function Slider() {
                 <ExploreButton variant="outlined">Explore</ExploreButton>
                 <StartButton variant="contained">Start</StartButton>
               </ButtonGroup>
-              <img src={"https://whatsmylevel.com/threePeople.png"} alt="Three People" />
-              <img src={"https://whatsmylevel.com/twoPeople.png"} alt="Two People" />
-              <MathBoy src={"https://whatsmylevel.com/mathBoy.png"} alt="Math" />
+              <img src={"/threePeople.png"} alt="Three People" />
+              <img src={"/twoPeople.png"} alt="Two People" />
+              <MathBoy src={"/mathBoy.png"} alt="Math" />
             </ContentWrapper>
           </Container>
         </StyledSlide>
       </SwiperSlide>
 
       <SwiperSlide>
-        <StyledSlide bg={"https://whatsmylevel.com/secondSlideBG.png"} overlay>
+        <StyledSlide bg={"/secondSlideBG.png"} overlay>
           <Container>
             <ContentWrapper>
               <SecondHeading variant="h1">
                 From Palestine..
                 <br />
-                to the World Stage......
+                to the World Stage.
               </SecondHeading>
               <ButtonGroup>
                 <ExploreButton variant="outlined">Explore</ExploreButton>
@@ -71,15 +71,15 @@ function Slider() {
           </Container>
         </StyledSlide>
         <ChartWrapper>
-          <img src={"https://whatsmylevel.com/firstChart.png"} alt="First Chart" />
-          <img src={"https://whatsmylevel.com/secondChart.png"} alt="Second Chart" />
-          <img src={"https://whatsmylevel.com/thirdChart.png"} alt="Third Chart" />
+          <img src={"/firstChart.png"} alt="First Chart" />
+          <img src={"/secondChart.png"} alt="Second Chart" />
+          <img src={"/thirdChart.png"} alt="Third Chart" />
         </ChartWrapper>
       </SwiperSlide>
 
       <SwiperSlide>
-        <StyledSlide bg={"https://whatsmylevel.com/thirdSlideBG.png"}>
-          <ComPersonImg src={"https://whatsmylevel.com/comPerson.png"} alt="Programs illustration" />
+        <StyledSlide bg={"/thirdSlideBG.png"}>
+          <ComPersonImg src={"/comPerson.png"} alt="Programs illustration" />
           <ThirdSlideContent>
             <ThirdSlideHeading variant="h2">
               Programs, camps,
@@ -95,9 +95,9 @@ function Slider() {
           </ThirdSlideContent>
         </StyledSlide>
         <ChartWrapper>
-          <img src={"https://whatsmylevel.com/thirdChart.png"} alt="Third Chart" />
-          <img src={"https://whatsmylevel.com/secondChart.png"} alt="Second Chart" />
-          <img src={"https://whatsmylevel.com/firstChart.png"} alt="First Chart" />
+          <img src={"/thirdChart.png"} alt="Third Chart" />
+          <img src={"/secondChart.png"} alt="Second Chart" />
+          <img src={"/firstChart.png"} alt="First Chart" />
         </ChartWrapper>
       </SwiperSlide>
 
