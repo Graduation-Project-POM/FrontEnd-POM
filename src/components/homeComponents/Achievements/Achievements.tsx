@@ -1,4 +1,4 @@
-import { Container } from "@mui/material"
+import { Box, Container } from "@mui/material"
 import {
   AchievementsWrapper,
   Card,
@@ -7,6 +7,8 @@ import {
   ActionWrapper,
   ViewButton,
   AchievementsTitle,
+  AchievementLabel,
+  StudentName,
 } from "./AchievementsStyle"
 
 const achievements = [
@@ -33,33 +35,27 @@ const achievements = [
 function Achievements() {
   return (
     <Container maxWidth="md">
-      <br /><br /><br /><br /><br />
-      <AchievementsTitle variant="h2">
-        Achievements and Awards
-      </AchievementsTitle>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <AchievementsTitle variant="h2">Achievements and Awards</AchievementsTitle>
       <AchievementsWrapper>
         {achievements.map((achievement, index) => {
           const isEven = index % 2 === 0
 
           return (
             <Card key={achievement.name} bg={achievement.backgroundImage}>
-              {!isEven && (
-                <StudentImageLeft
-                  src={achievement.studentImage}
-                  alt={achievement.name}
-                />
-              )}
+              {!isEven && <StudentImageLeft src={achievement.studentImage} alt={achievement.name} />}
               <ActionWrapper align={isEven ? "right" : "left"}>
-                <ViewButton variant="outlined">
-                  View Details
-                </ViewButton>
+                <Box display="flex" flexDirection="column">
+                  <AchievementLabel>{achievement.title}</AchievementLabel>
+                  <StudentName>{achievement.name}</StudentName>
+                </Box>
+                <ViewButton variant="outlined">View Details</ViewButton>
               </ActionWrapper>
-              {isEven && (
-                <StudentImageRight
-                  src={achievement.studentImage}
-                  alt={achievement.name}
-                />
-              )}
+              {isEven && <StudentImageRight src={achievement.studentImage} alt={achievement.name} />}
             </Card>
           )
         })}

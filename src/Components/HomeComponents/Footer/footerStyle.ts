@@ -16,7 +16,7 @@ export const BottomBar = styled(Box)({
 export const BrandTitle = styled(Typography)({
   color: "#6E0B2A",
   fontWeight: 700,
-  fontSize: "1.5rem",
+  fontSize: "2rem",
   marginBottom: "12px",
 });
 
@@ -32,7 +32,6 @@ export const ColumnTitle = styled(Typography)({
   fontSize: "0.95rem",
   color: "#6E0B2A",
   marginBottom: "16px",
-  // marginRight: "25px",
 });
 
 export const FooterLink = styled(Link)({

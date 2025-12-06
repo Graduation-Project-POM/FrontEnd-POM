@@ -6,21 +6,21 @@ interface StyledSlideProps {
   overlay?: boolean
 }
 
-export const StyledSlide = styled(Box)<StyledSlideProps>(({ theme, bg, overlay }) => ({
+export const StyledSlide = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "overlay",
+})<StyledSlideProps>(({ theme, bg, overlay }) => ({
   position: "relative",
-  backgroundImage: overlay ? `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bg})` : `url(${bg})`,
+  backgroundImage: overlay
+    ? `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bg})`
+    : `url(${bg})`,
   display: "flex",
   alignItems: "center",
   backgroundSize: "cover",
   backgroundPosition: "center",
   height: "530px",
-  [theme.breakpoints.down("md")]: {
-    height: "400px",
-  },
-  [theme.breakpoints.down("sm")]: {
-    height: "500px",
-  },
-}))
+  [theme.breakpoints.down("md")]: { height: "400px" },
+  [theme.breakpoints.down("sm")]: { height: "500px" },
+}));
 
 export const ContentWrapper = styled(Box)(({ theme }) => ({
   position: "relative",
