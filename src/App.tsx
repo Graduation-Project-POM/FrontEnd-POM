@@ -12,13 +12,14 @@ function App() {
     <>
     <Navbar /> 
     <Slider />
-    <Achievements />
-    <Footer />
+
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
+    <Achievements />
+    <Footer />
     </>
   )
 }
