@@ -18,6 +18,10 @@ body {
   font-family: "Lenos Thin", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .secondary-text {
   font-family: "Readex Pro", sans-serif;
 }
