@@ -3,6 +3,8 @@ import { Achievements } from "./components/homeComponents/Achievements/Achieveme
 import { Navbar } from "./components/homeComponents/Navbar/Navbar"
 import { Slider } from "./components/homeComponents/Slider/slider"
 import { Footer } from "./components/homeComponents/Footer/footer"
+import Home from './pages/index'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -12,6 +14,11 @@ function App() {
     <Slider />
     <Achievements />
     <Footer />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
