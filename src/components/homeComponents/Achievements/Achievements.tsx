@@ -1,10 +1,10 @@
 import { Container } from "@mui/material"
 
-import firstBGAch from "../../../assets/images/firstBGAch.png"
-import secondBGAch from "../../../assets/images/secondBGAch.png"
-import firstStud from "../../../assets/images/firstStud.png"
-import secStud from "../../../assets/images/secStud.png"
-import thirdStud from "../../../assets/images/thirdStud.png"
+import firstBGAch from "../../../assest/images/firstBGAch.png"
+import secondBGAch from "../../../assest/images/secondBGAch.png"
+import firstStud from "../../../assest/images/firstStud.png"
+import secStud from "../../../assest/images/secStud.png"
+import thirdStud from "../../../assest/images/thirdStud.png"
 import {
   AchievementsWrapper,
   Card,
