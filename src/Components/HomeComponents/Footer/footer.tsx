@@ -23,15 +23,12 @@ import {
 function Footer() {
   return (
     <FooterWrapper component="footer">
-      <br /><br /><br /><br /><br />
       <Container maxWidth="lg">
-        <Grid container spacing={8} justifyContent="center" >
-          <Grid>
+        <Grid container spacing={4} sx={{ py: 6 }}>
+          <Grid item xs={12} md={6} lg={3}>
             <BrandTitle>Palestine Math Olympiad</BrandTitle>
             <BrandDescription>
-              Empowering students across Palestine to explore,
-              <br />
-              learn and excel in mathematics
+              Empowering students across Palestine to explore, learn and excel in mathematics
             </BrandDescription>
 
             <SocialIcons>
@@ -42,7 +39,7 @@ function Footer() {
             </SocialIcons>
           </Grid>
 
-          <Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <ColumnTitle>Company</ColumnTitle>
             <Column>
               <FooterLink href="#">About Us</FooterLink>
@@ -52,7 +49,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <ColumnTitle>Developers</ColumnTitle>
             <Column>
               <FooterLink href="#">Web Technologies</FooterLink>
@@ -62,7 +59,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid>
+          <Grid item xs={6} sm={4} md={3} lg={2}>
             <ColumnTitle>Our Communities</ColumnTitle>
             <Column>
               <FooterLink href="#">MM Communities</FooterLink>
@@ -71,7 +68,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <ColumnTitle>Contact</ColumnTitle>
             <Column>
               <ContactRow>
