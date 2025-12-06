@@ -15,33 +15,52 @@ function Partner() {
             </Typography>
 
             <Box className="partner" sx={styles.partnerWrapper}>
-                <Box
-                    component="img"
-                    src="/Partner1.png"
-                    alt="partner1"
-                    sx={styles.partnerImage1}
-                    className="partner-img"
-                />
+                
+                <a 
+                    href="https://www.taawon.org/en" 
+                    target="_blank" 
+                    style={{ textDecoration: "none" }}
+                >
+                    <Box
+                        component="img"
+                        src="/Partner1.png"
+                        alt="partner1"
+                        sx={styles.partnerImage1}
+                        className="partner-img"
+                    />
+                </a>
 
                 <Box sx={styles.verticalLine} />
 
-                <Box
-                    component="img"
-                    src="/Partner2.png"
-                    alt="partner2"
-                    sx={styles.partnerImage2}
-                    className="partner-img"
-                />
+                <a 
+                    href="https://moe.edu.ps" 
+                    target="_blank" 
+                    style={{ textDecoration: "none" }}
+                >
+                    <Box
+                        component="img"
+                        src="/Partner2.png"
+                        alt="partner2"
+                        sx={styles.partnerImage2}
+                        className="partner-img"
+                    />
+                </a>
 
                 <Box sx={styles.verticalLine} />
 
-                <Box
-                    component="img"
-                    src="/Partner3.jpg"
-                    alt="partner3"
-                    sx={styles.partnerImage3}
-                    className="partner-img"
-                />
+                <a 
+                    href="https://www.palast.ps/ar" 
+                    target="_blank" 
+                    style={{ textDecoration: "none" }}
+                >
+                    <Box
+                        component="img"
+                        src="/Partner3.jpg"
+                        alt="partner3"
+                        sx={styles.partnerImage3}
+                        className="partner-img"
+                    />
+                </a>
             </Box>
         </>
     );

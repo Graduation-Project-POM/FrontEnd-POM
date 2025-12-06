@@ -12,7 +12,7 @@ export const styles = {
             md: "90px",
         },
         marginBottomResponsive: {
-            xs: "20px",
+            xs: "30px",
             md: "40px",
         },
     },
@@ -44,21 +44,33 @@ export const styles = {
             sm: "170px",
             md: "290px"
         },
-        height: "auto",
+        height: {
+            xs: "140px",
+            sm: "170px",
+            md: "290px"
+        },
         borderRadius: "10px",
         transition: "transform 0.4s ease, box-shadow 0.4s ease",
         "&:hover": {
             transform: "scale(1.1)",
+        },
+        marginBottomResponsive: {
+            xs: "30px",
+            md: "40px",
         },
     },
 
     partnerImage2: {
         width: {
             xs: "100px",
-            sm: "200px",
-            md: "320px"
+            sm: "170px",
+            md: "290px"
         },
-        height: "auto",
+        height: {
+            xs: "140px",
+            sm: "170px",
+            md: "290px"
+        },
         borderRadius: "10px",
         transition: "transform 0.4s ease, box-shadow 0.4s ease",
         "&:hover": {
@@ -69,10 +81,14 @@ export const styles = {
     partnerImage3: {
         width: {
             xs: "100px",
-            sm: "200px",
-            md: "320px"
+            sm: "170px",
+            md: "290px"
         },
-        height: "auto",
+        height: {
+            xs: "140px",
+            sm: "170px",
+            md: "290px"
+        },
         borderRadius: "10px",
         transition: "transform 0.4s ease, box-shadow 0.4s ease",
         "&:hover": {
