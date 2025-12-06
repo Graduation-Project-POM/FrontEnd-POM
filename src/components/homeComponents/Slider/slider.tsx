@@ -12,9 +12,10 @@ import thirdChart from "../../../assets/images/thirdChart.png"
 import thirdSlideBG from "../../../assets/images/thirdSlideBG.png"
 import comPerson from "../../../assets/images/comPerson.png"
 import { StyledSlide, ContentWrapper, Heading, Subtext, ExploreButton, StartButton, ButtonGroup, SecondHeading, ThirdSlideContent, ThirdSlideHeading, WhiteExploreButton, WhiteStartButton, ChartWrapper, ComPersonImg, MathBoy } from "./slider.style"
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export function Slider() {
   return (
@@ -78,7 +79,8 @@ export function Slider() {
 
       <SwiperSlide>
         <StyledSlide bg={thirdSlideBG}>
-          <ComPersonImg src={comPerson} alt="Programs illustration" />          <ThirdSlideContent>
+          <ComPersonImg src={comPerson} alt="Programs illustration" />
+          <ThirdSlideContent>
             <ThirdSlideHeading variant="h2">
               Programs, camps,
               <br />
@@ -93,9 +95,9 @@ export function Slider() {
           </ThirdSlideContent>
         </StyledSlide>
         <ChartWrapper>
-          <img src={firstChart} alt="Two People" />
-          <img src={secondChart} alt="Two People" />
-          <img src={thirdChart} alt="Two People" />
+          <img src={thirdChart} alt="Third Chart" />
+          <img src={secondChart} alt="Second Chart" />
+          <img src={firstChart} alt="First Chart" />
         </ChartWrapper>
       </SwiperSlide>
 
