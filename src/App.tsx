@@ -1,4 +1,5 @@
 import "./App.css"
+import { Navbar } from "./components/homeComponents/Navbar/Navbar"
 import Home from './pages/index'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -6,6 +7,7 @@ function App() {
 
   return (
     <>
+    <Navbar /> 
 
     <BrowserRouter>
       <Routes>
