@@ -37,19 +37,15 @@ function Achievements() {
   const { t, i18n } = useTranslation()
 
   return (
-    <Container 
+    <Container
       maxWidth="md"
       sx={{
         direction: i18n.language === "ar" ? "rtl" : "ltr",
         textAlign: i18n.language === "ar" ? "right" : "left",
       }}
     >
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      
+      <br /><br /><br /><br /><br />
+
       <AchievementsTitle variant="h2">
         {t("achievements.title")}
       </AchievementsTitle>
@@ -60,26 +56,15 @@ function Achievements() {
 
           return (
             <Card key={achievement.name} bg={achievement.backgroundImage}>
-              
-              {(!isEven && i18n.language === "en") ||
-              (isEven && i18n.language === "ar") ? (
+
+              {!isEven && (
                 <StudentImageLeft
                   src={achievement.studentImage}
                   alt={t(achievement.name)}
                 />
-              ) : null}
+              )}
 
-              <ActionWrapper
-                align={
-                  i18n.language === "ar"
-                    ? isEven
-                      ? "right"
-                      : "left"
-                    : isEven
-                    ? "right"
-                    : "left"
-                }
-              >
+              <ActionWrapper align={isEven ? "right" : "left"}>
                 <Box display="flex" flexDirection="column">
                   <AchievementLabel>{t(achievement.title)}</AchievementLabel>
                   <StudentName>{t(achievement.name)}</StudentName>
@@ -90,13 +75,13 @@ function Achievements() {
                 </ViewButton>
               </ActionWrapper>
 
-              {(isEven && i18n.language === "en") ||
-              (!isEven && i18n.language === "ar") ? (
+              {isEven && (
                 <StudentImageRight
                   src={achievement.studentImage}
                   alt={t(achievement.name)}
                 />
-              ) : null}
+              )}
+
             </Card>
           )
         })}
