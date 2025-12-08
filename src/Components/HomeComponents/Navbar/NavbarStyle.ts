@@ -15,15 +15,10 @@ export const Logo = styled("div")({
   fontSize: "32px",
   color: "#7A1E3C",
   marginTop: "5px",
+  marginLeft: "30px"
 
 })
-export const Typography = styled("div")({
-  display: "flex",
-  alignItems: "center",
-  fontWeight: 700,
-  fontSize: "32px",
-  color: "#7A1E3C",
-})
+
 
 
 export const NavLinks = styled(Box)<{ isrtl?: boolean }>(
@@ -32,13 +27,12 @@ export const NavLinks = styled(Box)<{ isrtl?: boolean }>(
     gap: "3rem",
     alignItems: "center",
     marginLeft: "auto",
-    flexDirection: "row",
     justifyContent: isrtl ? "flex-end" : "flex-start",
   })
 )
 export const NavLink = styled(Button)<{ active?: boolean }>(({ active }) => ({
   color: active ? "#7A1E3C" : "#7A1E3C",
-  fontWeight: active ? "bold" : "normal",
+  fontWeight: active ? "900" : "700",
   fontSize: "16px",
   textTransform: "none",
   "&:hover": {

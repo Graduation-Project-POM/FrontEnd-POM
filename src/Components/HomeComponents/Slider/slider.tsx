@@ -108,9 +108,8 @@ function Slider() {
           <ComPersonImg src={"/comPerson.png"} alt="Programs Illustration" />
 
           <ThirdSlideContent>
-            <ThirdSlideHeading variant="h2">
+            <ThirdSlideHeading variant="h2" align="center">
               {t("slider.slide3.line1")}
-              <br />
               {t("slider.slide3.line2")}
               <br />
               {t("slider.slide3.line3")}

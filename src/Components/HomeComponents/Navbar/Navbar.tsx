@@ -37,18 +37,17 @@ export function Navbar() {
   return (
     <StyledAppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar sx={{ justifyContent: "space-between" }}>
+        <Toolbar sx={{ justifyContent: "space-between",MaxHeight: "64px" }}>
           <Logo><Box component="img" src="/public/olm pal math22.png" alt="" sx={{
             width: {
-              md: "140px",
+              md: "150px",
               xs: "100px"
             },
             height: {
-              md: "70px",
+              md: "75px",
               xs: "60px"
             }
           }} /></Logo>
-          <Typography>PMO</Typography>
 
           <NavLinks isrtl={isRTL} sx={{ display: { xs: "none", md: "flex" }, flex: 1 }}>
             <NavLink active>{t("nav.home")}</NavLink>
