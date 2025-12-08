@@ -22,7 +22,7 @@ export const styles: Record<string, SxProps> = {
         justifyContent: "center",
         alignItems: "center",
         flexWrap: { xs: "wrap", md: "nowrap" },
-        gap: { xs: 1, sm: 6 },
+        gap: { xs: 3, sm: 6 },
     },
     card: {
         p: 2,

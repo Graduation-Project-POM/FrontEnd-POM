@@ -15,7 +15,6 @@ export const StyledSlide = styled(Box, {
     : `url(${bg})`,
   display: "flex",
   alignItems: "center",
-  backgroundSize: "cover",
   backgroundPosition: "center",
   height: "530px",
   [theme.breakpoints.down("md")]: { height: "400px" },

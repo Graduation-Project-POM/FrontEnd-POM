@@ -25,7 +25,6 @@ export const styles = {
         marginBottom: "10px",
         color: "#7D1C48",
         fontWeight: "bold",
-        textAlign: "left",
 
         fontSize: {
             xs: "35px",

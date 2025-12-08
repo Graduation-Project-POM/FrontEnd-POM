@@ -6,16 +6,19 @@ import {
     ArrowForward as ArrowForwardIcon
 } from "@mui/icons-material";
 import { styles } from "./training.ts";
-
-const resourceData = [
-    { title: "Work", subtitle: "Sheets", icon: <Box sx={styles.image} component="img" src="/training1.png" /> },
-    { title: "External", subtitle: "Resources", icon: <Box sx={styles.image} component="img" src="/training2.png" /> },
-    { title: "Practice", subtitle: "Problems", icon: <Box sx={styles.image} component="img" src="/training3.png" /> },
-    { title: "Video", subtitle: "Tutorials", icon: <Box sx={styles.image} component="img" src="/training4.png" /> },
-    { title: "Math", subtitle: "Books", icon: <Box sx={styles.image} component="img" src="/training5.png" /> },
-];
+import { useTranslation } from "react-i18next";
 
 function TrainingField() {
+    const { t } = useTranslation();
+
+    const resourceData = [
+        { title: t("training.resources.work.title"), subtitle: t("training.resources.work.subtitle"), icon: <Box sx={styles.image} component="img" src="/training1.png" /> },
+        { title: t("training.resources.external.title"), subtitle: t("training.resources.external.subtitle"), icon: <Box sx={styles.image} component="img" src="/training2.png" /> },
+        { title: t("training.resources.practice.title"), subtitle: t("training.resources.practice.subtitle"), icon: <Box sx={styles.image} component="img" src="/training3.png" /> },
+        { title: t("training.resources.video.title"), subtitle: t("training.resources.video.subtitle"), icon: <Box sx={styles.image} component="img" src="/training4.png" /> },
+        { title: t("training.resources.math.title"), subtitle: t("training.resources.math.subtitle"), icon: <Box sx={styles.image} component="img" src="/training5.png" /> },
+    ];
+
     const [index, setIndex] = useState(2);
 
     const handleNext = () => setIndex((prev) => (prev + 1) % resourceData.length);
@@ -23,7 +26,7 @@ function TrainingField() {
 
     return (
         <Box sx={{ justifyContent: "center", px: { xs: 2, md: 10 }, py: 5 }}>
-            <Typography sx={styles.title}>Learning Resources</Typography>
+            <Typography sx={styles.title}>{t("training.title")}</Typography>
 
             <Box sx={styles.control}>
                 <IconButton onClick={handlePrev} sx={styles.controlBtn}>
@@ -50,8 +53,10 @@ function TrainingField() {
                         {card.icon}
                         <Typography sx={styles.cardTitle}>{card.title}</Typography>
                         <Typography sx={styles.cardSubtitle}>{card.subtitle}</Typography>
-                        <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 2, cursor: "pointer", color: "#fff", transition: "0.3s", "&:hover": { gap: 2 } }}>
-                            <Typography sx={{ fontWeight: 500, fontSize: 14 }}>Learn More</Typography>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 2, mt: 2, cursor: "pointer", color: "#fff", transition: "0.3s", "&:hover": { gap: 2 } }}>
+                            <Typography sx={{ fontWeight: 500, fontSize: 14 }}>
+                                {t("training.learnMore")}
+                            </Typography>
                             <ArrowForwardIcon sx={{ fontSize: 18 }} />
                         </Box>
                     </Paper>

@@ -2,9 +2,10 @@ import { AppBar, Box, Button } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
 export const StyledAppBar = styled(AppBar)({
-  backgroundColor: "#7A1E3C",
+  backgroundColor: "#fff",
   boxShadow: "none",
   padding: "0.5rem 0",
+  border: "2px solid #7A1E3C",
 })
 
 export const Logo = styled("div")({
@@ -12,17 +13,31 @@ export const Logo = styled("div")({
   alignItems: "center",
   fontWeight: 700,
   fontSize: "32px",
-})
+  color: "#7A1E3C",
+  marginTop: "5px",
 
-export const NavLinks = styled(Box)({
+})
+export const Typography = styled("div")({
   display: "flex",
-  gap: "3rem",
   alignItems: "center",
-  marginLeft: "auto",
+  fontWeight: 700,
+  fontSize: "32px",
+  color: "#7A1E3C",
 })
 
+
+export const NavLinks = styled(Box)<{ isrtl?: boolean }>(
+  ({ isrtl }) => ({
+    display: "flex",
+    gap: "3rem",
+    alignItems: "center",
+    marginLeft: "auto",
+    flexDirection: "row",
+    justifyContent: isrtl ? "flex-end" : "flex-start",
+  })
+)
 export const NavLink = styled(Button)<{ active?: boolean }>(({ active }) => ({
-  color: active ? "#FFD1DC" : "#ffffff",
+  color: active ? "#7A1E3C" : "#7A1E3C",
   fontWeight: active ? "bold" : "normal",
   fontSize: "16px",
   textTransform: "none",
@@ -32,8 +47,8 @@ export const NavLink = styled(Button)<{ active?: boolean }>(({ active }) => ({
 }))
 
 export const LoginButton = styled(Button)({
-  backgroundColor: "#ffffff",
-  color: "#7A1E3C",
+  backgroundColor: "#7A1E3C",
+  color: "#fff",
   fontSize: "16px",
   fontWeight: 600,
   textTransform: "none",
@@ -43,14 +58,14 @@ export const LoginButton = styled(Button)({
 
 export const StyledMenu = styled(Box)({
   "& .MuiPaper-root": {
-    backgroundColor: "#7A1E3C",
-    color: "#ffffff",
+    backgroundColor: "#fff",
+    color: "#7A1E3C",
     minWidth: "250px",
     borderRadius: "8px",
     marginTop: "0.5rem",
   },
   "& .MuiMenuItem-root": {
-    color: "#ffffff",
+    color: "#7A1E3C",
     fontSize: "16px",
     padding: "1rem 2rem",
     "&:hover": {
@@ -66,7 +81,7 @@ export const SidebarContent = styled(Box)({
 })
 
 export const SidebarNavLink = styled(Button)({
-  color: "#ffffff",
+  color: "#fff",
   fontSize: "16px",
   textTransform: "none",
   padding: "1rem 1.5rem",

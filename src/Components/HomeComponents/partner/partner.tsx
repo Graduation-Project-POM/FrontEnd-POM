@@ -1,7 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import { styles } from "./partnerStyle.ts";
+import { useTranslation } from "react-i18next";
 
 function Partner() {
+    const { t } = useTranslation();
+
     return (
         <>
             <Typography
@@ -11,7 +14,7 @@ function Partner() {
                     marginBottom: styles.title.marginBottomResponsive,
                 }}
             >
-                Our Partners
+                {t("partners.title")}
             </Typography>
 
             <Box className="partner" sx={styles.partnerWrapper}>
@@ -24,7 +27,7 @@ function Partner() {
                     <Box
                         component="img"
                         src="/Partner1.png"
-                        alt="partner1"
+                        alt={t("partners.partner1")}
                         sx={styles.partnerImage1}
                         className="partner-img"
                     />
@@ -40,7 +43,7 @@ function Partner() {
                     <Box
                         component="img"
                         src="/Partner2.png"
-                        alt="partner2"
+                        alt={t("partners.partner2")}
                         sx={styles.partnerImage2}
                         className="partner-img"
                     />
@@ -56,7 +59,7 @@ function Partner() {
                     <Box
                         component="img"
                         src="/Partner3.jpg"
-                        alt="partner3"
+                        alt={t("partners.partner3")}
                         sx={styles.partnerImage3}
                         className="partner-img"
                     />

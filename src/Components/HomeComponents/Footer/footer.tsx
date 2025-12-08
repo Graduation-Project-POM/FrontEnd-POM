@@ -20,15 +20,19 @@ import {
   ContactRow,
 } from "./footerStyle.ts";
 
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <FooterWrapper component="footer">
       <Container maxWidth="lg">
         <Grid container spacing={4} sx={{ py: 6 }}>
           <Grid item xs={12} md={6} lg={3}>
-            <BrandTitle>Palestine Math Olympiad</BrandTitle>
+            <BrandTitle>{t("footer.brand.title")}</BrandTitle>
             <BrandDescription>
-              Empowering students across Palestine to explore, learn and excel in mathematics
+              {t("footer.brand.description")}
             </BrandDescription>
 
             <SocialIcons>
@@ -40,45 +44,45 @@ function Footer() {
           </Grid>
 
           <Grid item xs={6} sm={4} md={3} lg={2}>
-            <ColumnTitle>Company</ColumnTitle>
+            <ColumnTitle>{t("footer.company.title")}</ColumnTitle>
             <Column>
-              <FooterLink href="#">About Us</FooterLink>
-              <FooterLink href="#">Services</FooterLink>
-              <FooterLink href="#">Community</FooterLink>
-              <FooterLink href="#">Testimonial</FooterLink>
+              <FooterLink href="#">{t("footer.company.links.about")}</FooterLink>
+              <FooterLink href="#">{t("footer.company.links.services")}</FooterLink>
+              <FooterLink href="#">{t("footer.company.links.community")}</FooterLink>
+              <FooterLink href="#">{t("footer.company.links.testimonial")}</FooterLink>
             </Column>
           </Grid>
 
           <Grid item xs={6} sm={4} md={3} lg={2}>
-            <ColumnTitle>Developers</ColumnTitle>
+            <ColumnTitle>{t("footer.developers.title")}</ColumnTitle>
             <Column>
-              <FooterLink href="#">Web Technologies</FooterLink>
-              <FooterLink href="#">Learn Web Development</FooterLink>
-              <FooterLink href="#">MM Plus</FooterLink>
-              <FooterLink href="#">Hacks Blog</FooterLink>
+              <FooterLink href="#">{t("footer.developers.links.webTech")}</FooterLink>
+              <FooterLink href="#">{t("footer.developers.links.learnWeb")}</FooterLink>
+              <FooterLink href="#">{t("footer.developers.links.mmPlus")}</FooterLink>
+              <FooterLink href="#">{t("footer.developers.links.blog")}</FooterLink>
             </Column>
           </Grid>
 
           <Grid item xs={6} sm={4} md={3} lg={2}>
-            <ColumnTitle>Our Communities</ColumnTitle>
+            <ColumnTitle>{t("footer.communities.title")}</ColumnTitle>
             <Column>
-              <FooterLink href="#">MM Communities</FooterLink>
-              <FooterLink href="#">MM Forum</FooterLink>
-              <FooterLink href="#">MM Chat</FooterLink>
+              <FooterLink href="#">{t("footer.communities.links.mmCommunities")}</FooterLink>
+              <FooterLink href="#">{t("footer.communities.links.mmForum")}</FooterLink>
+              <FooterLink href="#">{t("footer.communities.links.mmChat")}</FooterLink>
             </Column>
           </Grid>
 
           <Grid item xs={12} sm={6} md={3} lg={3}>
-            <ColumnTitle>Contact</ColumnTitle>
+            <ColumnTitle>{t("footer.contact.title")}</ColumnTitle>
             <Column>
               <ContactRow>
                 <PhoneIcon sx={{ fontSize: "1rem", color: "#6E0B2A" }} />
-                <FooterLink href="tel:+324847890">+32 484 7890</FooterLink>
+                <FooterLink href="tel:+324847890">{t("footer.contact.phone")}</FooterLink>
               </ContactRow>
               <ContactRow>
                 <EmailIcon sx={{ fontSize: "1rem", color: "#6E0B2A" }} />
                 <FooterLink href="mailto:support@mmm.com">
-                  support@mmm.com
+                  {t("footer.contact.email")}
                 </FooterLink>
               </ContactRow>
             </Column>
@@ -98,14 +102,14 @@ function Footer() {
             }}
           >
             <Typography sx={{ color: "white", fontSize: "0.8rem" }}>
-              © 2025 Palestine Olympiad. All rights reserved.
+              {t("footer.bottom.rights")}
             </Typography>
 
             <Box sx={{ display: "flex", gap: 3, flexWrap: "wrap" }}>
-              <BottomLink href="#">Privacy Policy</BottomLink>
-              <BottomLink href="#">Terms of Use</BottomLink>
-              <BottomLink href="#">Legal</BottomLink>
-              <BottomLink href="#">Site Map</BottomLink>
+              <BottomLink href="#">{t("footer.bottom.privacy")}</BottomLink>
+              <BottomLink href="#">{t("footer.bottom.terms")}</BottomLink>
+              <BottomLink href="#">{t("footer.bottom.legal")}</BottomLink>
+              <BottomLink href="#">{t("footer.bottom.sitemap")}</BottomLink>
             </Box>
           </Box>
         </Container>
@@ -114,5 +118,4 @@ function Footer() {
   );
 }
 
-
-export default Footer
+export default Footer;
