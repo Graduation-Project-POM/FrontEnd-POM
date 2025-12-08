@@ -24,7 +24,8 @@ import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { useTranslation } from "react-i18next";
 
 function Slider() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
 
   return (
     <Swiper
@@ -66,7 +67,7 @@ function Slider() {
 
               <img src={"/threePeople.png"} alt="Three People" />
               <img src={"/twoPeople.png"} alt="Two People" />
-              <MathBoy src={"/mathBoy.png"} alt="Math" />
+              <MathBoy isrtl={isRTL} src={"/mathBoy.png"} alt="Math" />
             </ContentWrapper>
           </Container>
         </StyledSlide>

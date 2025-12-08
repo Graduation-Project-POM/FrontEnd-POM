@@ -5,7 +5,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-
+import i18n from "i18next";
 import {
   FooterWrapper,
   BottomBar,
@@ -24,11 +24,12 @@ import { useTranslation } from "react-i18next";
 
 function Footer() {
   const { t } = useTranslation();
+  const isRTL = i18n.language === "ar";
 
   return (
-    <FooterWrapper component="footer">
+    <FooterWrapper component="footer" sx={{ direction: isRTL ? "rtl" : "ltr" }}>
       <Container maxWidth="lg">
-        <Grid container spacing={4} sx={{ py: 6 }}>
+        <Grid container spacing={4} sx={{ py: 6, justifyContent: "center", }}>
           <Grid item xs={12} md={6} lg={3}>
             <BrandTitle>{t("footer.brand.title")}</BrandTitle>
             <BrandDescription>
