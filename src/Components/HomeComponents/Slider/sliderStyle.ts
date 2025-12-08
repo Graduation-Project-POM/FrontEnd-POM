@@ -235,12 +235,14 @@ export const ComPersonImg = styled("img")(({ theme }) => ({
   },
 }))
 
-export const MathBoy = styled("img")(({ theme }) => ({
+export const MathBoy = styled("img")<{ isrtl?: boolean }>(({ theme, isrtl }) => ({
   height: "340px",
   objectFit: "contain",
   marginBottom: "2rem",
-  marginLeft: "18rem",
+  marginLeft: isrtl ? "-10rem" : "20rem",
+  marginRight: isrtl ? "18rem" : "-50rem",
   marginTop: "-5rem",
+
   [theme.breakpoints.down("md")]: {
     height: "220px",
     marginLeft: "8rem",
