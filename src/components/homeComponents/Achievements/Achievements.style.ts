@@ -82,7 +82,7 @@ export const StudentImageRight = styled("img")(({ theme }) => ({
   width: "auto",
   objectFit: "contain",
   position: "absolute",
-  right: theme.spacing(2),
+  right: theme.spacing(-1),
   bottom: 0,
   zIndex: 2,
   [theme.breakpoints.down("md")]: {

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import { Container } from "@mui/material"
-
-import firstBGAch from "../../../assets/images/firstBGAch.png"
-import secondBGAch from "../../../assets/images/secondBGAch.png"
-import firstStud from "../../../assets/images/firstStud.png"
-import secStud from "../../../assets/images/secStud.png"
-import thirdStud from "../../../assets/images/thirdStud.png"
-=======
 import { Box, Container } from "@mui/material"
->>>>>>> 756da52 (faet: create responsive design for achievements section)
 import {
   AchievementsWrapper,
   Card,
@@ -17,13 +7,9 @@ import {
   ActionWrapper,
   ViewButton,
   AchievementsTitle,
-<<<<<<< HEAD
-} from "./Achievements.style"
-=======
   AchievementLabel,
   StudentName,
-} from "./AchievementsStyle"
->>>>>>> 756da52 (faet: create responsive design for achievements section)
+} from "./Achievements.style"
 
 const achievements = [
   {
@@ -49,18 +35,12 @@ const achievements = [
 export function Achievements() {
   return (
     <Container maxWidth="md">
-<<<<<<< HEAD
-      <AchievementsTitle variant="h2">
-        Achievements and Awards
-      </AchievementsTitle>
-=======
       <br />
       <br />
       <br />
       <br />
       <br />
       <AchievementsTitle variant="h2">Achievements and Awards</AchievementsTitle>
->>>>>>> 756da52 (faet: create responsive design for achievements section)
       <AchievementsWrapper>
         {achievements.map((achievement, index) => {
           const isEven = index % 2 === 0
