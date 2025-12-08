@@ -1,0 +1,176 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "program": "Program",
+        "about": "About",
+        "login": "Log In"
+    },
+    "hero": {
+        "title1": "Where champions begin.",
+        "desc1": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems.",
+        "explore": "Explore",
+        "start": "Start",
+        "title2": "From Palestine's PMO to the World's IMO",
+        "title3": "Programs, camps, competitions all in one place"
+    },
+    "about": {
+        "title": "About Us",
+        "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine." 
+    },
+    "footer": {
+        "company": "Company",
+        "community": "Community",
+        "developers": "Developers",
+        "contact": "Contact",
+        "rights": "All rights reserved."
+    },
+    "achievements": {
+        "title": "Achievements and Awards",
+        "third_place": "Third Place",
+        "second_place": "Second Place",
+        "special": "Special Recognition",
+        "yousef": "Yousef Barakat",
+        "kareem": "Kareem Mahmmoud",
+        "reem": "Reem Haddad",
+        "view_details": "View Details"
+    },
+    "partners": {
+        "title": "Our Partners",
+        "partner1": "Taawon Association",
+        "partner2": "Ministry of Education",
+        "partner3": "Palestinian Academy for Science and Technology"
+    },
+    "programs": {
+        "title": "Our Programs",
+        "explore": "Explore More",
+        "items": {
+            "prep": {
+                "title": "Preparation Stage",
+                "desc": "Students join trainings and practice problems to build strong math skills before the competition starts."
+            },
+            "rounds": {
+                "title": "Preliminary Rounds",
+                "desc": "Participants take qualifying exams to select the top students for the advanced stages."
+            },
+            "finals": {
+                "title": "Finals",
+                "desc": "Top students compete in the final round with challenging problems testing logic and creativity."
+            },
+            "awards": {
+                "title": "Awards & Recognition",
+                "desc": "Winners receive medals, certificates, and public recognition for their achievements."
+            },
+            "finish": {
+                "title": "Finish Stage",
+                "desc": "The competition concludes, results are published, and preparations begin for the next Olympiad."
+            }
+        }
+    },
+    "slider": {
+        "buttons": {
+            "explore": "Explore",
+            "start": "Start"
+        },
+        "slide1": {
+            "title": "Where champions begin.",
+            "desc": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems."
+        },
+        "slide2": {
+            "title1": "From Palestine’s PMO",
+            "title2": "to the World’s IMO"
+        },
+        "slide3": {
+            "line1": "Programs, camps,",
+            "line2": "competitions",
+            "line3": "all in one place"
+        }
+    },
+    "training": {
+        "title": "Learning Resources",
+        "learnMore": "Learn More",
+        "resources": {
+            "work": {
+                "title": "Work",
+                "subtitle": "Sheets"
+            },
+            "external": {
+                "title": "External",
+                "subtitle": "Resources"
+            },
+            "practice": {
+                "title": "Practice",
+                "subtitle": "Problems"
+            },
+            "video": {
+                "title": "Video",
+                "subtitle": "Tutorials"
+            },
+            "math": {
+                "title": "Math",
+                "subtitle": "Books"
+            }
+        }
+    },
+    "vision": {
+        "title": "Our Vision",
+        "slides": {
+            "discover": {
+                "title": "Discover Talent",
+                "text": "We identify young students with exceptional logical and creative thinking skills across Palestine."
+            },
+            "train": {
+                "title": "Train & Inspire",
+                "text": "Expert coaches guide students through workshops, camps, and challenges to unlock their full potential."
+            },
+            "compete": {
+                "title": "Compete Globally",
+                "text": "Students are prepared to proudly represent Palestine in international competitions like IMO and ARMO."
+            }
+        }
+    },
+    "footer": {
+        "brand": {
+            "title": "Palestine Math Olympiad",
+            "description": "Empowering students across Palestine to explore, learn and excel in mathematics"
+        },
+        "company": {
+            "title": "Company",
+            "links": {
+                "about": "About Us",
+                "services": "Services",
+                "community": "Community",
+                "testimonial": "Testimonial"
+            }
+        },
+        "developers": {
+            "title": "Developers",
+            "links": {
+                "webTech": "Web Technologies",
+                "learnWeb": "Learn Web Development",
+                "mmPlus": "MM Plus",
+                "blog": "Hacks Blog"
+            }
+        },
+        "communities": {
+            "title": "Our Communities",
+            "links": {
+                "mmCommunities": "MM Communities",
+                "mmForum": "MM Forum",
+                "mmChat": "MM Chat"
+            }
+        },
+        "contact": {
+            "title": "Contact",
+            "phone": "+32 484 7890",
+            "email": "support@mmm.com"
+        },
+        "bottom": {
+            "rights": "© 2025 Palestine Olympiad. All rights reserved.",
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Use",
+            "legal": "Legal",
+            "sitemap": "Site Map"
+        }
+    }
+}

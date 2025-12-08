@@ -7,20 +7,25 @@ import {
 import { styles } from "./visionStyle.ts";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
+import i18n from "../../../utils/i18n.ts";
 
 function Vision() {
+    const { t } = useTranslation();
+    const isRTL = i18n.language === "ar"
+
     const slides = [
         {
-            title: "Discover Talent",
-            text: "We identify young students with exceptional logical and creative thinking skills across Palestine.",
+            title: t("vision.slides.discover.title"),
+            text: t("vision.slides.discover.text"),
         },
         {
-            title: "Train & Inspire",
-            text: "Expert coaches guide students through workshops, camps, and challenges to unlock their full potential.",
+            title: t("vision.slides.train.title"),
+            text: t("vision.slides.train.text"),
         },
         {
-            title: "Compete Globally",
-            text: "Students are prepared to proudly represent Palestine in international competitions like IMO and ARMO.",
+            title: t("vision.slides.compete.title"),
+            text: t("vision.slides.compete.text"),
         },
     ];
 
@@ -40,15 +45,16 @@ function Vision() {
     return (
         <>
             <Box sx={styles.visionContainer} data-aos="fade-up">
-                <Typography sx={styles.title}>Our Vision</Typography>
+                <Typography sx={styles.title}>{t("vision.title")}</Typography>
 
                 <Box sx={styles.controlsWrapper}>
-                    <IconButton onClick={handlePrev} sx={styles.controlBtn}>
+                    <IconButton onClick={handlePrev} sx={{ ...styles.controlBtn, transform: isRTL?"scaleX(-1)":"scaleX(1)" }}>
                         <ArrowBackIosNewIcon fontSize="small" />
                     </IconButton>
-                    <IconButton onClick={handleNext} sx={styles.controlBtn}>
+                    <IconButton onClick={handleNext} sx={{ ...styles.controlBtn,  transform: isRTL?"scaleX(-1)":"scaleX(1)"  }}>
                         <ArrowForwardIosIcon fontSize="small" />
                     </IconButton>
+
                 </Box>
             </Box>
 

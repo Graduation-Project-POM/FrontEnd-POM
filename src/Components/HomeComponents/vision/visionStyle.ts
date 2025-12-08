@@ -1,3 +1,5 @@
+import { Margin } from "@mui/icons-material";
+
 export const styles = {
     visionContainer: {
         display: "flex",
@@ -19,6 +21,11 @@ export const styles = {
         padding: { xs: "0 10px", md: "70px 150px" },
         textAlign: { xs: "center", md: "left" },
         textShadow: "0px 3px 6px rgba(27, 27, 27, 0.15)",
+        marginTop:{
+            xs:"100px",
+            md:"28px"
+        }
+
     },
 
     controlsWrapper: {
@@ -37,6 +44,7 @@ export const styles = {
         p: { xs: 0.8, sm: 1.2, md: 1.8 },
         borderRadius: "50%",
         transition: "0.3s",
+        marginTop:"50px"
     },
 
     image: {
