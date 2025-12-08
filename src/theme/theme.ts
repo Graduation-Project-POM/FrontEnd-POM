@@ -2,6 +2,6 @@ import { createTheme } from "@mui/material/styles";
 
 export const theme = createTheme({
   typography: {
-    fontFamily: "Lenos Thin, sans-serif",
+    fontFamily: "Lenos, sans-serif",
   },
 });

@@ -17,7 +17,7 @@ import {
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.language ==="ar";
+  const isRTL = i18n.language === "ar";
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <StyledAppBar position="static">
       <Container maxWidth="xl">
-        <Toolbar sx={{ justifyContent: "space-between",MaxHeight: "64px" }}>
+        <Toolbar sx={{ justifyContent: "space-between", MaxHeight: "64px" }}>
           <Logo><Box component="img" src="/public/olm pal math22.png" alt="" sx={{
             width: {
               md: "150px",
@@ -58,39 +58,30 @@ export function Navbar() {
           </NavLinks>
 
           <Box sx={{ display: "flex", gap: 1, padding: "0.5rem", background: "#fff" }}>
-            {["en", "ar"].map((lang) => (
-              <Button
-                key={lang}
-                onClick={() => i18n.changeLanguage(lang)}
-                variant={i18n.language === lang ? "contained" : "outlined"}
-                sx={{
-                  minWidth: 40,
-                  height: 40,
-                  borderRadius: "50%",
-                  fontWeight: "bold",
-                  fontSize: "0.8rem",
-                  transition: "0.3s",
-                  borderColor: "#7D1C48",
-                  color: i18n.language === lang ? "#fff" : "#7D1C48",
-                  backgroundColor: i18n.language === lang ? "#7D1C48" : "transparent",
-                  boxShadow:
-                    i18n.language === lang
-                      ? "0 0 8px rgba(125,28,72,0.6)"
-                      : "none",
-                  "&:hover": {
-                    backgroundColor: i18n.language === lang ? "#7D1C48" : "#f8f8f8",
-                    color: i18n.language === lang ? "#fff" : "#7D1C48",
-                    boxShadow:
-                      i18n.language === lang
-                        ? "0 0 12px rgba(125,28,72,0.8)"
-                        : "0 0 6px rgba(125,28,72,0.3)",
-                  },
-                }}
-              >
-                {lang.toUpperCase()}
-              </Button>
-            ))}
+            <Button
+              onClick={() => i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar")}
+              variant="contained"
+              sx={{
+                minWidth: 40,
+                height: 40,
+                borderRadius: "50%",
+                fontWeight: "bold",
+                fontSize: "0.8rem",
+                transition: "0.3s",
+                borderColor: "#7D1C48",
+                color: "#fff",
+                backgroundColor: "#7D1C48",
+                boxShadow: "0 0 8px rgba(125,28,72,0.6)",
+                "&:hover": {
+                  backgroundColor: "#7D1C48",
+                  boxShadow: "0 0 12px rgba(125,28,72,0.8)",
+                },
+              }}
+            >
+              {i18n.language === "ar" ? "EN" : "AR"}
+            </Button>
           </Box>
+
           <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton onClick={handleOpen}
               sx={{

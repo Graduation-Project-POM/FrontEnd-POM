@@ -14,8 +14,8 @@ function Home() {
         <Navbar/>
         <Slider/>
         <About />
-        <Partner/>
         <Vision/>
+        <Partner/>
         <Programs/>
         <TrainingField/>
         <Achievements/>

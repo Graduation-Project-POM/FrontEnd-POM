@@ -33,7 +33,7 @@ export const styles: Record<string, SxProps> = {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        backgroundImage: 'url("https://whatsmylevel.com/background.png")',
+        backgroundImage: 'url("/background.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         transition: "transform 0.3s, opacity 0.3s",
