@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Toolbar, Container, IconButton, Box, Drawer, Button, Typography } from "@mui/material"
+import { Toolbar, Container, IconButton, Box, Drawer, Button } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import CloseIcon from "@mui/icons-material/Close"
 import { useTranslation } from "react-i18next";
@@ -60,25 +60,24 @@ export function Navbar() {
           <Box sx={{ display: "flex", gap: 1, padding: "0.5rem", background: "#fff" }}>
             <Button
               onClick={() => i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar")}
-              variant="contained"
+              variant="outlined"
               sx={{
-                minWidth: 40,
-                height: 40,
-                borderRadius: "50%",
+                minWidth: "95px",
+                height: "40px",
+                borderRadius: "10px",
                 fontWeight: "bold",
-                fontSize: "0.8rem",
-                transition: "0.3s",
+                fontSize: "0.9rem",
                 borderColor: "#7D1C48",
-                color: "#fff",
-                backgroundColor: "#7D1C48",
-                boxShadow: "0 0 8px rgba(125,28,72,0.6)",
+                color: "#7D1C48",
+                backgroundColor: "#fff",
+                textTransform: "none",
                 "&:hover": {
-                  backgroundColor: "#7D1C48",
-                  boxShadow: "0 0 12px rgba(125,28,72,0.8)",
+                  backgroundColor: "#f5e5eb",
+                  borderColor: "#7D1C48",
                 },
               }}
             >
-              {i18n.language === "ar" ? "EN" : "AR"}
+              {i18n.language === "ar" ? "English" : "العربية"}
             </Button>
           </Box>
 

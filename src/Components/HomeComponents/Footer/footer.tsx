@@ -30,7 +30,7 @@ function Footer() {
     <FooterWrapper component="footer" sx={{ direction: isRTL ? "rtl" : "ltr" }}>
       <Container maxWidth="lg">
         <Grid container spacing={4} sx={{ py: 6, justifyContent: "center", }}>
-          <Grid item xs={12} md={6} lg={3}>
+          <Grid>
             <BrandTitle>{t("footer.brand.title")}</BrandTitle>
             <BrandDescription>
               {t("footer.brand.description")}
@@ -44,7 +44,7 @@ function Footer() {
             </SocialIcons>
           </Grid>
 
-          <Grid item xs={6} sm={4} md={3} lg={2}>
+          <Grid>
             <ColumnTitle>{t("footer.company.title")}</ColumnTitle>
             <Column>
               <FooterLink href="#">{t("footer.company.links.about")}</FooterLink>
@@ -54,7 +54,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid item xs={6} sm={4} md={3} lg={2}>
+          <Grid>
             <ColumnTitle>{t("footer.developers.title")}</ColumnTitle>
             <Column>
               <FooterLink href="#">{t("footer.developers.links.webTech")}</FooterLink>
@@ -64,7 +64,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid item xs={6} sm={4} md={3} lg={2}>
+          <Grid>
             <ColumnTitle>{t("footer.communities.title")}</ColumnTitle>
             <Column>
               <FooterLink href="#">{t("footer.communities.links.mmCommunities")}</FooterLink>
@@ -73,7 +73,7 @@ function Footer() {
             </Column>
           </Grid>
 
-          <Grid item xs={12} sm={6} md={3} lg={3}>
+          <Grid>
             <ColumnTitle>{t("footer.contact.title")}</ColumnTitle>
             <Column>
               <ContactRow>
