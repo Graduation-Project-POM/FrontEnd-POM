@@ -12,7 +12,7 @@ import i18n from "../../../utils/i18n.ts";
 
 function Vision() {
     const { t } = useTranslation();
-    const isRTL = i18n.language === "ar"
+    const isRTL = i18n.language ==="ar"
 
     const slides = [
         {
