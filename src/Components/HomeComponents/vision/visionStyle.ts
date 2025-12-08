@@ -9,7 +9,6 @@ export const styles = {
         gap: { xs: 1.5, md: 0 },
         textAlign: { xs: "center", md: "left" },
         mb: 3,
-        marginTop:{xs:"0" , md:"200px"},
 
     },
 

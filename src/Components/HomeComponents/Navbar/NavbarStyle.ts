@@ -19,8 +19,6 @@ export const Logo = styled("div")({
 
 })
 
-
-
 export const NavLinks = styled(Box)<{ isrtl?: boolean }>(
   ({ isrtl }) => ({
     display: "flex",
@@ -30,6 +28,7 @@ export const NavLinks = styled(Box)<{ isrtl?: boolean }>(
     justifyContent: isrtl ? "flex-end" : "flex-start",
   })
 )
+
 export const NavLink = styled(Button)<{ active?: boolean }>(({ active }) => ({
   color: active ? "#7A1E3C" : "#7A1E3C",
   fontWeight: active ? "900" : "700",
