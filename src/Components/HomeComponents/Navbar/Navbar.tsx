@@ -38,7 +38,7 @@ export function Navbar() {
     <StyledAppBar position="static">
       <Container maxWidth="xl">
         <Toolbar sx={{ justifyContent: "space-between", MaxHeight: "64px" }}>
-          <Logo><Box component="img" src="/public/olm pal math22.png" alt="" sx={{
+          <Logo><Box component="img" src="/olm pal math22.png" alt="" sx={{
             width: {
               md: "150px",
               xs: "100px"
