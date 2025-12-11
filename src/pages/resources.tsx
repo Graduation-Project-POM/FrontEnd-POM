@@ -1,9 +1,9 @@
 
 
-function Resources(){
-    return(
-        <></>
-    )
+function Resources() {
+  return (
+    <></>
+  )
 }
 
 export default Resources
