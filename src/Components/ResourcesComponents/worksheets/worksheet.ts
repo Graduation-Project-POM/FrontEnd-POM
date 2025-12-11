@@ -1,21 +1,25 @@
-import { Box, Typography, Button, Card, CardContent, CardMedia, IconButton } from '@mui/material';
+import { Box, Typography, Card, CardMedia, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export const PageWrapper = styled(Box)(({ theme }) => ({
-  minHeight: '100vh',
-  backgroundColor: '#f5f5f5',
-  direction: theme.direction,
+interface RTLProps {
+  isrtl?: boolean;
+}
+
+export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
+  minHeight: "100vh",
+  backgroundColor: "#f5f5f5",
+  direction: isrtl ? "rtl" : "ltr",
 }));
 
 export const TopBanner = styled(Box)({
-  backgroundColor: '#7d2d3d',
+  backgroundColor: '#7A1E3C',
   color: 'white',
   padding: '12px 0',
   textAlign: 'center',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  gap: '8px',
+  gap: '2px',
 });
 
 export const HeaderWrapper = styled(Box)({
@@ -24,16 +28,19 @@ export const HeaderWrapper = styled(Box)({
   padding: '16px 0',
 });
 
-export const HeaderInner = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-});
+export const HeaderInner = styled(Box)<RTLProps>(({ isrtl }) => ({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
+  flexDirection: isrtl ? "row-reverse" : "row",
+}));
 
-export const HeaderLeft = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-});
+export const HeaderLeft = styled(Box)<RTLProps>(({ isrtl }) => ({
+  display: "flex",
+  alignItems: "center",
+  flexDirection: isrtl ? "row-reverse" : "row",
+  gap: "12px",
+}));
 
 export const MainTitle = styled(Typography)({
   fontWeight: 600,
@@ -50,7 +57,7 @@ export const DescriptionText = styled(Typography)({
 
 export const SectionTitle = styled(Typography)({
   fontWeight: 600,
-  color: '#7d2d3d',
+  color: '#7A1E3C',
   marginBottom: '32px',
 });
 
@@ -60,19 +67,21 @@ export const SectionBox = styled(Box)({
   padding: '32px',
 });
 
-export const SectionHeader = styled(Box)({
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  marginBottom: '32px',
-});
+export const SectionHeader = styled(Box)<RTLProps>(({ isrtl }) => ({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  flexDirection: isrtl ? "row-reverse" : "row",
+}));
 
-export const CardsGrid = styled(Box)({
-  display: 'grid',
-  gridTemplateColumns: 'repeat(3, 1fr)',
-  gap: '24px',
-  marginBottom: '24px',
-});
+export const CardsGrid = styled(Box)<RTLProps>(({ isrtl }) => ({
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "24px",
+  marginTop: "24px",
+  marginBottom: "24px",
+  direction: isrtl ? "rtl" : "ltr",
+}));
 
 export const StyledCard = styled(Card)({
   borderRadius: '16px',
@@ -87,11 +96,13 @@ export const StyledCardMedia = styled(CardMedia)({
   cursor: 'pointer',
 });
 
-export const NavButtonsWrapper = styled(Box)({
-  display: 'flex',
-  justifyContent: 'flex-end',
-  gap: '8px',
-});
+export const NavButtonsWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
+  display: "flex",
+  justifyContent: isrtl ? "flex-start" : "flex-end",
+  flexDirection: isrtl ? "row-reverse" : "row",
+  gap: "8px",
+}));
+
 
 export const PrevBtn = styled(IconButton)({
   backgroundColor: '#a15566',
@@ -100,7 +111,7 @@ export const PrevBtn = styled(IconButton)({
 });
 
 export const NextBtn = styled(IconButton)({
-  backgroundColor: '#7d2d3d',
+  backgroundColor: '#7A1E3C',
   color: 'white',
   '&:hover': { backgroundColor: '#6a2534' },
 });

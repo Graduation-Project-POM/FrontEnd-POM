@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Button, CardContent, CardMedia } from '@mui/material';
-import { ArrowRight, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
+import { ArrowRight, ArrowLeft, ChevronLeft, ChevronRight, Heart } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Logo } from '../../HomeComponents/Navbar/NavbarStyle';
 import {
@@ -20,9 +20,15 @@ import {
   NextBtn
 } from './worksheet';
 import { useTranslation } from "react-i18next";
+import { useEffect } from 'react';
 
 export function Worksheet() {
   const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
+
+  useEffect(() => {
+    document.documentElement.dir = isRTL ? "rtl" : "ltr";
+  }, [isRTL]);
 
   const worksheets = [
     {
@@ -49,7 +55,7 @@ export function Worksheet() {
   ];
 
   return (
-    <PageWrapper>
+    <PageWrapper isrtl={isRTL}>
       <TopBanner>
         <Box sx={{ position: "absolute", left: 20 }}>
           <Button
@@ -61,8 +67,8 @@ export function Worksheet() {
               borderRadius: "10px",
               fontWeight: "bold",
               fontSize: "0.9rem",
-              borderColor: "#7D1C48",
-              color: "#7D1C48",
+              borderColor: "#7A1E3C",
+              color: "#7A1E3C",
               backgroundColor: "#fff",
               textTransform: "none",
             }}
@@ -80,8 +86,8 @@ export function Worksheet() {
 
       <HeaderWrapper>
         <Container maxWidth="lg">
-          <HeaderInner>
-            <HeaderLeft>
+          <HeaderInner isrtl={isRTL}>
+            <HeaderLeft isrtl={isRTL}>
               <Logo>
                 <Box
                   component="img"
@@ -93,7 +99,10 @@ export function Worksheet() {
                   }}
                 />
               </Logo>
-              <Button sx={{ color: '#333', textTransform: 'none', fontSize: '1rem' }} endIcon={<ArrowRight size={20} />}>
+              <Button
+                sx={{ color: '#333', textTransform: 'none', fontSize: '1rem' }}
+                endIcon={isRTL ? <ArrowLeft size={20} /> : <ArrowRight size={20} />}
+              >
                 <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
                   {t("worksheet.headerBack")}
                 </Link>
@@ -105,7 +114,7 @@ export function Worksheet() {
               </Button>
               <Button
                 variant="contained"
-                sx={{ bgcolor: '#7d2d3d', textTransform: 'none', fontSize: '1rem', px: 3 }}
+                sx={{ bgcolor: '#7A1E3C', textTransform: 'none', fontSize: '1rem', px: 3 }}
               >
                 {t("worksheet.login")}
               </Button>
@@ -130,17 +139,17 @@ export function Worksheet() {
       <Container maxWidth="lg" sx={{ mb: 8 }}>
         <SectionTitle variant="h4">{t("worksheet.externalTitle")}</SectionTitle>
         <SectionBox>
-          <SectionHeader>
-            <Typography variant="h5" sx={{ fontWeight: 600, color: '#7d2d3d' }}>
+          <SectionHeader isrtl={isRTL}>
+            <Typography variant="h5" sx={{ fontWeight: 600, color: '#7A1E3C' }}>
               {t("worksheet.externalSub")}
               <br />
               {t("worksheet.secExternalSub")}
             </Typography>
-            <Button sx={{ color: '#7d2d3d', textTransform: 'none', fontSize: '1rem', fontWeight: 600 }}>
+            <Button sx={{ color: '#7A1E3C', textTransform: 'none', fontSize: '1rem', fontWeight: 600 }}>
               {t("worksheet.viewHistory")}
             </Button>
           </SectionHeader>
-          <CardsGrid>
+          <CardsGrid isrtl={isRTL}>
             {worksheets.map((w) => (
               <StyledCard key={w.title}>
                 <a href={w.pdf} target="_blank">
@@ -162,7 +171,7 @@ export function Worksheet() {
               </StyledCard>
             ))}
           </CardsGrid>
-          <NavButtonsWrapper>
+          <NavButtonsWrapper isrtl={isRTL}>
             <PrevBtn><ChevronLeft size={20} /></PrevBtn>
             <NextBtn><ChevronRight size={20} /></NextBtn>
           </NavButtonsWrapper>
