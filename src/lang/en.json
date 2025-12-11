@@ -16,14 +16,7 @@
     },
     "about": {
         "title": "About Us",
-        "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine." 
-    },
-    "footer": {
-        "company": "Company",
-        "community": "Community",
-        "developers": "Developers",
-        "contact": "Contact",
-        "rights": "All rights reserved."
+        "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine."
     },
     "achievements": {
         "title": "Achievements and Awards",
@@ -172,5 +165,31 @@
             "legal": "Legal",
             "sitemap": "Site Map"
         }
+    },
+    "books": {
+        "heroTitle": "Discover",
+        "highlight": "Amazing Books",
+        "heroDesc": "Explore our curated collection of mathematical wonders and problem-solving resources",
+        "title1": "International Mathematics Olympiad Book – Omran Quba",
+        "desc1": "Master the fundamentals of creative problem solving",
+        "title2": "The Art of Problem Solving",
+        "desc2": "Dive deep into advanced mathematical concepts",
+        "title3": "IMO 2023 Shortlisted Problems",
+        "desc3": "Challenge yourself with International Math Olympiad questions",
+        "open": "Open Book"
+    },
+    "problems": {
+        "heroTitle": "Discover",
+        "highlight": "Olympiad Problems",
+        "heroDesc": "Browse our curated collection of international Olympiad problems, solutions, and math training resources.",
+        "title1": "Mathematical Olympiad Problems from 1959 to 2018",
+        "desc1": "A complete set of Palestinian and international Olympiad problems across the years.",
+        "title2": "Poland Olympiad 1965 Problems and Puzzles with Solutions",
+        "desc2": "Detailed solutions for the toughest math problems and puzzles.",
+        "title3": "International Mathematical Olympiad",
+        "desc3": "Challenge yourself with international math Olympiad problems.",
+        "title4": "Olympiad Problems and Solutions",
+        "desc4": "A comprehensive site for advanced problems and solutions.",
+        "open": "Open Problem"
     }
 }
