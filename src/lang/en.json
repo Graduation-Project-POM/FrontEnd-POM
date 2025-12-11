@@ -188,18 +188,18 @@
     "secExternalSub": "to support your olympiad preparation.",
     "viewHistory": "View history",
     "card1": {
-      "title": "Practice Sheets",
-      "desc": "Need extra practice? Access a wide range of worksheets covering essential math skills.",
-      "extra": "These sheets are perfect for strengthening your concepts."
+      "title": "Arab Mathematics Olympiad – Doha 2024",
+      "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
+      "extra": "Includes an online training program held from 16–19 September 2025."
     },
     "card2": {
-      "title": "Preparation Booklets",
-      "desc": "Find structured booklets built to prepare you for math competitions and exams.",
+      "title": "Arab Mathematics Olympiad – 2nd Edition (2020)",
+      "desc": "The second edition of the Arab Mathematics Olympiad, featuring high-level mathematical problems and participation from students across the region.",
       "extra": null
     },
     "card3": {
-      "title": "Online Learning Portal",
-      "desc": "Explore our recommended online platform for video lessons, exercises, and quizzes.",
+      "title": "Jordan Mathematics Olympiad – Past Papers",
+      "desc": "Archive of past papers, sample problems, and training booklets from the Jordanian Mathematics Olympiad, offering high-quality preparation material in Arabic.",
       "extra": null
     }
   }
