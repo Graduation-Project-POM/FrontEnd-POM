@@ -1,10 +1,11 @@
 import { Box, Typography, Button, Card, CardContent, CardMedia, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-export const PageWrapper = styled(Box)({
+export const PageWrapper = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
   backgroundColor: '#f5f5f5',
-});
+  direction: theme.direction,
+}));
 
 export const TopBanner = styled(Box)({
   backgroundColor: '#7d2d3d',
