@@ -14,7 +14,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
 
-export function Worksheet() {
+export function ExternalResources() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
@@ -22,26 +22,26 @@ export function Worksheet() {
     document.documentElement.dir = isRTL ? "rtl" : "ltr";
   }, [isRTL]);
 
-  const worksheets = [
+  const externalResourcess = [
     {
-      title: t("worksheet.card1.title"),
+      title: t("externalResources.card1.title"),
       image: '/images.png',
       pdf: '/secPDF.pdf',
-      description: t("worksheet.card1.desc"),
-      extraLine: t("worksheet.card1.extra")
+      description: t("externalResources.card1.desc"),
+      extraLine: t("externalResources.card1.extra")
     },
     {
-      title: t("worksheet.card2.title"),
+      title: t("externalResources.card2.title"),
       image: '/secRes.png',
       pdf: '/educ_olymp.pdf',
-      description: t("worksheet.card2.desc"),
+      description: t("externalResources.card2.desc"),
       extraLine: null
     },
     {
-      title: t("worksheet.card3.title"),
+      title: t("externalResources.card3.title"),
       image: '/thrdRes.jpg',
       pdf: 'https://www.joacademy.com/',
-      description: t("worksheet.card3.desc"),
+      description: t("externalResources.card3.desc"),
       extraLine: null
     }
   ];
@@ -49,20 +49,20 @@ export function Worksheet() {
   return (
     <PageWrapper isrtl={isRTL}>
       <Container maxWidth="lg" sx={{ mb: 8 }}>
-        <SectionTitle variant="h4">{t("worksheet.externalTitle")}</SectionTitle>
+        <SectionTitle variant="h4">{t("externalResources.externalTitle")}</SectionTitle>
         <SectionBox>
           <SectionHeader isrtl={isRTL}>
             <Typography variant="h5" sx={{ fontWeight: 600, color: '#7A1E3C' }}>
-              {t("worksheet.externalSub")}
+              {t("externalResources.externalSub")}
               <br />
-              {t("worksheet.secExternalSub")}
+              {t("externalResources.secExternalSub")}
             </Typography>
             <Button sx={{ color: '#7A1E3C', textTransform: 'none', fontSize: '1rem', fontWeight: 600 }}>
-              {t("worksheet.viewHistory")}
+              {t("externalResources.viewHistory")}
             </Button>
           </SectionHeader>
           <CardsGrid isrtl={isRTL}>
-            {worksheets.map((w) => (
+            {externalResourcess.map((w) => (
               <StyledCard key={w.title}>
                 <a href={w.pdf} target="_blank">
                   <CardMedia component="img" image={w.image} sx={{ height: 200, objectFit: 'cover' }} />

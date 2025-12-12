@@ -129,7 +129,7 @@
       }
     }
   },
-  "worksheet": {
+  "externalResources": {
     "bannerText1": "Push your limits",
     "bannerText2": "Great minds start with one problem",
     "headerBack": "Back to Home Page",
@@ -137,7 +137,7 @@
     "login": "Login",
     "title": "Resources - Your Complete Learning Hub",
     "desc1": "Welcome to the Resources section, where you can explore a wide range of materials designed to support students, teachers, and math enthusiasts.",
-    "desc2": "Here, you'll find organized collections of worksheets, external references, practice problems, video tutorials, and recommended math books.",
+    "desc2": "Here, you'll find organized collections of externalResourcess, external references, practice problems, video tutorials, and recommended math books.",
     "desc3": "Browse through the categories below and start learning with high-quality, structured resources tailored just for you.",
     "externalTitle": "External Resources",
     "externalSub": "Boost your learning with trusted external resources designed",

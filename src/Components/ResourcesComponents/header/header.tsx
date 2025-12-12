@@ -45,9 +45,9 @@ export function Header() {
           </Button>
         </Box>
         <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <Typography variant="body2">{t("worksheet.bannerText1")}</Typography>
+          <Typography variant="body2">{t("externalResources.bannerText1")}</Typography>
           <Heart size={16} fill="white" />
-          <Typography variant="body2">{t("worksheet.bannerText2")}</Typography>
+          <Typography variant="body2">{t("externalResources.bannerText2")}</Typography>
         </Box>
         <Box sx={{ width: 120 }} />
       </TopBanner>
@@ -72,19 +72,19 @@ export function Header() {
                 endIcon={isRTL ? <ArrowLeft size={20} /> : <ArrowRight size={20} />}
               >
                 <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
-                  {t("worksheet.headerBack")}
+                  {t("externalResources.headerBack")}
                 </Link>
               </Button>
             </HeaderLeft>
             <Box sx={{ display: 'flex', gap: 2 }}>
               <Button sx={{ color: '#333', textTransform: 'none', fontSize: '1rem' }}>
-                {t("worksheet.signup")}
+                {t("externalResources.signup")}
               </Button>
               <Button
                 variant="contained"
                 sx={{ bgcolor: '#7A1E3C', textTransform: 'none', fontSize: '1rem', px: 3 }}
               >
-                {t("worksheet.login")}
+                {t("externalResources.login")}
               </Button>
             </Box>
           </HeaderInner>
@@ -94,12 +94,12 @@ export function Header() {
       <Container maxWidth="lg" sx={{ mt: 8, mb: 6 }}>
         <Box sx={{ display: 'flex', gap: 8 }}>
           <Box sx={{ flex: 1 }}>
-            <MainTitle variant="h3">{t("worksheet.title")}</MainTitle>
+            <MainTitle variant="h3">{t("externalResources.title")}</MainTitle>
           </Box>
           <Box sx={{ flex: 1 }}>
-            <DescriptionText>{t("worksheet.desc1")}</DescriptionText>
-            <DescriptionText>{t("worksheet.desc2")}</DescriptionText>
-            <DescriptionText>{t("worksheet.desc3")}</DescriptionText>
+            <DescriptionText>{t("externalResources.desc1")}</DescriptionText>
+            <DescriptionText>{t("externalResources.desc2")}</DescriptionText>
+            <DescriptionText>{t("externalResources.desc3")}</DescriptionText>
           </Box>
         </Box>
       </Container>
