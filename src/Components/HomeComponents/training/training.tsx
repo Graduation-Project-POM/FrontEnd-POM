@@ -57,15 +57,17 @@ function TrainingField() {
             {card.icon}
             <Typography sx={styles.cardTitle}>{card.title}</Typography>
             <Typography sx={styles.cardSubtitle}>{card.subtitle}</Typography>
-            <Link to={"/resources"}
-            style={{ textDecoration: "none" }}
+            <Link
+              to="/resources"
+              onClick={() => { window.scrollTo(0, 0); }}
+              style={{ textDecoration: "none" }}
             >
-            <Box sx={{ display: "flex", alignItems: "center", gap: 2, mt: 2, cursor: "pointer", color: "#fff", transition: "0.3s", "&:hover": { gap: 2 } }}>
-              <Typography sx={{ fontWeight: 500, fontSize: 14 }}>
-                {t("training.learnMore")}
-              </Typography>
-              <ArrowForwardIcon sx={{ fontSize: 18 }} />
-            </Box>
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2, mt: 2, cursor: "pointer", color: "#fff", transition: "0.3s", "&:hover": { gap: 2 } }}>
+                <Typography sx={{ fontWeight: 500, fontSize: 14 }}>
+                  {t("training.learnMore")}
+                </Typography>
+                <ArrowForwardIcon sx={{ fontSize: 18 }} />
+              </Box>
             </Link>
           </Paper>
         ))}

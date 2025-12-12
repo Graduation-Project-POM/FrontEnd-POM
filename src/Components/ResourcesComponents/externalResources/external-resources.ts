@@ -9,12 +9,15 @@ export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
   minHeight: "100vh",
   backgroundColor: "#f5f5f5",
   direction: isrtl ? "rtl" : "ltr",
+  paddingTop: "10rem"
 }));
 
 export const SectionTitle = styled(Typography)({
   fontWeight: 600,
   color: '#7A1E3C',
   marginBottom: '32px',
+  fontSize: "48px",
+  textAlign: "center"
 });
 
 export const SectionBox = styled(Box)({
@@ -28,6 +31,7 @@ export const SectionHeader = styled(Box)<RTLProps>(({ isrtl }) => ({
   justifyContent: "space-between",
   alignItems: "center",
   flexDirection: isrtl ? "row-reverse" : "row",
+  marginBottom: "3rem"
 }));
 
 export const CardsGrid = styled(Box)<RTLProps>(({ isrtl }) => ({
