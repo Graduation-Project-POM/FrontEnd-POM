@@ -10,7 +10,7 @@ import {
   NavButtonsWrapper,
   PrevBtn,
   NextBtn
-} from './worksheet';
+} from './external-resources';
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
 
