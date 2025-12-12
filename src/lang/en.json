@@ -1,127 +1,209 @@
 {
-    "nav": {
-        "home": "Home",
-        "services": "Services",
-        "program": "Program",
-        "about": "About",
-        "login": "Log In"
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "program": "Program",
+    "about": "About",
+    "login": "Log In"
+  },
+  "hero": {
+    "title1": "Where champions begin.",
+    "desc1": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems.",
+    "explore": "Explore",
+    "start": "Start",
+    "title2": "From Palestine's PMO to the World's IMO",
+    "title3": "Programs, camps, competitions all in one place"
+  },
+  "about": {
+    "title": "About Us",
+    "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine."
+  },
+  "footer": {
+    "company": "Company",
+    "community": "Community",
+    "developers": "Developers",
+    "contact": "Contact",
+    "rights": "All rights reserved."
+  },
+  "achievements": {
+    "title": "Achievements and Awards",
+    "third_place": "Third Place",
+    "second_place": "Second Place",
+    "special": "Special Recognition",
+    "yousef": "Yousef Barakat",
+    "kareem": "Kareem Mahmmoud",
+    "reem": "Reem Haddad",
+    "view_details": "View Details"
+  },
+  "partners": {
+    "title": "Our Partners",
+    "partner1": "Taawon Association",
+    "partner2": "Ministry of Education",
+    "partner3": "Palestinian Academy for Science and Technology"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "explore": "Explore More",
+    "items": {
+      "prep": {
+        "title": "Preparation Stage",
+        "desc": "Students join trainings and practice problems to build strong math skills before the competition starts."
+      },
+      "rounds": {
+        "title": "Preliminary Rounds",
+        "desc": "Participants take qualifying exams to select the top students for the advanced stages."
+      },
+      "finals": {
+        "title": "Finals",
+        "desc": "Top students compete in the final round with challenging problems testing logic and creativity."
+      },
+      "awards": {
+        "title": "Awards & Recognition",
+        "desc": "Winners receive medals, certificates, and public recognition for their achievements."
+      },
+      "finish": {
+        "title": "Finish Stage",
+        "desc": "The competition concludes, results are published, and preparations begin for the next Olympiad."
+      }
+    }
+  },
+  "slider": {
+    "buttons": {
+      "explore": "Explore",
+      "start": "Start"
     },
-    "hero": {
-        "title1": "Where champions begin.",
-        "desc1": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems.",
-        "explore": "Explore",
-        "start": "Start",
-        "title2": "From Palestine's PMO to the World's IMO",
-        "title3": "Programs, camps, competitions all in one place"
+    "slide1": {
+      "title": "Where champions begin.",
+      "desc": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems."
     },
+    "slide2": {
+      "title1": "From Palestine’s PMO",
+      "title2": "to the World’s IMO"
+    },
+    "slide3": {
+      "line1": "Programs, camps,",
+      "line2": "competitions",
+      "line3": "all in one place"
+    }
+  },
+  "training": {
+    "title": "Learning Resources",
+    "learnMore": "Learn More",
+    "resources": {
+      "work": {
+        "title": "Work",
+        "subtitle": "Sheets"
+      },
+      "external": {
+        "title": "External",
+        "subtitle": "Resources"
+      },
+      "practice": {
+        "title": "Practice",
+        "subtitle": "Problems"
+      },
+      "video": {
+        "title": "Video",
+        "subtitle": "Tutorials"
+      },
+      "math": {
+        "title": "Math",
+        "subtitle": "Books"
+      }
+    }
+  },
+  "vision": {
+    "title": "Our Vision",
+    "slides": {
+      "discover": {
+        "title": "Discover Talent",
+        "text": "We identify young students with exceptional logical and creative thinking skills across Palestine."
+      },
+      "train": {
+        "title": "Train & Inspire",
+        "text": "Expert coaches guide students through workshops, camps, and challenges to unlock their full potential."
+      },
+      "compete": {
+        "title": "Compete Globally",
+        "text": "Students are prepared to proudly represent Palestine in international competitions like IMO and ARMO."
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "title": "Palestine Math Olympiad",
+      "description": "Empowering students across Palestine to explore, learn and excel in mathematics"
     "about": {
         "title": "About Us",
         "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine."
     },
-    "achievements": {
-        "title": "Achievements and Awards",
-        "third_place": "Third Place",
-        "second_place": "Second Place",
-        "special": "Special Recognition",
-        "yousef": "Yousef Barakat",
-        "kareem": "Kareem Mahmmoud",
-        "reem": "Reem Haddad",
-        "view_details": "View Details"
+    "company": {
+      "title": "Company",
+      "links": {
+        "about": "About Us",
+        "services": "Services",
+        "community": "Community",
+        "testimonial": "Testimonial"
+      }
     },
-    "partners": {
-        "title": "Our Partners",
-        "partner1": "Taawon Association",
-        "partner2": "Ministry of Education",
-        "partner3": "Palestinian Academy for Science and Technology"
+    "developers": {
+      "title": "Developers",
+      "links": {
+        "webTech": "Web Technologies",
+        "learnWeb": "Learn Web Development",
+        "mmPlus": "MM Plus",
+        "blog": "Hacks Blog"
+      }
     },
-    "programs": {
-        "title": "Our Programs",
-        "explore": "Explore More",
-        "items": {
-            "prep": {
-                "title": "Preparation Stage",
-                "desc": "Students join trainings and practice problems to build strong math skills before the competition starts."
-            },
-            "rounds": {
-                "title": "Preliminary Rounds",
-                "desc": "Participants take qualifying exams to select the top students for the advanced stages."
-            },
-            "finals": {
-                "title": "Finals",
-                "desc": "Top students compete in the final round with challenging problems testing logic and creativity."
-            },
-            "awards": {
-                "title": "Awards & Recognition",
-                "desc": "Winners receive medals, certificates, and public recognition for their achievements."
-            },
-            "finish": {
-                "title": "Finish Stage",
-                "desc": "The competition concludes, results are published, and preparations begin for the next Olympiad."
-            }
-        }
+    "communities": {
+      "title": "Our Communities",
+      "links": {
+        "mmCommunities": "MM Communities",
+        "mmForum": "MM Forum",
+        "mmChat": "MM Chat"
+      }
     },
-    "slider": {
-        "buttons": {
-            "explore": "Explore",
-            "start": "Start"
-        },
-        "slide1": {
-            "title": "Where champions begin.",
-            "desc": "We seek students who think beyond numbers, solve puzzles before questions, and reimagine problems."
-        },
-        "slide2": {
-            "title1": "From Palestine’s PMO",
-            "title2": "to the World’s IMO"
-        },
-        "slide3": {
-            "line1": "Programs, camps,",
-            "line2": "competitions",
-            "line3": "all in one place"
-        }
+    "contact": {
+      "title": "Contact",
+      "phone": "+32 484 7890",
+      "email": "support@mmm.com"
     },
-    "training": {
-        "title": "Learning Resources",
-        "learnMore": "Learn More",
-        "resources": {
-            "work": {
-                "title": "Work",
-                "subtitle": "Sheets"
-            },
-            "external": {
-                "title": "External",
-                "subtitle": "Resources"
-            },
-            "practice": {
-                "title": "Practice",
-                "subtitle": "Problems"
-            },
-            "video": {
-                "title": "Video",
-                "subtitle": "Tutorials"
-            },
-            "math": {
-                "title": "Math",
-                "subtitle": "Books"
-            }
-        }
+    "bottom": {
+      "rights": "© 2025 Palestine Olympiad. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "legal": "Legal",
+      "sitemap": "Site Map"
+    }
+  },
+  "worksheet": {
+    "bannerText1": "Push your limits",
+    "bannerText2": "Great minds start with one problem",
+    "headerBack": "Back to Home Page",
+    "signup": "Sign Up",
+    "login": "Login",
+    "title": "Resources - Your Complete Learning Hub",
+    "desc1": "Welcome to the Resources section, where you can explore a wide range of materials designed to support students, teachers, and math enthusiasts.",
+    "desc2": "Here, you'll find organized collections of worksheets, external references, practice problems, video tutorials, and recommended math books.",
+    "desc3": "Browse through the categories below and start learning with high-quality, structured resources tailored just for you.",
+    "externalTitle": "External Resources",
+    "externalSub": "Boost your learning with trusted external resources designed",
+    "secExternalSub": "to support your olympiad preparation.",
+    "viewHistory": "View history",
+    "card1": {
+      "title": "Arab Mathematics Olympiad – Doha 2024",
+      "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
+      "extra": "Includes an online training program held from 16–19 September 2025."
     },
-    "vision": {
-        "title": "Our Vision",
-        "slides": {
-            "discover": {
-                "title": "Discover Talent",
-                "text": "We identify young students with exceptional logical and creative thinking skills across Palestine."
-            },
-            "train": {
-                "title": "Train & Inspire",
-                "text": "Expert coaches guide students through workshops, camps, and challenges to unlock their full potential."
-            },
-            "compete": {
-                "title": "Compete Globally",
-                "text": "Students are prepared to proudly represent Palestine in international competitions like IMO and ARMO."
-            }
-        }
+    "card2": {
+      "title": "Arab Mathematics Olympiad – 2nd Edition (2020)",
+      "desc": "The second edition of the Arab Mathematics Olympiad, featuring high-level mathematical problems and participation from students across the region.",
+      "extra": null
     },
+    "card3": {
+      "title": "Jordan Mathematics Olympiad – Past Papers",
+      "desc": "Archive of past papers, sample problems, and training booklets from the Jordanian Mathematics Olympiad, offering high-quality preparation material in Arabic.",
+      "extra": null
     "footer": {
         "brand": {
             "title": "Palestine Math Olympiad",
@@ -192,4 +274,5 @@
         "desc4": "A comprehensive site for advanced problems and solutions.",
         "open": "Open Problem"
     }
+  }
 }
