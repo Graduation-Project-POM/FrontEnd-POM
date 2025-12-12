@@ -129,13 +129,40 @@
       }
     }
   },
+  "worksheet": {
+    "bannerText1": "Push your limits",
+    "bannerText2": "Great minds start with one problem",
+    "headerBack": "Back to Home Page",
+    "signup": "Sign Up",
+    "login": "Login",
+    "title": "Resources - Your Complete Learning Hub",
+    "desc1": "Welcome to the Resources section, where you can explore a wide range of materials designed to support students, teachers, and math enthusiasts.",
+    "desc2": "Here, you'll find organized collections of worksheets, external references, practice problems, video tutorials, and recommended math books.",
+    "desc3": "Browse through the categories below and start learning with high-quality, structured resources tailored just for you.",
+    "externalTitle": "External Resources",
+    "externalSub": "Boost your learning with trusted external resources designed",
+    "secExternalSub": "to support your olympiad preparation.",
+    "viewHistory": "View history",
+    "card1": {
+      "title": "Arab Mathematics Olympiad – Doha 2024",
+      "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
+      "extra": "Includes an online training program held from 16–19 September 2025."
+    },
+    "card2": {
+      "title": "Arab Mathematics Olympiad – 2nd Edition (2020)",
+      "desc": "The second edition of the Arab Mathematics Olympiad, featuring high-level mathematical problems and participation from students across the region.",
+      "extra": null
+    },
+    "card3": {
+      "title": "Jordan Mathematics Olympiad – Past Papers",
+      "desc": "Archive of past papers, sample problems, and training booklets from the Jordanian Mathematics Olympiad, offering high-quality preparation material in Arabic.",
+      "extra": null
+    }
+  },
   "footer": {
     "brand": {
       "title": "Palestine Math Olympiad",
       "description": "Empowering students across Palestine to explore, learn and excel in mathematics"
-    "about": {
-        "title": "About Us",
-        "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine."
     },
     "company": {
       "title": "Company",
@@ -176,103 +203,31 @@
       "sitemap": "Site Map"
     }
   },
-  "worksheet": {
-    "bannerText1": "Push your limits",
-    "bannerText2": "Great minds start with one problem",
-    "headerBack": "Back to Home Page",
-    "signup": "Sign Up",
-    "login": "Login",
-    "title": "Resources - Your Complete Learning Hub",
-    "desc1": "Welcome to the Resources section, where you can explore a wide range of materials designed to support students, teachers, and math enthusiasts.",
-    "desc2": "Here, you'll find organized collections of worksheets, external references, practice problems, video tutorials, and recommended math books.",
-    "desc3": "Browse through the categories below and start learning with high-quality, structured resources tailored just for you.",
-    "externalTitle": "External Resources",
-    "externalSub": "Boost your learning with trusted external resources designed",
-    "secExternalSub": "to support your olympiad preparation.",
-    "viewHistory": "View history",
-    "card1": {
-      "title": "Arab Mathematics Olympiad – Doha 2024",
-      "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
-      "extra": "Includes an online training program held from 16–19 September 2025."
-    },
-    "card2": {
-      "title": "Arab Mathematics Olympiad – 2nd Edition (2020)",
-      "desc": "The second edition of the Arab Mathematics Olympiad, featuring high-level mathematical problems and participation from students across the region.",
-      "extra": null
-    },
-    "card3": {
-      "title": "Jordan Mathematics Olympiad – Past Papers",
-      "desc": "Archive of past papers, sample problems, and training booklets from the Jordanian Mathematics Olympiad, offering high-quality preparation material in Arabic.",
-      "extra": null
-    "footer": {
-        "brand": {
-            "title": "Palestine Math Olympiad",
-            "description": "Empowering students across Palestine to explore, learn and excel in mathematics"
-        },
-        "company": {
-            "title": "Company",
-            "links": {
-                "about": "About Us",
-                "services": "Services",
-                "community": "Community",
-                "testimonial": "Testimonial"
-            }
-        },
-        "developers": {
-            "title": "Developers",
-            "links": {
-                "webTech": "Web Technologies",
-                "learnWeb": "Learn Web Development",
-                "mmPlus": "MM Plus",
-                "blog": "Hacks Blog"
-            }
-        },
-        "communities": {
-            "title": "Our Communities",
-            "links": {
-                "mmCommunities": "MM Communities",
-                "mmForum": "MM Forum",
-                "mmChat": "MM Chat"
-            }
-        },
-        "contact": {
-            "title": "Contact",
-            "phone": "+32 484 7890",
-            "email": "support@mmm.com"
-        },
-        "bottom": {
-            "rights": "© 2025 Palestine Olympiad. All rights reserved.",
-            "privacy": "Privacy Policy",
-            "terms": "Terms of Use",
-            "legal": "Legal",
-            "sitemap": "Site Map"
-        }
-    },
-    "books": {
-        "heroTitle": "Discover",
-        "highlight": "Amazing Books",
-        "heroDesc": "Explore our curated collection of mathematical wonders and problem-solving resources",
-        "title1": "International Mathematics Olympiad Book – Omran Quba",
-        "desc1": "Master the fundamentals of creative problem solving",
-        "title2": "The Art of Problem Solving",
-        "desc2": "Dive deep into advanced mathematical concepts",
-        "title3": "IMO 2023 Shortlisted Problems",
-        "desc3": "Challenge yourself with International Math Olympiad questions",
-        "open": "Open Book"
-    },
-    "problems": {
-        "heroTitle": "Discover",
-        "highlight": "Olympiad Problems",
-        "heroDesc": "Browse our curated collection of international Olympiad problems, solutions, and math training resources.",
-        "title1": "Mathematical Olympiad Problems from 1959 to 2018",
-        "desc1": "A complete set of Palestinian and international Olympiad problems across the years.",
-        "title2": "Poland Olympiad 1965 Problems and Puzzles with Solutions",
-        "desc2": "Detailed solutions for the toughest math problems and puzzles.",
-        "title3": "International Mathematical Olympiad",
-        "desc3": "Challenge yourself with international math Olympiad problems.",
-        "title4": "Olympiad Problems and Solutions",
-        "desc4": "A comprehensive site for advanced problems and solutions.",
-        "open": "Open Problem"
-    }
+  "books": {
+    "heroTitle": "Discover",
+    "highlight": "Amazing Books",
+    "heroDesc": "Explore our curated collection of mathematical wonders and problem-solving resources",
+    "title1": "International Mathematics Olympiad Book – Omran Quba",
+    "desc1": "Master the fundamentals of creative problem solving",
+    "title2": "The Art of Problem Solving",
+    "desc2": "Dive deep into advanced mathematical concepts",
+    "title3": "IMO 2023 Shortlisted Problems",
+    "desc3": "Challenge yourself with International Math Olympiad questions",
+    "open": "Open Book"
+  },
+  "problems": {
+    "heroTitle": "Discover",
+    "highlight": "Olympiad Problems",
+    "heroDesc": "Browse our curated collection of international Olympiad problems, solutions, and math training resources.",
+    "title1": "Mathematical Olympiad Problems from 1959 to 2018",
+    "desc1": "A complete set of Palestinian and international Olympiad problems across the years.",
+    "title2": "Poland Olympiad 1965 Problems and Puzzles with Solutions",
+    "desc2": "Detailed solutions for the toughest math problems and puzzles.",
+    "title3": "International Mathematical Olympiad",
+    "desc3": "Challenge yourself with international math Olympiad problems.",
+    "title4": "Olympiad Problems and Solutions",
+    "desc4": "A comprehensive site for advanced problems and solutions.",
+    "open": "Open Problem"
   }
+
 }

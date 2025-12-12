@@ -6,7 +6,7 @@ interface RTLProps {
 }
 
 export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
-  minHeight: "100vh",
+  minHeight: "90vh",
   backgroundColor: "#f5f5f5",
   direction: isrtl ? "rtl" : "ltr",
 }));
@@ -45,7 +45,6 @@ export const HeaderLeft = styled(Box)<RTLProps>(({ isrtl }) => ({
 export const MainTitle = styled(Typography)({
   fontWeight: 600,
   color: '#333',
-  marginBottom: '16px',
   lineHeight: 1.3,
 });
 

@@ -2,7 +2,7 @@ import type { SxProps, Theme } from "@mui/material";
 
 export const styles = {
     container: {
-        minHeight: "100vh",
+        minHeight: "80vh",
         background: "#f5f5f5",
         p: 4,
     } as SxProps<Theme>,

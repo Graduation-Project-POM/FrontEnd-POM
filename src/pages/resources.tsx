@@ -12,3 +12,6 @@ function Resources() {
       <Worksheet />
     </>
   )
+}
+
+export default Resources
