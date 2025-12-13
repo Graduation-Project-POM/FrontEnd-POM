@@ -18,14 +18,14 @@ function Problems() {
         {
             title: t("problems.title2"),
             description: t("problems.desc2"),
-            link: "/public/pdfs/problems1.pdf",
+            link: "/pdfs/problems1.pdf",
             color: "#6C4859",
             icon: "🧮",
         },
         {
             title: t("problems.title3"),
             description: t("problems.desc3"),
-            link: "/public/pdfs/problems2.pdf",
+            link: "/pdfs/problems2.pdf",
             color: "#FF9F1C",
             icon: "🏆",
         },

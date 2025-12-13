@@ -18,14 +18,14 @@ function Books() {
         {
             title: t("books.title2"),
             description: t("books.desc2"),
-            link: "/public/pdfs/book1.pdf",
+            link: "/pdfs/book1.pdf",
             color: "#6C4859",
             icon: "🧮",
         },
         {
             title: t("books.title3"),
             description: t("books.desc3"),
-            link: "/public/pdfs/book2.pdf",
+            link: "/pdfs/book2.pdf",
             color: "#FF9F1C",
             icon: "🏆",
         },
