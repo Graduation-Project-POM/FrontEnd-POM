@@ -284,5 +284,8 @@
       "salfitAnswers": "Salfit Olympiad Answers",
       "jericho2025": "Jericho 2025 Olympiad Worksheet"
     }
+  },
+  "common": {
+    "all": "All"
   }
 }

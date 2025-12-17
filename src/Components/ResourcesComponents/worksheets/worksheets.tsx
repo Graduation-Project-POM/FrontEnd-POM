@@ -1,5 +1,5 @@
 import { Box, Typography, Card, CardContent, Button } from "@mui/material";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n from "../../../utils/i18n.ts";
 import { styles } from "./worksheets.ts";
@@ -157,28 +157,26 @@ function Worksheets() {
     ];
 
     const colors: Record<string, string> = {
-        جنين: "#7D1C48",
-        قباطية: "#FF9F1C",
-        يطا: "#FF3C3C",
-        بيرزيت: "#FF6B1C",
-        قلقيلية: "#FFF71C",
-        القدس: "#A0FF1C",
-        طولكرم: "#1CDFFF",
-        "رام الله والبيرة": "#241CFF",
-        نابلس: "#B71CFF",
-        سلفيت: "#FF1CD9",
-        اريحا: "#FF1C27",
+        Jenin: "#7D1C48",
+        Qabatiya: "#FF9F1C",
+        Yatta: "#FF3C3C",
+        Birzeit: "#FF6B1C",
+        Qalqilya: "#FFF71C",
+        Jerusalem: "#A0FF1C",
+        Tulkarm: "#1CDFFF",
+        RamallahBireh: "#241CFF",
+        Nablus: "#B71CFF",
+        Salfit: "#FF1CD9",
+        Jericho: "#FF1C27",
     };
 
-    const directorates = useMemo(
-        () => ["All", ...Array.from(new Set(sheetsList.map(s => s.directorate)))],
-        []
-    );
 
-    const filteredSheets = useMemo(
-        () => (filter === "All" ? sheetsList : sheetsList.filter(s => s.directorate === filter)),
-        [filter]
-    );
+    const directorates = ["All", ...Array.from(new Set(sheetsList.map(s => s.directorate)))];
+
+    const filteredSheets =
+        filter === "All"
+            ? sheetsList
+            : sheetsList.filter(s => s.directorate === filter);
 
     return (
         <Box sx={{ ...styles.container, direction: isRTL ? "rtl" : "ltr" }}>
@@ -201,7 +199,7 @@ function Worksheets() {
                         color="primary"
                         onClick={() => setFilter(dir)}
                     >
-                        {dir}
+                        {dir === "All" ? t("common.all") : t(`sheets.directorates.${dir}`)}
                     </Button>
                 ))}
             </Box>

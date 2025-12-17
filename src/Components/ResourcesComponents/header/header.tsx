@@ -1,18 +1,16 @@
-import { Box, Container, Typography, Button } from '@mui/material';
-import { ArrowRight, ArrowLeft, Heart } from 'lucide-react';
+import { Box, Container, Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Logo } from '../../HomeComponents/Navbar/NavbarStyle';
+import { Logo } from "../../HomeComponents/Navbar/NavbarStyle";
 import {
   PageWrapper,
-  TopBanner,
   HeaderWrapper,
   HeaderInner,
   HeaderLeft,
   MainTitle,
-  DescriptionText
-} from './header';
+  DescriptionText,
+} from "./header";
 import { useTranslation } from "react-i18next";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -24,34 +22,6 @@ export function Header() {
 
   return (
     <PageWrapper isrtl={isRTL}>
-      <TopBanner>
-        <Box sx={{ position: "absolute", left: 20 }}>
-          <Button
-            onClick={() => i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar")}
-            variant="outlined"
-            sx={{
-              minWidth: "95px",
-              height: "40px",
-              borderRadius: "10px",
-              fontWeight: "bold",
-              fontSize: "0.9rem",
-              borderColor: "#7A1E3C",
-              color: "#7A1E3C",
-              backgroundColor: "#fff",
-              textTransform: "none",
-            }}
-          >
-            {i18n.language === "ar" ? "English" : "العربية"}
-          </Button>
-        </Box>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-          <Typography variant="body2">{t("externalResources.bannerText1")}</Typography>
-          <Heart size={16} fill="white" />
-          <Typography variant="body2">{t("externalResources.bannerText2")}</Typography>
-        </Box>
-        <Box sx={{ width: 120 }} />
-      </TopBanner>
-
       <HeaderWrapper>
         <Container maxWidth="lg">
           <HeaderInner isrtl={isRTL}>
@@ -63,28 +33,56 @@ export function Header() {
                   alt=""
                   sx={{
                     width: { md: "150px", xs: "100px" },
-                    height: { md: "75px", xs: "60px" }
+                    height: { md: "75px", xs: "60px" },
                   }}
                 />
               </Logo>
               <Button
-                sx={{ color: '#333', textTransform: 'none', fontSize: '1rem' }}
-                endIcon={isRTL ? <ArrowLeft size={20} /> : <ArrowRight size={20} />}
+                component={Link}
+                to="/"
+                variant="outlined"
+                sx={{
+                  textTransform: "none",
+                  borderRadius: "10px",
+                  borderColor: "#7A1E3C",
+                  color: "#7A1E3C",
+                  fontSize: "1rem",
+                }}
               >
-                <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
-                  {t("externalResources.headerBack")}
-                </Link>
+                {t("externalResources.headerBack")}
               </Button>
             </HeaderLeft>
-            <Box sx={{ display: 'flex', gap: 2 }}>
-              <Button sx={{ color: '#333', textTransform: 'none', fontSize: '1rem' }}>
-                {t("externalResources.signup")}
-              </Button>
+            <Box sx={{ display: "flex", gap: 2 }}>
               <Button
                 variant="contained"
-                sx={{ bgcolor: '#7A1E3C', textTransform: 'none', fontSize: '1rem', px: 3 }}
+                sx={{
+                  bgcolor: "#7A1E3C",
+                  textTransform: "none",
+                  fontSize: "1rem",
+                  px: 3,
+                  borderRadius: "10px",
+                }}
               >
                 {t("externalResources.login")}
+              </Button>
+              <Button
+                onClick={() =>
+                  i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar")
+                }
+                variant="outlined"
+                sx={{
+                  minWidth: "95px",
+                  height: "40px",
+                  borderRadius: "10px",
+                  fontWeight: "bold",
+                  fontSize: "0.9rem",
+                  borderColor: "#7A1E3C",
+                  color: "#7A1E3C",
+                  backgroundColor: "#fff",
+                  textTransform: "none",
+                }}
+              >
+                {i18n.language === "ar" ? "English" : "العربية"}
               </Button>
             </Box>
           </HeaderInner>
@@ -92,7 +90,7 @@ export function Header() {
       </HeaderWrapper>
 
       <Container maxWidth="lg" sx={{ mt: 8, mb: 6 }}>
-        <Box sx={{ display: 'flex', gap: 8 }}>
+        <Box sx={{ display: "flex", gap: 8 }}>
           <Box sx={{ flex: 1 }}>
             <MainTitle variant="h3">{t("externalResources.title")}</MainTitle>
           </Box>
@@ -104,5 +102,5 @@ export function Header() {
         </Box>
       </Container>
     </PageWrapper>
-  )
+  );
 }

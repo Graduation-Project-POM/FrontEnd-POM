@@ -46,11 +46,11 @@ export const NavLink = styled(Button, {
 export const LoginButton = styled(Button)({
   backgroundColor: "#7A1E3C",
   color: "#fff",
-  fontSize: "16px",
+  fontSize: "0.9rem",
   fontWeight: 600,
   textTransform: "none",
   padding: "0.5rem 2rem",
-  borderRadius: "2rem",
+  borderRadius: "10px",
 })
 
 export const StyledMenu = styled(Box)({
