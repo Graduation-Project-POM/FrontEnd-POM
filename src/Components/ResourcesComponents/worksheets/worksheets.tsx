@@ -147,7 +147,7 @@ const worksheets: Worksheet[] = [
   {
     title: "sheets.worksheets.jericho2025",
     description: "sheets.desc.jericho2025",
-    link: "https://drive.google.com/file/d/1QMfY5cl_fTAl9N086p48-EDm6BVmYbv/view?usp=drive_link",
+    link: "https://drive.google.com/file/d/1QMfY5cl_fTAl9wN086p48-EDm6BVmYbv/view?usp=sharing",
     directorate: "Jericho",
     color: "#FF1C27",
     icon: "📘",
