@@ -5,9 +5,9 @@ export const styles = {
     },
 
     title: {
-        fontSize: "52px",
+        fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
         fontWeight: "700",
-        color: "#5A1F3D",
+        color: "#7D1C48",
         mb: 4,
         mt: 20,
     },
@@ -34,7 +34,7 @@ export const styles = {
         fontWeight: "900",
         fontSize: "18px",
         textTransform: "uppercase",
-        color: "#5A1F3D",
+        color: "#7D1C48",
         mb: 1,
     },
 
@@ -53,16 +53,16 @@ export const styles = {
 
     exploreBtn: {
         background: "#fff",
-        border: "2px solid #5A1F3D",
+        border: "2px solid #7D1C48",
         px: 4,
         py: 1.5,
         borderRadius: "30px",
         fontWeight: "600",
-        color: "#5A1F3D",
+        color: "#7D1C48",
         display: "inline-block",
         cursor: "pointer",
         transition: "0.3s",
         animation: "pulse 1.8s infinite",
-        "&:hover": { background: "#5A1F3D", color: "#fff" },
+        "&:hover": { background: "#7D1C48", color: "#fff" },
     },
 };

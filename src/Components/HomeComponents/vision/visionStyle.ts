@@ -7,41 +7,20 @@ export const styles = {
     gap: { xs: 1.5, md: 0 },
     textAlign: { xs: "center", md: "left" },
     mb: 3,
-
   },
 
   title: {
     color: "#7D1C48",
-    fontWeight: "bold",
+    fontWeight: "700",
     flex: 1,
     fontSize: { xs: "40px", sm: "46px", md: "52px", lg: "64px" },
-    padding: { xs: "0 10px", md: "70px 150px" },
-    textAlign: { xs: "center", md: "left" },
+    padding: { xs: "0 10px", md: "50px 150px" },
+    textAlign: { xs: "center", md: "center" },
     textShadow: "0px 3px 6px rgba(27, 27, 27, 0.15)",
     marginTop: {
       xs: "100px",
-      md: "28px"
-    }
-
-  },
-
-  controlsWrapper: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: { xs: "center", md: "flex-start" },
-    gap: { xs: 1.5, sm: 2, md: 3 },
-    mt: { xs: 1.5, md: 0 },
-    p: { xs: "0 10px", md: "70px 150px" },
-  },
-
-  controlBtn: {
-    background: "#7A1731",
-    color: "white",
-    "&:hover": { background: "#5a0f24" },
-    p: { xs: 0.8, sm: 1.2, md: 1.8 },
-    borderRadius: "50%",
-    transition: "0.3s",
-    marginTop: "50px"
+      md: "28px",
+    },
   },
 
   image: {
@@ -62,16 +41,22 @@ export const styles = {
   },
 
   slideCard: {
-    width: { sm: "200px", md: "240px" },
-    height: { sm: "160px", md: "280px" },
-    padding: "12px",
+    width: { xs: "180px", sm: "200px", md: "240px" },
+    height: { xs: "160px", sm: "200px", md: "280px" },
+    padding: "14px",
     borderRadius: "16px",
     backgroundColor: "white",
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    transition: "all 0.35s ease",
+    cursor: "pointer",
+    transition:
+      "transform 0.4s ease, box-shadow 0.4s ease, opacity 0.3s ease",
+    "&:hover": {
+      transform: "scale(0.95)",
+      boxShadow: "0px 10px 25px rgba(125,28,72,0.25)",
+    },
   },
 
   slideTitle: {

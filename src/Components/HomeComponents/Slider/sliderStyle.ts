@@ -72,8 +72,9 @@ export const SecondHeading = styled(Typography)(({ theme }) => ({
 }))
 
 export const Subtext = styled(Typography)(({ theme }) => ({
-  color: "#9CA3AF",
-  fontSize: "34px",
+  color: "#333",
+  maxWidth: "1000px",
+  fontSize: "28px",
   marginBottom: "2rem",
   textAlign: "center",
   [theme.breakpoints.down("md")]: {
@@ -90,6 +91,8 @@ export const Subtext = styled(Typography)(({ theme }) => ({
 export const ButtonGroup = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: "1rem",
+//   marginRight:"60px",
+paddingRight:"10vh",
   justifyContent: "center",
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",

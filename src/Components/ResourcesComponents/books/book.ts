@@ -9,7 +9,13 @@ export const styles = {
     heroWrapper: { textAlign: "center", mb: 6 } as SxProps<Theme>,
     heroTitle: { fontWeight: "bold", mb: 2 } as SxProps<Theme>,
     heroDesc: { maxWidth: 600, mx: "auto" } as SxProps<Theme>,
-    grid: { display: "grid", gap: 3, gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" } as SxProps<Theme>,
+    starterGrid: {
+        display: "grid",
+        gap: 3,
+        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 320px))",
+        justifyContent: "center"
+        
+    } as SxProps<Theme>,
 
     card: (color: string): SxProps<Theme> => ({
         position: "relative",

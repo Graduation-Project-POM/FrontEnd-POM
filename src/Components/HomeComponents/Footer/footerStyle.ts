@@ -3,12 +3,11 @@ import { Box, Typography, Link, IconButton } from "@mui/material";
 
 export const FooterWrapper = styled(Box)<{ component?: React.ElementType }>({
   backgroundColor: "white",
-  paddingTop: "10px",
+  paddingTop: "20vh",
 });
 
 export const BottomBar = styled(Box)({
   backgroundColor: "#6E0B2A",
-  marginTop: "48px",
   padding: "16px 0",
 });
 

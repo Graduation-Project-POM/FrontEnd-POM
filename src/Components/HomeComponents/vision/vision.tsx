@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
-import { Box, Typography, IconButton, Paper } from "@mui/material";
-import {
-    ArrowBackIosNew as ArrowBackIosNewIcon,
-    ArrowForwardIos as ArrowForwardIosIcon,
-} from "@mui/icons-material";
-import { styles } from "./visionStyle.ts";
+import { Box, Typography, Paper } from "@mui/material";
+import { styles } from "./visionStyle";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
-import i18n from "../../../utils/i18n.ts";
+import i18n from "../../../utils/i18n";
 
 function Vision() {
     const { t } = useTranslation();
-    const isRTL = i18n.language ==="ar"
+    const isRTL = i18n.language === "ar";
 
     const slides = [
         {
@@ -35,27 +31,15 @@ function Vision() {
         AOS.init({ duration: 900, once: true });
     }, []);
 
-    const handleNext = () => setIndex((prev) => (prev + 1) % slides.length);
-    const handlePrev = () =>
-        setIndex((prev) => (prev - 1 + slides.length) % slides.length);
-
-    const getScale = (i: number) => (i === index ? 1.15 : 0.88);
-    const getOpacity = (i: number) => (i === index ? 1 : 0.55);
+    const getScale = (i: number) => (i === index ? 1 : 0.9);
+    const getOpacity = (i: number) => (i === index ? 1 : 0.8);
 
     return (
         <>
             <Box sx={styles.visionContainer} data-aos="fade-up">
-                <Typography sx={styles.title}>{t("vision.title")}</Typography>
-
-                <Box sx={styles.controlsWrapper}>
-                    <IconButton onClick={handlePrev} sx={{ ...styles.controlBtn, transform: isRTL?"scaleX(-1)":"scaleX(1)" }}>
-                        <ArrowBackIosNewIcon fontSize="small" />
-                    </IconButton>
-                    <IconButton onClick={handleNext} sx={{ ...styles.controlBtn,  transform: isRTL?"scaleX(-1)":"scaleX(1)"  }}>
-                        <ArrowForwardIosIcon fontSize="small" />
-                    </IconButton>
-
-                </Box>
+                <Typography sx={styles.title}>
+                    {t("vision.title")}
+                </Typography>
             </Box>
 
             <Box
@@ -63,7 +47,7 @@ function Vision() {
                 alignItems="center"
                 justifyContent="center"
                 flexWrap="wrap"
-                gap={1}
+                gap={2}
                 data-aos="zoom-in"
             >
                 <Box
@@ -74,11 +58,18 @@ function Vision() {
                     className="floating-img"
                 />
 
-                <Box sx={styles.slidesWrapper}>
+                <Box
+                    sx={{
+                        ...styles.slidesWrapper,
+                        flexDirection: isRTL ? "row-reverse" : "row",
+                    }}
+                >
                     {slides.map((slide, i) => (
                         <Paper
                             key={i}
                             elevation={index === i ? 8 : 2}
+                            onMouseEnter={() => setIndex(i)}
+                            onClick={() => setIndex(i)}
                             sx={{
                                 ...styles.slideCard,
                                 transform: `scale(${getScale(i)})`,
@@ -92,7 +83,6 @@ function Vision() {
                                         ? "2px solid #7A1731"
                                         : "2px solid #e7c7d2",
                             }}
-                            className={i === index ? "active-slide" : ""}
                         >
                             <Typography sx={styles.slideTitle} variant="h5">
                                 {slide.title}

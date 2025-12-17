@@ -11,20 +11,9 @@ export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
   direction: isrtl ? "rtl" : "ltr",
 }));
 
-export const TopBanner = styled(Box)({
-  backgroundColor: '#7A1E3C',
-  color: 'white',
-  padding: '12px 0',
-  textAlign: 'center',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  gap: '2px',
-});
-
 export const HeaderWrapper = styled(Box)({
   backgroundColor: 'white',
-  borderBottom: '1px solid #e0e0e0',
+  border: '1px solid #000',
   padding: '16px 0',
 });
 

@@ -65,7 +65,7 @@ export function Navbar() {
                 minWidth: "95px",
                 height: "40px",
                 borderRadius: "10px",
-                fontWeight: "bold",
+                fontWeight: 600,
                 fontSize: "0.9rem",
                 borderColor: "#7D1C48",
                 color: "#7D1C48",
