@@ -19,7 +19,7 @@ export const styles: Record<string, SxProps> = {
 
   card: {
     p: 2,
-    borderRadius: 2,
+    borderRadius: 5,
     width: { xs: 140, sm: 160, md: 180 },
     minHeight: { xs: 220, sm: 240, md: 250 },
     display: "flex",
@@ -33,7 +33,7 @@ export const styles: Record<string, SxProps> = {
     transition:
       "transform 0.6s ease, box-shadow 0.3s ease, opacity 0.3s ease",
     "&:hover": {
-      boxShadow: "0px 10px 25px rgba(125,28,72,0.25)",
+      boxShadow: "0px 10px 25px rgba(77, 60, 68, 0.25)",
     },
   },
 

@@ -6,7 +6,6 @@ interface RTLProps {
 }
 
 export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
-  minHeight: "90vh",
   backgroundColor: "#f5f5f5",
   direction: isrtl ? "rtl" : "ltr",
 }));

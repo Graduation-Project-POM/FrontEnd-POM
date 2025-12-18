@@ -2,8 +2,7 @@ import type { SxProps, Theme } from "@mui/material";
 
 export const styles = {
     container: {
-        minHeight: "90vh",
-        p: 4,
+        paddingTop: "10rem"
     } as SxProps<Theme>,
     heroWrapper: { textAlign: "center", mb: 6 } as SxProps<Theme>,
     heroTitle: { fontWeight: "bold", mb: 2 } as SxProps<Theme>,
@@ -13,7 +12,7 @@ export const styles = {
         gap: 3,
         gridTemplateColumns: "repeat(auto-fit, minmax(280px, 320px))",
         justifyContent: "center"
-        
+
     } as SxProps<Theme>,
 
     card: (color: string): SxProps<Theme> => ({
