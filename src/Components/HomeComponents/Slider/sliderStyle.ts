@@ -24,17 +24,39 @@ export const StyledSlide = styled(Box, {
   "@media (max-width:570px)": { height: "350px" },
 }));
 
-export const ContentWrapper = styled(Box)({
+
+interface ContentWrapperProps {
+  isArabic?: boolean;
+}
+
+export const ContentWrapper = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isArabic",
+})<ContentWrapperProps>(({ isArabic }) => ({
   position: "relative",
   zIndex: 1,
-  marginTop: "10rem",
+  marginTop: isArabic ? "12rem" : "10rem",
 
-  "@media (max-width:1400px)": { marginTop: "25rem", padding: "0 7rem" },
-  "@media (max-width:1080px)": { marginTop: "20rem", padding: "0 5rem" },
-  "@media (max-width:850px)": { marginTop: "24rem", padding: "0 2rem" },
-  "@media (max-width:620px)": { marginTop: "18rem", padding: "0 1rem" },
-  "@media (max-width:575px)": { marginTop: "35rem", padding: "0 1rem" },
-});
+  "@media (max-width:1400px)": {
+    marginTop: isArabic ? "24rem" : "12rem",
+    padding: "0 7rem",
+  },
+  "@media (max-width:1080px)": {
+    marginTop: isArabic ? "23rem" : "10rem",
+    padding: "0 5rem",
+  },
+  "@media (max-width:850px)": {
+    marginTop: isArabic ? "20rem" : "12rem",
+    padding: "0 2rem",
+  },
+  "@media (max-width:620px)": {
+    marginTop: isArabic ? "20rem" : "10rem",
+    padding: "0 1rem",
+  },
+  "@media (max-width:575px)": {
+    marginTop: isArabic ? "39rem" : "32rem",
+    padding: "0 1rem",
+  },
+}));
 
 export const Heading = styled(Typography)({
   color: "#7A1E3C",
@@ -49,21 +71,72 @@ export const Heading = styled(Typography)({
   "@media (max-width:570px)": { fontSize: "28px", marginBottom: "1rem" },
 });
 
-export const SecondHeading = styled(Typography)({
+export const ContentWrappersecond = styled(Box)<ContentWrapperProps>(({ isArabic }) => ({
+  position: "relative",
+  zIndex: 1,
+  marginTop: isArabic ? "12rem" : "10rem",
+
+  "@media (max-width:1400px)": {
+    marginTop: isArabic ? "28rem" : "10rem",
+    padding: "0 7rem",
+  },
+  "@media (max-width:1080px)": {
+    marginTop: isArabic ? "22rem" : "12rem",
+    padding: "0 5rem",
+  },
+  "@media (max-width:850px)": {
+    marginTop: isArabic ? "16rem" : "14rem",
+    padding: "0 2rem",
+  },
+  "@media (max-width:620px)": {
+    marginTop: isArabic ? "20rem" : "12rem",
+    padding: "0 1rem",
+  },
+  "@media (max-width:575px)": {
+    marginTop: isArabic ? "18rem" : "32rem",
+    padding: "0 1rem",
+  },
+}));
+
+interface SecondHeadingProps {
+  isArabic?: boolean;
+}
+
+export const SecondHeading = styled(Typography, {
+  shouldForwardProp: (prop) => prop !== "isArabic",
+})<SecondHeadingProps>(({ isArabic }) => ({
   color: "#fff",
   textShadow: "2px 2px 8px rgba(0,0,0,0.4)",
   fontWeight: 700,
   fontSize: "48px",
   marginBottom: "4rem",
-  marginTop: "-15rem",
+  marginTop: isArabic ? "-12rem" : "-15rem",
   display: "flex",
-  justifyContent: "flex-end",
+  justifyContent: isArabic ? "center" : "flex-end",
+  textAlign: isArabic ? "center" : "right",
 
-  "@media (max-width:1400px)": { fontSize: "42px", marginTop: "-16rem", marginBottom: "3.5rem" },
-  "@media (max-width:1080px)": { fontSize: "36px", marginTop: "-18rem", marginBottom: "3rem" },
-  "@media (max-width:850px)": { fontSize: "28px", marginTop: "-20rem", justifyContent: "center", textAlign: "center" },
-  "@media (max-width:600px)": { fontSize: "24px", marginTop: "-22rem" },
-});
+  "@media (max-width:1400px)": {
+    fontSize: "42px",
+    marginTop: isArabic ? "-31rem" : "-18rem",
+    marginBottom: "3.5rem",
+  },
+  "@media (max-width:1080px)": {
+    fontSize: "36px",
+    marginTop: isArabic ? "-24rem" : "-13rem",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  "@media (max-width:850px)": {
+    fontSize: "28px",
+    marginTop: isArabic ? "-22rem" : "-10rem",
+    justifyContent: "center",
+    textAlign: "center",
+  },
+  "@media (max-width:600px)": {
+    fontSize: "24px",
+    marginTop: isArabic ? "-40rem" : "-35rem",
+  },
+}));
 
 export const Subtext = styled(Typography)({
   color: "#333",
@@ -90,6 +163,7 @@ export const ButtonGroup = styled(Box)({
 export const ExploreButton = styled(Button)({
   borderColor: "#7A1E3C",
   color: "#7A1E3C",
+  backgroundColor: "#fff",
   padding: "0.75rem 2.5rem",
   borderRadius: "25px",
   textTransform: "none",
@@ -175,7 +249,7 @@ export const ChartWrapper = styled(Box)({
 
   "@media (max-width:1080px)": { gap: "1rem", marginTop: "-6rem", "& img": { maxWidth: "120px" } },
   "@media (max-width:850px)": { marginTop: "-4rem" },
-  "@media (max-width:600px)": { flexDirection: "column" },
+  "@media (max-width:600px)": { flexDirection: "row" },
 });
 
 export const ComPersonImg = styled("img")({

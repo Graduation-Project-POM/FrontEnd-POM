@@ -47,7 +47,7 @@ function Slider() {
       <SwiperSlide>
         <StyledSlide bg={"/firstSlideBG.png"}>
           <Container>
-            <ContentWrapper>
+            <ContentWrapper isArabic={isRTL}>
               <Heading variant="h1">
                 {t("slider.slide1.title")}
               </Heading>
@@ -77,8 +77,8 @@ function Slider() {
       <SwiperSlide>
         <StyledSlide bg={"/secondSlideBG.png"} overlay>
           <Container>
-            <ContentWrapper>
-              <SecondHeading variant="h1">
+            <ContentWrapper isArabic={isRTL}>
+              <SecondHeading variant="h1" isArabic={isRTL}>
                 {t("slider.slide2.title1")}
                 <br />
                 {t("slider.slide2.title2")}
@@ -88,7 +88,7 @@ function Slider() {
                 <ExploreButton variant="outlined">
                   {t("slider.buttons.explore")}
                 </ExploreButton>
-                <StartButton variant="contained">
+                <StartButton variant="contained" >
                   {t("slider.buttons.start")}
                 </StartButton>
               </ButtonGroup>
