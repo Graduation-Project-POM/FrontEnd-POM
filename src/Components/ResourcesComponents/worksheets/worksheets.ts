@@ -17,8 +17,8 @@ export const colors: Record<string, string> = {
 export const styles = {
     page: (isRTL: boolean) => ({
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #fdfcfdff 0%, #f5f2f3ff 100%)",
         py: 8,
+        p:8,
         direction: isRTL ? "rtl" : "ltr",
     }),
 
