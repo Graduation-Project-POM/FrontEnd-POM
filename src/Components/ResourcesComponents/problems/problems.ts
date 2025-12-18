@@ -1,30 +1,21 @@
-import type { SxProps, Theme } from "@mui/material";
-
 export const styles = {
     container: {
-        minHeight: "80vh",
-        background: "#f5f5f5",
+        minHeight: "90vh",
         p: 4,
-    } as SxProps<Theme>,
-    heroWrapper: {
-        textAlign: "center",
-        mb: 6,
-    } as SxProps<Theme>,
-    heroTitle: {
-        fontWeight: "bold",
-        mb: 2,
-    } as SxProps<Theme>,
-    heroDesc: {
-        maxWidth: 600,
-        mx: "auto",
-    } as SxProps<Theme>,
+    },
+
+    heroWrapper: { textAlign: "center", mb: 6 },
+    heroTitle: { fontWeight: "bold", mb: 2 },
+    heroDesc: { maxWidth: 600, mx: "auto" },
+
     grid: {
         display: "grid",
         gap: 3,
-        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-    } as SxProps<Theme>,
+        gridTemplateColumns: "repeat(auto-fit, minmax(280px, 320px))",
+        justifyContent: "center",
+    },
 
-    card: (color: string): SxProps<Theme> => ({
+    card: (color: string) => ({
         position: "relative",
         overflow: "hidden",
         borderRadius: 3,
@@ -37,7 +28,7 @@ export const styles = {
         },
     }),
 
-    iconBox: (color: string): SxProps<Theme> => ({
+    iconBox: (color: string) => ({
         fontSize: 36,
         mb: 2,
         display: "inline-block",
@@ -46,17 +37,10 @@ export const styles = {
         background: `${color}33`,
     }),
 
-    cardTitle: {
-        fontWeight: "bold",
-        mb: 1,
-    } as SxProps<Theme>,
+    cardTitle: { fontWeight: "bold", mb: 1 },
+    cardDesc: { mb: 2, color: "#333" },
 
-    cardDesc: {
-        mb: 2,
-        color: "#333",
-    } as SxProps<Theme>,
-
-    button: (color: string): SxProps<Theme> => ({
+    button: (color: string) => ({
         backgroundColor: color,
         "&:hover": {
             backgroundColor: color + "cc",
