@@ -1,18 +1,9 @@
 import { Container, Typography, Button, CardContent, CardMedia, Box } from '@mui/material';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import {
-  PageWrapper,
-  SectionTitle,
-  SectionBox,
-  SectionHeader,
-  CardsGrid,
-  StyledCard,
-  NavButtonsWrapper,
-  PrevBtn,
-  NextBtn
-} from './external-resources';
+
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
+import { PageWrapper,  SectionTitle,  SectionBox,  SectionHeader,  CardsGrid,  StyledCard, NavButtonsWrapper,  PrevBtn,  NextBtn } from './external-resources';
 import { BottomBar } from '../../HomeComponents/Footer/footerStyle';
 
 export function ExternalResources() {
@@ -137,4 +128,3 @@ export function ExternalResources() {
   );
 
 }
-
