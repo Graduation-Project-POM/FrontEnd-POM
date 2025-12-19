@@ -202,7 +202,7 @@ export default function Exam1() {
 
             <Box sx={{ direction: isRTL ? "rtl" : "ltr", textAlign: "center", margin: { xs: 2, sm: 4, md: 6 }, px: { xs: 2, sm: 4, md: 2 } }}>
                 <Typography variant="h3" sx={{ color: "#333", fontWeight: "bold", m: "20px"}}>
-                    {t("worksheets.heroTitle")} <span style={{ color: "#7D1C48" }}>{t("worksheets.heroDesc")}</span>
+                    {t("worksheets.heroTitle")} 
                 </Typography>
 
                 <Box

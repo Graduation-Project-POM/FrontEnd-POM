@@ -45,7 +45,7 @@ export default function Playlist() {
 
                 <Container maxWidth="sm">
                     {playlist.map((p, index) => (
-                        <Card key={index} sx={card} onClick={() => (window.location.href = p.link)}>
+                        <Card key={index} sx={card} onClick={() => window.open(p.link, "_blank")}>
                             <CardContent sx={cardContent}>
                                 <Box sx={iconBox(p.color)}>{p.icon}</Box>
                                 <Typography variant="h4" sx={title}>
@@ -55,7 +55,7 @@ export default function Playlist() {
                                     {t("playlist.heroDesc")}
                                 </Typography>
 
-                                <Button variant="contained" sx={button(p.color)}>
+                                <Button variant="contained" component="a"sx={button(p.color)}>
                                     {t("playlist.viewPlaylist")}
                                 </Button>
                             </CardContent>

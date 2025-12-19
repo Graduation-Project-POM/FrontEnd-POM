@@ -1,5 +1,6 @@
 export const styles = {
     container: {
+        minHeight: "90vh",
         p: 4,
         paddingTop: "10rem"
     },
