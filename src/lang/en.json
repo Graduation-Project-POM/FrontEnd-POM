@@ -135,7 +135,6 @@
     "externalTitle": "External Resources",
     "externalSub": "Boost your learning with trusted external resources designed",
     "secExternalSub": "to support your olympiad preparation.",
-    "viewHistory": "View history",
     "card1": {
       "title": "Arab Mathematics Olympiad – Doha 2024",
       "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
@@ -144,11 +143,6 @@
     "card2": {
       "title": "Arab Mathematics Olympiad – 2nd Edition (2020)",
       "desc": "The second edition of the Arab Mathematics Olympiad, featuring high-level mathematical problems and participation from students across the region.",
-      "extra": null
-    },
-    "card3": {
-      "title": "Jordan Mathematics Olympiad – Past Papers",
-      "desc": "Archive of past papers, sample problems, and training booklets from the Jordanian Mathematics Olympiad, offering high-quality preparation material in Arabic.",
       "extra": null
     }
   },
@@ -253,7 +247,7 @@
   "playlist": {
     "headerBack": "Back to Resources Page",
     "heroTitle": "Previous Training Videos",
-    "heroDesc": "Explore our curated video playlists to enhance your arithmetic skills.",
-    "viewPlaylist": "Phase 1 Training"
+    "heroDesc": "Explore our curated video playlists designed to enhance your mathematical skills and prepare you for competitions.",
+    "viewPlaylist": "Click Here"
   }
 }
