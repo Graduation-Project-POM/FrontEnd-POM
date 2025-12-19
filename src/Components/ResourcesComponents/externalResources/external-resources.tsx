@@ -1,4 +1,4 @@
-import { Container, Typography, Button, CardContent, CardMedia } from '@mui/material';
+import { Container, Typography, Button, CardContent, CardMedia, Box } from '@mui/material';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   PageWrapper,
@@ -13,6 +13,7 @@ import {
 } from './external-resources';
 import { useTranslation } from "react-i18next";
 import { useEffect } from 'react';
+import { BottomBar } from '../../HomeComponents/Footer/footerStyle';
 
 export function ExternalResources() {
   const { t, i18n } = useTranslation();
@@ -47,10 +48,34 @@ export function ExternalResources() {
   ];
 
   return (
-    <PageWrapper isrtl={isRTL}>
-      <Container maxWidth="lg" sx={{ mb: 8 }}>
-        <SectionTitle variant="h4">{t("externalResources.externalTitle")}</SectionTitle>
+    <>
+      <PageWrapper isrtl={isRTL ? true : undefined}>
+        <Container maxWidth="lg" sx={{ mb: 8 }}>
+          <SectionTitle variant="h3" sx={{
+            fontWeight: 800,
+            mb: 5,
+            textAlign: "center",
+            color: "#333",
+          }}>{t("externalResources.externalTitle")}</SectionTitle>
+        <Box>
+          <Typography
+            variant="h5"
+            sx={{
+              width: "200px",
+              height: 4,
+              backgroundColor: "#7D1C48",
+              borderRadius: 2,
+              mx: "auto",
+              mt: 3,
+              marginBottom: 5,
+            }}
+          >
+          </Typography>
+        </Box>
+
         <SectionBox>
+
+
           <SectionHeader isrtl={isRTL}>
             <Typography variant="h5" sx={{ fontWeight: 600, color: '#7A1E3C' }}>
               {t("externalResources.externalSub")}
@@ -61,7 +86,9 @@ export function ExternalResources() {
               {t("externalResources.viewHistory")}
             </Button>
           </SectionHeader>
-          <CardsGrid isrtl={isRTL}>
+
+
+          <CardsGrid isrtl={isRTL ? true : undefined}>
             {externalResourcess.map((w) => (
               <StyledCard key={w.title}>
                 <a href={w.pdf} target="_blank">
@@ -83,14 +110,31 @@ export function ExternalResources() {
               </StyledCard>
             ))}
           </CardsGrid>
-          <NavButtonsWrapper isrtl={isRTL}>
+          <NavButtonsWrapper isrtl={isRTL ? true : undefined}>
             <PrevBtn><ChevronLeft size={20} /></PrevBtn>
             <NextBtn><ChevronRight size={20} /></NextBtn>
           </NavButtonsWrapper>
         </SectionBox>
       </Container>
 
-    </PageWrapper>
+    </PageWrapper >
+
+
+
+      <BottomBar>
+        <Container maxWidth="lg">
+          <Box
+            sx={{
+              textAlign: "center",
+            }}
+          >
+            <Typography sx={{ color: "white", fontSize: "0.8rem" }}>
+              {t("footer.bottom.rights")}
+            </Typography>
+          </Box>
+        </Container>
+      </BottomBar></>
   );
+
 }
 

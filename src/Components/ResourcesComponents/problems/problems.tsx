@@ -49,6 +49,22 @@ function Problems() {
                 </Typography>
             </Box>
 
+            <Box>
+                <Typography
+                    variant="h5"
+                    sx={{
+                        width: "200px",
+                        height: 4,
+                        backgroundColor: "#7D1C48",
+                        borderRadius: 2,
+                        mx: "auto",
+                        mt: 3,
+                        marginBottom: 5,
+                    }}
+                >
+                </Typography>
+            </Box>
+
             <Box sx={styles.grid}>
                 {problemsList.map((problem, index) => (
                     <Card key={index} sx={styles.card(problem.color)}>

@@ -21,22 +21,23 @@ export function Header() {
   }, [isRTL]);
 
   return (
-    <PageWrapper isrtl={isRTL}>
+    <PageWrapper isrtl={isRTL ? true : undefined}>
       <HeaderWrapper>
         <Container maxWidth="lg">
-          <HeaderInner isrtl={isRTL}>
-            <HeaderLeft isrtl={isRTL}>
+          <HeaderInner isrtl={isRTL ? true : undefined}>
+            <HeaderLeft isrtl={isRTL ? true : undefined}>
               <Logo>
                 <Box
                   component="img"
                   src="/olm pal math22.png"
-                  alt=""
+                  alt="logo"
                   sx={{
-                    width: { md: "150px", xs: "100px" },
-                    height: { md: "75px", xs: "60px" },
+                    width: { xs: "100px", md: "150px" },
+                    height: { xs: "60px", md: "75px" },
                   }}
                 />
               </Logo>
+
               <Button
                 component={Link}
                 to="/"
@@ -46,13 +47,21 @@ export function Header() {
                   borderRadius: "10px",
                   borderColor: "#7A1E3C",
                   color: "#7A1E3C",
-                  fontSize: "1rem",
+                  fontSize: { xs: "0.9rem", md: "1rem" },
                 }}
               >
                 {t("externalResources.headerBack")}
               </Button>
             </HeaderLeft>
-            <Box sx={{ display: "flex", gap: 2 }}>
+
+            <Box
+              sx={{
+                display: "flex",
+                gap: 2,
+                flexDirection: { xs: "column", sm: "row" },
+                width: { xs: "100%", sm: "auto" },
+              }}
+            >
               <Button
                 variant="contained"
                 sx={{
@@ -65,6 +74,7 @@ export function Header() {
               >
                 {t("externalResources.login")}
               </Button>
+
               <Button
                 onClick={() =>
                   i18n.changeLanguage(i18n.language === "ar" ? "en" : "ar")
@@ -89,11 +99,23 @@ export function Header() {
         </Container>
       </HeaderWrapper>
 
-      <Container maxWidth="lg" sx={{ mt: 8, mb: 6 }}>
-        <Box sx={{ display: "flex", gap: 8 }}>
+      <Container maxWidth="lg" sx={{ mt: { xs: 4, md: 8 }, mb: 6 }}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: { xs: 3, md: 8 },
+            flexDirection: {
+              xs: "column",
+              md: isRTL ? "row-reverse" : "row",
+            },
+          }}
+        >
           <Box sx={{ flex: 1 }}>
-            <MainTitle variant="h3">{t("externalResources.title")}</MainTitle>
+            <MainTitle variant="h3">
+              {t("externalResources.title")}
+            </MainTitle>
           </Box>
+
           <Box sx={{ flex: 1 }}>
             <DescriptionText>{t("externalResources.desc1")}</DescriptionText>
             <DescriptionText>{t("externalResources.desc2")}</DescriptionText>

@@ -227,65 +227,33 @@
     "desc4": "A comprehensive site for advanced problems and solutions.",
     "open": "Open Problem"
   },
-  "sheets": {
-    "heroTitle": "Math Olympiad Worksheets",
-    "heroDesc": "Find all the worksheets and solutions from different directorates here.",
-    "open": "Open",
-    "directorates": {
-      "Jenin": "Jenin",
-      "Qabatiya": "Qabatiya",
-      "Yatta": "Yatta",
-      "Birzeit": "Birzeit",
-      "Qalqilya": "Qalqilya",
-      "Jerusalem": "Jerusalem",
-      "Tulkarm": "Tulkarm",
-      "RamallahBireh": "Ramallah & Bireh",
-      "Nablus": "Nablus",
-      "Salfit": "Salfit",
-      "Jericho": "Jericho"
-    },
-    "worksheets": {
-      "jenin2025": "Olympiad 2025 Jenin Directorate",
-      "qabatiyaAnswers2": "Qabatiya Math Olympiad Answer (2)",
-      "qabatiyaMath": "Qabatiya Math Olympiad",
-      "yattaExam": "Yatta Directorate Olympiad Exam (Answers)",
-      "birzeit2025": "Birzeit 2025 Olympiad - Answers",
-      "qalqilyaCompetition": "Qalqilya Math Olympiad Competition",
-      "jerusalem2025": "Jerusalem 2025 Math Olympiad",
-      "jerusalemAnswers": "Jerusalem Directorate Answers",
-      "tulkarmFinal": "Tulkarm Final Version",
-      "tulkarmSolutions": "Tulkarm Olympiad Solutions",
-      "ramallahLast": "Ramallah Directorate Last Exam",
-      "ramallahFinalAnswers": "Ramallah Final Answers",
-      "nablusFinal": "Nablus Final Version",
-      "nablusAnswers": "Nablus Answers",
-      "nablusEng": "Nablus Math Olympiad Questions (English)",
-      "nablusQuestions": "Nablus Math Olympiad Questions",
-      "salfitAnswers": "Salfit Olympiad Answers",
-      "jericho2025": "Jericho 2025 Math Olympiad"
-    },
-    "desc": {
-      "jenin2025": "Worksheet for Jenin 2025 Olympiad",
-      "qabatiyaAnswers2": "Solutions for Qabatiya Math Olympiad (2)",
-      "qabatiyaMath": "Qabatiya Math Olympiad Worksheet",
-      "yattaExam": "Yatta Directorate Exam Answers",
-      "birzeit2025": "Birzeit 2025 Olympiad Answers",
-      "qalqilyaCompetition": "Qalqilya Olympiad Questions",
-      "jerusalem2025": "Jerusalem 2025 Olympiad Worksheet",
-      "jerusalemAnswers": "Answers for Jerusalem Directorate",
-      "tulkarmFinal": "Final version for Tulkarm",
-      "tulkarmSolutions": "Solutions for Tulkarm Olympiad",
-      "ramallahLast": "Last exam at Ramallah Directorate",
-      "ramallahFinalAnswers": "Final answers at Ramallah Directorate",
-      "nablusFinal": "Final Nablus Olympiad",
-      "nablusAnswers": "Solutions for Nablus Olympiad",
-      "nablusEng": "English version of Nablus Olympiad Questions",
-      "nablusQuestions": "Questions of Nablus Olympiad",
-      "salfitAnswers": "Salfit Olympiad Answers",
-      "jericho2025": "Jericho 2025 Olympiad Worksheet"
-    }
+  "worksheets": {
+    "heroTitle": "Preparatory Stage ",
+    "heroDesc": "Exam Questions",
+    "clickHere": "Click here",
+    "jenin2025": "Olympiad 2025 Jenin Directorate",
+    "qabatiyaAnswers2": "Qabatiya Math Olympiad Answer (2)",
+    "qabatiyaMath": "Qabatiya Math Olympiad",
+    "yattaExam": "Yatta Directorate Olympiad Exam (Answers)",
+    "birzeit2025": "Birzeit 2025 Olympiad - Answers",
+    "qalqilyaCompetition": "Qalqilya Math Olympiad Competition",
+    "jerusalem2025": "Jerusalem 2025 Math Olympiad",
+    "jerusalemAnswers": "Jerusalem Directorate Answers",
+    "tulkarmFinal": "Tulkarm Final Version",
+    "tulkarmSolutions": "Tulkarm Olympiad Solutions",
+    "ramallahLast": "Ramallah Directorate Last Exam",
+    "ramallahFinalAnswers": "Ramallah Final Answers",
+    "nablusFinal": "Nablus Final Version",
+    "nablusAnswers": "Nablus Answers",
+    "nablusEng": "Nablus Math Olympiad Questions (English)",
+    "nablusQuestions": "Nablus Math Olympiad Questions",
+    "salfitAnswers": "Salfit Olympiad Answers",
+    "jericho2025": "Jericho 2025 Math Olympiad"
   },
-  "common": {
-    "all": "All"
+  "playlist": {
+    "headerBack": "Back to Resources Page",
+    "heroTitle": "Previous Training Videos",
+    "heroDesc": "Explore our curated video playlists designed to enhance your mathematical skills and prepare you for competitions.",
+    "viewPlaylist": "Phase 1 Training"
   }
 }

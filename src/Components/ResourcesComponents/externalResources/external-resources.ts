@@ -1,21 +1,24 @@
 import { Box, Typography, Card, CardMedia, IconButton } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
+
 interface RTLProps {
   isrtl?: boolean;
 }
 
-export const PageWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
+export const PageWrapper = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isrtl",
+})<RTLProps>(({ isrtl }) => ({
   backgroundColor: "#f5f5f5",
   direction: isrtl ? "rtl" : "ltr",
-  paddingTop: "10rem"
+  paddingTop: "10rem",
 }));
 
+
+
 export const SectionTitle = styled(Typography)({
-  fontWeight: 600,
-  color: '#7A1E3C',
+  color: '#333',
   marginBottom: '32px',
-  fontSize: "48px",
   textAlign: "center"
 });
 
@@ -24,8 +27,9 @@ export const SectionBox = styled(Box)({
   borderRadius: '16px',
   padding: '32px',
 });
-
-export const SectionHeader = styled(Box)<RTLProps>(({ isrtl }) => ({
+export const SectionHeader = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isrtl",
+})<RTLProps>(({ isrtl }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -33,7 +37,9 @@ export const SectionHeader = styled(Box)<RTLProps>(({ isrtl }) => ({
   marginBottom: "3rem"
 }));
 
-export const CardsGrid = styled(Box)<RTLProps>(({ isrtl }) => ({
+export const CardsGrid = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isrtl",
+})<RTLProps>(({ isrtl }) => ({
   display: "grid",
   gridTemplateColumns: "repeat(3, 1fr)",
   gap: "24px",
@@ -41,6 +47,16 @@ export const CardsGrid = styled(Box)<RTLProps>(({ isrtl }) => ({
   marginBottom: "24px",
   direction: isrtl ? "rtl" : "ltr",
 }));
+
+export const NavButtonsWrapper = styled(Box, {
+  shouldForwardProp: (prop) => prop !== "isrtl",
+})<RTLProps>(({ isrtl }) => ({
+  display: "flex",
+  justifyContent: isrtl ? "flex-start" : "flex-end",
+  flexDirection: isrtl ? "row-reverse" : "row",
+  gap: "8px",
+}));
+
 
 export const StyledCard = styled(Card)({
   borderRadius: '16px',
@@ -54,14 +70,6 @@ export const StyledCardMedia = styled(CardMedia)({
   objectFit: 'cover',
   cursor: 'pointer',
 });
-
-export const NavButtonsWrapper = styled(Box)<RTLProps>(({ isrtl }) => ({
-  display: "flex",
-  justifyContent: isrtl ? "flex-start" : "flex-end",
-  flexDirection: isrtl ? "row-reverse" : "row",
-  gap: "8px",
-}));
-
 
 export const PrevBtn = styled(IconButton)({
   backgroundColor: '#a15566',
