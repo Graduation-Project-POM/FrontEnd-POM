@@ -67,8 +67,8 @@ export const SectionHeader = styled(Box, {
 export const CardsGrid = styled(Box, {
   shouldForwardProp: (prop) => prop !== "isrtl",
 })<RTLProps>(({ isrtl }) => ({
-  display:"inline-flex",
-  gridTemplateColumns: "repeat(3, 1fr)",
+  display:"grid",
+  gridTemplateColumns: "repeat(2, 1fr)",
   gap: "24px",
   marginTop: "24px",
   marginBottom: "24px",
