@@ -40,14 +40,9 @@ export function ExternalResources() {
 
   return (
     <>
+    
       <PageWrapper isrtl={isRTL ? true : undefined}>
-        <Container maxWidth="lg" sx={{ mb: 8 }}>
-          <SectionTitle variant="h3" sx={{
-            fontWeight: 800,
-            mb: 5,
-            textAlign: "center",
-            color: "#333",
-          }}>{t("externalResources.externalTitle")}</SectionTitle>
+
         <Box>
           <Typography
             variant="h5"
@@ -63,6 +58,15 @@ export function ExternalResources() {
           >
           </Typography>
         </Box>
+        
+        <Container maxWidth="lg" sx={{ mb: 8 }}>
+          <SectionTitle variant="h3" sx={{
+            fontWeight: 800,
+            mb: 5,
+            textAlign: "center",
+            color: "#333",
+          }}>{t("externalResources.externalTitle")}</SectionTitle>
+        
 
         <SectionBox>
 

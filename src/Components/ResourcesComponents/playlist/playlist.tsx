@@ -51,7 +51,7 @@ export default function Playlist() {
                                 <Typography variant="h4" sx={title}>
                                     {t(p.title)}
                                 </Typography>
-                                <Typography variant="body2" sx={{ mb: 4, textAlign: "center" , color: "#7D1C48",fontWeight:500}}>
+                                <Typography variant="h6" sx={{ mb: 4, textAlign: "center" , color: "#7D1C48",fontWeight:500}}>
                                     {t("playlist.heroDesc")}
                                 </Typography>
 

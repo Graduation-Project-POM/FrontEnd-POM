@@ -228,8 +228,8 @@
     "open": "Open Problem"
   },
   "worksheets": {
-    "heroTitle": "Preparatory Stage ",
-    "heroDesc": "Exam Questions",
+    "heroTitle": "Preparatory Stage Exam Questions ",
+    "heroDesc": "Practice past exam questions to boost your skills.",
     "clickHere": "Click here",
     "jenin2025": "Olympiad 2025 Jenin Directorate",
     "qabatiyaAnswers2": "Qabatiya Math Olympiad Answer (2)",
@@ -253,7 +253,7 @@
   "playlist": {
     "headerBack": "Back to Resources Page",
     "heroTitle": "Previous Training Videos",
-    "heroDesc": "Explore our curated video playlists designed to enhance your mathematical skills and prepare you for competitions.",
+    "heroDesc": "Explore our curated video playlists to enhance your arithmetic skills.",
     "viewPlaylist": "Phase 1 Training"
   }
 }
