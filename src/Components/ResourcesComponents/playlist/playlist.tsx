@@ -12,7 +12,7 @@ interface playlist {
 const playlist: playlist[] = [
     {
         title: "playlist.heroTitle",
-        link: "https://youtube.com/playlist?list=PL9EgwsgADteyL3CsO5TDeay_4ntBPFc46&si=hHkdxWKNljOXBPJl",
+        link: "https://www.youtube.com/playlist?list=PL9EgwsgADtexVP_Fj3WrmpgNtXlv0-fgl",
         color: "#a33165",
         icon: "🎥",
     },

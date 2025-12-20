@@ -71,7 +71,7 @@ export const CardsGrid = styled(Box, {
   shouldForwardProp: (prop) => prop !== "isrtl",
 })<RTLProps>(({ isrtl }) => ({
   display: "grid",
-  gridTemplateColumns: "repeat(3, 1fr)",
+  gridTemplateColumns: "repeat(2, 1fr)",
   gap: "24px",
   marginTop: "24px",
   marginBottom: "24px",

@@ -28,13 +28,6 @@ export function ExternalResources() {
       pdf: '/educ_olymp.pdf',
       description: t("externalResources.card2.desc"),
       extraLine: null
-    },
-    {
-      title: t("externalResources.card3.title"),
-      image: '/thrdRes.jpg',
-      pdf: 'https://www.joacademy.com/',
-      description: t("externalResources.card3.desc"),
-      extraLine: null
     }
   ];
 
