@@ -14,14 +14,14 @@ const playlist: playlist[] = [
     {
         title: "playlist.heroTitle",
         desc: "playlist.heroDesc",
-        link: "https://www.youtube.com/watch?v=ule0EcyBuWU&list=PL9EgwsgADteyYkzq9zCzA-6KdwNwfv3J3",
+        link: "https://www.youtube.com/watch?v=NV_YIWpNajs&list=PL9EgwsgADtexVP_Fj3WrmpgNtXlv0-fgl",
         color: "#a33165",
         icon: "🎥",
     },
     {
         title: "playlist.heroTitle",
         desc: "playlist.heroDesc2",
-        link: "https://www.youtube.com/watch?v=yi0w1OQaHH8&list=PL9EgwsgADtew_9ZuPokvnOOc8uQcP5S41",
+        link: "https://www.youtube.com/watch?v=HPILHO7NzcY&list=PL9EgwsgADteyGLxBjUNBL2GtWUXWM-dga",
         color: "#FF6F61",
         icon: "📺",
     }, {
