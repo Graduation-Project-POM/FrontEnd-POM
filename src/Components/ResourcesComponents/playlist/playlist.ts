@@ -3,23 +3,25 @@ import type { SxProps, Theme } from "@mui/material";
 export const page: SxProps<Theme> = {
     paddingTop: "80px",
     display: "flex",
-    alignItems: "center",
+    flexWrap: "wrap",
     justifyContent: "center",
     p: 2,
+    gap: 4,
 };
 
-export const card: SxProps<Theme> = {
+export const card = (color: string): SxProps<Theme> => ({
+    width: 340,
     borderRadius: 4,
     overflow: "hidden",
     boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-    background: "linear-gradient(135deg, rgba(156, 39, 176, 0.2), rgba(103, 58, 183, 0.4))",
+    background: `linear-gradient(135deg, ${color}33, ${color}66)`,
     transition: "all 0.3s ease",
     cursor: "pointer",
     "&:hover": {
         transform: "translateY(-8px)",
         boxShadow: "0 20px 50px rgba(0,0,0,0.25)",
     },
-};
+});
 
 export const cardContent: SxProps<Theme> = {
     display: "flex",

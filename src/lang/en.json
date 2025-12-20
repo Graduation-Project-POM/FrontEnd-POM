@@ -247,7 +247,9 @@
   "playlist": {
     "headerBack": "Back to Resources Page",
     "heroTitle": "Previous Training Videos",
-    "heroDesc": "Explore our curated video playlists designed to enhance your mathematical skills and prepare you for competitions.",
+    "heroDesc": "Level One (in Arabic)",
+    "heroDesc2": "Level Two (in Arabic)",
+    "heroDesc3": "Level Three (in English)",
     "viewPlaylist": "Click Here"
   }
 }

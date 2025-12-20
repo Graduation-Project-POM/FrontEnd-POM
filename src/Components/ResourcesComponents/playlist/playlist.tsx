@@ -4,6 +4,7 @@ import i18n from "../../../utils/i18n";
 import { page, card, cardContent, iconBox, title, button } from "./playlist";
 interface playlist {
     title: string;
+    desc: string;
     link: string;
     color: string;
     icon: string;
@@ -12,10 +13,24 @@ interface playlist {
 const playlist: playlist[] = [
     {
         title: "playlist.heroTitle",
-        link: "https://www.youtube.com/playlist?list=PL9EgwsgADtexVP_Fj3WrmpgNtXlv0-fgl",
+        desc: "playlist.heroDesc",
+        link: "https://www.youtube.com/watch?v=ule0EcyBuWU&list=PL9EgwsgADteyYkzq9zCzA-6KdwNwfv3J3",
         color: "#a33165",
         icon: "🎥",
     },
+    {
+        title: "playlist.heroTitle",
+        desc: "playlist.heroDesc2",
+        link: "https://www.youtube.com/watch?v=yi0w1OQaHH8&list=PL9EgwsgADtew_9ZuPokvnOOc8uQcP5S41",
+        color: "#FF6F61",
+        icon: "📺",
+    }, {
+        title: "playlist.heroTitle",
+        desc: "playlist.heroDesc3",
+        link: "https://www.youtube.com/watch?v=5mE7J7Vd1U0&list=PL9EgwsgADteyL3CsO5TDeay_4ntBPFc46",
+        color: "#FFA500",
+        icon: "📹",
+    }
 ];
 
 export default function Playlist() {
@@ -43,19 +58,24 @@ export default function Playlist() {
             <Box sx={{ ...page, direction: isRTL ? "rtl" : "ltr" }}>
 
 
-                <Container maxWidth="sm">
+                <Container
+                    sx={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                        justifyContent: "center",
+                        gap: 4,
+                    }}>
                     {playlist.map((p, index) => (
-                        <Card key={index} sx={card} onClick={() => window.open(p.link, "_blank")}>
+                        <Card key={index} sx={card(p.color)} onClick={() => window.open(p.link, "_blank")}>
                             <CardContent sx={cardContent}>
                                 <Box sx={iconBox(p.color)}>{p.icon}</Box>
                                 <Typography variant="h4" sx={title}>
                                     {t(p.title)}
                                 </Typography>
-                                <Typography variant="h6" sx={{ mb: 4, textAlign: "center" , color: "#7D1C48",fontWeight:500}}>
-                                    {t("playlist.heroDesc")}
+                                <Typography variant="h5" sx={{ mb: 4, textAlign: "center", color: "#7D1C48", fontWeight: 500 }}>
+                                    {t(p.desc)}
                                 </Typography>
-
-                                <Button variant="contained" component="a"sx={button(p.color)}>
+                                <Button variant="contained" component="a" sx={button(p.color)}>
                                     {t("playlist.viewPlaylist")}
                                 </Button>
                             </CardContent>
