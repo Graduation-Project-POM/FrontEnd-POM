@@ -90,7 +90,7 @@ export default function VideoLibrarySection() {
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <Avatar sx={avatar(item.iconColor)}>{item.icon}</Avatar>
 
-                  <Box sx={{ flex: 1 }}>
+                  <Box sx={{ flex: 1, mr: "16px !important", }}>
                     <Typography variant="h6" fontWeight={700} gutterBottom>
                       {item.title}
                     </Typography>
