@@ -1,65 +1,68 @@
 import type { SxProps, Theme } from "@mui/material";
 
 export const page: SxProps<Theme> = {
-    paddingTop: "80px",
-    display: "flex",
-    flexWrap: "wrap",
+    minHeight: "100vh",
+    bgcolor: "#f5f5f5",
+    py: 4,
+};
+
+export const heroBox: SxProps<Theme> = {
+    bgcolor: "white",
+    py: 8,
+    px: 3,
+    mb: 4,
+    textAlign: "center",
+};
+
+export const heroStack: SxProps<Theme> = {
     justifyContent: "center",
-    p: 2,
-    gap: 4,
+};
+
+export const heroTitle: SxProps<Theme> = {
+    mt: 2,
+    background: "linear-gradient(90deg, #2C3E50 0%, #C2185B 100%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    mb: 2,
+    fontWeight: 800,
+};
+
+export const heroSubtitle: SxProps<Theme> = {
+    maxWidth: 700,
+    mx: "auto",
+};
+
+export const listWrapper: SxProps<Theme> = {
+    maxWidth: 1000,
+    mx: "auto",
+    px: 3,
 };
 
 export const card = (color: string): SxProps<Theme> => ({
-    width: 340,
-    borderRadius: 4,
-    overflow: "hidden",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
-    background: `linear-gradient(135deg, ${color}33, ${color}66)`,
-    transition: "all 0.3s ease",
     cursor: "pointer",
+    borderRadius: 3,
+    border: "1px solid #e0e0e0",
+    boxShadow: "0 1px 3px rgba(0,0,0,0.08)",
+    transition:
+        "transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.35s",
     "&:hover": {
-        transform: "translateY(-8px)",
-        boxShadow: "0 20px 50px rgba(0,0,0,0.25)",
+        transform: "translateY(-6px)",
+        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+        borderColor: color,
     },
 });
 
-export const cardContent: SxProps<Theme> = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    p: 6,
+export const avatar = (color: string): SxProps<Theme> => ({
+    bgcolor: color,
+    width: 64,
+    height: 64,
+    borderRadius: 2,
+    transition: "transform 0.35s",
+    ".MuiCard-root:hover &": {
+        transform: "scale(1.08)",
+    },
+});
+
+export const statsStack: SxProps<Theme> = {
+    ml: "auto",
 };
-
-export const iconBox = (color: string): SxProps<Theme> => ({
-    width: 80,
-    height: 80,
-    borderRadius: 3,
-    backgroundColor: color + "33",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    mb: 3,
-    fontSize: "3rem",
-});
-
-export const title: SxProps<Theme> = {
-    fontWeight: 700,
-    mb: 2,
-};
-
-export const subtitle = (color: string): SxProps<Theme> => ({
-    mb: 4,
-    color: color,
-});
-
-export const button = (color: string): SxProps<Theme> => ({
-    background: `linear-gradient(135deg, ${color}, #a33165)`,
-    color: "#fff",
-    borderRadius: 3,
-    px: 5,
-    py: 1.5,
-    fontWeight: 700,
-    fontSize: "1.1rem",
-    "&:hover": { filter: "brightness(1.1)" },
-});
