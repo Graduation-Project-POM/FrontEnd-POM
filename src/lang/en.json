@@ -250,6 +250,10 @@
     "heroDesc": "Level One (in Arabic)",
     "heroDesc2": "Level Two (in English)",
     "heroDesc3": "Level Three (in English)",
-    "viewPlaylist": "Click Here"
+    "viewPlaylist": "Click Here",
+    "library": "Video Library",
+    "startHeadLine": "Start Learning Today",
+    "exploreDesc": "Explore our curated playlists designed to accelerate your learning journey",
+    "listView": "Playlist Overview"
   }
 }

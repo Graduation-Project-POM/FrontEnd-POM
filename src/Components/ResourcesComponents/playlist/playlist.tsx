@@ -64,23 +64,23 @@ export default function VideoLibrarySection() {
             <VideoLibraryIcon />
           </Avatar>
           <Typography variant="h5" fontWeight={700}>
-            Video Library
+            {t("playlist.library")}
           </Typography>
         </Stack>
 
         <Typography variant="h2" sx={heroTitle}>
-          Start Learning Today
+          {t("playlist.startHeadLine")}
         </Typography>
 
         <Typography variant="h6" color="text.secondary" sx={heroSubtitle}>
-          Explore our curated playlists designed to accelerate your learning journey
+          {t("playlist.exploreDesc")}
         </Typography>
       </Box>
 
-      {/* Compact List View */}
+      {/* List View */}
       <Box sx={listWrapper}>
         <Typography variant="h4" fontWeight={700} sx={{ mb: 3 }}>
-          Compact List View
+          {t("playlist.listView")}
         </Typography>
 
         <Stack spacing={2}>
