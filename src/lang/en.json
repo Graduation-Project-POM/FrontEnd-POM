@@ -132,9 +132,9 @@
     "desc1": "Welcome to the Resources section, where you can explore a wide range of materials designed to support students, teachers, and math enthusiasts.",
     "desc2": "Here, you'll find organized collections of externalResourcess, external references, practice problems, video tutorials, and recommended math books.",
     "desc3": "Browse through the categories below and start learning with high-quality, structured resources tailored just for you.",
-    "externalTitle": "External Resources",
-    "externalSub": "Boost your learning with trusted external resources designed",
-    "secExternalSub": "to support your olympiad preparation.",
+    "externalTitle": "Arab Mathematics Competitions",
+    "externalSub": "Specialized books on Arab mathematics competitions",
+    "secExternalSub": "to enhance problem-solving and mathematical thinking skills.",
     "card1": {
       "title": "Arab Mathematics Olympiad – Doha 2024",
       "desc": "A regional mathematics competition hosted in Doha, Qatar. This event brings together top students from across the Arab world to compete in advanced problem-solving challenges.",
@@ -208,8 +208,8 @@
     "desc5": "Continuation of Part 1, focusing on more challenging problems and strengthening problem-solving skills."
   },
   "problems": {
-    "heroTitle": "Discover",
-    "highlight": "Olympiad Problems",
+    "heroTitle": "Selected Problems from",
+    "highlight": "the International Mathematical Olympiad",
     "heroDesc": "Browse our curated collection of international Olympiad problems, solutions, and math training resources.",
     "title1": "Mathematical Olympiad Problems from 1959 to 2018",
     "desc1": "A complete set of Palestinian and international Olympiad problems across the years.",
