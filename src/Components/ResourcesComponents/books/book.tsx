@@ -23,26 +23,12 @@ function Books() {
             icon: "📖",
         },
         {
-            title: t("books.title1"),
-            description: t("books.desc1"),
-            link: "https://drive.google.com/file/d/13_yxdhInipKbN7zkbSRJJ3EyF7wKISR8/view",
-            color: "#7D1C48",
-            icon: "📐",
-        },
-        {
             title: t("books.title2"),
             description: t("books.desc2"),
             link: "https://drive.google.com/file/d/13N6cRcuQ4XgnHg08AMNqF3jZdHXYHqLx/view?usp=drive_link",
             color: "#FF9F1C",
             icon: "🧮",
-        },
-        {
-            title: t("books.title3"),
-            description: t("books.desc3"),
-            link: "https://drive.google.com/file/d/1qxBldC_S7bby4FQjdG74eYEjxzCgz3Fy/view?usp=drive_link",
-            color: "#6C4859",
-            icon: "🏆",
-        },
+        }
     ];
 
     return (
@@ -90,32 +76,7 @@ function Books() {
                     justifyContent: "center"
                 }}
             >
-                {booksList.slice(0, 2).map((book, index) => (
-                    <Card key={index} sx={styles.card(book.color)}>
-                        <CardContent>
-                            <Box sx={styles.iconBox(book.color)}>{book.icon}</Box>
-                            <Typography variant="h6" sx={styles.cardTitle}>
-                                {book.title}
-                            </Typography>
-                            <Typography variant="body2" sx={styles.cardDesc}>
-                                {book.description}
-                            </Typography>
-                            <Button
-                                href={book.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                variant="contained"
-                                sx={styles.button(book.color)}
-                            >
-                                {t("books.open")}
-                            </Button>
-                        </CardContent>
-                    </Card>
-                ))}
-            </Box>
-
-            <Box sx={{ ...styles.starterGrid, mt: 6 }}>
-                {booksList.slice(2).map((book, index) => (
+                {booksList.slice(0, 3).map((book, index) => (
                     <Card key={index} sx={styles.card(book.color)}>
                         <CardContent>
                             <Box sx={styles.iconBox(book.color)}>{book.icon}</Box>

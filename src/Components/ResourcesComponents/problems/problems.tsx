@@ -35,7 +35,21 @@ function Problems() {
             link: "https://www.imo-official.org/results.aspx",
             color: "#FF6F61",
             icon: "🏅",
-        }
+        },
+        {
+            title: t("problems.title5"),
+            description: t("problems.desc5"),
+            link: "https://drive.google.com/file/d/13_yxdhInipKbN7zkbSRJJ3EyF7wKISR8/view",
+            color: "#7D1C48",
+            icon: "📐",
+        },
+        {
+            title: t("problems.title6"),
+            description: t("problems.desc6"),
+            link: "https://drive.google.com/file/d/1qxBldC_S7bby4FQjdG74eYEjxzCgz3Fy/view?usp=drive_link",
+            color: "#6C4859",
+            icon: "🏆",
+        },
     ];
 
     return (
