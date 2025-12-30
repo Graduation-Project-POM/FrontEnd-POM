@@ -116,7 +116,7 @@ export default function VideoLibrarySection() {
 
                     <IconButton
                       size="small"
-                      color="action"
+                      color="inherit"
                       onClick={(e) => {
                         e.stopPropagation();
                         openLink(item.link);
