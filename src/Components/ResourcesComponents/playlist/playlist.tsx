@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Typography, Card, CardContent, Stack, IconButton, Avatar } from "@mui/material";
-import { PlayArrow, Videocam, LocalOffer, VideoLibrary as VideoLibraryIcon, Schedule, OndemandVideo, Launch } from "@mui/icons-material";
+import { Box, Typography, Card, CardContent, Stack, IconButton, Avatar, Chip } from "@mui/material";
+import { PlayArrow, Videocam, LocalOffer, VideoLibrary as VideoLibraryIcon, Schedule, OndemandVideo, Launch, School } from "@mui/icons-material";
 import { useTranslation } from "react-i18next";
 import { avatar, card, heroBox, heroStack, heroSubtitle, heroTitle, listWrapper, page, statsStack } from "./playlist";
 
@@ -9,17 +9,18 @@ interface VideoItem {
   title: string;
   description: string;
   link: string;
-  videoCount: number;
-  duration: string;
+  videoCount?: number;
+  duration?: string;
   iconColor: string;
   icon: React.ReactNode;
+  isChannel?: boolean;
 }
 
 const openLink = (url: string) => {
   window.open(url, "_blank", "noopener,noreferrer");
 };
 
-export default function VideoLibrarySection() {
+export default function Playlist() {
   const { t } = useTranslation();
 
   const videoItems: VideoItem[] = [
@@ -53,11 +54,19 @@ export default function VideoLibrarySection() {
       iconColor: "#FFA500",
       icon: <LocalOffer />,
     },
+    {
+      id: "4",
+      title: t("playlist.heroTitle2"),
+      description: t("playlist.heroDesc4"),
+      link: "https://www.youtube.com/@ArtofProblemSolving/playlists",
+      iconColor: "#4A90E2",
+      icon: <School />,
+      isChannel: true,
+    },
   ];
 
   return (
     <Box sx={page}>
-      {/* Hero Section */}
       <Box sx={heroBox}>
         <Stack direction="row" alignItems="center" spacing={2} sx={heroStack}>
           <Avatar sx={{ bgcolor: "#E91E63", width: 40, height: 40 }}>
@@ -77,7 +86,6 @@ export default function VideoLibrarySection() {
         </Typography>
       </Box>
 
-      {/* List View */}
       <Box sx={listWrapper}>
         <Typography variant="h4" fontWeight={700} sx={{ mb: 3 }}>
           {t("playlist.listView")}
@@ -85,12 +93,16 @@ export default function VideoLibrarySection() {
 
         <Stack spacing={2}>
           {videoItems.map((item) => (
-            <Card key={item.id} onClick={() => openLink(item.link)} sx={card(item.iconColor)}>
+            <Card
+              key={item.id}
+              onClick={() => openLink(item.link)}
+              sx={card(item.iconColor)}
+            >
               <CardContent>
                 <Stack direction="row" alignItems="center" spacing={2}>
                   <Avatar sx={avatar(item.iconColor)}>{item.icon}</Avatar>
 
-                  <Box sx={{ flex: 1, mr: "16px !important", }}>
+                  <Box sx={{ flex: 1, mr: "16px !important" }}>
                     <Typography variant="h6" fontWeight={700} gutterBottom>
                       {item.title}
                     </Typography>
@@ -99,20 +111,39 @@ export default function VideoLibrarySection() {
                     </Typography>
                   </Box>
 
-                  <Stack direction="row" alignItems="center" spacing={3} sx={statsStack}>
-                    <Stack direction="row" alignItems="center" spacing={1}>
-                      <OndemandVideo fontSize="small" color="action" />
-                      <Typography variant="body2" color="text.secondary">
-                        {item.videoCount}
-                      </Typography>
-                    </Stack>
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    spacing={3}
+                    sx={statsStack}
+                  >
+                    {item.isChannel ? (
+                      <Chip
+                        label="YouTube Channel"
+                        size="small"
+                        sx={{
+                          bgcolor: `${item.iconColor}20`,
+                          color: item.iconColor,
+                          fontWeight: 600,
+                        }}
+                      />
+                    ) : (
+                      <>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <OndemandVideo fontSize="small" sx={{ color: "action.active" }} />
+                          <Typography variant="body2" color="text.secondary">
+                            {item.videoCount}
+                          </Typography>
+                        </Stack>
 
-                    <Stack direction="row" alignItems="center" spacing={1}>
-                      <Schedule fontSize="small" color="action" />
-                      <Typography variant="body2" color="text.secondary">
-                        {item.duration}
-                      </Typography>
-                    </Stack>
+                        <Stack direction="row" alignItems="center" spacing={1}>
+                          <Schedule fontSize="small" sx={{ color: "action.active" }} />
+                          <Typography variant="body2" color="text.secondary">
+                            {item.duration}
+                          </Typography>
+                        </Stack>
+                      </>
+                    )}
 
                     <IconButton
                       size="small"

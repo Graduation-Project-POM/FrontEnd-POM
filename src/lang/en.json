@@ -254,6 +254,8 @@
     "library": "Video Library",
     "startHeadLine": "Start Learning Today",
     "exploreDesc": "Explore our curated playlists designed to accelerate your learning journey",
-    "listView": "Playlist Overview"
+    "listView": "Playlist Overview",
+    "heroTitle2": "Art of Problem Solving Channel",
+    "heroDesc4": "Explaining various topics in mathematics"
   }
 }
