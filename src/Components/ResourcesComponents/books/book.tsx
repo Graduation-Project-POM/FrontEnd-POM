@@ -43,6 +43,13 @@ function Books() {
             color: "#6C4859",
             icon: "🏆",
         },
+        {
+            title: t("books.title6"),
+            description: t("books.desc6"),
+            link: "https://drive.google.com/file/d/1UWNoKcRrODCCpwoCBu4mUvtO83cRVb_B/view",
+            color: "#6C4859",
+            icon: "📘",
+        },
     ];
 
     return (
@@ -90,7 +97,7 @@ function Books() {
                     justifyContent: "center"
                 }}
             >
-                {booksList.slice(0, 2).map((book, index) => (
+                {booksList.slice(0, 3).map((book, index) => (
                     <Card key={index} sx={styles.card(book.color)}>
                         <CardContent>
                             <Box sx={styles.iconBox(book.color)}>{book.icon}</Box>
@@ -115,7 +122,7 @@ function Books() {
             </Box>
 
             <Box sx={{ ...styles.starterGrid, mt: 6 }}>
-                {booksList.slice(2).map((book, index) => (
+                {booksList.slice(3).map((book, index) => (
                     <Card key={index} sx={styles.card(book.color)}>
                         <CardContent>
                             <Box sx={styles.iconBox(book.color)}>{book.icon}</Box>
