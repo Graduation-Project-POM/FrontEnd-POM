@@ -46,7 +46,7 @@ function Books() {
         {
             title: t("books.title6"),
             description: t("books.desc6"),
-            link: "https://drive.google.com/file/d/1UWNoKcRrODCCpwoCBu4mUvtO83cRVb_B/view",
+            link: "https://drive.google.com/file/d/1ON-wOaP5SE7xrPI5hse7FuoQqJ-3CuAH/view?usp=sharing",
             color: "#6C4859",
             icon: "📘",
         },

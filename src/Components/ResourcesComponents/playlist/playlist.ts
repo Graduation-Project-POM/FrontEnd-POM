@@ -25,6 +25,7 @@ export const heroTitle: SxProps<Theme> = {
     WebkitTextFillColor: "transparent",
     mb: 2,
     fontWeight: 800,
+    lineHeight: 1.4,
 };
 
 export const heroSubtitle: SxProps<Theme> = {
