@@ -14,7 +14,16 @@ export const AboutTitle = styled(Typography)({
     color: "#7A1E3C",
     marginBottom: "32px",
     position: "relative",
-    
+    "&::after": {
+        content: '""',
+        display: "block",
+        width: "100px",
+        height: "4px",
+        backgroundColor: "#7A1E3C",
+        margin: "8px auto 0",
+        borderRadius: "2px",
+    },
+    animation: "fadeIn 1s ease forwards",
 });
 
 export const AboutText = styled(Typography)({
@@ -25,5 +34,6 @@ export const AboutText = styled(Typography)({
     borderRadius: "12px",
     padding: "32px",
     boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+    animation: "fadeIn 1.2s ease forwards",
 });
 
