@@ -118,6 +118,7 @@ const location = useLocation()
                 <SidebarNavLink onClick={handleClose}>{t("nav.services")}</SidebarNavLink>
                 <SidebarNavLink onClick={handleClose}>{t("nav.program")}</SidebarNavLink>
                 <SidebarNavLink onClick={handleClose}>{t("nav.about")}</SidebarNavLink>
+                <SidebarNavLink onClick={handleClose}>{t("nav.camp")}</SidebarNavLink>
                 <MobileLoginButton onClick={handleClose}>{t("nav.login")}</MobileLoginButton>
               </Box>
 
