@@ -4,6 +4,7 @@
     "services": "Services",
     "program": "Program",
     "about": "About",
+    "camp": "Training Camp",
     "login": "Log In"
   },
   "hero": {
@@ -45,6 +46,10 @@
       "rounds": {
         "title": "Preliminary Rounds",
         "desc": "Participants take qualifying exams to select the top students for the advanced stages."
+      },
+      "camp": {
+        "title": "Training Camp",
+        "desc": "Selected students participate in an intensive training camp to enhance their problem-solving skills."
       },
       "finals": {
         "title": "Finals",
@@ -259,5 +264,15 @@
     "listView": "Playlist Overview",
     "heroTitle2": "Art of Problem Solving Channel",
     "heroDesc4": "Explaining various topics in mathematics"
+  },
+  "winterCamp": {
+    "header1": "Winter Training Camp",
+    "header2": "for the International Mathematics Olympiad",
+    "searchMore": "Search More",
+    "checkIn": "CHECK IN",
+    "checkOut": "CHECK OUT",
+    "startDate": "10 Jan 2026",
+    "endDate": "15 Jan 2026",
+    "exploreCamp": "Explore the Camp"
   }
 }

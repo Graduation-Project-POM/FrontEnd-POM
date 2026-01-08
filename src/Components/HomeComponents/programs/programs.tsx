@@ -23,6 +23,11 @@ function Programs() {
       desc: t("programs.items.rounds.desc"),
     },
     {
+      img: "/program6.png",
+      title: t("programs.items.camp.title"),
+      desc: t("programs.items.camp.desc"),
+    },
+    {
       img: "/program3.png",
       title: t("programs.items.finals.title"),
       desc: t("programs.items.finals.desc"),

@@ -14,6 +14,7 @@ import {
   SidebarContent,
   SidebarNavLink,
 } from "./NavbarStyle.ts"
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
@@ -33,6 +34,8 @@ export function Navbar() {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
 
+const navigate = useNavigate()
+const location = useLocation()
 
   return (
     <StyledAppBar position="static">
@@ -50,10 +53,11 @@ export function Navbar() {
           }} /></Logo>
 
           <NavLinks isrtl={isRTL} sx={{ display: { xs: "none", md: "flex" }, flex: 1 }}>
-            <NavLink active>{t("nav.home")}</NavLink>
-            <NavLink>{t("nav.services")}</NavLink>
-            <NavLink>{t("nav.program")}</NavLink>
-            <NavLink>{t("nav.about")}</NavLink>
+            <NavLink active={location.pathname === "/" ? true : false} onClick={() => navigate("/")}>{t("nav.home")}</NavLink>
+            <NavLink >{t("nav.services")}</NavLink>
+            <NavLink >{t("nav.program")}</NavLink>
+            <NavLink >{t("nav.about")}</NavLink>
+            <NavLink onClick={() => navigate("/winterPath")} active={location.pathname === "/winterPath"}>{t("nav.camp")}</NavLink>
             <LoginButton variant="contained" sx={{ marginInlineStart: "auto" }}>{t("nav.login")}</LoginButton>
           </NavLinks>
 
