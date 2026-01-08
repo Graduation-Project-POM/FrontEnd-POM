@@ -1,7 +1,7 @@
 import { Box, Card, Typography, Grid } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-export const MAROON = "#7C1C3B"
+export const MAROON = "#7A1E3C"
 
 /* Page */
 export const PageWrapper = styled(Box)(({ theme }) => ({

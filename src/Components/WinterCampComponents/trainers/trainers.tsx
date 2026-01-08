@@ -22,18 +22,11 @@ import {
   PartnerImageBox,
   PartnerImage,
   TeacherImage,
-} from "./trainersStyles"
-
-type Teacher = {
-  name: string
-  title: string
-  subtitle: string
-  description: string
-  image: string
-}
+} from "./trainersStyles.ts"
+import type { Trainers } from "../../../types/trainers.ts"
 
 export default function Trainers() {
-  const teachers: Teacher[] = [
+  const teachers: Trainers[] = [
     {
       name: "Dr. Adnan Qadri",
       title: "Dr. Adnan Qadri",
