@@ -50,7 +50,7 @@ const agendaByDay: Record<Day, AgendaItem[]> = {
         { id: 6, time: "17:00 - 18:30", title: "agenda.dinner", speakers: null, type: "break" },
         {
             id: 7,
-            time: "18:30 - 19:00",
+            time: "",
             title: "agenda.videos",
             speakers: [
                 "organizations.moe",
@@ -230,28 +230,9 @@ export default function Agenda() {
     const [day, setDay] = useState<Day>("day1")
     const { t, i18n } = useTranslation()
 
-    const toggleLanguage = () => {
-        const newLang = i18n.language === "ar" ? "en" : "ar"
-        i18n.changeLanguage(newLang)
-    }
     return (
         <Page style={{ direction: i18n.language === "ar" ? "rtl" : "ltr" }}>
             <Main style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>
-                <div style={{ textAlign: i18n.language === "ar" ? "left" : "end", marginBottom: "12px" }}>
-                    <button
-                        onClick={toggleLanguage}
-                        style={{
-                            padding: "6px 12px",
-                            border: "1px solid #ccc",
-                            borderRadius: "6px",
-                            cursor: "pointer",
-                            background: "#f5f5f5"
-                        }}
-                    >
-                        {i18n.language === "ar" ? "EN" : "AR"}
-                    </button>
-                </div>
-
                 <PageTitle>{t("agenda.title")}</PageTitle>
                 <PageDescription>{t("agenda.description")}</PageDescription>
 
