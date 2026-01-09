@@ -34,8 +34,8 @@ export function Navbar() {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
 
-const navigate = useNavigate()
-const location = useLocation()
+  const navigate = useNavigate()
+  const location = useLocation()
 
   return (
     <StyledAppBar position="static">
@@ -114,11 +114,11 @@ const location = useLocation()
                 </IconButton>
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem", padding: "0 1rem" }}>
-                <SidebarNavLink onClick={handleClose}>{t("nav.home")}</SidebarNavLink>
-                <SidebarNavLink onClick={handleClose}>{t("nav.services")}</SidebarNavLink>
-                <SidebarNavLink onClick={handleClose}>{t("nav.program")}</SidebarNavLink>
-                <SidebarNavLink onClick={handleClose}>{t("nav.about")}</SidebarNavLink>
-                <SidebarNavLink onClick={handleClose}>{t("nav.camp")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/" ? true : false} onClick={() => { navigate("/"); handleClose() }} >{t("nav.home")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/services" ? true : false} onClick={() => { navigate("/services"); handleClose() }} >{t("nav.services")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/program" ? true : false} onClick={() => { navigate("/program"); handleClose() }} >{t("nav.program")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/about" ? true : false} onClick={() => { navigate("/about"); handleClose() }} >{t("nav.about")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/winterPath" ? true : false} onClick={() => { navigate("/winterPath"); handleClose() }} >{t("nav.camp")}</SidebarNavLink>
                 <MobileLoginButton onClick={handleClose}>{t("nav.login")}</MobileLoginButton>
               </Box>
 
