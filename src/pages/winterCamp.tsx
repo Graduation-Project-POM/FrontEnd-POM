@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Trainers from "../components/WinterCampComponents/trainers/trainers.tsx";
 import Home from "../Components/WinterCampComponents/homepage/home.tsx";
 import {About} from "../Components/WinterCampComponents/about/about.tsx";
+import Galary from "../Components/WinterCampComponents/galary/galary.tsx";
 
 export default function WinterCamp() {
   return (
@@ -9,7 +10,7 @@ export default function WinterCamp() {
       <Home />
       <About />
       <Trainers />
-
+      <Galary />
     </Box>
   )
 }

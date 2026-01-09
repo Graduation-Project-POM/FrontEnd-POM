@@ -275,6 +275,38 @@
     "endDate": "15 Jan 2026",
     "exploreCamp": "Explore the Camp",
     "aboutTitle": "About the Camp",
-    "aboutDescription": "The Winter Training Camp for the International Mathematics Olympiad is an intensive program designed to prepare and train selected students for the prestigious IMO competition. Held annually, this camp brings together the brightest young minds from across the region to enhance their problem-solving skills, deepen their mathematical knowledge, and foster a spirit of collaboration and competition. Through a series of challenging workshops, lectures, and practice sessions led by experienced coaches and former IMO participants, students will have the opportunity to tackle complex mathematical problems, engage in peer learning, and build lasting friendships with fellow math enthusiasts. The camp aims to not only equip students with the skills needed to excel in the IMO but also to inspire a lifelong passion for mathematics and critical thinking."
+    "aboutDescription": "The Winter Training Camp for the Palestinian Mathematics Olympiad kicks off on Saturday, January 10th, 2026, and will run for six days, graciously hosted by Al-Istiqlal University in Jericho.\n\nA total of 53 students from 18 districts are participating in this camp, selected through a rigorous, multi-stage selection process. This process began at the school level with over 5,000 students, then 1,046 students advanced to the district level, followed by a pre-final stage with 140 students, culminating in the final stage with 53 students from 18 districts.\n\nAdditionally, the camp hosts international and local academics and supervisors specialized in global and Arab mathematics Olympiads, alongside local academics from several Palestinian universities, dedicating their time and expertise to elevate the scientific level of our students during this stage.\n\nThe training staff also includes supervisors from various directorates of the Palestinian Ministry of Education and Higher Education.",
+    "location":"location",
+    "university":"Al-Istiqlal University - Jericho",
+    "gallaryTitle": "Camp Memories",
+    "gallarySubTitle":"Explore the highlights and fun adventures from the Winter Training Camp",
+    
+    "day1": "🏁 Day 1 ",
+    "day2": "📚 Day 2",
+    "day3": "🧠 Day 3",
+    "day4": "🏕️ Day 4",
+    "day5": "🏆 Day 5",
+    
+    "Day1": {
+      "event1": "Sports Activity",
+      "event2": "Art Workshop",
+      "event3": "Theatrical Show",
+      "event4": "Educational Trip",
+      "event5": "Nature Adventure"
+    },
+    "Day2": {
+      "event1": "Field Trip",
+      "event2": "Games Race",
+      "event3": "Nature Adventure",
+      "event4": "Educational Workshop",
+      "event5": "Sports Activity"
+    },
+    "Day3": {
+      "event1": "Educational Workshop",
+      "event2": "Farewell Party",
+      "event3": "Art Activity",
+      "event4": "Field Trip",
+      "event5": "Games Race"
+    }
   }
 }
