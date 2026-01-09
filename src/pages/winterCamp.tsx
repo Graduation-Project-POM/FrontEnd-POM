@@ -1,12 +1,17 @@
 import { Box } from "@mui/material";
 import Trainers from "../Components/WinterCampComponents/trainers/trainers.tsx";
 import Agenda from "../Components/WinterCampComponents/agenda/agenda.tsx";
+import Home from "../Components/WinterCampComponents/homepage/home.tsx";
+import {About} from "../Components/WinterCampComponents/about/about.tsx";
 
 export default function WinterCamp() {
- return (
+  return (
     <Box sx={{ background: "#f5f5f5" }}>
-     <Trainers />
+      <Home />
+      <About />
+      <Trainers />
      <Agenda />
+
     </Box>
   )
 }

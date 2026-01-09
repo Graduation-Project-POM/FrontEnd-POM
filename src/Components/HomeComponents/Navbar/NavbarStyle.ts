@@ -77,16 +77,19 @@ export const SidebarContent = styled(Box)({
   flexDirection: "column",
 })
 
-export const SidebarNavLink = styled(Button)({
+export const SidebarNavLink = styled(Button, {
+  shouldForwardProp: (prop) => prop !== "active"
+})<{ active?: boolean }>(({ active }) => ({
   color: "#fff",
   fontSize: "16px",
   textTransform: "none",
   padding: "1rem 1.5rem",
   justifyContent: "flex-start",
+  fontWeight: active ? "700" : "400",
   "&:hover": {
     backgroundColor: "rgba(255, 255, 255, 0.1)",
   },
-})
+}))
 
 export const MobileLoginButton = styled(Button)({
   backgroundColor: "#ffffff !important",
