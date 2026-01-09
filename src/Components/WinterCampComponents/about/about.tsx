@@ -9,7 +9,7 @@ export function About() {
         <Box>
             <AboutContainer maxWidth="lg">
                 <AboutTitle variant="h3">
-                    {t("organizations.winterCamp.aboutTitle")}
+                    {t("winterCamp.aboutTitle")}
                 </AboutTitle>
 
                 <AboutText>

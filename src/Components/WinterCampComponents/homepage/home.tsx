@@ -14,19 +14,19 @@ function Home() {
 
             <Box sx={bannerStyles.container}>
                 <Typography sx={bannerStyles.title}>
-                    {t("organizations.winterCamp.header1")}
+                    {t("winterCamp.header1")}
                     <br />
-                    {t("organizations.winterCamp.header2")}
+                    {t("winterCamp.header2")}
                 </Typography>
 
                 <Box sx={bannerStyles.searchBox}>
                     <Box sx={bannerStyles.dateBox}>
                         <Typography sx={bannerStyles.dateLabel}>
                             <CalendarMonthIcon fontSize="small" />
-                            {t("organizations.winterCamp.checkIn")}
+                            {t("winterCamp.checkIn")}
                         </Typography>
                         <Typography sx={bannerStyles.dateValue}>
-                            {t("organizations.winterCamp.startDate")}
+                            {t("winterCamp.startDate")}
                         </Typography>
                     </Box>
 
@@ -35,10 +35,10 @@ function Home() {
                     <Box sx={bannerStyles.dateBox}>
                         <Typography sx={bannerStyles.dateLabel}>
                             <CalendarMonthIcon fontSize="small" />
-                            {t("organizations.winterCamp.checkOut")}
+                            {t("winterCamp.checkOut")}
                         </Typography>
                         <Typography sx={bannerStyles.dateValue}>
-                            {t("organizations.winterCamp.endDate")}
+                            {t("winterCamp.endDate")}
                         </Typography>
                     </Box>
 
@@ -54,7 +54,7 @@ function Home() {
                         </Typography>
                     </Box>
                     <Button variant="contained" sx={bannerStyles.button}>
-                        {t("organizations.winterCamp.exploreCamp")}
+                        {t("winterCamp.exploreCamp")}
                     </Button>
                 </Box>
             </Box>
