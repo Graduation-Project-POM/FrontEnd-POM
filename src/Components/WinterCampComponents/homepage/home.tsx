@@ -13,19 +13,19 @@ function Home() {
 
             <Box sx={bannerStyles.container}>
                 <Typography sx={bannerStyles.title}>
-                    {t("winterCamp.header1")}
+                    {t("organizations.winterCamp.header1")}
                     <br />
-                    {t("winterCamp.header2")}
+                    {t("organizations.winterCamp.header2")}
                 </Typography>
 
                 <Box sx={bannerStyles.searchBox}>
                     <Box sx={bannerStyles.dateBox}>
                         <Typography sx={bannerStyles.dateLabel}>
                             <CalendarMonthIcon fontSize="small" />
-                            {t("winterCamp.checkIn")}
+                            {t("organizations.winterCamp.checkIn")}
                         </Typography>
                         <Typography sx={bannerStyles.dateValue}>
-                            {t("winterCamp.startDate")}
+                            {t("organizations.winterCamp.startDate")}
                         </Typography>
                     </Box>
 
@@ -34,15 +34,15 @@ function Home() {
                     <Box sx={bannerStyles.dateBox}>
                         <Typography sx={bannerStyles.dateLabel}>
                             <CalendarMonthIcon fontSize="small" />
-                            {t("winterCamp.checkOut")}
+                            {t("organizations.winterCamp.checkOut")}
                         </Typography>
                         <Typography sx={bannerStyles.dateValue}>
-                            {t("winterCamp.endDate")}
+                            {t("organizations.winterCamp.endDate")}
                         </Typography>
                     </Box>
 
                     <Button variant="contained" sx={bannerStyles.button}>
-                        {t("winterCamp.exploreCamp")}
+                        {t("organizations.winterCamp.exploreCamp")}
                     </Button>
                 </Box>
             </Box>
