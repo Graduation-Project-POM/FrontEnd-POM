@@ -1,6 +1,5 @@
 export const bannerStyles = {
     container: {
-        pt:{ xs: 20, md: 0 },
         position: "relative",
         backgroundImage: `url("/Banner.png")`,
         backgroundColor: "rgba(2, 15, 3, 0.62)",
@@ -14,42 +13,32 @@ export const bannerStyles = {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        px: { xs: 2, sm: 4 },
     },
 
     title: {
         fontWeight: "bold",
-        fontSize: { xs: "1.4rem", sm: "2.2rem", md: "2.8rem", lg: "3rem" },
-        lineHeight: 1.3,
+        fontSize: { xs: 22, sm: 36, md: 46 },
     },
 
     searchBox: {
-        position: { xs: "static", md: "absolute" }, 
-        bottom: { md: -45 },
+        position: "absolute",
+        bottom: -45,
         left: "50%",
-        transform: { md: "translateX(-50%)", xs: "none" },
+        transform: "translateX(-50%)",
         backgroundColor: "#fff",
         borderRadius: 3,
         boxShadow: "0px 12px 40px rgba(0,0,0,0.15)",
         px: { xs: 2, md: 4 },
         py: 3,
         display: "flex",
-        flexDirection: { xs: "column", md: "row" }, 
         alignItems: "center",
-        gap: 2,
-        width: { xs: "40%", sm: "40%", md: "60%", lg: "50%" },
+        gap: 3,
+        width: { xs: "90%", md: "80%", lg: "70%" },
         zIndex: 10,
-        mx: { xs: "auto" },
-        mt: { xs: 8, md: 0 }, 
     },
-
 
     dateBox: {
         flex: 1,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: { xs: "flex-start", md: "flex-start" },
-        mb: { xs: 2, md: 0 },
     },
 
     dateLabel: {
@@ -82,10 +71,9 @@ export const bannerStyles = {
         textTransform: "none",
         padding: "0.5rem 2rem",
         borderRadius: "10px",
-        width: { xs: "100%", md: "auto" },
     },
 
     spacer: {
-        height: { xs: 60, md: 80 },
+        height: 80,
     },
 };

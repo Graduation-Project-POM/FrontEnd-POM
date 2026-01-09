@@ -273,6 +273,8 @@
     "checkOut": "CHECK OUT",
     "startDate": "10 Jan 2026",
     "endDate": "15 Jan 2026",
-    "exploreCamp": "Explore the Camp"
+    "exploreCamp": "Explore the Camp",
+    "aboutTitle": "About the Camp",
+    "aboutDescription": "The Winter Training Camp for the International Mathematics Olympiad is an intensive program designed to prepare and train selected students for the prestigious IMO competition. Held annually, this camp brings together the brightest young minds from across the region to enhance their problem-solving skills, deepen their mathematical knowledge, and foster a spirit of collaboration and competition. Through a series of challenging workshops, lectures, and practice sessions led by experienced coaches and former IMO participants, students will have the opportunity to tackle complex mathematical problems, engage in peer learning, and build lasting friendships with fellow math enthusiasts. The camp aims to not only equip students with the skills needed to excel in the IMO but also to inspire a lifelong passion for mathematics and critical thinking."
   }
 }
