@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { AboutContainer, AboutTitle, AboutText } from "./about.ts";
 import { useTranslation } from "react-i18next";
 
@@ -12,9 +12,14 @@ export function About() {
                     {t("organizations.winterCamp.aboutTitle")}
                 </AboutTitle>
 
-                <AboutText >
-                    {t("organizations.winterCamp.aboutDescription")}
+                <AboutText>
+                    {t("winterCamp.aboutDescription").split("\n\n").map((paragraph, index) => (
+                        <Typography key={index} sx={{ mb: 2 }}>
+                            {paragraph}
+                        </Typography>
+                    ))}
                 </AboutText>
+
             </AboutContainer>
         </Box>
     );

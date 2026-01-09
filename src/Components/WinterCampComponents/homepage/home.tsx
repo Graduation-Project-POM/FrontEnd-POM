@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Navbar } from "../../HomeComponents/Navbar/Navbar";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { useTranslation } from "react-i18next";
 import { bannerStyles } from "./home.ts";
 
@@ -41,6 +42,17 @@ function Home() {
                         </Typography>
                     </Box>
 
+                    <Box sx={bannerStyles.divider} />
+
+                    <Box sx={bannerStyles.dateBox}>
+                        <Typography sx={bannerStyles.dateLabel}>
+                            <LocationOnIcon fontSize="small" />
+                            {t("winterCamp.location")}
+                        </Typography>
+                        <Typography sx={bannerStyles.dateValue} fontSize="small">
+                            {t("winterCamp.university")}
+                        </Typography>
+                    </Box>
                     <Button variant="contained" sx={bannerStyles.button}>
                         {t("organizations.winterCamp.exploreCamp")}
                     </Button>
