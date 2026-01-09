@@ -265,6 +265,68 @@
     "heroTitle2": "Art of Problem Solving Channel",
     "heroDesc4": "Explaining various topics in mathematics"
   },
+  "agenda": {
+    "title": "Schedule",
+    "description": "Multi-day training camp schedule.",
+    "days": {
+      "day1": "Day 1",
+      "day2": "Day 2",
+      "day3": "Day 3",
+      "day4": "Day 4",
+      "day5": "Day 5",
+      "day6": "Day 6"
+    },
+    "table": {
+      "time": "Time",
+      "title": "Event",
+      "supervisor": "Supervisor"
+    },
+    "arrival": "Participant Arrival & Accommodation",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch & Break",
+    "lunchOnly": "Lunch",
+    "dinner": "Dinner & Break",
+    "departure": "Departure",
+    "qualifiers": "National Qualifiers",
+    "videos": "Introductory Videos",
+    "opening": {
+      "title": "Opening Ceremony",
+      "welcome": "Welcome Speech",
+      "hostUniversity": "Host University Speech - Al-Istiqlal University",
+      "moe": "Ministry of Education Speech",
+      "past": "Palestine Academy for Science & Technology",
+      "taawon": "Taawon Foundation Speech",
+      "intro": "Introduction to Camp Activities and Trainers"
+    },
+    "sessions": {
+      "algebra": "Training Session in Algebra",
+      "geometry": "Training Session in Geometry",
+      "numberTheory": "Training Session in Number Theory",
+      "combinatorics": "Training Session in Combinatorics"
+    },
+    "talks": {
+      "mathEnjoyment": "Enjoying Mathematics",
+      "imoPath": "Path to the International Math Olympiad",
+      "programmingMath": "Using Mathematics to Solve Programming Problems"
+    }
+  },
+  "speakers": {
+    "mohammadAlAdam": "Dr. Mohammad Al-Adam - Polytechnic University",
+    "abdulrahimMousa": "Dr. Abdulrahim Mousa - Birzeit University",
+    "ahmadAlJundi": "Dr. Ahmad Al-Jundi - University of Wisconsin",
+    "afafSaghir": "Ms. Afaf Saghir - Ministry of Education",
+    "nadeenIssa": "Ms. Nadeen Issa - Ministry of Education",
+    "salahFayyad": "Mr. Salah Fayyad - Ministry of Education",
+    "mohammadMaraaba": "Dr. Mohammad Maraaba - Khadouri University",
+    "omarAlHusni": "Dr. Omar Al-Husni - Cornell University",
+    "raniaWannan": "Dr. Rania Wannan - Khadouri University",
+    "lubnaAbuBasha": "Ms. Lubna Abu Basha - Ministry of Education",
+    "mohammadKhalil": "Dr. Mohammad Khalil - Taawon Foundation"
+  },
+  "organizations": {
+    "moe": "Ministry of Education",
+    "past": "Palestine Academy for Science & Technology",
+    "taawon": "Taawon Foundation"
   "winterCamp": {
     "header1": "Winter Training Camp",
     "header2": "for the International Mathematics Olympiad",
