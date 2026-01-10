@@ -80,4 +80,36 @@ export const styles: Record<string, SxProps<Theme>> = {
             color: "white",
         },
     },
+
+    cardPDF: {
+        width: "100%",
+        maxWidth: 420,
+        mx: "auto",
+        mt: 4,
+        borderRadius: 3,
+        p: 3,
+        background: "linear-gradient(135deg, #6C485920, #6C485940)",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.15)",
+        transition: "0.3s",
+        "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: "0 12px 28px rgba(0,0,0,0.25)",
+        },
+    },
+
+    iconBox: {
+        fontSize: 36,
+        mb: 2,
+        display: "inline-block",
+        p: 1.5,
+        borderRadius: 2,
+        background: `#6C485933`,
+    },
+
+    button: {
+        backgroundColor: "#6C4859",
+        "&:hover": {
+            backgroundColor: "#6C4859cc",
+        },
+    }
 };

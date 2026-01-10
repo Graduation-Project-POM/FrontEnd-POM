@@ -372,6 +372,9 @@
       "event3": "Art Activity",
       "event4": "Field Trip",
       "event5": "Games Race"
+    },
+    "pdfs": {
+      "desc": "Training session in Algebra with Dr. Mohammad Al-Adam"
     }
   }
 }

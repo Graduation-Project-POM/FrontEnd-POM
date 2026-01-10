@@ -5,6 +5,8 @@ import {
     Card,
     CardMedia,
     IconButton,
+    CardContent,
+    Button,
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -20,10 +22,26 @@ interface Day {
 const Galary: React.FC = () => {
     const { t } = useTranslation();
 
+    const PDFList = [
+        {
+            title: t("winterCamp.pdfs.title"),
+            description: "",
+            link: "https://drive.google.com/file/d/1D6vwVIeRmdyOQwO9Em99fEmNIKOonihZ/view?usp=sharing",
+            color: "#6C4859",
+            icon: "📘",
+        },
+    ]
+
     const days: Day[] = [
         {
             titleKey: "winterCamp.day1",
-            images: Array(12).fill("/Banner.png"),
+            images: [
+                "/Banner.png",
+                "/Banner.png",
+                "/Banner.png",
+                "/Banner.png",
+                "/Banner.png",
+            ],
             eventsKeys: [
                 "winterCamp.Day1.event1",
                 "winterCamp.Day1.event2",
@@ -38,91 +56,92 @@ const Galary: React.FC = () => {
                 "winterCamp.Day1.event2",
                 "winterCamp.Day1.event3",
             ],
-        },
-        {
-            titleKey: "winterCamp.day2",
-            images: Array(18).fill("/Banner.png"),
-            eventsKeys: [
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-                "winterCamp.Day2.event1",
-                "winterCamp.Day2.event2",
-                "winterCamp.Day2.event3",
-            ],
-        },
-        {
-            titleKey: "winterCamp.day3",
-            images: Array(15).fill("/Banner.png"),
-            eventsKeys: [
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-            ],
-        },
-        {
-            titleKey: "winterCamp.day4",
-            images: Array(12).fill("/Banner.png"),
-            eventsKeys: [
-                "winterCamp.Day1.event1",
-                "winterCamp.Day1.event2",
-                "winterCamp.Day1.event3",
-                "winterCamp.Day1.event1",
-                "winterCamp.Day1.event2",
-                "winterCamp.Day1.event3",
-                "winterCamp.Day1.event1",
-                "winterCamp.Day1.event2",
-                "winterCamp.Day1.event3",
-                "winterCamp.Day1.event1",
-                "winterCamp.Day1.event2",
-                "winterCamp.Day1.event3",
-            ],
-        },
-        {
-            titleKey: "winterCamp.day5",
-            images: Array(15).fill("/Banner.png"),
-            eventsKeys: [
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-                "winterCamp.Day3.event1",
-                "winterCamp.Day3.event2",
-                "winterCamp.Day3.event3",
-                "winterCamp.Day3.event4",
-                "winterCamp.Day3.event5",
-            ],
-        },
+        }
+        // },
+        // {
+        //     titleKey: "winterCamp.day2",
+        //     images: Array(18).fill("/Banner.png"),
+        //     eventsKeys: [
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //         "winterCamp.Day2.event1",
+        //         "winterCamp.Day2.event2",
+        //         "winterCamp.Day2.event3",
+        //     ],
+        // },
+        // {
+        //     titleKey: "winterCamp.day3",
+        //     images: Array(15).fill("/Banner.png"),
+        //     eventsKeys: [
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //     ],
+        // },
+        // {
+        //     titleKey: "winterCamp.day4",
+        //     images: Array(12).fill("/Banner.png"),
+        //     eventsKeys: [
+        //         "winterCamp.Day1.event1",
+        //         "winterCamp.Day1.event2",
+        //         "winterCamp.Day1.event3",
+        //         "winterCamp.Day1.event1",
+        //         "winterCamp.Day1.event2",
+        //         "winterCamp.Day1.event3",
+        //         "winterCamp.Day1.event1",
+        //         "winterCamp.Day1.event2",
+        //         "winterCamp.Day1.event3",
+        //         "winterCamp.Day1.event1",
+        //         "winterCamp.Day1.event2",
+        //         "winterCamp.Day1.event3",
+        //     ],
+        // },
+        // {
+        //     titleKey: "winterCamp.day5",
+        //     images: Array(15).fill("/Banner.png"),
+        //     eventsKeys: [
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //         "winterCamp.Day3.event1",
+        //         "winterCamp.Day3.event2",
+        //         "winterCamp.Day3.event3",
+        //         "winterCamp.Day3.event4",
+        //         "winterCamp.Day3.event5",
+        //     ],
+        // },
     ];
 
 
@@ -131,7 +150,7 @@ const Galary: React.FC = () => {
         <Box sx={styles.page}>
             <Box sx={styles.header}>
                 <Typography variant="h3" fontWeight="bold">
-                    <img src="/Vector.png" width={50}/> &nbsp;
+                    <img src="/Vector.png" width={50} /> &nbsp;
                     {t("winterCamp.gallaryTitle")}
                 </Typography>
                 <Typography variant="subtitle1" mt={1} >
@@ -141,6 +160,31 @@ const Galary: React.FC = () => {
 
             {days.map((day, index) => (
                 <DaySlider key={index} day={day} />
+            ))}
+            <Typography variant="h4" fontWeight="bold" textAlign={"center"} mb={3}>
+                {t("winterCamp.Day1.title")}
+            </Typography>            
+            {PDFList.map((item, index) => (
+                <Card key={index} sx={styles.cardPDF}>
+                    <CardContent>
+                        <Box sx={styles.iconBox}>{item.icon}</Box>
+                        <Typography variant="h6" sx={styles.cardTitle}>
+                            {item.title}
+                        </Typography>
+                        <Typography variant="body2" sx={styles.cardDesc}>
+                            {item.description}
+                        </Typography>
+                        <Button
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="contained"
+                            sx={styles.button}
+                        >
+                            {t("books.open")}
+                        </Button>
+                    </CardContent>
+                </Card>
             ))}
         </Box>
     );
