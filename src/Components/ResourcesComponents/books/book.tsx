@@ -50,6 +50,13 @@ function Books() {
             color: "#6C4859",
             icon: "📘",
         },
+        {
+            title: t("books.title7"),
+            description: t("books.desc7"),
+            link: "https://drive.google.com/file/d/1_52ccZFQhl7sUhwvbSD4hm8lUWNSiHH6/view?usp=sharing",
+            color: "#6C4859",
+            icon: "📘",
+        },
     ];
 
     return (
