@@ -1,104 +1,250 @@
-import { Grid, Stack } from "@mui/material"
+import { Box, Card, CardContent, Typography, CardMedia } from "@mui/material"
+import type { Trainers } from "../../../types/trainers"
 import {
-  PageWrapper,
-  Container,
-  Header,
-  HeaderTitle,
-  HeaderLine,
-  TeacherCard,
-  HoverOverlay,
-  ImageWrapper,
-  ImageCard,
-  ImageBox,
-  ContentGrid,
-  Subtitle,
-  Title,
-  Description,
-  TeacherName,
-  TeacherJob,
-  PartnerGrid,
-  PartnerItem,
-  PartnerCard,
-  PartnerImageBox,
-  PartnerImage,
-  TeacherImage,
-} from "./trainersStyles.ts"
-import type { Trainers } from "../../../types/trainers.ts"
+    pageWrapper,
+    sectionTitle,
+    cardsWrapper,
+    card,
+    cardContent,
+    textWrapper,
+    image,
+    nameText,
+    subtitleText,
+    descriptionText,
+} from "./trainersStyles"
 
 export default function Trainers() {
-  const teachers: Trainers[] = [
-    {
-      name: "Dr. Adnan Qadri",
-      title: "Dr. Adnan Qadri",
-      subtitle: "طريق الأولمبياد الدولي للبرمجيات من القاع إلى القمة",
-      description:
-        "Expert in problem-solving strategies, experienced Olympiad mentor, author of math-training guides used in schools.",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
-    },
-    {
-      name: "Ms. Rana Shweiki",
-      title: "Name: Ms. Rana Shweiki",
-      subtitle: "طريق الأولمبياد الدولي للبرمجيات من القاع إلى القمة",
-      description:
-        "Specialization: Extensive experience designing gifted student programs.",
-      image: "https://images.pexels.com/photos/3763188/pexels-photo-3763188.jpeg",
-    },
-  ]
+    const partners: Trainers[] = [
+        {
+            name: "وزارة التربية والتعليم العالي",
+            title: "",
+            subtitle: "",
+            description: "وزارة التربية والتعليم العالي هي الجهة الرسمية المسؤولة عن تنظيم العملية التعليمية في فلسطين. تُعد شريكًا مهمًا في دعم الأولمبياد الفلسطيني للرياضيات وتعزيز ثقافة التميز بين الطلبة. تنسّق مع المديريات والمدارس لإعلان الأولمبياد وترشيح الطلبة وتنظيم مراحل التصفيات. تدعم تطوير مهارات التفكير المنطقي وحل المشكلات عبر الأنشطة والمسابقات التعليمية.",
+            image: "/Edu.jpg",
+        },
+        {
+            name: "أ. مرعي صوص",
+            title: "",
+            subtitle: "",
+            description: "بكالوريوس كيمياء وماجستير تربية من جامعة النجاح الوطنية. معلم علوم وكيمياء لعشر سنوات في مديريتي رام الله وطولكرم رئيس قسم التدريب في المعهد الوطني للتدريب التربوي لعشر سنوات. مدير دائرة التدريب في الادارة العامة للاشراف لاربع سنوات و مدير عام الادارة العامة للابداع والتمي ",
+            image: "/DrMaree.png",
+        },
+        {
+            name: "أكاديمية فلسطين للعلوم والتكنولوجيا",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description: "التأسيس والصفة: أُنشئت PALAST بقرارات رئاسية (1994 و2004) كمؤسسة وطنية مستقلة ذاتية الإدارة. الهدف: تحفيز العلوم والتكنولوجيا والابتكار في فلسطين وتوظيفها لخدمة التنمية الاقتصادية والاجتماعية والإنسانية. الشراكات والموقع: تعمل مع الجامعات والحكومة وشركاء محليين ودوليين؛ مقرها القدس ولها مكاتب في رام الله وغزة. دورها في الأولمبياد: تنسق التدريب والتوجيه والاختيار وفق أفضل الممارسات، وتُشرك الخبراء المحليين والمغتربين وتُنشئ فرقًا علمية للإشراف. ",
+            image: "/Tech.png",
+        },
+        {
+            name: "الدكتور احمد عمار",
+            title: "",
+            subtitle: "",
+            description: "الدكتور أحمد عمار أستاذ المناهج التعليمية وطرائق التدريس، مستشارًا للحملة العالمية للتعليم وخبيرًا تربويا لعدد من المؤسسات. شغل مناصب قيادية في وزارة التربية والتعليم وكان المقرر العام لمؤتمر وزراء التربية العرب (2021-2023) وله إسهامات في تأليف مواد تدريبية والتدريب محليًا ودوليا.",
+            image: "/DrAmmar.png",
+        },
+        {
+            name: "مؤسسة التعاون ",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description: "تأسست/انطلقت مؤسسة التعاون في جنيف عام 1983. أهدافها: تطوير قدرات الإنسان الفلسطيني. الحفاظ على التراث والهوية ودعم الثقافة الفلسطينية.  المساهمة في بناء المجتمع المدني عبر تحديد الاحتياجات والأولويات واستثمار التمويل بشكل فعّال.",
+            image: "/taawon.jpg",
+        },
+        {
+            name: "أ. شروق الخطيب",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description: "المهندسة شروق الخطيب هي مديرة برامج STEM في مؤسسة التعاون، تتمتع بخبرة تمتد لثماني سنوات في مجال التعليم والابتكار في العلوم والتكنولوجيا والهندسة والرياضيات تحمل درجة البكالوريوس في هندسة الميكاترونيكس من جامعة بيرزيت، ودرجة الماجستير في إدارة الأعمال من جامعة أنجليا راسكن في بريطانيا. حاصلة على شهادة إدارة المشاريع الاحترافية PMP، بالإضافة إلى اعتماد متخصص من STEM.org، وتعد من الخبراء في تطوير البرامج والمبادرات التي تعزز مهارات الطلبة والشباب في مجالات STEM",
+            image: "/DrShorook.png",
+        },
+    ]
 
-  return (
-    <PageWrapper>
-      <Container>
-        <Header>
-          <HeaderTitle>Teachers</HeaderTitle>
-          <HeaderLine />
-        </Header>
+    const guests: Trainers[] = [
+        {
+            name: "الدكتور مروان عورتاني",
+            title: "",
+            subtitle: "",
+            description: "الدكتور مروان عورتاني أستاذ في الرياضيات، ويُعد من أبرز القيادات الأكاديمية والتعليمية في فلسطين. شغل مناصب وطنية رفيعة منها وزير التربية والتعليم، ورئيس المكتبة الوطنية الفلسطينية، ورئيس أكاديمية فلسطين للعلوم والتكنولوجيا. كما تولى رئاسة جامعة فلسطين التقنية خضوري، وقام بأعمال رئيس جامعة القدس، إضافة إلى أدوار قيادية واستشارية دولية مع البنك الدولي واليونسكو والاتحاد الأوروبي في مجالات التعليم والابتكار والعلوم والتكنولوجيا.",
+            image: "/DrMarwan.png",
+        },
+        {
+            name: "أ. سهير عودة",
+            title: "",
+            subtitle: "",
+            description: "",
+            image: "/.png",
+        },
+    ]
 
-        <Stack spacing={8}>
-          {teachers.map((teacher, index) => (
-            <TeacherCard key={index}>
-              <HoverOverlay />
+    const speakers: Trainers[] = [
+        {
+            name: "الدكتور عمر الحسني",
+            title: "الدكتور عمر الحسني",
+            subtitle: "طريق الأولمبياد الدولي للرياضيات: من الشغف الى المنافسة",
+            description:
+                "الدكتور عمر الحسني أستاذ جامعي في كلية بحوث العمليات وهندسة المعلومات بجامعة كورنيل بنيويورك، وعضو في مركز الرياضيات التطبيقية بالجامعة. يشتغل كذلك كباحث أكاديمي بشركة أمازون. حصل على الدكتوراه من جامعة كولومبيا بنيويورك في بحوث العمليات، وعلى الماجستير والبكالوريوس في الرياضيات التطبيقية من مدرسة بوليتكنيك بباريس.",
+            image: "/DrOmer.png",
+        },
+        {
+            name: "الدكتور احمد الجندي",
+            title: "",
+            subtitle: "الاستمتاع الذهني بالرياضيات: بين المسابقات والدراسة الأكاديمية والتطبيقات العملية",
+            description:
+                "الدكتور أحمد الجندي حاصل على بكالوريوس رياضيات من جامعة القاهرة وماجستير ودكتوراه في نظرية الأعداد من جامعة ويسكونسن ماديسون، ويعمل حاليا أستاذًا للرياضيات بجامعة القاهرة بعد خبرات وزمالات دولية. له أدوار قيادية علمية وشبابية ونشاط بارز في تدريب وتنظيم أولمبياد الرياضيات، وترأس الفريق المصري في الأولمبيادات العربية والأفريقية خلال 2020 - 2024",
+            image: "/DrAhmed.png",
+        },
+        {
+            name: "الدكتور محمد خليل",
+            title: "",
+            subtitle: "توظيف الرياضيات في حل المشكلات البرمجية",
+            description:
+                "الدكتور محمد خليل محاضر في جامعة فلسطين التقنية - خضوري مختص في الذكاء الاصطناعي والبرمجيات يشغل منصب المسؤول التقني للمسابقة الوطنية للبرمجة ويعمل مدربًا لفريق الأولمبياد الفلسطيني في البرمجة. كما يعمل خبيرًا تقنيا مع مؤسسة التعاون بصفتها الممول والشريك المنفّذ للأولمبياد الفلسطيني في الرياضيات.",
+            image: "/DrKhalil.png",
+        },
+    ]
 
-              <Grid container>
-                <ImageWrapper>
-                  <ImageCard>
-                    <ImageBox>
-                      <TeacherImage
-                        src={teacher.image}
-                        alt={teacher.name}
-                      />
-                    </ImageBox>
+    const supervisors: Trainers[] = [
+        {
+            name: "الدكتورة رانيا الونان",
+            title: "",
+            subtitle: "مدرب أكاديمي",
+            description:
+                "أستاذة مشاركة وعميدة كلية العلوم التطبيقية في جامعة فلسطين التقنية خضوري حاصلة على دكتوراه في الرياضيات من الجامعة الأردنية، وعلى درجتي الماجستير والبكالوريوس في الرياضيات من جامعة النجاح الوطنية. تتركز اهتماماتها البحثية في سلوك الأنظمة الديناميكية غير الذاتية على المدى البعيد، والتحليل العددي، والأنظمة اللامتناهية الأبعاد، والمعادلات التفاضلية العادية والجزئية، ولها أبحاث محكمة ومشاركات علمية داخل فلسطين وخارجها.",
+            image: "/DrRania.png",
+        },
+        {
+            name: "الدكتور عبد الرحيم موسى",
+            title: "",
+            subtitle: "مدرب أكاديمي",
+            description:
+                "د. عبدالرحيم موسى أستاذ مساعد في الرياضيات التطبيقية في قسم الرياضيات بكلية العلوم في جامعة بيرزيت. يعمل ضمن الهيئة الأكاديمية في مجال الرياضيات التطبيقية ويساهم في التدريس والبحث العلمي في القسم.",
+            image: "/DrAbed.png",
+        },
+        {
+            name: "الدكتور محمد العدم",
+            title: "",
+            subtitle: "مدرب أكاديمي",
+            description:
+                "الدكتور محمد العدم أستاذ مشارك في الرياضيات بجامعة بوليتكنك فلسطين، ومتخصص في الجبر الخطي ونظرية المصفوفات والمشتقات الكسرية. تميّز أكاديميا منذ البداية إذ كان الأول في البكالوريوس عام 2008 بمعدل 95.51%، والأول في ماجستير الجامعة الأردنية عام 2011 بمعدل 4.00/4.00، ثم نال الدكتوراه في الرياضيات من جامعة كونستانز الألمانية عام 2016 بتقدير ممتاز وتصنيف الأول على دفعته. كما حصل على منح وجوائز بحثية وعضويات أكاديمية عالمية، وله العديد من الأبحاث المنشورة دوليا وتعاونات علمية.",
+            image: "/DrAladam.png",
+        },
+        {
+            name: "الدكتور محمد مراعبة",
+            title: "",
+            subtitle: "مدرب أكاديمي",
+            description:
+                "أستاذ مشارك ورئيس قسم الرياضيات التطبيقية في جامعة فلسطين التقنية - خضوري متخصص في التحليل الرياضي والأنظمة الضبابية والتفاضل والتكامل الكسري، وله خبرة في التدريس والإشراف على الدراسات العليا. حصل على بكالوريوس من جامعة النجاح، وماجستير من الجامعة العربية الأمريكية ودكتوراه من جامعة الشرق الأوسط التقنية في تركيا، إضافة إلى زيارة بحثية لجامعة ألبرتا في كندا. شارك في مشروع FESTEM الأوروبي وعمل مساعد عميد لكلية العلوم التطبيقية، وأسهم في تطوير التعليم التطبيقي وتعزيز بيئة أكاديمية داعمة للإبداع والتميز.",
+            image: "/DrMaraabeh.png",
+        },
+        {
+            name: "أ. رهام احمد مصلح",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "مشرفة الرياضيات في مديرية التربية و التعليم أريحا من عام ٢٠١٢ لتاريخه. بكالوريوس رياضيات من جامعة القدس عام .٢٠٠١ ماجستير فنون تدريس الرياضيات جامعة القدس بارد عام ٢٠١٢",
+            image: "/DrReham.png",
+        },
+        {
+            name: "أ. عفاف عبد العفو الزغير",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "مشرفة لمادة الرياضيات في مديرية التربية والتعليم / الخليل من سنة 2020. بكالوريوس رياضيات من جامعة الخليل",
+            image: "/DrAfaf.png",
+        },
+        {
+            name: "أ. ندين عادل عيسى",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "مشرفة لمادة الرياضيات في مديرية التربية والتعليم / بيت لحم. بكالوريوس رياضيات من جامعة بيت لحم. ماجستیر اساليب تدريس الرياضيات كلية البارد/ابو ديس",
+            image: "/DrNadeen.png",
+        },
+        {
+            name: "أ. صلاح الدين خضر",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "دير الغصون طولكرم / مشرف مادة الرياضيات دراسات عليا - جامعة اليرموك ١٩٩٤ مشارك في المبياد الرياضيات الوطني ٢٠١٤، ٢٠١٦، ٢٠١٨ ومدرب فريق فلسطين للبطولة العربية لالعاب الرياضيات والمنطق في تونس ٢٠٢٤ الحائز على الترتيب الثاني عربيا",
+            image: "/DrSalah.png",
+        },
+        {
+            name: "أ. رائدة حسني عويس",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "حاصلة على بكالوريوس رياضيات من الجامعة الأردنية وماجستير رياضيات تطبيقية من الجامعة العربية الأمريكية، وأحد مؤلفي كتاب التوجيهي (علمي وصناعي). ومشرفة رياضيات في مديرية جنين منذ 2006، وشاركت فى أولمبياد الرياضيات عدة مرات ورافقت الفريق الفلسطيني إلى قطر العام الماضي، كما حصلت على شهادة مدرب أولمبياد من الألكسو.",
+            image: "/DrRaeda.png",
+        },
+        {
+            name: "أ. لبنى عبد القادر ابو باشا",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description:
+                "مشرفة رياضيات / مديرية التربية و التعليم /نابلس. بكالوريوس رياضيات / جامعة النجاح. معلمة توجيهي علمي لمدة 20 عام. منافسة في جائزة معلم فلسطين 2016. مشاركة في تأليف وورشات المنهاج الجديد لمبحث الرضيات للصفوف ١٢١١",
+            image: "/DrLubna.png",
+        },
+        {
+            name: "أ. كمال الجمل",
+            title: "",
+            subtitle: "المشرف التربوي",
+            description: "تربية ضواحي القدس",
+            image: "/DrKamal.png",
+        },
+    ]
 
-                    <Stack spacing={1} alignItems="center">
-                      <TeacherName>{teacher.name}</TeacherName>
-                      <TeacherJob>{teacher.title}</TeacherJob>
-                    </Stack>
-                  </ImageCard>
-                </ImageWrapper>
+    const renderCards = (items: Trainers[]) => (
+        <Box sx={cardsWrapper}>
+            {items.map((person, index) => (
+                <Card key={index} sx={card}>
+                    <CardContent sx={cardContent}>
+                        <Box sx={textWrapper}>
+                            <CardMedia
+                                component="img"
+                                image={person.image}
+                                alt={person.name}
+                                sx={image}
+                            />
 
-                <ContentGrid item xs={12} md={6}>
-                  <Subtitle>{teacher.subtitle}</Subtitle>
-                  <Title>{teacher.title}</Title>
-                  <Description>{teacher.description}</Description>
+                            <Typography variant="h6" sx={nameText}>
+                                {person.name}
+                            </Typography>
 
-                  <PartnerGrid container spacing={2}>
-                    {["/Partner1.png", "/Partner2.png", "/Partner3.jpg"].map(
-                      (src, i) => (
-                        <PartnerItem item xs={4} key={i}>
-                          <PartnerCard>
-                            <PartnerImageBox>
-                              <PartnerImage src={src} alt={`Partner ${i + 1}`} />
-                            </PartnerImageBox>
-                          </PartnerCard>
-                        </PartnerItem>
-                      )
-                    )}
-                  </PartnerGrid>
-                </ContentGrid>
-              </Grid>
-            </TeacherCard>
-          ))}
-        </Stack>
-      </Container>
-    </PageWrapper>
-  )
+                            <Typography variant="subtitle2" sx={subtitleText}>
+                                {person.subtitle}
+                            </Typography>
+
+                            <Typography variant="body2" sx={descriptionText}>
+                                {person.description}
+                            </Typography>
+                        </Box>
+                    </CardContent>
+                </Card>
+            ))}
+        </Box>
+    )
+
+    return (
+        <Box sx={pageWrapper}>
+            <Typography variant="h3" sx={sectionTitle(5)}>
+                شركاؤنا
+            </Typography>
+            {renderCards(partners)}
+
+            <Typography variant="h4" sx={sectionTitle(5)}>
+                ضيوف المخيم
+            </Typography>
+            {renderCards(guests)}
+
+            <Typography variant="h3" sx={sectionTitle(5)}>
+                المتحدثون
+            </Typography>
+            {renderCards(speakers)}
+
+            <Typography variant="h3" sx={sectionTitle(5)}>
+                المشرفون والمدربون
+            </Typography>
+            {renderCards(supervisors)}
+        </Box>
+    )
 }
