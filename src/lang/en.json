@@ -214,7 +214,15 @@
     "title6": "Moroccan Mathematics – IMO Preparation Guide",
     "desc6": "Test your abilities with International Mathematical Olympiad problems",
     "title7": "Arab Mathematics Olympiad",
-    "desc7": "A comprehensive collection of Arab Olympiad problems with solutions"
+    "desc7": "A comprehensive collection of Arab Olympiad problems with solutions",
+    "title8": "Number Theory – Olympiad Mathematics",
+    "desc8": "A comprehensive introduction to number theory for the preparation stage, focusing on fundamental concepts and Olympiad-style problems with clear explanations",
+    "title9": "Geometry – Olympiad Mathematics",
+    "desc9": "A comprehensive introduction to geometry for the preparation stage, covering core concepts and Olympiad-style problems with clear solutions",
+    "title10": "Algebra – Olympiad Mathematics",
+    "desc10": "An introductory algebra book for the preparation stage, focusing on essential skills, algebraic techniques, and practice problems with worked examples",
+    "title11": "Combinatorics – Olympiad Mathematics",
+    "desc11": "An introductory book in combinatorics for the preparation stage, covering counting principles, permutations, and combinations with Olympiad-style problems and practice exercises"
   },
   "problems": {
     "heroTitle": "Discover",
