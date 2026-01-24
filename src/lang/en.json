@@ -384,5 +384,112 @@
     "pdfs": {
       "desc": "Training session in Algebra with Dr. Mohammad Al-Adam"
     }
+  },
+  "partner": {
+    "partner0": {
+      "name": "Mr. Maree Saws",
+      "description": "Holds a Bachelor's degree in Chemistry and a Master's degree in Education from An-Najah National University. He worked as a science and chemistry teacher for ten years in the Ramallah and Tulkarm directorates, Head of the Training Department at the National Institute for Educational Training for ten years, Director of the Training Department at the General Administration of Supervision for four years, and Director General of the General Administration of Creativity and Excellence."
+    },
+    "partner1": {
+      "name": "Dr. Ahmad Ammar",
+      "description": "Dr. Ahmad Ammar is a professor of curricula and teaching methods, an advisor to the Global Campaign for Education, and an educational expert for several institutions. He held leadership positions in the Ministry of Education and served as the General Rapporteur of the Conference of Arab Ministers of Education (2021–2023). He has contributed to authoring training materials and providing training locally and internationally."
+    },
+    "partner2": {
+      "name": "Ms. Shorouq Al-Khatib",
+      "description": "Engineer Shorouq Al-Khatib is the STEM Programs Director at Taawon (Welfare Association). She has over eight years of experience in education and innovation in science, technology, engineering, and mathematics. She holds a Bachelor's degree in Mechatronics Engineering from Birzeit University and a Master's degree in Business Administration from Anglia Ruskin University in the UK."
+    }
+  },
+
+  "guests": {
+    "guest0": {
+      "name": "Dr. Marwan Awartani",
+      "description": "Dr. Marwan Awartani is a professor of mathematics and one of the most prominent academic and educational leaders in Palestine. He held senior national positions, including Minister of Education, President of the Palestinian National Library, and President of the Palestinian Academy for Science and Technology."
+    },
+    "guest1": {
+      "name": "Ms. Suhair Odeh"
+    }
+  },
+
+  "speaker": {
+    "speaker0": {
+      "name": "Dr. Omar Al-Husni",
+      "title": "Dr. Omar Al-Husni",
+      "subtitle": "The Road to the International Mathematical Olympiad: From Passion to Competition",
+      "description": "University professor in the School of Operations Research and Information Engineering at Cornell University in New York, a member of the Center for Applied Mathematics, and an academic researcher at Amazon."
+    },
+    "speaker1": {
+      "name": "Dr. Ahmad Al-Jundi",
+      "subtitle": "Mathematical Enjoyment: Between Competitions, Academic Study, and Practical Applications",
+      "description": "Professor of mathematics at Cairo University, holding a Master's and PhD in Number Theory, and actively involved in training and organizing mathematical Olympiads."
+    },
+    "speaker2": {
+      "name": "Dr. Mohammad Khalil",
+      "subtitle": "Applying Mathematics to Solve Programming Problems",
+      "description": "Specialist in artificial intelligence and software development, and coach of the Palestinian Olympiad team in programming."
+    }
+  },
+
+  "supervisors": {
+    "supervisor0": {
+      "name": "Dr. Rania Al-Wannan",
+      "subtitle": "Academic Trainer",
+      "description": "Associate Professor and Dean of the Faculty of Applied Sciences at Palestine Technical University – Kadoorie, with research interests in dynamical systems and numerical analysis."
+    },
+    "supervisor1": {
+      "name": "Dr. Abdulrahim Mousa",
+      "subtitle": "Academic Trainer",
+      "description": "Assistant Professor of Applied Mathematics at Birzeit University."
+    },
+    "supervisor2": {
+      "name": "Dr. Mohammad Al-Adam",
+      "subtitle": "Academic Trainer",
+      "description": "Associate Professor of Mathematics at Palestine Polytechnic University, specializing in linear algebra, matrix theory, and fractional derivatives. He ranked first in his Bachelor's degree (2008) and Master's degree at the University of Jordan (2011), and earned his PhD from the University of Konstanz, Germany in 2016 with distinction. He has received several research grants and awards and published numerous international research papers."
+    },
+    "supervisor3": {
+      "name": "Dr. Mohammad Maraabeh",
+      "subtitle": "Academic Trainer",
+      "description": "Associate Professor and Head of the Department of Applied Mathematics at Palestine Technical University – Kadoorie. His expertise includes mathematical analysis, fuzzy systems, and fractional calculus. He has extensive experience in teaching and supervising graduate studies and has contributed to European FESTEM projects."
+    },
+    "supervisor4": {
+      "name": "Ms. Reham Ahmad Masleh",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor at the Jericho Directorate of Education since 2012. Holds a Bachelor's degree in Mathematics from Al-Quds University (2001) and a Master's degree in Teaching Mathematics from Al-Quds Bard College (2012)."
+    },
+    "supervisor5": {
+      "name": "Ms. Afaf Abdul-Afu Al-Zughair",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor at the Hebron Directorate of Education since 2020. Holds a Bachelor's degree in Mathematics from Hebron University."
+    },
+    "supervisor6": {
+      "name": "Ms. Nadin Adel Issa",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor at the Bethlehem Directorate of Education. Holds a Bachelor's degree in Mathematics from Bethlehem University and a Master's degree in Methods of Teaching Mathematics from Al-Bard College / Abu Dis."
+    },
+    "supervisor7": {
+      "name": "Mr. Salah Al-Din Khader",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor in Deir Al-Ghusoun / Tulkarm. Completed graduate studies at Yarmouk University in 1994. Participated in the National Mathematics Olympiad in 2014, 2016, and 2018, and coached the Palestinian team for the Arab Championship of Mathematical and Logic Games in Tunisia 2024, achieving second place in the Arab ranking."
+    },
+    "supervisor8": {
+      "name": "Ms. Raeda Husni Oweis",
+      "subtitle": "Educational Supervisor",
+      "description": "Holds a Bachelor's degree in Mathematics from the University of Jordan and a Master's degree in Applied Mathematics from the Arab American University. Co-author of the Tawjihi mathematics textbook (scientific and industrial streams). Mathematics supervisor in Jenin since 2006 and certified Olympiad trainer by ALECSO."
+    },
+    "supervisor9": {
+      "name": "Ms. Lubna Abdul Qader Abu Basha",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor at the Nablus Directorate of Education. Holds a Bachelor's degree in Mathematics from An-Najah National University. A Tawjihi science teacher for 20 years and a finalist in the Palestine Teacher Award 2016."
+    },
+    "supervisor10": {
+      "name": "Mr. Kamal Al-Jamal",
+      "subtitle": "Educational Supervisor",
+      "description": "Mathematics supervisor at the Jerusalem Suburbs Directorate, working on improving mathematics teaching, supporting teachers, raising student achievement, and preparing students for participation in the Mathematics Olympiad through logical thinking and problem-solving training."
+    }
+  },
+  "sections": {
+    "partners": "Our Partners",
+    "guests": "Camp Guests",
+    "speakers_name": "Speakers",
+    "supervisors": "Supervisors & Trainers"
   }
 }

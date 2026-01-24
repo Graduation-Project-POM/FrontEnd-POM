@@ -12,42 +12,45 @@ import {
     subtitleText,
     descriptionText,
 } from "./trainersStyles"
+import { useTranslation } from "react-i18next";
 
 export default function Trainers() {
+    const { t } = useTranslation();
+
     const partners: Trainers[] = [
         {
-            name: "أ. مرعي صوص",
+            name: t("partner.partner0.name"),
             title: "",
             subtitle: "",
-            description: "بكالوريوس كيمياء وماجستير تربية من جامعة النجاح الوطنية. معلم علوم وكيمياء لعشر سنوات في مديريتي رام الله وطولكرم رئيس قسم التدريب في المعهد الوطني للتدريب التربوي لعشر سنوات. مدير دائرة التدريب في الادارة العامة للاشراف لاربع سنوات و مدير عام الادارة العامة للابداع والتمي ",
+            description: t("partner.partner0.description"),
             image: "/DrMaree.png",
         },
         {
-            name: "الدكتور احمد عمار",
+            name: t("partner.partner1.name"),
             title: "",
             subtitle: "",
-            description: "الدكتور أحمد عمار أستاذ المناهج التعليمية وطرائق التدريس، مستشارًا للحملة العالمية للتعليم وخبيرًا تربويا لعدد من المؤسسات. شغل مناصب قيادية في وزارة التربية والتعليم وكان المقرر العام لمؤتمر وزراء التربية العرب (2021-2023) وله إسهامات في تأليف مواد تدريبية والتدريب محليًا ودوليا.",
+            description: t("partner.partner1.description"),
             image: "/DrAmmar.png",
         },
         {
-            name: "أ. شروق الخطيب",
+            name: t("partner.partner2.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description: "المهندسة شروق الخطيب هي مديرة برامج STEM في مؤسسة التعاون، تتمتع بخبرة تمتد لثماني سنوات في مجال التعليم والابتكار في العلوم والتكنولوجيا والهندسة والرياضيات تحمل درجة البكالوريوس في هندسة الميكاترونيكس من جامعة بيرزيت، ودرجة الماجستير في إدارة الأعمال من جامعة أنجليا راسكن في بريطانيا. حاصلة على شهادة إدارة المشاريع الاحترافية PMP، بالإضافة إلى اعتماد متخصص من STEM.org، وتعد من الخبراء في تطوير البرامج والمبادرات التي تعزز مهارات الطلبة والشباب في مجالات STEM",
+            subtitle: "",
+            description: t("partner.partner2.description"),
             image: "/DrShorook.png",
         },
     ]
 
     const guests: Trainers[] = [
         {
-            name: "الدكتور مروان عورتاني",
+            name: t("guests.guest0.name"),
             title: "",
             subtitle: "",
-            description: "الدكتور مروان عورتاني أستاذ في الرياضيات، ويُعد من أبرز القيادات الأكاديمية والتعليمية في فلسطين. شغل مناصب وطنية رفيعة منها وزير التربية والتعليم، ورئيس المكتبة الوطنية الفلسطينية، ورئيس أكاديمية فلسطين للعلوم والتكنولوجيا. كما تولى رئاسة جامعة فلسطين التقنية خضوري، وقام بأعمال رئيس جامعة القدس، إضافة إلى أدوار قيادية واستشارية دولية مع البنك الدولي واليونسكو والاتحاد الأوروبي في مجالات التعليم والابتكار والعلوم والتكنولوجيا.",
+            description: t("guests.guest0.description"),
             image: "/DrMarwan.png",
         },
         {
-            name: "أ. سهير عودة",
+            name: t("guests.guest1.name"),
             title: "",
             subtitle: "",
             description: "",
@@ -57,117 +60,104 @@ export default function Trainers() {
 
     const speakers: Trainers[] = [
         {
-            name: "الدكتور عمر الحسني",
-            title: "الدكتور عمر الحسني",
-            subtitle: "طريق الأولمبياد الدولي للرياضيات: من الشغف الى المنافسة",
-            description:
-                "الدكتور عمر الحسني أستاذ جامعي في كلية بحوث العمليات وهندسة المعلومات بجامعة كورنيل بنيويورك، وعضو في مركز الرياضيات التطبيقية بالجامعة. يشتغل كذلك كباحث أكاديمي بشركة أمازون. حصل على الدكتوراه من جامعة كولومبيا بنيويورك في بحوث العمليات، وعلى الماجستير والبكالوريوس في الرياضيات التطبيقية من مدرسة بوليتكنيك بباريس.",
+            name: t("speaker.speaker0.name"),
+            title: t("speaker.speaker0.title"),
+            subtitle: t("speaker.speaker0.subtitle"),
+            description: t("speaker.speaker0.description"),
             image: "/DrOmer.png",
         },
         {
-            name: "الدكتور احمد الجندي",
+            name: t("speaker.speaker1.name"),
             title: "",
-            subtitle: "الاستمتاع الذهني بالرياضيات: بين المسابقات والدراسة الأكاديمية والتطبيقات العملية",
-            description:
-                "الدكتور أحمد الجندي حاصل على بكالوريوس رياضيات من جامعة القاهرة وماجستير ودكتوراه في نظرية الأعداد من جامعة ويسكونسن ماديسون، ويعمل حاليا أستاذًا للرياضيات بجامعة القاهرة بعد خبرات وزمالات دولية. له أدوار قيادية علمية وشبابية ونشاط بارز في تدريب وتنظيم أولمبياد الرياضيات، وترأس الفريق المصري في الأولمبيادات العربية والأفريقية خلال 2020 - 2024",
+            subtitle: t("speaker.speaker1.subtitle"),
+            description: t("speaker.speaker1.description"),
             image: "/DrAhmed.png",
         },
         {
-            name: "الدكتور محمد خليل",
+            name: t("speaker.speaker2.name"),
             title: "",
-            subtitle: "توظيف الرياضيات في حل المشكلات البرمجية",
-            description:
-                "الدكتور محمد خليل محاضر في جامعة فلسطين التقنية - خضوري مختص في الذكاء الاصطناعي والبرمجيات يشغل منصب المسؤول التقني للمسابقة الوطنية للبرمجة ويعمل مدربًا لفريق الأولمبياد الفلسطيني في البرمجة. كما يعمل خبيرًا تقنيا مع مؤسسة التعاون بصفتها الممول والشريك المنفّذ للأولمبياد الفلسطيني في الرياضيات.",
+            subtitle: t("speaker.speaker2.subtitle"),
+            description: t("speaker.speaker2.description"),
             image: "/DrKhalil.png",
         },
     ]
 
     const supervisors: Trainers[] = [
         {
-            name: "الدكتورة رانيا الونان",
+            name: t("supervisors.supervisor0.name"),
             title: "",
-            subtitle: "مدرب أكاديمي",
-            description:
-                "أستاذة مشاركة وعميدة كلية العلوم التطبيقية في جامعة فلسطين التقنية خضوري حاصلة على دكتوراه في الرياضيات من الجامعة الأردنية، وعلى درجتي الماجستير والبكالوريوس في الرياضيات من جامعة النجاح الوطنية. تتركز اهتماماتها البحثية في سلوك الأنظمة الديناميكية غير الذاتية على المدى البعيد، والتحليل العددي، والأنظمة اللامتناهية الأبعاد، والمعادلات التفاضلية العادية والجزئية، ولها أبحاث محكمة ومشاركات علمية داخل فلسطين وخارجها.",
+            subtitle: t("supervisors.supervisor0.subtitle"),
+            description: t("supervisors.supervisor0.description"),
             image: "/DrRania.png",
         },
         {
-            name: "الدكتور عبد الرحيم موسى",
+            name: t("supervisors.supervisor1.name"),
             title: "",
-            subtitle: "مدرب أكاديمي",
-            description:
-                "د. عبدالرحيم موسى أستاذ مساعد في الرياضيات التطبيقية في قسم الرياضيات بكلية العلوم في جامعة بيرزيت. يعمل ضمن الهيئة الأكاديمية في مجال الرياضيات التطبيقية ويساهم في التدريس والبحث العلمي في القسم.",
+            subtitle: t("supervisors.supervisor1.subtitle"),
+            description: t("supervisors.supervisor1.description"),
             image: "/DrAbed.png",
         },
         {
-            name: "الدكتور محمد العدم",
+            name: t("supervisors.supervisor2.name"),
             title: "",
-            subtitle: "مدرب أكاديمي",
-            description:
-                "الدكتور محمد العدم أستاذ مشارك في الرياضيات بجامعة بوليتكنك فلسطين، ومتخصص في الجبر الخطي ونظرية المصفوفات والمشتقات الكسرية. تميّز أكاديميا منذ البداية إذ كان الأول في البكالوريوس عام 2008 بمعدل 95.51%، والأول في ماجستير الجامعة الأردنية عام 2011 بمعدل 4.00/4.00، ثم نال الدكتوراه في الرياضيات من جامعة كونستانز الألمانية عام 2016 بتقدير ممتاز وتصنيف الأول على دفعته. كما حصل على منح وجوائز بحثية وعضويات أكاديمية عالمية، وله العديد من الأبحاث المنشورة دوليا وتعاونات علمية.",
+            subtitle: t("supervisors.supervisor2.subtitle"),
+            description: t("supervisors.supervisor2.description"),
             image: "/DrAladam.png",
         },
         {
-            name: "الدكتور محمد مراعبة",
+            name: t("supervisors.supervisor3.name"),
             title: "",
-            subtitle: "مدرب أكاديمي",
-            description:
-                "أستاذ مشارك ورئيس قسم الرياضيات التطبيقية في جامعة فلسطين التقنية - خضوري متخصص في التحليل الرياضي والأنظمة الضبابية والتفاضل والتكامل الكسري، وله خبرة في التدريس والإشراف على الدراسات العليا. حصل على بكالوريوس من جامعة النجاح، وماجستير من الجامعة العربية الأمريكية ودكتوراه من جامعة الشرق الأوسط التقنية في تركيا، إضافة إلى زيارة بحثية لجامعة ألبرتا في كندا. شارك في مشروع FESTEM الأوروبي وعمل مساعد عميد لكلية العلوم التطبيقية، وأسهم في تطوير التعليم التطبيقي وتعزيز بيئة أكاديمية داعمة للإبداع والتميز.",
+            subtitle: t("supervisors.supervisor3.subtitle"),
+            description: t("supervisors.supervisor3.description"),
             image: "/DrMaraabeh.png",
         },
         {
-            name: "أ. رهام احمد مصلح",
+            name: t("supervisors.supervisor4.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "مشرفة الرياضيات في مديرية التربية و التعليم أريحا من عام ٢٠١٢ لتاريخه. بكالوريوس رياضيات من جامعة القدس عام .٢٠٠١ ماجستير فنون تدريس الرياضيات جامعة القدس بارد عام ٢٠١٢",
+            subtitle: t("supervisors.supervisor4.subtitle"),
+            description: t("supervisors.supervisor4.description"),
             image: "/DrReham.png",
         },
         {
-            name: "أ. عفاف عبد العفو الزغير",
+            name: t("supervisors.supervisor5.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "مشرفة لمادة الرياضيات في مديرية التربية والتعليم / الخليل من سنة 2020. بكالوريوس رياضيات من جامعة الخليل",
+            subtitle: t("supervisors.supervisor5.subtitle"),
+            description: t("supervisors.supervisor5.description"),
             image: "/DrAfaf.png",
         },
         {
-            name: "أ. ندين عادل عيسى",
+            name: t("supervisors.supervisor6.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "مشرفة لمادة الرياضيات في مديرية التربية والتعليم / بيت لحم. بكالوريوس رياضيات من جامعة بيت لحم. ماجستیر اساليب تدريس الرياضيات كلية البارد/ابو ديس",
+            subtitle: t("supervisors.supervisor6.subtitle"),
+            description: t("supervisors.supervisor6.description"),
             image: "/DrNadeen.png",
         },
         {
-            name: "أ. صلاح الدين خضر",
+            name: t("supervisors.supervisor7.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "دير الغصون طولكرم / مشرف مادة الرياضيات دراسات عليا - جامعة اليرموك ١٩٩٤ مشارك في المبياد الرياضيات الوطني ٢٠١٤، ٢٠١٦، ٢٠١٨ ومدرب فريق فلسطين للبطولة العربية لالعاب الرياضيات والمنطق في تونس ٢٠٢٤ الحائز على الترتيب الثاني عربيا",
+            subtitle: t("supervisors.supervisor7.subtitle"),
+            description: t("supervisors.supervisor7.description"),
             image: "/DrSalah.png",
         },
         {
-            name: "أ. رائدة حسني عويس",
+            name: t("supervisors.supervisor8.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "حاصلة على بكالوريوس رياضيات من الجامعة الأردنية وماجستير رياضيات تطبيقية من الجامعة العربية الأمريكية، وأحد مؤلفي كتاب التوجيهي (علمي وصناعي). ومشرفة رياضيات في مديرية جنين منذ 2006، وشاركت فى أولمبياد الرياضيات عدة مرات ورافقت الفريق الفلسطيني إلى قطر العام الماضي، كما حصلت على شهادة مدرب أولمبياد من الألكسو.",
+            subtitle: t("supervisors.supervisor8.subtitle"),
+            description: t("supervisors.supervisor8.description"),
             image: "/DrRaeda.png",
         },
         {
-            name: "أ. لبنى عبد القادر ابو باشا",
+            name: t("supervisors.supervisor9.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description:
-                "مشرفة رياضيات / مديرية التربية و التعليم /نابلس. بكالوريوس رياضيات / جامعة النجاح. معلمة توجيهي علمي لمدة 20 عام. منافسة في جائزة معلم فلسطين 2016. مشاركة في تأليف وورشات المنهاج الجديد لمبحث الرضيات للصفوف ١٢١١",
+            subtitle: t("supervisors.supervisor9.subtitle"),
+            description: t("supervisors.supervisor9.description"),
             image: "/DrLubna.png",
         },
         {
-            name: "أ. كمال الجمل",
+            name: t("supervisors.supervisor10.name"),
             title: "",
-            subtitle: "المشرف التربوي",
-            description: "تربية ضواحي القدس",
+            subtitle: t("supervisors.supervisor10.subtitle"),
+            description: t("supervisors.supervisor10.description"),
             image: "/DrKamal.png",
         },
     ]
@@ -206,24 +196,25 @@ export default function Trainers() {
     return (
         <Box sx={pageWrapper}>
             <Typography variant="h3" sx={sectionTitle(5)}>
-                شركاؤنا
+                {t('sections.partners')}
             </Typography>
             {renderCards(partners)}
 
             <Typography variant="h4" sx={sectionTitle(5)}>
-                ضيوف المخيم
+                {t('sections.guests')}
             </Typography>
             {renderCards(guests)}
 
             <Typography variant="h3" sx={sectionTitle(5)}>
-                المتحدثون
+                {t('sections.speakers_name')}
             </Typography>
             {renderCards(speakers)}
 
             <Typography variant="h3" sx={sectionTitle(5)}>
-                المشرفون والمدربون
+                {t('sections.supervisors')}
             </Typography>
             {renderCards(supervisors)}
         </Box>
+
     )
 }
