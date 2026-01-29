@@ -5,8 +5,6 @@ import {
     Card,
     CardMedia,
     IconButton,
-    CardContent,
-    Button,
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -22,15 +20,6 @@ interface Day {
 const Galary: React.FC = () => {
     const { t } = useTranslation();
 
-    const PDFList = [
-        {
-            title: t("winterCamp.pdfs.title"),
-            description: "",
-            link: "https://drive.google.com/file/d/1D6vwVIeRmdyOQwO9Em99fEmNIKOonihZ/view?usp=sharing",
-            color: "#6C4859",
-            icon: "📘",
-        },
-    ]
 
     const days: Day[] = [
         {
@@ -160,31 +149,6 @@ const Galary: React.FC = () => {
 
             {days.map((day, index) => (
                 <DaySlider key={index} day={day} />
-            ))}
-            <Typography variant="h4" fontWeight="bold" textAlign={"center"} mb={3}>
-                {t("winterCamp.Day1.title")}
-            </Typography>            
-            {PDFList.map((item, index) => (
-                <Card key={index} sx={styles.cardPDF}>
-                    <CardContent>
-                        <Box sx={styles.iconBox}>{item.icon}</Box>
-                        <Typography variant="h6" sx={styles.cardTitle}>
-                            {item.title}
-                        </Typography>
-                        <Typography variant="body2" sx={styles.cardDesc}>
-                            {item.description}
-                        </Typography>
-                        <Button
-                            href={item.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="contained"
-                            sx={styles.button}
-                        >
-                            {t("books.open")}
-                        </Button>
-                    </CardContent>
-                </Card>
             ))}
         </Box>
     );

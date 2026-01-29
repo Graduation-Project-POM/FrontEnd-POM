@@ -349,17 +349,17 @@
     "exploreCamp": "Explore the Camp",
     "aboutTitle": "About the Camp",
     "aboutDescription": "The Winter Training Camp for the Palestinian Mathematics Olympiad kicks off on Saturday, January 10th, 2026, and will run for six days, graciously hosted by Al-Istiqlal University in Jericho.\n\nA total of 53 students from 18 districts are participating in this camp, selected through a rigorous, multi-stage selection process. This process began at the school level with over 5,000 students, then 1,046 students advanced to the district level, followed by a pre-final stage with 140 students, culminating in the final stage with 53 students from 18 districts.\n\nAdditionally, the camp hosts international and local academics and supervisors specialized in global and Arab mathematics Olympiads, alongside local academics from several Palestinian universities, dedicating their time and expertise to elevate the scientific level of our students during this stage.\n\nThe training staff also includes supervisors from various directorates of the Palestinian Ministry of Education and Higher Education.",
-    "location":"location",
-    "university":"Al-Istiqlal University - Jericho",
+    "location": "location",
+    "university": "Al-Istiqlal University - Jericho",
     "gallaryTitle": "Camp Memories",
-    "gallarySubTitle":"Explore the highlights and fun adventures from the Winter Training Camp",
-    
+    "gallarySubTitle": "Explore the highlights and fun adventures from the Winter Training Camp",
+
     "day1": "🏁 Day 1 ",
     "day2": "📚 Day 2",
     "day3": "🧠 Day 3",
     "day4": "🏕️ Day 4",
     "day5": "🏆 Day 5",
-    
+
     "Day1": {
       "event1": "Sports Activity",
       "event2": "Art Workshop",
@@ -382,7 +382,14 @@
       "event5": "Games Race"
     },
     "pdfs": {
-      "desc": "Training session in Algebra with Dr. Mohammad Al-Adam"
+      "title1": "Training Session Material 1 in Algebra with Dr. Mohamed Al-Adem",
+      "title2": "Binomial Theorem",
+      "title3": "Sequences",
+      "title4": "Geometric Series",
+      "title5": "Basic Counting Principles Exercise",
+      "title6": "Solution to the Two Circles Question",
+      "title7": "Solution to the Kite Problem",
+      "title8": "The Circle"
     }
   },
   "partner": {

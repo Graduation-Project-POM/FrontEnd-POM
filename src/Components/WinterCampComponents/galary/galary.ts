@@ -83,7 +83,7 @@ export const styles: Record<string, SxProps<Theme>> = {
 
     cardPDF: {
         width: "100%",
-        maxWidth: 420,
+        maxWidth: 330,
         mx: "auto",
         mt: 4,
         borderRadius: 3,
