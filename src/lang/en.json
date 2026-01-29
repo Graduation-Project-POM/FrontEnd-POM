@@ -464,7 +464,63 @@
     "supervisors": "Supervisors & Trainers"
   },
   "studentsCard": {
-    "title": "Palestinian Math Olympiad Champions",
-    "studentDesc": "Student Programmer"
+    "title": "Palestinian Math Olympiad Champions 2026"
+  },
+  
+  "students": {
+    "student0": { "name": "Mohammad Shbita", "city": "Qalqilya", "school": "Azzun Boys Secondary School" },
+    "student1": { "name": "George Qassis", "city": "Bethlehem", "school": "Evangelical Lutheran School – Beit Sahour" },
+    "student2": { "name": "Yahya Jarradat", "city": "Jenin", "school": "Silat Al-Harithiya Boys Secondary School" },
+    "student3": { "name": "Ibrahim Shtaiwi", "city": "Jericho", "school": "Imran Girls School" },
+    "student4": { "name": "Sama Shanti", "city": "Qalqilya", "school": "Abu Ali Iyad Girls Secondary School" },
+    "student5": { "name": "Kamal Daheidel", "city": "North Hebron – Halhul", "school": "Halhul Boys Secondary School" },
+    "student6": { "name": "Ghina Abu Bakr", "city": "Tulkarm", "school": "Al-Adawiya Girls Secondary School" },
+    "student7": { "name": "Younis Al-Salamain", "city": "South Hebron", "school": "As-Samu' Boys Secondary School" },
+    "student8": { "name": "Zayan Shawarib", "city": "Tulkarm", "school": "Nazlat Issa Girls Secondary School" },
+    "student9": { "name": "Shaden Abu Asbi", "city": "Salfit", "school": "Rafat Girls Secondary School" },
+
+    "student10": { "name": "Adham Najajreh", "city": "Bethlehem", "school": "Freres Mixed Secondary School" },
+    "student11": { "name": "Moatasem Shtaiwi", "city": "South Nablus", "school": "Huwara Boys Secondary School" },
+    "student12": { "name": "Abdulrahman Shalash", "city": "Birzeit Directorate", "school": "Arab Academy for Modern Education" },
+    "student13": { "name": "Mohammad Al-Adous", "city": "Jericho", "school": "Imran Girls School" },
+    "student14": { "name": "Mohammad Samara", "city": "Birzeit", "school": "Arab Academy for Modern Education" },
+
+    "student15": { "name": "Abi Oqeili", "city": "South Hebron", "school": "Martyr Majed Abu Sharar Boys School" },
+    "student16": { "name": "Noor Abu Ghadib", "city": "Nablus Directorate", "school": "Al-Ayshiya Girls Secondary School" },
+    "student17": { "name": "Salma Safadi", "city": "South Nablus", "school": "Oureif Girls Secondary School" },
+    "student18": { "name": "Sadeel Al-Najjar", "city": "South Hebron", "school": "Hafsa Bint Omar Secondary School" },
+    "student19": { "name": "Deena Nirookh", "city": "Central Hebron", "school": "Widad Nader Al-Din Girls Secondary School" },
+
+    "student20": { "name": "Janan Ouda", "city": "Nablus", "school": "Al-Ayshiya Girls Secondary School" },
+    "student21": { "name": "Mohammad Al-Rajai", "city": "South Hebron", "school": "Martyr Majed Abu Sharar Secondary School" },
+    "student22": { "name": "Rimas Bani Ouda", "city": "Tubas", "school": "Tammun Secondary School" },
+    "student23": { "name": "Lynn Al-Arar", "city": "North Hebron", "school": "Sourif Girls Secondary School" },
+    "student24": { "name": "Rana Kalbouna", "city": "Nablus", "school": "Talae' Al-Amal School" },
+
+    "student25": { "name": "Adam Owais", "city": "South Nablus", "school": "As-Sawiya Al-Laban Boys Secondary School" },
+    "student26": { "name": "Mohammad Daghamin", "city": "South Hebron", "school": "Al-Bukhari Boys Basic School" },
+    "student27": { "name": "Lana Noor", "city": "Tulkarm", "school": "Anabta Girls Secondary School" },
+    "student28": { "name": "Rami Abukersh", "city": "South Hebron", "school": "As-Samu' Boys Secondary School" },
+    "student29": { "name": "Ayman Osbeih", "city": "Yatta", "school": "Abu Ali Iyad Boys Secondary School" },
+
+    "student30": { "name": "Saif Abukshak", "city": "Ramallah", "school": "Our Lady of the Annunciation Greek Catholic School" },
+    "student31": { "name": "Ahmad Marrar", "city": "Ramallah–Al-Bireh", "school": "Ahliya College of Ramallah" },
+    "student32": { "name": "Sarah Dawas", "city": "Tubas", "school": "Tubas Girls Secondary School" },
+    "student33": { "name": "Joud Obeid", "city": "Qabatiya", "school": "Sami Taha Girls Secondary School" },
+    "student34": { "name": "Lujain Ajra", "city": "Bethlehem", "school": "Good Shepherd Swedish School" },
+
+    "student35": { "name": "Batool Zakaria", "city": "Nablus", "school": "British Scientific Schools" },
+    "student36": { "name": "Khalil Jibran", "city": "Jerusalem", "school": "Arab Institute" },
+    "student37": { "name": "Talia Obeid", "city": "Nablus", "school": "Talae' Al-Amal School" },
+    "student38": { "name": "Yasmin Ashqar", "city": "Nablus", "school": "Talae' Al-Amal School" },
+    "student39": { "name": "Mohammad Haj Ali", "city": "South Nablus", "school": "Jamma'in Boys Secondary School" },
+
+    "student40": { "name": "Amro Abu Safieh", "city": "Birzeit", "school": "Rawabi English Academy" },
+    "student41": { "name": "Moataz Al-Humaidi", "city": "Jericho", "school": "Terra Santa Secondary School" },
+    "student42": { "name": "Layali Subaih", "city": "Bethlehem", "school": "Bethlehem Girls Secondary School" },
+    "student43": { "name": "Diala Ayash", "city": "Jerusalem Suburbs", "school": "Al-Umawiyya Girls Secondary School" },
+    "student44": { "name": "Nada Ghannam", "city": "Tubas", "school": "Green School" }
   }
 }
+
+

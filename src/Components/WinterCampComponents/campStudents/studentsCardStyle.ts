@@ -1,5 +1,6 @@
 import { Card, Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import type { SxProps, Theme } from "@mui/material";
 
 export const StyledCard = styled(Card)(({ theme }) => ({
   position: "relative",
@@ -7,27 +8,16 @@ export const StyledCard = styled(Card)(({ theme }) => ({
   borderRadius: theme.spacing(2),
   transition: "all 0.3s",
   width: 220,
-  height: 180,
+  height: 160,
   paddingTop: 80,
   cursor: "pointer",
+
   "&:hover": {
     boxShadow: theme.shadows[6],
     transform: "translateY(-4px)",
   },
 }));
 
-
-export const GradientOverlay = styled(Box)(() => ({
-  position: "absolute",
-  inset: 0,
-  background: "linear-gradient(to bottom right, #7B2D47, #5a2134)",
-  opacity: 0,
-  transition: "opacity 0.3s",
-  pointerEvents: "none",
-  [`${StyledCard}:hover &`]: {
-    opacity: 0.05,
-  },
-}));
 
 export const AvatarWrapper = styled(Box)(() => ({
   position: "absolute",
@@ -40,34 +30,6 @@ export const AvatarWrapper = styled(Box)(() => ({
 }));
 
 
-export const Ring = styled(Box)(() => ({
-  position: "absolute",
-  inset: -4,
-  borderRadius: "50%",
-  border: "3px solid #7B2D47",
-  opacity: 0,
-  transform: "scale(0.85)",
-  transition: "all 0.3s ease",
-  pointerEvents: "none",
-  [`${StyledCard}:hover &`]: {
-    opacity: 1,
-    transform: "scale(1)",
-  },
-}));
-
-export const HoverBlur = styled(Box)(() => ({
-  position: "absolute",
-  inset: 0,
-  borderRadius: "50%",
-  backgroundColor: "#7B2D47",
-  filter: "blur(12px)",
-  opacity: 0.15,
-  transition: "opacity 0.3s",
-  [`${StyledCard}:hover &`]: {
-    opacity: 0.3,
-  },
-}));
-
 export const BadgeWrapper = styled(Box)(({ theme }) => ({
   position: "absolute",
   bottom: 10,
@@ -79,11 +41,6 @@ export const BadgeWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  transition: "all 0.3s",
-  transformOrigin: "center",
-  [`${StyledCard}:hover &`]: {
-    transform: "scale(1.1) rotate(12deg)",
-  },
 }));
 
 export const RoleBadge = styled(Box)(({ theme }) => ({
@@ -94,9 +51,112 @@ export const RoleBadge = styled(Box)(({ theme }) => ({
   borderRadius: theme.spacing(1),
   fontSize: 12,
   fontWeight: 600,
-  boxShadow: theme.shadows[1],
-  transition: "transform 0.3s",
-  [`${StyledCard}:hover &`]: {
-    transform: "scale(1.05)",
-  },
+  boxShadow: theme.shadows[2],
 }));
+
+export const cardStyles: Record<string, SxProps<Theme>> = {
+  cardContent: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    pt: 5,
+    pb: 1,
+    textAlign: "center",
+  },
+
+  avatar: {
+    width: "120%",
+    height: "120%",
+    border: "3px solid #7B2D47",
+    boxSizing: "border-box",
+  },
+
+  name: {
+    color: "#7B2D47",
+    fontWeight: "bold",
+    fontSize: 16,
+    mt: 0.4,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  },
+
+  countryBox: {
+    display: "flex",
+    alignItems: "center",
+    gap: 0.5,
+    color: "gray",
+    fontSize: 12,
+    mt: 1,
+  },
+
+  locationIcon: {
+    fontSize: 18,
+    color: "#888",
+  },
+
+};
+
+export const sliderStyles: Record<string, SxProps<Theme>> = {
+  title: {
+    fontWeight: 800,
+    textAlign: "center",
+    color: "#7B2D47",
+    mb: 6,
+    textShadow: "0 2px 8px rgba(123, 45, 71, 0.2)",
+  },
+
+
+  wrapper: {
+    position: "relative",
+    p: 3,
+  },
+
+
+  slider: {
+    display: "flex",
+    gap: 2,
+    overflowX: "auto",
+    overflowY: "visible",
+    scrollBehavior: "smooth",
+    py: 6, "&::-webkit-scrollbar": {
+      display: "none",
+    },
+  },
+
+
+  cardWrapper: {
+    minWidth: 260,
+    maxWidth: 260,
+  },
+
+
+  leftButton: {
+    position: "absolute",
+    left: 0,
+    top: "50%",
+    transform: "translateY(-50%)",
+    zIndex: 2,
+    boxShadow: 2,
+    color: "#f5f5f5",
+    bgcolor: "#7B2D47",
+    "&:hover": {
+      bgcolor: "#f5f5f5",
+      color: "#7B2D47",
+    },
+  },
+  rightButton: {
+    position: "absolute",
+    right: 0,
+    top: "50%",
+    transform: "translateY(-50%)",
+    zIndex: 2,
+    boxShadow: 2,
+    color: "#f5f5f5",
+    bgcolor: "#7B2D47",
+    "&:hover": {
+      bgcolor: "#f5f5f5",
+      color: "#7B2D47",
+    },
+  },
+};
