@@ -6,6 +6,7 @@ import {About} from "../Components/WinterCampComponents/about/about.tsx";
 import Galary from "../Components/WinterCampComponents/galary/galary.tsx";
 import Material from "../Components/WinterCampComponents/trainingMaterial/material.tsx";
 import CampFooter from "../Components/WinterCampComponents/footer/CampFooter.tsx";
+import StudentCard from "../Components/WinterCampComponents/cards/cards.tsx";
 
 export default function WinterCamp() {
   return (
@@ -14,6 +15,7 @@ export default function WinterCamp() {
       <About />
       <Agenda />
       <Trainers /> 
+      <StudentCard/>
       <Galary />
       <Material />
       <CampFooter/>
