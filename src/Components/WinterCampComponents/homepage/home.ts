@@ -2,7 +2,7 @@ export const bannerStyles = {
     container: {
         pt:{ xs: 20, md: 0 },
         position: "relative",
-        backgroundImage: `url("/Banner.png")`,
+        backgroundImage: `url("/all.jpg")`,
         backgroundColor: "rgba(2, 15, 3, 0.62)",
         backgroundBlendMode: "multiply",
         backgroundRepeat: "no-repeat",
