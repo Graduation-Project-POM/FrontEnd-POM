@@ -4,6 +4,7 @@ import Agenda from "../Components/WinterCampComponents/agenda/agenda.tsx";
 import Home from "../Components/WinterCampComponents/homepage/home.tsx";
 import {About} from "../Components/WinterCampComponents/about/about.tsx";
 import Galary from "../Components/WinterCampComponents/galary/galary.tsx";
+import Material from "../Components/WinterCampComponents/trainingMaterial/material.tsx";
 
 export default function WinterCamp() {
   return (
@@ -14,7 +15,7 @@ export default function WinterCamp() {
 
       <Trainers /> 
       <Galary />
-
+      <Material />
     </Box>
   )
 }
