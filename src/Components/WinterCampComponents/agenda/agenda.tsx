@@ -14,6 +14,7 @@ import {
     MutedCell,
 } from "./agenda"
 import type { AgendaItem, Day } from "../../../types/agenda"
+import { Box, Typography } from "@mui/material"
 
 const agendaByDay: Record<Day, AgendaItem[]> = {
     day1: [
@@ -235,6 +236,20 @@ export default function Agenda() {
             <Main style={{ textAlign: i18n.language === "ar" ? "right" : "left" }}>
                 <PageTitle>{t("agenda.title")}</PageTitle>
                 <PageDescription>{t("agenda.description")}</PageDescription>
+                 <Box>
+                    <Typography
+                        variant="h5"
+                        sx={{
+                            width: "100px",        
+                            height: 4,             
+                            backgroundColor: "#7D1C48",
+                            borderRadius: 2,
+                            mx: "auto",             
+                            mt: 3,                 
+                        }}
+                    >
+                    </Typography>
+                </Box>
 
                 <Tabs style={{ marginLeft: i18n.language === "ar" ? "auto" : "0" }}>
                     {(Object.keys(agendaByDay) as Day[]).map((d) => (

@@ -277,7 +277,7 @@
   },
   "agenda": {
     "title": "Schedule",
-    "description": "Multi-day training camp schedule.",
+    "description":"Agenda for the first day of the Palestinian Math Olympiad 2026",
     "days": {
       "day1": "Day 1",
       "day2": "Day 2",
@@ -352,36 +352,9 @@
     "location": "location",
     "university": "Al-Istiqlal University - Jericho",
     "gallaryTitle": "Camp Memories",
-    "gallarySubTitle": "Explore the highlights and fun adventures from the Winter Training Camp",
-
-    "day1": "🏁 Day 1 ",
-    "day2": "📚 Day 2",
-    "day3": "🧠 Day 3",
-    "day4": "🏕️ Day 4",
-    "day5": "🏆 Day 5",
-
-    "Day1": {
-      "event1": "Sports Activity",
-      "event2": "Art Workshop",
-      "event3": "Theatrical Show",
-      "event4": "Educational Trip",
-      "event5": "Nature Adventure"
-    },
-    "Day2": {
-      "event1": "Field Trip",
-      "event2": "Games Race",
-      "event3": "Nature Adventure",
-      "event4": "Educational Workshop",
-      "event5": "Sports Activity"
-    },
-    "Day3": {
-      "event1": "Educational Workshop",
-      "event2": "Farewell Party",
-      "event3": "Art Activity",
-      "event4": "Field Trip",
-      "event5": "Games Race"
-    },
+    "gallarySubTitle":"Explore the highlights and fun adventures from the Winter Training Camp",
     "pdfs": {
+      "title": "Training Session Material",
       "title1": "Training Session Material 1 in Algebra with Dr. Mohamed Al-Adem",
       "title2": "Binomial Theorem",
       "title3": "Sequences",
@@ -407,15 +380,6 @@
     }
   },
 
-  "guests": {
-    "guest0": {
-      "name": "Dr. Marwan Awartani",
-      "description": "Dr. Marwan Awartani is a professor of mathematics and one of the most prominent academic and educational leaders in Palestine. He held senior national positions, including Minister of Education, President of the Palestinian National Library, and President of the Palestinian Academy for Science and Technology."
-    },
-    "guest1": {
-      "name": "Ms. Suhair Odeh"
-    }
-  },
 
   "speaker": {
     "speaker0": {
@@ -450,12 +414,12 @@
     "supervisor2": {
       "name": "Dr. Mohammad Al-Adam",
       "subtitle": "Academic Trainer",
-      "description": "Associate Professor of Mathematics at Palestine Polytechnic University, specializing in linear algebra, matrix theory, and fractional derivatives. He ranked first in his Bachelor's degree (2008) and Master's degree at the University of Jordan (2011), and earned his PhD from the University of Konstanz, Germany in 2016 with distinction. He has received several research grants and awards and published numerous international research papers."
+      "description":"Associate Professor of Mathematics at Palestine Polytechnic University, specializing in linear algebra, matrix theory, and fractional derivatives. He graduated with distinction in both his bachelor’s and master’s degrees and earned his PhD from the University of Konstanz, Germany, in 2016 with excellent standing. He has published research and maintains international academic collaborations."
     },
     "supervisor3": {
       "name": "Dr. Mohammad Maraabeh",
       "subtitle": "Academic Trainer",
-      "description": "Associate Professor and Head of the Department of Applied Mathematics at Palestine Technical University – Kadoorie. His expertise includes mathematical analysis, fuzzy systems, and fractional calculus. He has extensive experience in teaching and supervising graduate studies and has contributed to European FESTEM projects."
+      "description":"Associate Professor and Head of the Department of Applied Mathematics at Palestine Technical University - Kadoorie. His expertise includes mathematical analysis, fuzzy systems, and fractional calculus. He has extensive experience in teaching and supervising graduate studies and has contributed to European FESTEM projects."
     },
     "supervisor4": {
       "name": "Ms. Reham Ahmad Masleh",

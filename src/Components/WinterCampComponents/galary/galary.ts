@@ -3,6 +3,7 @@ import type { SxProps, Theme } from "@mui/material";
 export const styles: Record<string, SxProps<Theme>> = {
     page: {
         minHeight: "100vh",
+        background: "#F5F5F5",
     },
 
     header: {
@@ -21,35 +22,7 @@ export const styles: Record<string, SxProps<Theme>> = {
         position: "relative",
     },
 
-    slider: {
-        display: "flex",
-        gap: 2,
-        overflow: "hidden",
-    },
 
-    card: {
-        minWidth: 320,
-        height: 220,
-        borderRadius: 4,
-        position: "relative",
-        boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
-        transition: "0.3s",
-        "&:hover": {
-            transform: "scale(1.03)",
-        },
-    },
-
-    overlay: {
-        position: "absolute",
-        bottom: 0,
-        width: "100%",
-        bgcolor: "rgba(122, 30, 60, 0.5)",
-        color: "white",
-        py: 1,
-        textAlign: "center",
-        borderBottomLeftRadius: 4,
-        borderBottomRightRadius: 4,
-    },
 
     leftArrow: {
         position: "absolute",
@@ -80,6 +53,35 @@ export const styles: Record<string, SxProps<Theme>> = {
             color: "white",
         },
     },
+    card: {
+        minWidth: 400,
+        height: 500,
+        borderRadius: 4,
+        overflow: "hidden",
+        boxShadow: "0 8px 20px rgba(0,0,0,0.25)",
+        scrollSnapAlign: "center",
+        cursor: "pointer",
+    },
+
+    image: {
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+    },
+
+    slider: {
+        display: "flex",
+        gap: 2,
+        overflowX: "auto",
+        scrollSnapType: "x mandatory",
+        scrollBehavior: "smooth",
+        backgroundColor: "#F5F5F5", 
+        padding: 0,
+        "&::-webkit-scrollbar": {
+            display: "none",
+        },
+    },
+
 
     cardPDF: {
         width: "100%",
