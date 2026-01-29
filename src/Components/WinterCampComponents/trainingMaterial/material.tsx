@@ -50,7 +50,7 @@ export default function Page() {
         <Box sx={{ minHeight: "100vh", background: "linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%)", py: 6 }}>
             <Box sx={{ mt: 4, mb: 2, textAlign: "center" }}>
                 <Typography
-                    variant="h2"
+                    variant="h3"
                     sx={{
                         fontWeight: 800,
                         color: "#7B2D47",
@@ -59,7 +59,21 @@ export default function Page() {
                         letterSpacing: "-1px",
                     }}
                 >
-                    {t("winterCamp.Day1.title")}
+                    {t("winterCamp.pdfs.title")}
+                    <Box>
+                        <Typography
+                            variant="h5"
+                            sx={{
+                                width: "200px",
+                                height: 4,
+                                backgroundColor: "#7D1C48",
+                                borderRadius: 2,
+                                mx: "auto",
+                                mt: 3,
+                            }}
+                        >
+                        </Typography>
+                    </Box>
                 </Typography>
                 <Box sx={styles.container}>
                     {PDFList.map((item, index) => (

@@ -102,9 +102,6 @@ const Galary: React.FC = () => {
                 </Box>
             </Box>
 
-            {days.map((day, index) => (
-                <DaySlider key={index} day={day} />
-            ))}
         </Box>
     );
 };
