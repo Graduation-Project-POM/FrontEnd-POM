@@ -462,5 +462,9 @@
     "guests": "Camp Guests",
     "speakers_name": "Speakers",
     "supervisors": "Supervisors & Trainers"
+  },
+  "studentsCard": {
+    "title": "Palestinian Math Olympiad Champions",
+    "studentDesc": "Student Programmer"
   }
 }
