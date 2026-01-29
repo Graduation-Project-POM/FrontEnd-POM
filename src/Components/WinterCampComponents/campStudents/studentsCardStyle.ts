@@ -100,12 +100,12 @@ export const cardStyles: Record<string, SxProps<Theme>> = {
 export const sliderStyles: Record<string, SxProps<Theme>> = {
   title: {
     fontWeight: 800,
-    textAlign: "center",
+    textAlign: "center",  
     color: "#7B2D47",
     mb: 6,
+    mt: 6,
     textShadow: "0 2px 8px rgba(123, 45, 71, 0.2)",
   },
-
 
   wrapper: {
     position: "relative",

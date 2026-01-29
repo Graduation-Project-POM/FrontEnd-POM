@@ -11,6 +11,17 @@ export const gradients = [
   ["#00CEC9", "#81ECEC", "#FF7675"],
 ];
 
+// export const gradients = [
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+//   ["#6E0B2A", "#7c4758ff", "#6E0B2A"],
+// ];
+
 export const colors = gradients.map(g => g[0]);
 
 export const styles: Record<string, SxProps<Theme> | any> = {
