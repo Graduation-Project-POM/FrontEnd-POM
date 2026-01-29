@@ -41,22 +41,7 @@ export default function Trainers() {
         },
     ]
 
-    const guests: Trainers[] = [
-        {
-            name: t("guests.guest0.name"),
-            title: "",
-            subtitle: "",
-            description: t("guests.guest0.description"),
-            image: "/DrMarwan.png",
-        },
-        {
-            name: t("guests.guest1.name"),
-            title: "",
-            subtitle: "",
-            description: "",
-            image: "/.png",
-        },
-    ]
+    
 
     const speakers: Trainers[] = [
         {
@@ -199,11 +184,6 @@ export default function Trainers() {
                 {t('sections.partners')}
             </Typography>
             {renderCards(partners)}
-
-            <Typography variant="h4" sx={sectionTitle(5)}>
-                {t('sections.guests')}
-            </Typography>
-            {renderCards(guests)}
 
             <Typography variant="h3" sx={sectionTitle(5)}>
                 {t('sections.speakers_name')}
