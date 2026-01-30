@@ -3,6 +3,7 @@ import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 import { useRef } from "react";
 import { StudentCard } from "./studentsCard";
 import { studentsData } from "./students";
+import {sliderStyles} from "./studentsCardStyle";
 import { useTranslation } from "react-i18next";
 
 export default function StudentsSlider() {
@@ -21,7 +22,7 @@ export default function StudentsSlider() {
 
   return (
     <Box>
-      <Typography variant="h3" sx={{ fontWeight: 800, textAlign: "center", color: "#7B2D47", mb: 6, textShadow: "0 2px 8px rgba(123, 45, 71, 0.2)", mt: 6 }}>
+      <Typography variant="h3" sx={sliderStyles.title}>
         {t("studentsCard.title")}
         <Box>
           <Typography
@@ -38,21 +39,21 @@ export default function StudentsSlider() {
           </Typography>
         </Box>
       </Typography>
-      
-      <Box sx={{ position: "relative", p: 3 }}>
-        <IconButton onClick={() => handleScroll("left")} sx={{ position: "absolute", left: 0, top: "50%", transform: "translateY(-50%)", zIndex: 2, bgcolor: "white", boxShadow: 2 }}>
+
+      <Box sx={sliderStyles.wrapper}>
+        <IconButton onClick={() => handleScroll("left")} sx={sliderStyles.leftButton}>
           <ArrowBackIosNew />
         </IconButton>
 
-        <Box ref={sliderRef} sx={{ display: "flex", gap: 2, overflowX: "auto", overflowY: "visible", scrollBehavior: "smooth", py: 6, "&::-webkit-scrollbar": { display: "none" } }}>
+        <Box ref={sliderRef} sx={sliderStyles.slider}>
           {students.map((student) => (
-            <Box key={student.id} sx={{ minWidth: 260, maxWidth: 260 }}>
+            <Box key={student.id} sx={sliderStyles.cardWrapper}>
               <StudentCard student={student} />
             </Box>
           ))}
         </Box>
 
-        <IconButton onClick={() => handleScroll("right")} sx={{ position: "absolute", right: 0, top: "50%", transform: "translateY(-50%)", zIndex: 2, bgcolor: "white", boxShadow: 2 }}>
+        <IconButton onClick={() => handleScroll("right")} sx={sliderStyles.rightButton}>
           <ArrowForwardIos />
         </IconButton>
       </Box>
