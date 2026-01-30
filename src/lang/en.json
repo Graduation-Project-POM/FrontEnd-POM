@@ -519,7 +519,8 @@
     "student41": { "name": "Moataz Al-Humaidi", "city": "Jericho", "school": "Terra Santa Secondary School" },
     "student42": { "name": "Layali Subaih", "city": "Bethlehem", "school": "Bethlehem Girls Secondary School" },
     "student43": { "name": "Diala Ayash", "city": "Jerusalem Suburbs", "school": "Al-Umawiyya Girls Secondary School" },
-    "student44": { "name": "Nada Ghannam", "city": "Tubas", "school": "Green School" }
+    "student44": { "name": "Nada Ghannam", "city": "Tubas", "school": "Green School" },
+    "student45": {"name": "Mais Adwan","city": "Qalqilya","school": "Fatima Sorour Girls Secondary School"} 
   }
 }
 
