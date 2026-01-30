@@ -1,5 +1,4 @@
-
-export const studentsData = (t: any) => [
+export const studentsData = (t: (key: string) => string) => [
   { id: 1, imageUrl: "../s1.jpg", name: t("students.student0.name"), directorate: t("students.student0.city"), school: t("students.student0.school") },
   { id: 2, imageUrl: "../s2.jpg", name: t("students.student1.name"), directorate: t("students.student1.city"), school: t("students.student1.school") },
   { id: 3, imageUrl: "../s3.jpg", name: t("students.student2.name"), directorate: t("students.student2.city"), school: t("students.student2.school") },
