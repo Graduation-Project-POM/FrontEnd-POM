@@ -277,7 +277,7 @@
   },
   "agenda": {
     "title": "Schedule",
-    "description":"Agenda for the first day of the Palestinian Math Olympiad 2026",
+    "description": "Agenda for the first day of the Palestinian Math Olympiad 2026",
     "days": {
       "day1": "Day 1",
       "day2": "Day 2",
@@ -352,7 +352,7 @@
     "location": "location",
     "university": "Al-Istiqlal University - Jericho",
     "gallaryTitle": "Camp Memories",
-    "gallarySubTitle":"Explore the highlights and fun adventures from the Winter Training Camp",
+    "gallarySubTitle": "Explore the highlights and fun adventures from the Winter Training Camp",
     "pdfs": {
       "title": "Training Session Material",
       "title1": "Training Session Material 1 in Algebra with Dr. Mohamed Al-Adem",
@@ -379,7 +379,6 @@
       "description": "Engineer Shorouq Al-Khatib is the STEM Programs Director at Taawon (Welfare Association). She has over eight years of experience in education and innovation in science, technology, engineering, and mathematics. She holds a Bachelor's degree in Mechatronics Engineering from Birzeit University and a Master's degree in Business Administration from Anglia Ruskin University in the UK."
     }
   },
-
 
   "speaker": {
     "speaker0": {
@@ -414,12 +413,12 @@
     "supervisor2": {
       "name": "Dr. Mohammad Al-Adam",
       "subtitle": "Academic Trainer",
-      "description":"Associate Professor of Mathematics at Palestine Polytechnic University, specializing in linear algebra, matrix theory, and fractional derivatives. He graduated with distinction in both his bachelor’s and master’s degrees and earned his PhD from the University of Konstanz, Germany, in 2016 with excellent standing. He has published research and maintains international academic collaborations."
+      "description": "Associate Professor of Mathematics at Palestine Polytechnic University, specializing in linear algebra, matrix theory, and fractional derivatives. He graduated with distinction in both his bachelor’s and master’s degrees and earned his PhD from the University of Konstanz, Germany, in 2016 with excellent standing. He has published research and maintains international academic collaborations."
     },
     "supervisor3": {
       "name": "Dr. Mohammad Maraabeh",
       "subtitle": "Academic Trainer",
-      "description":"Associate Professor and Head of the Department of Applied Mathematics at Palestine Technical University - Kadoorie. His expertise includes mathematical analysis, fuzzy systems, and fractional calculus. He has extensive experience in teaching and supervising graduate studies and has contributed to European FESTEM projects."
+      "description": "Associate Professor and Head of the Department of Applied Mathematics at Palestine Technical University - Kadoorie. His expertise includes mathematical analysis, fuzzy systems, and fractional calculus. He has extensive experience in teaching and supervising graduate studies and has contributed to European FESTEM projects."
     },
     "supervisor4": {
       "name": "Ms. Reham Ahmad Masleh",
@@ -466,61 +465,262 @@
   "studentsCard": {
     "title": "Palestinian Math Olympiad Champions 2026"
   },
-  
+
   "students": {
-    "student0": { "name": "Mohammad Shbita", "city": "Qalqilya", "school": "Azzun Boys Secondary School" },
-    "student1": { "name": "George Qassis", "city": "Bethlehem", "school": "Evangelical Lutheran School – Beit Sahour" },
-    "student2": { "name": "Yahya Jarradat", "city": "Jenin", "school": "Silat Al-Harithiya Boys Secondary School" },
-    "student3": { "name": "Ibrahim Shtaiwi", "city": "Jericho", "school": "Imran Girls School" },
-    "student4": { "name": "Sama Shanti", "city": "Qalqilya", "school": "Abu Ali Iyad Girls Secondary School" },
-    "student5": { "name": "Kamal Daheidel", "city": "North Hebron – Halhul", "school": "Halhul Boys Secondary School" },
-    "student6": { "name": "Ghina Abu Bakr", "city": "Tulkarm", "school": "Al-Adawiya Girls Secondary School" },
-    "student7": { "name": "Younis Al-Salamain", "city": "South Hebron", "school": "As-Samu' Boys Secondary School" },
-    "student8": { "name": "Zayan Shawarib", "city": "Tulkarm", "school": "Nazlat Issa Girls Secondary School" },
-    "student9": { "name": "Shaden Abu Asbi", "city": "Salfit", "school": "Rafat Girls Secondary School" },
+    "student0": {
+      "name": "Mohammad Shbita",
+      "city": "Qalqilya",
+      "school": "Azzun Boys Secondary School"
+    },
+    "student1": {
+      "name": "George Qassis",
+      "city": "Bethlehem",
+      "school": "Evangelical Lutheran School – Beit Sahour"
+    },
+    "student2": {
+      "name": "Yahya Jarradat",
+      "city": "Jenin",
+      "school": "Silat Al-Harithiya Boys Secondary School"
+    },
+    "student3": {
+      "name": "Ibrahim Shtaiwi",
+      "city": "Jericho",
+      "school": "Imran Girls School"
+    },
+    "student4": {
+      "name": "Sama Shanti",
+      "city": "Qalqilya",
+      "school": "Abu Ali Iyad Girls Secondary School"
+    },
+    "student5": {
+      "name": "Kamal Daheidel",
+      "city": "North Hebron – Halhul",
+      "school": "Halhul Boys Secondary School"
+    },
+    "student6": {
+      "name": "Ghina Abu Bakr",
+      "city": "Tulkarm",
+      "school": "Al-Adawiya Girls Secondary School"
+    },
+    "student7": {
+      "name": "Younis Al-Salamain",
+      "city": "South Hebron",
+      "school": "As-Samu' Boys Secondary School"
+    },
+    "student8": {
+      "name": "Zayan Shawarib",
+      "city": "Tulkarm",
+      "school": "Nazlat Issa Girls Secondary School"
+    },
+    "student9": {
+      "name": "Shaden Abu Asbi",
+      "city": "Salfit",
+      "school": "Rafat Girls Secondary School"
+    },
 
-    "student10": { "name": "Adham Najajreh", "city": "Bethlehem", "school": "Freres Mixed Secondary School" },
-    "student11": { "name": "Moatasem Shtaiwi", "city": "South Nablus", "school": "Huwara Boys Secondary School" },
-    "student12": { "name": "Abdulrahman Shalash", "city": "Birzeit Directorate", "school": "Arab Academy for Modern Education" },
-    "student13": { "name": "Mohammad Al-Adous", "city": "Jericho", "school": "Imran Girls School" },
-    "student14": { "name": "Mohammad Samara", "city": "Birzeit", "school": "Arab Academy for Modern Education" },
+    "student10": {
+      "name": "Adham Najajreh",
+      "city": "Bethlehem",
+      "school": "Freres Mixed Secondary School"
+    },
+    "student11": {
+      "name": "Moatasem Shtaiwi",
+      "city": "South Nablus",
+      "school": "Huwara Boys Secondary School"
+    },
+    "student12": {
+      "name": "Abdulrahman Shalash",
+      "city": "Birzeit Directorate",
+      "school": "Arab Academy for Modern Education"
+    },
+    "student13": {
+      "name": "Mohammad Al-Adous",
+      "city": "Jericho",
+      "school": "Imran Girls School"
+    },
+    "student14": {
+      "name": "Mohammad Samara",
+      "city": "Birzeit",
+      "school": "Arab Academy for Modern Education"
+    },
 
-    "student15": { "name": "Abi Oqeili", "city": "South Hebron", "school": "Martyr Majed Abu Sharar Boys School" },
-    "student16": { "name": "Noor Abu Ghadib", "city": "Nablus Directorate", "school": "Al-Ayshiya Girls Secondary School" },
-    "student17": { "name": "Salma Safadi", "city": "South Nablus", "school": "Oureif Girls Secondary School" },
-    "student18": { "name": "Sadeel Al-Najjar", "city": "South Hebron", "school": "Hafsa Bint Omar Secondary School" },
-    "student19": { "name": "Deena Nirookh", "city": "Central Hebron", "school": "Widad Nader Al-Din Girls Secondary School" },
+    "student15": {
+      "name": "Abi Oqeili",
+      "city": "South Hebron",
+      "school": "Martyr Majed Abu Sharar Boys School"
+    },
+    "student16": {
+      "name": "Noor Abu Ghadib",
+      "city": "Nablus Directorate",
+      "school": "Al-Ayshiya Girls Secondary School"
+    },
+    "student17": {
+      "name": "Salma Safadi",
+      "city": "South Nablus",
+      "school": "Oureif Girls Secondary School"
+    },
+    "student18": {
+      "name": "Sadeel Al-Najjar",
+      "city": "South Hebron",
+      "school": "Hafsa Bint Omar Secondary School"
+    },
+    "student19": {
+      "name": "Deena Nirookh",
+      "city": "Central Hebron",
+      "school": "Widad Nader Al-Din Girls Secondary School"
+    },
 
-    "student20": { "name": "Janan Ouda", "city": "Nablus", "school": "Al-Ayshiya Girls Secondary School" },
-    "student21": { "name": "Mohammad Al-Rajai", "city": "South Hebron", "school": "Martyr Majed Abu Sharar Secondary School" },
-    "student22": { "name": "Rimas Bani Ouda", "city": "Tubas", "school": "Tammun Secondary School" },
-    "student23": { "name": "Lynn Al-Arar", "city": "North Hebron", "school": "Sourif Girls Secondary School" },
-    "student24": { "name": "Rana Kalbouna", "city": "Nablus", "school": "Talae' Al-Amal School" },
+    "student20": {
+      "name": "Janan Ouda",
+      "city": "Nablus",
+      "school": "Al-Ayshiya Girls Secondary School"
+    },
+    "student21": {
+      "name": "Mohammad Al-Rajai",
+      "city": "South Hebron",
+      "school": "Martyr Majed Abu Sharar Secondary School"
+    },
+    "student22": {
+      "name": "Rimas Bani Ouda",
+      "city": "Tubas",
+      "school": "Tammun Secondary School"
+    },
+    "student23": {
+      "name": "Lynn Al-Arar",
+      "city": "North Hebron",
+      "school": "Sourif Girls Secondary School"
+    },
+    "student24": {
+      "name": "Rana Kalbouna",
+      "city": "Nablus",
+      "school": "Talae' Al-Amal School"
+    },
 
-    "student25": { "name": "Adam Owais", "city": "South Nablus", "school": "As-Sawiya Al-Laban Boys Secondary School" },
-    "student26": { "name": "Mohammad Daghamin", "city": "South Hebron", "school": "Al-Bukhari Boys Basic School" },
-    "student27": { "name": "Lana Noor", "city": "Tulkarm", "school": "Anabta Girls Secondary School" },
-    "student28": { "name": "Rami Abukersh", "city": "South Hebron", "school": "As-Samu' Boys Secondary School" },
-    "student29": { "name": "Ayman Osbeih", "city": "Yatta", "school": "Abu Ali Iyad Boys Secondary School" },
+    "student25": {
+      "name": "Adam Owais",
+      "city": "South Nablus",
+      "school": "As-Sawiya Al-Laban Boys Secondary School"
+    },
+    "student26": {
+      "name": "Mohammad Daghamin",
+      "city": "South Hebron",
+      "school": "Al-Bukhari Boys Basic School"
+    },
+    "student27": {
+      "name": "Lana Noor",
+      "city": "Tulkarm",
+      "school": "Anabta Girls Secondary School"
+    },
+    "student28": {
+      "name": "Rami Abukersh",
+      "city": "South Hebron",
+      "school": "As-Samu' Boys Secondary School"
+    },
+    "student29": {
+      "name": "Ayman Osbeih",
+      "city": "Yatta",
+      "school": "Abu Ali Iyad Boys Secondary School"
+    },
 
-    "student30": { "name": "Saif Abukshak", "city": "Ramallah", "school": "Our Lady of the Annunciation Greek Catholic School" },
-    "student31": { "name": "Ahmad Marrar", "city": "Ramallah–Al-Bireh", "school": "Ahliya College of Ramallah" },
-    "student32": { "name": "Sarah Dawas", "city": "Tubas", "school": "Tubas Girls Secondary School" },
-    "student33": { "name": "Joud Obeid", "city": "Qabatiya", "school": "Sami Taha Girls Secondary School" },
-    "student34": { "name": "Lujain Ajra", "city": "Bethlehem", "school": "Good Shepherd Swedish School" },
+    "student30": {
+      "name": "Saif Abukshak",
+      "city": "Ramallah",
+      "school": "Our Lady of the Annunciation Greek Catholic School"
+    },
+    "student31": {
+      "name": "Ahmad Marrar",
+      "city": "Ramallah–Al-Bireh",
+      "school": "Ahliya College of Ramallah"
+    },
+    "student32": {
+      "name": "Sarah Dawas",
+      "city": "Tubas",
+      "school": "Tubas Girls Secondary School"
+    },
+    "student33": {
+      "name": "Joud Obeid",
+      "city": "Qabatiya",
+      "school": "Sami Taha Girls Secondary School"
+    },
+    "student34": {
+      "name": "Lujain Ajra",
+      "city": "Bethlehem",
+      "school": "Good Shepherd Swedish School"
+    },
 
-    "student35": { "name": "Batool Zakaria", "city": "Nablus", "school": "British Scientific Schools" },
-    "student36": { "name": "Khalil Jibran", "city": "Jerusalem", "school": "Arab Institute" },
-    "student37": { "name": "Talia Obeid", "city": "Nablus", "school": "Talae' Al-Amal School" },
-    "student38": { "name": "Yasmin Ashqar", "city": "Nablus", "school": "Talae' Al-Amal School" },
-    "student39": { "name": "Mohammad Haj Ali", "city": "South Nablus", "school": "Jamma'in Boys Secondary School" },
+    "student35": {
+      "name": "Batool Zakaria",
+      "city": "Nablus",
+      "school": "British Scientific Schools"
+    },
+    "student36": {
+      "name": "Khalil Jibran",
+      "city": "Jerusalem",
+      "school": "Arab Institute"
+    },
+    "student37": {
+      "name": "Talia Obeid",
+      "city": "Nablus",
+      "school": "Talae' Al-Amal School"
+    },
+    "student38": {
+      "name": "Yasmin Ashqar",
+      "city": "Nablus",
+      "school": "Talae' Al-Amal School"
+    },
+    "student39": {
+      "name": "Mohammad Haj Ali",
+      "city": "South Nablus",
+      "school": "Jamma'in Boys Secondary School"
+    },
 
-    "student40": { "name": "Amro Abu Safieh", "city": "Birzeit", "school": "Rawabi English Academy" },
-    "student41": { "name": "Moataz Al-Humaidi", "city": "Jericho", "school": "Terra Santa Secondary School" },
-    "student42": { "name": "Layali Subaih", "city": "Bethlehem", "school": "Bethlehem Girls Secondary School" },
-    "student43": { "name": "Diala Ayash", "city": "Jerusalem Suburbs", "school": "Al-Umawiyya Girls Secondary School" },
-    "student44": { "name": "Nada Ghannam", "city": "Tubas", "school": "Green School" }
+    "student40": {
+      "name": "Amro Abu Safieh",
+      "city": "Birzeit",
+      "school": "Rawabi English Academy"
+    },
+    "student41": {
+      "name": "Moataz Al-Humaidi",
+      "city": "Jericho",
+      "school": "Terra Santa Secondary School"
+    },
+    "student42": {
+      "name": "Layali Subaih",
+      "city": "Bethlehem",
+      "school": "Bethlehem Girls Secondary School"
+    },
+    "student43": {
+      "name": "Diala Ayash",
+      "city": "Jerusalem Suburbs",
+      "school": "Al-Umawiyya Girls Secondary School"
+    },
+    "student44": {
+      "name": "Nada Ghannam",
+      "city": "Tubas",
+      "school": "Green School"
+    }
+  },
+  "signup": {
+    "createAccountTitle": "Create Account",
+    "createAccountSubtitle": "Sign up to get started with your account",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "passwordHelper": "Must be at least 6 characters",
+    "confirmPasswordLabel": "Confirm Password",
+    "passwordMismatchError": "Passwords do not match",
+    "passwordShortError": "Password must be at least 6 characters long",
+    "signUpButton": "Sign Up",
+    "alreadyHaveAccount": "Already have an account?",
+    "signInLink": "Sign In"
+  },
+  "login": {
+    "welcomeBackTitle": "Welcome Back",
+    "welcomeBackSubtitle": "Sign in to your account to continue",
+    "emailLabel": "Email Address",
+    "passwordLabel": "Password",
+    "togglePasswordVisibility": "toggle password visibility",
+    "signInButton": "Sign In",
+    "noAccountQuestion": "Don't have an account?",
+    "signUpLink": "Sign Up"
   }
 }
-
-
