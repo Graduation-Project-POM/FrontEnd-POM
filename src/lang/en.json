@@ -698,7 +698,12 @@
       "name": "Nada Ghannam",
       "city": "Tubas",
       "school": "Green School"
-    }
+    },
+    "student45": {
+        "name": "Mais Adwan",
+        "city": "Qalqilya",
+        "school": "Fatima Sorour Girls Secondary School"
+    } 
   },
   "signup": {
     "createAccountTitle": "Create Account",
