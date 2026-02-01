@@ -379,7 +379,6 @@
       "description": "Engineer Shorouq Al-Khatib is the STEM Programs Director at Taawon (Welfare Association). She has over eight years of experience in education and innovation in science, technology, engineering, and mathematics. She holds a Bachelor's degree in Mechatronics Engineering from Birzeit University and a Master's degree in Business Administration from Anglia Ruskin University in the UK."
     }
   },
-
   "speaker": {
     "speaker0": {
       "name": "Dr. Omar Al-Husni",
@@ -398,7 +397,6 @@
       "description": "Specialist in artificial intelligence and software development, and coach of the Palestinian Olympiad team in programming."
     }
   },
-
   "supervisors": {
     "supervisor0": {
       "name": "Dr. Rania Al-Wannan",
@@ -466,7 +464,6 @@
     "title": "Palestinian Math Olympiad Champions 2026",
     "subtitle": "you are living proof that determination and knowledge shape a future worthy of Palestine. We are proud of you, today and always.🧠"
   },
-
   "students": {
     "student0": {
       "name": "Mohammad Shbita",
@@ -518,7 +515,6 @@
       "city": "Salfit",
       "school": "Rafat Girls Secondary School"
     },
-
     "student10": {
       "name": "Adham Najajreh",
       "city": "Bethlehem",
@@ -544,7 +540,6 @@
       "city": "Birzeit",
       "school": "Arab Academy for Modern Education"
     },
-
     "student15": {
       "name": "Abi Oqeili",
       "city": "South Hebron",
@@ -570,7 +565,6 @@
       "city": "Central Hebron",
       "school": "Widad Nader Al-Din Girls Secondary School"
     },
-
     "student20": {
       "name": "Janan Ouda",
       "city": "Nablus",
@@ -596,7 +590,6 @@
       "city": "Nablus",
       "school": "Talae' Al-Amal School"
     },
-
     "student25": {
       "name": "Adam Owais",
       "city": "South Nablus",
@@ -622,7 +615,6 @@
       "city": "Yatta",
       "school": "Abu Ali Iyad Boys Secondary School"
     },
-
     "student30": {
       "name": "Saif Abukshak",
       "city": "Ramallah",
@@ -648,7 +640,6 @@
       "city": "Bethlehem",
       "school": "Good Shepherd Swedish School"
     },
-
     "student35": {
       "name": "Batool Zakaria",
       "city": "Nablus",
@@ -674,7 +665,6 @@
       "city": "South Nablus",
       "school": "Jamma'in Boys Secondary School"
     },
-
     "student40": {
       "name": "Amro Abu Safieh",
       "city": "Birzeit",
@@ -701,10 +691,15 @@
       "school": "Green School"
     },
     "student45": {
-        "name": "Mais Adwan",
-        "city": "Qalqilya",
-        "school": "Fatima Sorour Girls Secondary School"
-    } 
+      "name": "Mais Adwan",
+      "city": "Qalqilya",
+      "school": "Fatima Sorour Girls Secondary School"
+    },
+    "student46": {
+      "name": "Hala Barakat",
+      "city": "Jerusalem Suburbs",
+      "school": "Al-Eizariya Orthodox School"
+    }
   },
   "signup": {
     "createAccountTitle": "Create Account",
