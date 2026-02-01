@@ -121,7 +121,7 @@ export const GridStyles: Record<string, SxProps<Theme>> = {
 
   boxWrapper: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+    gridTemplateColumns: "repeat(5, 1fr)",
     gap: 6,
     m: 4,
   },
