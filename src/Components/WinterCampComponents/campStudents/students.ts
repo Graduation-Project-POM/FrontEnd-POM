@@ -46,4 +46,5 @@ export const studentsData = (t: (key: string) => string) => [
   { id: 45, imageUrl: "../s45.jpg", name: t("students.student44.name"), directorate: t("students.student44.city"), school: t("students.student44.school") },
   { id: 46, imageUrl: "../s46.jpg", name: t("students.student45.name"), directorate: t("students.student45.city"), school: t("students.student45.school") },
   { id: 47, imageUrl: "../s47.jpg", name: t("students.student46.name"), directorate: t("students.student46.city"), school: t("students.student46.school") },
+  { id: 48, imageUrl: "../s48.jpg", name: t("students.student47.name"), directorate: t("students.student47.city"), school: t("students.student47.school") },
 ];
