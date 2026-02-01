@@ -97,33 +97,43 @@ export const cardStyles: Record<string, SxProps<Theme>> = {
 
 };
 
-export const sliderStyles: Record<string, SxProps<Theme>> = {
+export const GridStyles: Record<string, SxProps<Theme>> = {
   title: {
     fontWeight: 800,
-    textAlign: "center",  
+    textAlign: "center",
     color: "#7B2D47",
     mb: 6,
     mt: 6,
     textShadow: "0 2px 8px rgba(123, 45, 71, 0.2)",
   },
-
-  wrapper: {
-    position: "relative",
-    p: 3,
+  subtitle: {
+   fontWeight: 400,
+  textAlign: "center",
+  color: "#5A5A5A",
+  maxWidth: "600px",
+  mx: "auto",
+  lineHeight: 1.6,
+  letterSpacing: "0.05em",
+  position: "relative",
+  mb: 3,
+  mt: 2,
   },
 
-
-  slider: {
-    display: "flex",
-    gap: 2,
-    overflowX: "auto",
-    overflowY: "visible",
-    scrollBehavior: "smooth",
-    py: 6, "&::-webkit-scrollbar": {
-      display: "none",
-    },
+  boxWrapper: {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+    gap: 6,
+    m: 4,
   },
-
+  line: {
+    width: "100px",
+    height: 4,
+    backgroundColor: "#7D1C48",
+    borderRadius: 2,
+    mx: "auto",
+    marginBottom: 10,
+    mt: 3,
+  },
 
   cardWrapper: {
     minWidth: 260,
