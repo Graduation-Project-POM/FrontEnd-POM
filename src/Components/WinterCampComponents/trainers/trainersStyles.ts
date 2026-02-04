@@ -28,9 +28,9 @@ export const card: SxProps<Theme> = {
   minHeight: 250,
   transition: "all 0.3s ease",
   cursor: "pointer",
-  border: "2px solid transparent",
+  border: "1.5px solid transparent",
   "&:hover": {
-    transform: "translateY(-8px)",
+    transform: "translateY(-3px)",
     boxShadow: "0 12px 24px rgba(122, 30, 60, 0.3)",
     borderColor: "#7A1E3C",
     bgcolor: "#fff",

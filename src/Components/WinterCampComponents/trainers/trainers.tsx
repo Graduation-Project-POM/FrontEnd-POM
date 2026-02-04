@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next";
 export default function Trainers() {
     const { t } = useTranslation();
 
+    // شركاء
     const partners: Trainers[] = [
         {
             name: t("partner.partner0.name"),
@@ -39,10 +40,9 @@ export default function Trainers() {
             description: t("partner.partner2.description"),
             image: "/DrShorook.png",
         },
-    ]
+    ];
 
-    
-
+    // متحدثين
     const speakers: Trainers[] = [
         {
             name: t("speaker.speaker0.name"),
@@ -65,87 +65,23 @@ export default function Trainers() {
             description: t("speaker.speaker2.description"),
             image: "/DrKhalil.png",
         },
-    ]
+    ];
 
     const supervisors: Trainers[] = [
-        {
-            name: t("supervisors.supervisor0.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor0.subtitle"),
-            description: t("supervisors.supervisor0.description"),
-            image: "/DrRania.png",
-        },
-        {
-            name: t("supervisors.supervisor1.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor1.subtitle"),
-            description: t("supervisors.supervisor1.description"),
-            image: "/DrAbed.png",
-        },
-        {
-            name: t("supervisors.supervisor2.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor2.subtitle"),
-            description: t("supervisors.supervisor2.description"),
-            image: "/DrAladam.png",
-        },
-        {
-            name: t("supervisors.supervisor3.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor3.subtitle"),
-            description: t("supervisors.supervisor3.description"),
-            image: "/DrMaraabeh.png",
-        },
-        {
-            name: t("supervisors.supervisor4.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor4.subtitle"),
-            description: t("supervisors.supervisor4.description"),
-            image: "/DrReham.png",
-        },
-        {
-            name: t("supervisors.supervisor5.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor5.subtitle"),
-            description: t("supervisors.supervisor5.description"),
-            image: "/DrAfaf.png",
-        },
-        {
-            name: t("supervisors.supervisor6.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor6.subtitle"),
-            description: t("supervisors.supervisor6.description"),
-            image: "/DrNadeen.png",
-        },
-        {
-            name: t("supervisors.supervisor7.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor7.subtitle"),
-            description: t("supervisors.supervisor7.description"),
-            image: "/DrSalah.png",
-        },
-        {
-            name: t("supervisors.supervisor8.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor8.subtitle"),
-            description: t("supervisors.supervisor8.description"),
-            image: "/DrRaeda.png",
-        },
-        {
-            name: t("supervisors.supervisor9.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor9.subtitle"),
-            description: t("supervisors.supervisor9.description"),
-            image: "/DrLubna.png",
-        },
-        {
-            name: t("supervisors.supervisor10.name"),
-            title: "",
-            subtitle: t("supervisors.supervisor10.subtitle"),
-            description: t("supervisors.supervisor10.description"),
-            image: "/DrKamal.png",
-        },
-    ]
+        { name: t("supervisors.supervisor0.name"), title: "", subtitle: t("supervisors.supervisor0.subtitle"), description: t("supervisors.supervisor0.description"), image: "/DrRania.png" },
+        { name: t("supervisors.supervisor2.name"), title: "", subtitle: t("supervisors.supervisor2.subtitle"), description: t("supervisors.supervisor2.description"), image: "/DrAladam.png" },
+        { name: t("supervisors.supervisor3.name"), title: "", subtitle: t("supervisors.supervisor3.subtitle"), description: t("supervisors.supervisor3.description"), image: "/DrMaraabeh.png" },
+        { name: t("supervisors.supervisor4.name"), title: "", subtitle: t("supervisors.supervisor4.subtitle"), description: t("supervisors.supervisor4.description"), image: "/DrReham.png" },
+        { name: t("supervisors.supervisor5.name"), title: "", subtitle: t("supervisors.supervisor5.subtitle"), description: t("supervisors.supervisor5.description"), image: "/DrAfaf.png" },
+        { name: t("supervisors.supervisor6.name"), title: "", subtitle: t("supervisors.supervisor6.subtitle"), description: t("supervisors.supervisor6.description"), image: "/DrNadeen.png" },
+        { name: t("supervisors.supervisor7.name"), title: "", subtitle: t("supervisors.supervisor7.subtitle"), description: t("supervisors.supervisor7.description"), image: "/DrSalah.png" },
+        { name: t("supervisors.supervisor8.name"), title: "", subtitle: t("supervisors.supervisor8.subtitle"), description: t("supervisors.supervisor8.description"), image: "/DrRaeda.png" },
+        { name: t("supervisors.supervisor9.name"), title: "", subtitle: t("supervisors.supervisor9.subtitle"), description: t("supervisors.supervisor9.description"), image: "/DrLubna.png" },
+        { name: t("supervisors.supervisor10.name"), title: "", subtitle: t("supervisors.supervisor10.subtitle"), description: t("supervisors.supervisor10.description"), image: "/DrKamal.png" },
+    ];
+
+    const trainersFromSupervisors: Trainers[] = supervisors.slice(0, 3);
+    const actualSupervisors: Trainers[] = supervisors.slice(3);
 
     const renderCards = (items: Trainers[]) => (
         <Box sx={cardsWrapper}>
@@ -176,7 +112,7 @@ export default function Trainers() {
                 </Card>
             ))}
         </Box>
-    )
+    );
 
     return (
         <Box sx={pageWrapper}>
@@ -191,10 +127,14 @@ export default function Trainers() {
             {renderCards(speakers)}
 
             <Typography variant="h3" sx={sectionTitle(5)}>
+                {t('sections.trainers')}
+            </Typography>
+            {renderCards(trainersFromSupervisors)}
+
+            <Typography variant="h3" sx={sectionTitle(5)}>
                 {t('sections.supervisors')}
             </Typography>
-            {renderCards(supervisors)}
+            {renderCards(actualSupervisors)}
         </Box>
-
-    )
+    );
 }
