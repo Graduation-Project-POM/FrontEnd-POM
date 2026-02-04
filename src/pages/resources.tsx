@@ -5,6 +5,7 @@ import Problems from "../Components/ResourcesComponents/problems/problems.tsx"
 import Worksheets from "../Components/ResourcesComponents/worksheets/worksheets.tsx"
 import Playlist from "../Components/ResourcesComponents/playlist/playlist.tsx"
 import { Box } from "@mui/material"
+import Material from "../Components/ResourcesComponents/trainingMaterial/material.tsx"
 
 function Resources() {
   return (
@@ -13,6 +14,7 @@ function Resources() {
       <Books />
       <Problems />
       <Worksheets />
+      <Material />
       <Playlist />
       <ExternalResources />
       

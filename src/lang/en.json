@@ -348,7 +348,7 @@
     "endDate": "15 Jan 2026",
     "exploreCamp": "Explore the Camp",
     "aboutTitle": "About the Camp",
-    "aboutDescription": "The Winter Training Camp for the Palestinian Mathematics Olympiad kicks off on Saturday, January 10th, 2026, and will run for six days, graciously hosted by Al-Istiqlal University in Jericho.\n\nA total of 53 students from 18 districts are participating in this camp, selected through a rigorous, multi-stage selection process. This process began at the school level with over 5,000 students, then 1,046 students advanced to the district level, followed by a pre-final stage with 140 students, culminating in the final stage with 53 students from 18 districts.\n\nAdditionally, the camp hosts international and local academics and supervisors specialized in global and Arab mathematics Olympiads, alongside local academics from several Palestinian universities, dedicating their time and expertise to elevate the scientific level of our students during this stage.\n\nThe training staff also includes supervisors from various directorates of the Palestinian Ministry of Education and Higher Education.",
+    "aboutDescription": "The Winter Training Camp for the Palestinian Mathematics Olympiad was launched on Saturday, 10/1/2026, and continued for six days, hosted generously by Al-Istiqlal University in the city of Jericho, where the camp concluded successfully.\n\nA total of 53 male and female students from 18 directorates participated in the camp. They were selected through a rigorous multi-stage selection process that began at the school level with the participation of more than 5,000 students. This was followed by 1,046 students advancing to the directorate level, then a pre-final stage that included 140 students, culminating in a final stage of 53 students representing 18 directorates.\n\nThe camp hosted international academics and supervisors specialized in international and Arab mathematics Olympiads, alongside local academics from several Palestinian universities, who dedicated their time and expertise to enhancing the students’ academic level during this stage.\n\nThe training team also included supervisors from various directorates of the Palestinian Ministry of Education and Higher Education, who contributed to the success of the camp and the achievement of its educational and academic objectives.",
     "location": "location",
     "university": "Al-Istiqlal University - Jericho",
     "gallaryTitle": "Camp Memories",
@@ -455,14 +455,14 @@
     }
   },
   "sections": {
-    "partners": "Our Partners",
+    "partners": "Partners' Words",
     "guests": "Camp Guests",
     "speakers_name": "Speakers",
     "supervisors": "Supervisors & Trainers"
   },
   "studentsCard": {
     "title": "Palestinian Math Olympiad Champions 2026",
-    "subtitle": "you are living proof that determination and knowledge shape a future worthy of Palestine. We are proud of you, today and always.🧠"
+    "subtitle": "We are proud of you, today and always.🧠"
   },
   "students": {
     "student0": {
