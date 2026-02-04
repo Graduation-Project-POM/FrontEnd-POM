@@ -7,8 +7,8 @@ export const StyledCard = styled(Card)(({ theme }) => ({
   overflow: "visible",
   borderRadius: theme.spacing(2),
   transition: "all 0.3s",
-  width: 220,
-  height: 160,
+  width: 266,
+  height: 150,
   paddingTop: 80,
   cursor: "pointer",
 
@@ -59,7 +59,7 @@ export const cardStyles: Record<string, SxProps<Theme>> = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    pt: 5,
+    pt: 4,
     pb: 1,
     textAlign: "center",
   },
@@ -121,7 +121,7 @@ export const GridStyles: Record<string, SxProps<Theme>> = {
 
   boxWrapper: {
     display: "grid",
-    gridTemplateColumns: "repeat(5, 1fr)",
+    gridTemplateColumns: "repeat(4, 1fr)",
     gap: 6,
     m: 4,
   },

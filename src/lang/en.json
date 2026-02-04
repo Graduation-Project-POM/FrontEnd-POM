@@ -466,249 +466,268 @@
   },
   "students": {
     "student0": {
-      "name": "Ibrahim Shtaiwi",
+      "name": "Ibrahim Awni Shtaywi",
       "city": "Jericho",
-      "school": "Imran Girls School"
+      "school": "Bint Imran"
     },
     "student1": {
-      "name": "Mohammad Al-Adous",
+      "name": "Mohammad Firas Abu Al-Adous",
       "city": "Jericho",
-      "school": "Imran Girls School"
+      "school": "Bint Imran"
     },
     "student2": {
-      "name": "Moataz Al-Humaidi",
+      "name": "Moataz Mohammad Al-Humaidi",
       "city": "Jericho",
-      "school": "Terra Santa Secondary School"
+      "school": "Terestan High School"
     },
+
     "student3": {
-      "name": "Khalil Jibran",
+      "name": "Khalil Shadi Gibran",
       "city": "Jerusalem",
-      "school": "Arab Institute"
+      "school": "The Arab Institute"
     },
+
     "student4": {
-      "name": "Adham Najajreh",
+      "name": "Adham Rani Najajreh",
       "city": "Bethlehem",
-      "school": "Freres Mixed Secondary School"
+      "school": "Frere Mixed High School"
     },
     "student5": {
-      "name": "George Qassis",
+      "name": "Georgi Shadi Qassis",
       "city": "Bethlehem",
-      "school": "Evangelical Lutheran School – Beit Sahour"
+      "school": "Evangelical Lutheran School, Beit Sahour"
     },
     "student6": {
-      "name": "Lujain Ajra",
+      "name": "Lujain Youssef Ajra",
       "city": "Bethlehem",
       "school": "Good Shepherd Swedish School"
     },
     "student7": {
-      "name": "Layali Subaih",
+      "name": "Layali Alaa Sbeih",
       "city": "Bethlehem",
-      "school": "Bethlehem Girls Secondary School"
+      "school": "Bint Bethlehem High School"
     },
+
     "student8": {
-      "name": "Abdulrahman Shalash",
+      "name": "Abdulrahman Bilal Shalash",
       "city": "Birzeit",
       "school": "Arab Academy for Modern Education"
     },
     "student9": {
-      "name": "Amro Abu Safieh",
+      "name": "Amro Tamer Abu Safieh",
       "city": "Birzeit",
       "school": "Rawabi English Academy"
     },
     "student10": {
-      "name": "Mohammad Samara",
+      "name": "Mohammad Rami Samara",
       "city": "Birzeit",
       "school": "Arab Academy for Modern Education"
     },
+
     "student11": {
-      "name": "Abi Oqeili",
+      "name": "Abi Mohammad Aqili",
       "city": "South Hebron",
       "school": "Martyr Majed Abu Sharar Boys School"
     },
     "student12": {
-      "name": "Rami Abukersh",
+      "name": "Rami Ramadan Abu Karsh",
       "city": "South Hebron",
-      "school": "As-Samu' Boys Secondary School"
+      "school": "Samou Boys High School"
     },
     "student13": {
-      "name": "Sadeel Al-Najjar",
+      "name": "Sadeel Ahmad Al-Najjar",
       "city": "South Hebron",
-      "school": "Hafsa Bint Omar Secondary School"
+      "school": "Hafsa Bint Omar High School"
     },
     "student14": {
-      "name": "Mohammad Al-Rajai",
+      "name": "Mohammad Faiz Al-Rajai",
       "city": "South Hebron",
-      "school": "Martyr Majed Abu Sharar Secondary School"
+      "school": "Martyr Majed Abu Sharar High School"
     },
     "student15": {
-      "name": "Mohammad Daghamin",
+      "name": "Mohammad Khalil Dghamin",
       "city": "South Hebron",
-      "school": "Al-Bukhari Boys Basic School"
+      "school": "Al-Bukhari Basic Boys School"
     },
     "student16": {
-      "name": "Younis Al-Salamain",
+      "name": "Younes Ghazi Al-Salameen",
       "city": "South Hebron",
-      "school": "As-Samu' Boys Secondary School"
+      "school": "Samou Boys High School"
     },
+
     "student17": {
-      "name": "Adam Owais",
+      "name": "Adam Murad Oweis",
       "city": "South Nablus",
-      "school": "As-Sawiya Al-Laban Boys Secondary School"
+      "school": "Al-Sawiya Al-Laban Boys High School"
     },
     "student18": {
-      "name": "Mohammad Haj Ali",
+      "name": "Mohammad Jabr Haj Ali",
       "city": "South Nablus",
-      "school": "Jamma'in Boys Secondary School"
+      "school": "Jamma’in Boys High School"
     },
     "student19": {
-      "name": "Moatasem Shtaiwi",
+      "name": "Moatasem Fathi Shtaywi",
       "city": "South Nablus",
-      "school": "Huwara Boys Secondary School"
+      "school": "Hawara Boys High School"
     },
     "student20": {
-      "name": "Salma Safadi",
+      "name": "Salma Abdel Fattah Safadi",
       "city": "South Nablus",
-      "school": "Oureif Girls Secondary School"
+      "school": "Awrif Girls High School"
     },
+
     "student21": {
-      "name": "Yahya Jarradat",
+      "name": "Yahya Ammar Jaradat",
       "city": "Jenin",
-      "school": "Silat Al-Harithiya Boys Secondary School"
+      "school": "Al-Sila Al-Harithiya Boys High School"
     },
+
     "student22": {
-      "name": "Saif Abukshak",
+      "name": "Saif Abdullah Abu Kashk",
       "city": "Ramallah",
-      "school": "Our Lady of the Annunciation Greek Catholic School"
+      "school": "Our Lady of Annunciation for Roman Catholics"
     },
+
     "student23": {
-      "name": "Ahmad Marrar",
-      "city": "Ramallah–Al-Bireh",
-      "school": "Ahliya College of Ramallah"
+      "name": "Ahmad Firas Marrar",
+      "city": "Ramallah-Bireh",
+      "school": "Al-College Al-Ahliya, Ramallah"
     },
+
     "student24": {
-      "name": "Shaden Abu Asbi",
+      "name": "Shaden Hamdallah Abu Asabi",
       "city": "Salfit",
-      "school": "Rafat Girls Secondary School"
+      "school": "Rafat Girls High School"
     },
+
     "student25": {
-      "name": "Lynn Al-Arar",
+      "name": "Lina Ahmad Al-Arar",
       "city": "North Hebron",
-      "school": "Sourif Girls Secondary School"
+      "school": "Surif Girls High School"
     },
+
     "student26": {
-      "name": "Kamal Daheidel",
-      "city": "North Hebron – Halhul",
-      "school": "Halhul Boys Secondary School"
+      "name": "Kamal Mohammad Dahidel",
+      "city": "North Hebron - Halhul",
+      "school": "Halhul Boys High School"
     },
+
     "student27": {
-      "name": "Hala Barakat",
+      "name": "Hala Firas Barakat",
       "city": "Jerusalem Suburbs",
       "school": "Al-Eizariya Orthodox School"
     },
     "student28": {
-      "name": "Diala Ayash",
+      "name": "Diyali Maher Ayash",
       "city": "Jerusalem Suburbs",
-      "school": "Al-Umawiyya Girls Secondary School"
+      "school": "Umayya Girls High School"
     },
     "student29": {
-      "name": "Mayyada Abu Ghazaleh",
+      "name": "Mayada Abu Ghazaleh",
       "city": "Jerusalem Suburbs",
-      "school": "Abu Dis Girls Secondary School"
+      "school": "Abu Dis Girls High School"
     },
+
     "student30": {
-      "name": "Rimas Bani Ouda",
+      "name": "Rimas Ahmad Bani Odeh",
       "city": "Tubas",
-      "school": "Tammun Secondary School"
+      "school": "Tammoun High School"
     },
     "student31": {
-      "name": "Sarah Dawas",
+      "name": "Sara Moeid Dawas",
       "city": "Tubas",
-      "school": "Tubas Girls Secondary School"
+      "school": "Tubas Girls High School"
     },
     "student32": {
-      "name": "Nada Ghannam",
+      "name": "Nada Jamal Ghanam",
       "city": "Tubas",
-      "school": "Green School"
+      "school": "The Green School"
     },
+
     "student33": {
-      "name": "Zayan Shawarib",
+      "name": "Zayan Abdelhakim Shawareb",
       "city": "Tulkarm",
-      "school": "Nazlat Issa Girls Secondary School"
+      "school": "Nazlat Isa Girls High School"
     },
     "student34": {
-      "name": "Ghina Abu Bakr",
+      "name": "Ghina Ali Abu Bakr",
       "city": "Tulkarm",
-      "school": "Al-Adawiya Girls Secondary School"
+      "school": "Al-Adawiya Girls High School"
     },
     "student35": {
-      "name": "Lana Noor",
+      "name": "Lana Abdel Rahim Nour",
       "city": "Tulkarm",
-      "school": "Anabta Girls Secondary School"
+      "school": "Anabta Girls High School"
     },
+
     "student36": {
-      "name": "Joud Obeid",
+      "name": "Joud Abdel Hakim Obeid",
       "city": "Qabatiya",
-      "school": "Sami Taha Girls Secondary School"
+      "school": "Sami Taha Girls High School"
     },
+
     "student37": {
-      "name": "Sama Shanti",
+      "name": "Sama Youssef Shanti",
       "city": "Qalqilya",
-      "school": "Abu Ali Iyad Girls Secondary School"
+      "school": "Abu Ali Eyad Girls High School"
     },
     "student38": {
-      "name": "Mohammad Shbita",
+      "name": "Mohammad Islam Shbeita",
       "city": "Qalqilya",
-      "school": "Azzun Boys Secondary School"
+      "school": "Izzoun Boys High School"
     },
     "student39": {
-      "name": "Mais Adwan",
+      "name": "Mays Mohammad Adwan",
       "city": "Qalqilya",
-      "school": "Fatima Sorour Girls Secondary School"
+      "school": "Fatima Surur Girls High School"
     },
+
     "student40": {
-      "name": "Batool Zakaria",
+      "name": "Batoul Ameid Zakaria",
       "city": "Nablus",
       "school": "British Scientific Schools"
     },
     "student41": {
-      "name": "Talia Obeid",
+      "name": "Talia Mohammad Obeid",
       "city": "Nablus",
-      "school": "Talae' Al-Amal School"
+      "school": "Pioneers of Hope"
     },
     "student42": {
-      "name": "Janan Ouda",
+      "name": "Janan Basel Odeh",
       "city": "Nablus",
-      "school": "Al-Ayshiya Girls Secondary School"
+      "school": "Al-Aishiya Girls High School"
     },
     "student43": {
-      "name": "Rana Kalbouna",
+      "name": "Rana Raed Kalbouna",
       "city": "Nablus",
-      "school": "Talae' Al-Amal School"
+      "school": "Pioneers of Hope"
     },
     "student44": {
-      "name": "Leen Mahmoud",
+      "name": "Lynn Ibrahim Mahmoud",
       "city": "Nablus",
-      "school": "Talae' Al-Amal School"
+      "school": "Pioneers of Hope"
     },
     "student45": {
-      "name": "Noor Abu Ghadib",
+      "name": "Noor Bassam Abu Ghaib",
       "city": "Nablus",
-      "school": "Al-Ayshiya Girls Secondary School"
+      "school": "Al-Aishiya Girls High School"
     },
     "student46": {
-      "name": "Yasmin Ashqar",
+      "name": "Yasmin Mohammad Ashqar",
       "city": "Nablus",
-      "school": "Talae' Al-Amal School"
+      "school": "Pioneers of Hope"
     },
+
     "student47": {
-      "name": "Deena Nirookh",
+      "name": "Dina Obeidallah Nirokh",
       "city": "Central Hebron",
-      "school": "Widad Nader Al-Din Girls Secondary School"
+      "school": "Wedad Nader Al-Din Girls High School"
     },
+
     "student48": {
-      "name": "Ayman Osbeih",
+      "name": "Ayham Ali Sbeih",
       "city": "Yatta",
-      "school": "Abu Ali Iyad Boys Secondary School"
+      "school": "Abu Ali Eyad Boys High School"
     }
   },
   "signup": {
