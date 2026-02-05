@@ -7,11 +7,12 @@ export const StyledCard = styled(Card)(({ theme }) => ({
   overflow: "visible",
   borderRadius: theme.spacing(2),
   transition: "all 0.3s",
-  width: 266,
+  width: "100%",
+  maxWidth: 266,
   height: 150,
   paddingTop: 80,
   cursor: "pointer",
-
+  marginInline: "auto",
   "&:hover": {
     boxShadow: theme.shadows[6],
     transform: "translateY(-4px)",
@@ -121,9 +122,11 @@ export const GridStyles: Record<string, SxProps<Theme>> = {
 
   boxWrapper: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
     gap: 6,
     m: 4,
+    maxWidth: "1400px",
+    mx: "auto",
   },
   line: {
     width: "100px",

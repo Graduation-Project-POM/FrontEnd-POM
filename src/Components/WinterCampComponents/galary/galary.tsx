@@ -4,18 +4,22 @@ import {
     Card,
     CardMedia,
     IconButton,
+    Dialog,
+    DialogContent,
 } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "react-i18next";
 import { styles } from "./galary.ts";
-import { useRef } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 
 
 const Galary: React.FC = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
     const { t } = useTranslation();
-
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const images = [
         "/1.png",
@@ -87,8 +91,7 @@ const Galary: React.FC = () => {
         "/31.png",
         "/32.png",
         "/34.png",
-    ]
-
+    ];
 
     const handleScroll = (dir: "left" | "right") => {
         if (!sliderRef.current) return;
@@ -97,6 +100,35 @@ const Galary: React.FC = () => {
             behavior: "smooth",
         });
     };
+
+    const openLightbox = (index: number) => {
+        setActiveIndex(index);
+        setLightboxOpen(true);
+    };
+
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+    };
+
+    const goToPrev = useCallback(() => {
+        setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    }, [images.length]);
+
+    const goToNext = useCallback(() => {
+        setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, [images.length]);
+
+    useEffect(() => {
+        if (!lightboxOpen) return;
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "ArrowLeft") goToPrev();
+            else if (e.key === "ArrowRight") goToNext();
+            else if (e.key === "Escape") closeLightbox();
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [lightboxOpen, goToPrev, goToNext]);
+
     return (
         <Box sx={styles.page}>
             <Box sx={styles.header}>
@@ -104,12 +136,11 @@ const Galary: React.FC = () => {
                     <img src="/Vector.png" width={50} /> &nbsp;
                     {t("winterCamp.gallaryTitle")}
                 </Typography>
-                <Typography variant="subtitle1" mt={1} >
+                <Typography variant="subtitle1" mt={1}>
                     {t("winterCamp.gallarySubTitle")}
                 </Typography>
             </Box>
             <Box sx={styles.daySection}>
-
                 <Box sx={styles.sliderWrapper}>
                     <IconButton onClick={() => handleScroll("left")} sx={styles.leftArrow}>
                         <ArrowBackIosNewIcon />
@@ -120,6 +151,7 @@ const Galary: React.FC = () => {
                             <Card
                                 key={i}
                                 sx={styles.card}
+                                onClick={() => openLightbox(i)}
                             >
                                 <CardMedia
                                     component="img"
@@ -129,7 +161,6 @@ const Galary: React.FC = () => {
                                 />
                             </Card>
                         ))}
-
                     </Box>
 
                     <IconButton onClick={() => handleScroll("right")} sx={styles.rightArrow}>
@@ -138,9 +169,46 @@ const Galary: React.FC = () => {
                 </Box>
             </Box>
 
+            <Dialog
+                open={lightboxOpen}
+                onClose={closeLightbox}
+                maxWidth={false}
+                PaperProps={{
+                    sx: styles.lightboxPaper,
+                }}
+                slotProps={{
+                    backdrop: {
+                        sx: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
+                    },
+                }}
+            >
+                <DialogContent sx={styles.lightboxContent}>
+                    <IconButton onClick={closeLightbox} sx={styles.lightboxClose}>
+                        <CloseIcon />
+                    </IconButton>
+
+                    <IconButton onClick={goToPrev} sx={styles.lightboxLeftArrow}>
+                        <ArrowBackIosNewIcon />
+                    </IconButton>
+
+                    <Box
+                        component="img"
+                        src={images[activeIndex]}
+                        alt={`Gallery image ${activeIndex + 1}`}
+                        sx={styles.lightboxImage}
+                    />
+
+                    <IconButton onClick={goToNext} sx={styles.lightboxRightArrow}>
+                        <ArrowForwardIosIcon />
+                    </IconButton>
+
+                    <Typography sx={styles.lightboxCounter}>
+                        {activeIndex + 1} / {images.length}
+                    </Typography>
+                </DialogContent>
+            </Dialog>
         </Box>
     );
 };
 
 export default Galary;
-

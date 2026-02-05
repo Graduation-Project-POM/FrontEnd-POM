@@ -22,8 +22,6 @@ export const styles: Record<string, SxProps<Theme>> = {
         position: "relative",
     },
 
-
-
     leftArrow: {
         position: "absolute",
         top: "50%",
@@ -75,13 +73,12 @@ export const styles: Record<string, SxProps<Theme>> = {
         overflowX: "auto",
         scrollSnapType: "x mandatory",
         scrollBehavior: "smooth",
-        backgroundColor: "#F5F5F5", 
+        backgroundColor: "#F5F5F5",
         padding: 0,
         "&::-webkit-scrollbar": {
             display: "none",
         },
     },
-
 
     cardPDF: {
         width: "100%",
@@ -113,5 +110,80 @@ export const styles: Record<string, SxProps<Theme>> = {
         "&:hover": {
             backgroundColor: "#6C4859cc",
         },
-    }
+    },
+
+    lightboxPaper: {
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        maxWidth: "95vw",
+        maxHeight: "95vh",
+        margin: 0,
+        overflow: "visible",
+    },
+
+    lightboxContent: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+        p: 0,
+        "&:last-child": { pb: 0 },
+        overflow: "visible",
+    },
+
+    lightboxImage: {
+        maxWidth: "80vw",
+        maxHeight: "85vh",
+        objectFit: "contain",
+        borderRadius: 2,
+        userSelect: "none",
+    },
+
+    lightboxClose: {
+        position: "absolute",
+        top: -50,
+        right: -10,
+        color: "white",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        "&:hover": {
+            backgroundColor: "rgba(255,255,255,0.3)",
+        },
+        zIndex: 10,
+    },
+
+    lightboxLeftArrow: {
+        position: "absolute",
+        left: { xs: -20, md: -60 },
+        top: "50%",
+        transform: "translateY(-50%)",
+        color: "white",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        "&:hover": {
+            backgroundColor: "#7A1E3C",
+        },
+        zIndex: 10,
+    },
+
+    lightboxRightArrow: {
+        position: "absolute",
+        right: { xs: -20, md: -60 },
+        top: "50%",
+        transform: "translateY(-50%)",
+        color: "white",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        "&:hover": {
+            backgroundColor: "#7A1E3C",
+        },
+        zIndex: 10,
+    },
+
+    lightboxCounter: {
+        position: "absolute",
+        bottom: -40,
+        left: "50%",
+        transform: "translateX(-50%)",
+        color: "white",
+        fontSize: 14,
+        opacity: 0.8,
+    },
 };
