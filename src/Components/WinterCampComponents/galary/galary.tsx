@@ -14,12 +14,12 @@ import { useTranslation } from "react-i18next";
 import { styles } from "./galary.ts";
 import { useRef, useState, useCallback, useEffect } from "react";
 
-
 const Galary: React.FC = () => {
     const sliderRef = useRef<HTMLDivElement>(null);
-    const { t } = useTranslation();
+    const { i18n, t } = useTranslation();
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
+    const isRTL = i18n.language === "ar";
 
     const images = [
         "/1.png",
@@ -95,8 +95,17 @@ const Galary: React.FC = () => {
 
     const handleScroll = (dir: "left" | "right") => {
         if (!sliderRef.current) return;
+
+        const scrollAmount = 340;
+
         sliderRef.current.scrollBy({
-            left: dir === "left" ? -340 : 340,
+            left: isRTL
+                ? dir === "left"
+                    ? scrollAmount
+                    : -scrollAmount
+                : dir === "left"
+                    ? -scrollAmount
+                    : scrollAmount,
             behavior: "smooth",
         });
     };
@@ -142,11 +151,17 @@ const Galary: React.FC = () => {
             </Box>
             <Box sx={styles.daySection}>
                 <Box sx={styles.sliderWrapper}>
-                    <IconButton onClick={() => handleScroll("left")} sx={styles.leftArrow}>
-                        <ArrowBackIosNewIcon />
+                    <IconButton
+                        onClick={() => handleScroll("left")}
+                        sx={isRTL ? styles.rightArrow : styles.leftArrow}
+                    >
+                        <ArrowBackIosNewIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
                     </IconButton>
 
-                    <Box ref={sliderRef} sx={styles.slider}>
+                    <Box ref={sliderRef} sx={{
+                        ...styles.slider,
+                        direction: isRTL ? "rtl" : "ltr",
+                    }}>
                         {images.map((imgSrc, i) => (
                             <Card
                                 key={i}
@@ -163,8 +178,11 @@ const Galary: React.FC = () => {
                         ))}
                     </Box>
 
-                    <IconButton onClick={() => handleScroll("right")} sx={styles.rightArrow}>
-                        <ArrowForwardIosIcon />
+                    <IconButton
+                        onClick={() => handleScroll("right")}
+                        sx={isRTL ? styles.leftArrow : styles.rightArrow}
+                    >
+                        <ArrowForwardIosIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
                     </IconButton>
                 </Box>
             </Box>
@@ -187,7 +205,13 @@ const Galary: React.FC = () => {
                         <CloseIcon />
                     </IconButton>
 
-                    <IconButton onClick={goToPrev} sx={styles.lightboxLeftArrow}>
+                    <IconButton
+                        onClick={isRTL ? goToNext : goToPrev}
+                        sx={{
+                            ...styles.lightboxLeftArrow,
+                            transform: isRTL ? "rotate(180deg)" : "none",
+                        }}
+                    >
                         <ArrowBackIosNewIcon />
                     </IconButton>
 
@@ -198,9 +222,17 @@ const Galary: React.FC = () => {
                         sx={styles.lightboxImage}
                     />
 
-                    <IconButton onClick={goToNext} sx={styles.lightboxRightArrow}>
+
+                    <IconButton
+                        onClick={isRTL ? goToPrev : goToNext}
+                        sx={{
+                            ...styles.lightboxRightArrow,
+                            transform: isRTL ? "rotate(180deg)" : "none",
+                        }}
+                    >
                         <ArrowForwardIosIcon />
                     </IconButton>
+
 
                     <Typography sx={styles.lightboxCounter}>
                         {activeIndex + 1} / {images.length}
