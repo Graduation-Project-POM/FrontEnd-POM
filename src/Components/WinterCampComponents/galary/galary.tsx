@@ -56,7 +56,6 @@ const Galary: React.FC = () => {
         "/66.png",
         "/67.png",
         "/68.png",
-        "/69.png",
         "/70.png",
         "/71.png",
         "/72.png",
