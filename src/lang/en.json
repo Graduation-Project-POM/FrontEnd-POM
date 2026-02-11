@@ -379,7 +379,7 @@
       "description": "STEM programs manager with 8 years experience, BSc Mechatronics, MSc Business Administration."
     }
   },
-   "speaker": {
+  "speaker": {
     "speaker0": {
       "name": "Dr. Omar Al-Husni",
       "title": "Dr. Omar Al-Husni",
@@ -448,8 +448,7 @@
       "subtitle": "Educational Supervisor",
       "description": "Math supervisor in Jerusalem suburbs, develops teaching and trains students for math Olympiad."
     }
- 
-},
+  },
   "sections": {
     "partners": "Partners' Words",
     "guests": "Camp Guests",
@@ -749,5 +748,9 @@
     "signInButton": "Sign In",
     "noAccountQuestion": "Don't have an account?",
     "signUpLink": "Sign Up"
+  },
+  "gazaOlympiad": {
+    "title": "Gaza Olympic Qualifiers",
+    "description": "From beneath the rubble, and amidst pain and challenges, Gaza's champions rose to create hope anew. With an indomitable will and unbreakable faith, they continue their journey towards the Olympic dream, proudly carrying Gaza's name with determination."
   }
 }
