@@ -1,26 +1,20 @@
-import { useState } from 'react';
-import {
-    Box,
-    Dialog,
-    IconButton,
-    useTheme,
-    useMediaQuery,
-    Typography,
-} from '@mui/material';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { useCallback, useRef, useState } from 'react';
+import { Box, Dialog, IconButton, Typography, Card, CardMedia, DialogContent } from '@mui/material';
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { sliderContainerStyles, titleStyles, descriptionStyles, sectionBoxStyles } from './imageSliderStyle';
+import { titleStyles, descriptionStyles, sectionBoxStyles } from './imageSliderStyle';
 import { useTranslation } from 'react-i18next';
 import { styles } from '../../WinterCampComponents/galary/galary';
 
 export default function ImageSlider() {
     const { t, i18n } = useTranslation();
     const isRTL = i18n.language.startsWith("ar");
-    const autoPlayInterval = 5000;
-      const images = [
+    const sliderRef = useRef<HTMLDivElement>(null);
+
+    const images = [
         "/74.png", "/75.png", "/76.png", "/77.png", "/78.png", "/79.png",
         "/80.png", "/81.png", "/82.png", "/83.png", "/84.png", "/85.png",
         "/86.png", "/87.png", "/88.png", "/89.png", "/90.png", "/91.png",
@@ -29,24 +23,42 @@ export default function ImageSlider() {
         "/104.png", "/105.png", "/106.png", "/107.png", "/108.png",
     ];
 
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalIndex, setModalIndex] = useState(0);
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+    const handleScroll = (dir: "left" | "right") => {
+        if (!sliderRef.current) return;
 
-    const openModal = (index: number) => {
-        setModalIndex(index);
-        setModalOpen(true);
+        const scrollAmount = 340;
+
+        sliderRef.current.scrollBy({
+            left: isRTL
+                ? dir === "left"
+                    ? scrollAmount
+                    : -scrollAmount
+                : dir === "left"
+                    ? -scrollAmount
+                    : scrollAmount,
+            behavior: "smooth",
+        });
     };
 
-    const closeModal = () => setModalOpen(false);
+    const openLightbox = (index: number) => {
+        setActiveIndex(index);
+        setLightboxOpen(true);
+    };
 
-    const nextModalImage = () =>
-        setModalIndex((prev) => (prev + 1) % images.length);
+    const closeLightbox = () => {
+        setLightboxOpen(false);
+    };
 
-    const prevModalImage = () =>
-        setModalIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    const goToPrev = useCallback(() => {
+        setActiveIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    }, [images.length]);
+
+    const goToNext = useCallback(() => {
+        setActiveIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    }, [images.length]);
 
     if (!images || images.length === 0) {
         return <Box sx={{ textAlign: 'center', py: 4 }}>No images available</Box>;
@@ -63,25 +75,47 @@ export default function ImageSlider() {
                 </Typography>
             </Box>
 
-            <Box sx={sliderContainerStyles}>
-                <Swiper
-                    modules={[Autoplay, Navigation]}
-                    autoplay={{ delay: autoPlayInterval, disableOnInteraction: false }}
-                    navigation
-                    loop
-                    speed={500}
-                >
-                    {images.map((image, index) => (
-                        <SwiperSlide key={index} onClick={() => openModal(index)}>
-                            <img src={image} alt={`Slide ${index + 1}`} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+            <Box sx={styles.daySection}>
+                <Box sx={styles.sliderWrapper}>
+                    <IconButton
+                        onClick={() => handleScroll("left")}
+                        sx={isRTL ? styles.rightArrow : styles.leftArrow}
+                    >
+                        <ArrowBackIosNewIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
+                    </IconButton>
+
+                    <Box ref={sliderRef} sx={{
+                        ...styles.slider,
+                        direction: isRTL ? "rtl" : "ltr",
+                    }}>
+                        {images.map((imgSrc, i) => (
+                            <Card
+                                key={i}
+                                sx={styles.card}
+                                onClick={() => openLightbox(i)}
+                            >
+                                <CardMedia
+                                    component="img"
+                                    image={imgSrc}
+                                    loading="lazy"
+                                    sx={styles.image}
+                                />
+                            </Card>
+                        ))}
+                    </Box>
+
+                    <IconButton
+                        onClick={() => handleScroll("right")}
+                        sx={isRTL ? styles.leftArrow : styles.rightArrow}
+                    >
+                        <ArrowForwardIosIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
+                    </IconButton>
+                </Box>
             </Box>
 
             <Dialog
-                open={modalOpen}
-                onClose={closeModal}
+                open={lightboxOpen}
+                onClose={closeLightbox}
                 maxWidth={false}
                 PaperProps={{
                     sx: styles.lightboxPaper,
@@ -92,83 +126,36 @@ export default function ImageSlider() {
                     },
                 }}
             >
-                <Box
-                    sx={{
-                        position: 'relative',
-                        width: '100%',
-                        height: isMobile ? '60vh' : '80vh',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <IconButton
-                        onClick={closeModal}
-                        sx={{
-                            position: 'absolute',
-                            top: 16,
-                            right: 16,
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                            zIndex: 2,
-                        }}
-                    >
-                        <X size={24} />
-                    </IconButton>
-
-                    <img
-                        src={images[modalIndex]}
-                        alt={`Image ${modalIndex + 1}`}
-                        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-                    />
-
-                    <IconButton
-                        onClick={isRTL ? nextModalImage : prevModalImage}
-                        sx={{
-                            position: 'absolute',
-                            left: 16,
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                        }}
-                    >
-                        <ChevronLeft size={32} />
+                <DialogContent sx={styles.lightboxContent}>
+                    <IconButton onClick={closeLightbox} sx={styles.lightboxClose}>
+                        <CloseIcon />
                     </IconButton>
 
                     <IconButton
-                        onClick={isRTL ? prevModalImage : nextModalImage}
-                        sx={{
-                            position: 'absolute',
-                            right: 16,
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                        }}
+                        onClick={isRTL ? goToNext : goToPrev}
+                        sx={styles.lightboxLeftArrow}
                     >
-                        <ChevronRight size={32} />
+                        <ArrowBackIosNewIcon />
                     </IconButton>
 
                     <Box
-                        sx={{
-                            position: 'absolute',
-                            bottom: 16,
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(0,0,0,0.5)',
-                            px: 2,
-                            py: 1,
-                            borderRadius: 1,
-                        }}
+                        component="img"
+                        src={images[activeIndex]}
+                        alt={`Gallery image ${activeIndex + 1}`}
+                        sx={styles.lightboxImage}
+                    />
+
+                    <IconButton
+                        onClick={isRTL ? goToPrev : goToNext}
+                        sx={styles.lightboxRightArrow}
                     >
-                        {modalIndex + 1} / {images.length}
-                    </Box>
-                </Box>
+                        <ArrowForwardIosIcon />
+                    </IconButton>
+
+                    <Typography sx={styles.lightboxCounter}>
+                        {activeIndex + 1} / {images.length}
+                    </Typography>
+                </DialogContent>
             </Dialog>
         </>
     );
