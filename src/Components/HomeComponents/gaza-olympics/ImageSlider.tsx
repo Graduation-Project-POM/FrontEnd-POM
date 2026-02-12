@@ -1,175 +1,129 @@
-import { useState } from 'react';
+import { useRef, useState, useCallback, useEffect } from "react";
 import {
-    Box,
-    Dialog,
-    IconButton,
-    useTheme,
-    useMediaQuery,
-    Typography,
-} from '@mui/material';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { sliderContainerStyles, titleStyles, descriptionStyles, sectionBoxStyles } from './imageSliderStyle';
-import { useTranslation } from 'react-i18next';
-import { styles } from '../../WinterCampComponents/galary/galary';
+  Box,
+  Card,
+  CardMedia,
+  IconButton,
+  Dialog,
+  DialogContent,
+  Typography,
+} from "@mui/material";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CloseIcon from "@mui/icons-material/Close";
+import { useTranslation } from "react-i18next";
+import {descriptionStyles, sectionBoxStyles, sliderContainerStyles, titleStyles}from "./imageSliderStyle";
 
 export default function ImageSlider() {
-    const { t, i18n } = useTranslation();
-    const isRTL = i18n.language.startsWith("ar");
-    const autoPlayInterval = 5000;
-      const images = [
-        "/74.png", "/75.png", "/76.png", "/77.png", "/78.png", "/79.png",
-        "/80.png", "/81.png", "/82.png", "/83.png", "/84.png", "/85.png",
-        "/86.png", "/87.png", "/88.png", "/89.png", "/90.png", "/91.png",
-        "/92.png", "/93.png", "/94.png", "/95.png", "/96.png", "/97.png",
-        "/98.png", "/99.png", "/100.png", "/101.png", "/102.png", "/103.png",
-        "/104.png", "/105.png", "/106.png", "/107.png", "/108.png",
-    ];
+  const { i18n, t } = useTranslation();
+  const isRTL = i18n.language.startsWith("ar");
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-    const [modalOpen, setModalOpen] = useState(false);
-    const [modalIndex, setModalIndex] = useState(0);
+  const images = [
+    "/77.png","/78.png","/79.png",
+    "/80.png","/81.png","/82.png","/83.png","/84.png","/85.png",
+    "/86.png","/87.png","/88.png","/89.png","/90.png","/91.png",
+    "/92.png","/93.png","/94.png","/95.png","/96.png","/97.png",
+    "/98.png","/99.png","/100.png","/101.png","/102.png","/103.png",
+    "/104.png","/105.png","/106.png","/107.png","/108.png","/74.png","/75.png","/76.png"
+  ];
 
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-    const openModal = (index: number) => {
-        setModalIndex(index);
-        setModalOpen(true);
+  const handleScroll = (dir: "left" | "right") => {
+    if (!sliderRef.current) return;
+    const scrollAmount = 340;
+    sliderRef.current.scrollBy({
+      left: isRTL
+        ? dir === "left" ? scrollAmount : -scrollAmount
+        : dir === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
+  const openLightbox = (index: number) => {
+    setActiveIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => setLightboxOpen(false);
+
+  const goToPrev = useCallback(() => {
+    setActiveIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+  }, [images.length]);
+
+  const goToNext = useCallback(() => {
+    setActiveIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
+  }, [images.length]);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") goToPrev();
+      else if (e.key === "ArrowRight") goToNext();
+      else if (e.key === "Escape") closeLightbox();
     };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxOpen, goToPrev, goToNext]);
 
-    const closeModal = () => setModalOpen(false);
+  return (
+    <>
+      <Box sx={sectionBoxStyles}>
+        <Typography component="h2" sx={titleStyles}>
+          {t("gazaOlympiad.title")}
+        </Typography>
+        <Typography component="p" sx={descriptionStyles}>
+          {t("gazaOlympiad.description")}
+        </Typography>
+      </Box>
 
-    const nextModalImage = () =>
-        setModalIndex((prev) => (prev + 1) % images.length);
+      <Box sx={sliderContainerStyles.sliderWrapper}>
+        <IconButton onClick={() => handleScroll("left")} sx={isRTL ? sliderContainerStyles.rightArrow : sliderContainerStyles.leftArrow}>
+          <ArrowBackIosNewIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
+        </IconButton>
 
-    const prevModalImage = () =>
-        setModalIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+        <Box ref={sliderRef} sx={{ ...sliderContainerStyles.slider, direction: isRTL ? "rtl" : "ltr" }}>
+          {images.map((imgSrc, i) => (
+            <Card key={i} sx={sliderContainerStyles.card} onClick={() => openLightbox(i)}>
+              <CardMedia component="img" image={imgSrc} sx={sliderContainerStyles.image} />
+            </Card>
+          ))}
+        </Box>
 
-    if (!images || images.length === 0) {
-        return <Box sx={{ textAlign: 'center', py: 4 }}>No images available</Box>;
-    }
+        <IconButton onClick={() => handleScroll("right")} sx={isRTL ? sliderContainerStyles.leftArrow : sliderContainerStyles.rightArrow}>
+          <ArrowForwardIosIcon sx={isRTL ? { transform: "rotate(180deg)" } : {}} />
+        </IconButton>
+      </Box>
 
-    return (
-        <>
-            <Box sx={sectionBoxStyles}>
-                <Typography component="h2" sx={titleStyles}>
-                    {t("gazaOlympiad.title")}
-                </Typography>
-                <Typography component="p" sx={descriptionStyles}>
-                    {t("gazaOlympiad.description")}
-                </Typography>
-            </Box>
+      <Dialog
+        open={lightboxOpen}
+        onClose={closeLightbox}
+        maxWidth={false}
+        PaperProps={{ sx: sliderContainerStyles.lightboxPaper }}
+        slotProps={{ backdrop: { sx: { backgroundColor: "rgba(0,0,0,0.9)" } } }}
+      >
+        <DialogContent sx={sliderContainerStyles.lightboxContent}>
+          <IconButton onClick={closeLightbox} sx={sliderContainerStyles.lightboxClose}>
+            <CloseIcon />
+          </IconButton>
 
-            <Box sx={sliderContainerStyles}>
-                <Swiper
-                    modules={[Autoplay, Navigation]}
-                    autoplay={{ delay: autoPlayInterval, disableOnInteraction: false }}
-                    navigation
-                    loop
-                    speed={500}
-                >
-                    {images.map((image, index) => (
-                        <SwiperSlide key={index} onClick={() => openModal(index)}>
-                            <img src={image} alt={`Slide ${index + 1}`} />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </Box>
+          <IconButton onClick={isRTL ? goToNext : goToPrev} sx={sliderContainerStyles.lightboxLeftArrow}>
+            <ArrowBackIosNewIcon />
+          </IconButton>
 
-            <Dialog
-                open={modalOpen}
-                onClose={closeModal}
-                maxWidth={false}
-                PaperProps={{
-                    sx: styles.lightboxPaper,
-                }}
-                slotProps={{
-                    backdrop: {
-                        sx: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
-                    },
-                }}
-            >
-                <Box
-                    sx={{
-                        position: 'relative',
-                        width: '100%',
-                        height: isMobile ? '60vh' : '80vh',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <IconButton
-                        onClick={closeModal}
-                        sx={{
-                            position: 'absolute',
-                            top: 16,
-                            right: 16,
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                            zIndex: 2,
-                        }}
-                    >
-                        <X size={24} />
-                    </IconButton>
+          <Box component="img" src={images[activeIndex]} alt={`Image ${activeIndex + 1}`} sx={sliderContainerStyles.lightboxImage} />
 
-                    <img
-                        src={images[modalIndex]}
-                        alt={`Image ${modalIndex + 1}`}
-                        style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
-                    />
+          <IconButton onClick={isRTL ? goToPrev : goToNext} sx={sliderContainerStyles.lightboxRightArrow}>
+            <ArrowForwardIosIcon />
+          </IconButton>
 
-                    <IconButton
-                        onClick={isRTL ? nextModalImage : prevModalImage}
-                        sx={{
-                            position: 'absolute',
-                            left: 16,
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                        }}
-                    >
-                        <ChevronLeft size={32} />
-                    </IconButton>
-
-                    <IconButton
-                        onClick={isRTL ? prevModalImage : nextModalImage}
-                        sx={{
-                            position: 'absolute',
-                            right: 16,
-                            top: '50%',
-                            transform: 'translateY(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(255,255,255,0.1)',
-                            '&:hover': { backgroundColor: 'rgba(255,255,255,0.2)' },
-                        }}
-                    >
-                        <ChevronRight size={32} />
-                    </IconButton>
-
-                    <Box
-                        sx={{
-                            position: 'absolute',
-                            bottom: 16,
-                            left: '50%',
-                            transform: 'translateX(-50%)',
-                            color: 'white',
-                            backgroundColor: 'rgba(0,0,0,0.5)',
-                            px: 2,
-                            py: 1,
-                            borderRadius: 1,
-                        }}
-                    >
-                        {modalIndex + 1} / {images.length}
-                    </Box>
-                </Box>
-            </Dialog>
-        </>
-    );
+          <Typography sx={sliderContainerStyles.lightboxCounter}>
+            {activeIndex + 1} / {images.length}
+          </Typography>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
 }

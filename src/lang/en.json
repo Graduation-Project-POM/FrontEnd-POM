@@ -476,13 +476,11 @@
       "city": "Jericho",
       "school": "Terestan High School"
     },
-
     "student3": {
       "name": "Khalil Shadi Gibran",
       "city": "Jerusalem",
       "school": "The Arab Institute"
     },
-
     "student4": {
       "name": "Adham Rani Najajreh",
       "city": "Bethlehem",
@@ -503,7 +501,6 @@
       "city": "Bethlehem",
       "school": "Bint Bethlehem High School"
     },
-
     "student8": {
       "name": "Abdulrahman Bilal Shalash",
       "city": "Birzeit",
@@ -519,7 +516,6 @@
       "city": "Birzeit",
       "school": "Arab Academy for Modern Education"
     },
-
     "student11": {
       "name": "Abi Mohammad Aqili",
       "city": "South Hebron",
@@ -550,7 +546,6 @@
       "city": "South Hebron",
       "school": "Samou Boys High School"
     },
-
     "student17": {
       "name": "Adam Murad Oweis",
       "city": "South Nablus",
@@ -571,43 +566,36 @@
       "city": "South Nablus",
       "school": "Awrif Girls High School"
     },
-
     "student21": {
       "name": "Yahya Ammar Jaradat",
       "city": "Jenin",
       "school": "Al-Sila Al-Harithiya Boys High School"
     },
-
     "student22": {
       "name": "Saif Abdullah Abu Kashk",
       "city": "Ramallah",
       "school": "Our Lady of Annunciation for Roman Catholics"
     },
-
     "student23": {
       "name": "Ahmad Firas Marrar",
       "city": "Ramallah-Bireh",
       "school": "Al-College Al-Ahliya, Ramallah"
     },
-
     "student24": {
       "name": "Shaden Hamdallah Abu Asabi",
       "city": "Salfit",
       "school": "Rafat Girls High School"
     },
-
     "student25": {
       "name": "Lina Ahmad Al-Arar",
       "city": "North Hebron",
       "school": "Surif Girls High School"
     },
-
     "student26": {
       "name": "Kamal Mohammad Dahidel",
       "city": "North Hebron - Halhul",
       "school": "Halhul Boys High School"
     },
-
     "student27": {
       "name": "Hala Firas Barakat",
       "city": "Jerusalem Suburbs",
@@ -623,7 +611,6 @@
       "city": "Jerusalem Suburbs",
       "school": "Abu Dis Girls High School"
     },
-
     "student30": {
       "name": "Rimas Ahmad Bani Odeh",
       "city": "Tubas",
@@ -639,7 +626,6 @@
       "city": "Tubas",
       "school": "The Green School"
     },
-
     "student33": {
       "name": "Zayan Abdelhakim Shawareb",
       "city": "Tulkarm",
@@ -655,13 +641,11 @@
       "city": "Tulkarm",
       "school": "Anabta Girls High School"
     },
-
     "student36": {
       "name": "Joud Abdel Hakim Obeid",
       "city": "Qabatiya",
       "school": "Sami Taha Girls High School"
     },
-
     "student37": {
       "name": "Sama Youssef Shanti",
       "city": "Qalqilya",
@@ -677,7 +661,6 @@
       "city": "Qalqilya",
       "school": "Fatima Surur Girls High School"
     },
-
     "student40": {
       "name": "Batoul Ameid Zakaria",
       "city": "Nablus",
@@ -713,13 +696,11 @@
       "city": "Nablus",
       "school": "Pioneers of Hope"
     },
-
     "student47": {
       "name": "Dina Obeidallah Nirokh",
       "city": "Central Hebron",
       "school": "Wedad Nader Al-Din Girls High School"
     },
-
     "student48": {
       "name": "Ayham Ali Sbeih",
       "city": "Yatta",
@@ -750,7 +731,7 @@
     "signUpLink": "Sign Up"
   },
   "gazaOlympiad": {
-    "title": "Gaza Olympic Qualifiers",
+    "title": "Gaza Mathematics Olympiad",
     "description": "From beneath the rubble, and amidst pain and challenges, Gaza's champions rose to create hope anew. With an indomitable will and unbreakable faith, they continue their journey towards the Olympic dream, proudly carrying Gaza's name with determination."
   }
 }
