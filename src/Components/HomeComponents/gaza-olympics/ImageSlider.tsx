@@ -14,9 +14,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { sliderContainerStyles, titleStyles, descriptionStyles, sectionBoxStyles } from './imageSliderStyle';
 import { useTranslation } from 'react-i18next';
+import { styles } from '../../WinterCampComponents/galary/galary';
 
 export default function ImageSlider() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const isRTL = i18n.language.startsWith("ar");
     const autoPlayInterval = 5000;
     const images = [
         "/1.png",
@@ -119,7 +121,7 @@ export default function ImageSlider() {
                     {t("gazaOlympiad.title")}
                 </Typography>
                 <Typography component="p" sx={descriptionStyles}>
-                   {t("gazaOlympiad.description")}
+                    {t("gazaOlympiad.description")}
                 </Typography>
             </Box>
 
@@ -142,10 +144,15 @@ export default function ImageSlider() {
             <Dialog
                 open={modalOpen}
                 onClose={closeModal}
-                maxWidth="lg"
-                fullWidth
-                BackdropProps={{ sx: { backgroundColor: 'rgba(0,0,0,0.95)' } }}
-                PaperProps={{ sx: { backgroundColor: '#000', boxShadow: 'none', margin: 0 } }}
+                maxWidth={false}
+                PaperProps={{
+                    sx: styles.lightboxPaper,
+                }}
+                slotProps={{
+                    backdrop: {
+                        sx: { backgroundColor: "rgba(0, 0, 0, 0.9)" },
+                    },
+                }}
             >
                 <Box
                     sx={{
@@ -179,7 +186,7 @@ export default function ImageSlider() {
                     />
 
                     <IconButton
-                        onClick={prevModalImage}
+                        onClick={isRTL ? nextModalImage : prevModalImage}
                         sx={{
                             position: 'absolute',
                             left: 16,
@@ -194,7 +201,7 @@ export default function ImageSlider() {
                     </IconButton>
 
                     <IconButton
-                        onClick={nextModalImage}
+                        onClick={isRTL ? prevModalImage : nextModalImage}
                         sx={{
                             position: 'absolute',
                             right: 16,

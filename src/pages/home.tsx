@@ -8,7 +8,7 @@ import TrainingField from '../Components/HomeComponents/training/training.tsx';
 import Achievements from '../Components/HomeComponents/Achievements/Achievements.tsx';
 import Footer from '../Components/HomeComponents/Footer/footer.tsx';
 import { Navbar } from '../Components/HomeComponents/Navbar/Navbar.tsx';
-// import ImageSlider from '../Components/HomeComponents/gaza-olympics/ImageSlider.tsx';
+import ImageSlider from '../Components/HomeComponents/gaza-olympics/ImageSlider.tsx';
 function Home() {
 
     return (
@@ -18,7 +18,7 @@ function Home() {
             <About />
             <Vision />
             <Partner />
-            {/* <ImageSlider /> */}
+            <ImageSlider />
             <Programs />
             <TrainingField />
             <Achievements />

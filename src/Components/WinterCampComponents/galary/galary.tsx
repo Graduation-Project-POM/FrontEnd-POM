@@ -206,10 +206,7 @@ const Galary: React.FC = () => {
 
                     <IconButton
                         onClick={isRTL ? goToNext : goToPrev}
-                        sx={{
-                            ...styles.lightboxLeftArrow,
-                            transform: isRTL ? "rotate(180deg)" : "none",
-                        }}
+                        sx={styles.lightboxLeftArrow}
                     >
                         <ArrowBackIosNewIcon />
                     </IconButton>
@@ -221,17 +218,12 @@ const Galary: React.FC = () => {
                         sx={styles.lightboxImage}
                     />
 
-
                     <IconButton
                         onClick={isRTL ? goToPrev : goToNext}
-                        sx={{
-                            ...styles.lightboxRightArrow,
-                            transform: isRTL ? "rotate(180deg)" : "none",
-                        }}
+                        sx={styles.lightboxRightArrow}
                     >
                         <ArrowForwardIosIcon />
                     </IconButton>
-
 
                     <Typography sx={styles.lightboxCounter}>
                         {activeIndex + 1} / {images.length}

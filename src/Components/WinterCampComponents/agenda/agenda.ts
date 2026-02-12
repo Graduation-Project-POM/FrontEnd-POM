@@ -1,19 +1,16 @@
 import { Box, Typography, Button } from "@mui/material"
 import { styled } from "@mui/material/styles"
 
-/* Colors */
 export const BG = "#ffffff"
 export const FG = "#111827"
 export const MUTED = "#6b7280"
 export const BORDER = "#e5e7eb"
 
-/* Layout */
 export const Page = styled(Box)(() => ({
   minHeight: "100vh",
   backgroundColor: BG,
 }))
 
-/* Main */
 export const Main = styled(Box)(() => ({
   maxWidth: 1280,
   margin: "0 auto",
@@ -35,26 +32,38 @@ export const PageDescription = styled(Typography)(() => ({
   marginBottom: 48,
 }))
 
-/* Day Tabs */
-export const Tabs = styled(Box)(() => ({
+export const Tabs = styled(Box)(({ theme }) => ({
   display: "flex",
   gap: 24,
   borderBottom: `1px solid ${BORDER}`,
   marginBottom: 32,
-}))
+
+  overflowX: "auto",
+  whiteSpace: "nowrap",
+  scrollbarWidth: "none",
+
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
+
+  [theme.breakpoints.down("sm")]: {
+    gap: 16,
+  },
+}));
 
 export const TabButton = styled(Button)<{ active?: boolean }>(
   ({ active }) => ({
     borderRadius: 0,
-    padding: "12px 0",
+    padding: "12px 16px",
     fontSize: 14,
     fontWeight: 500,
     color: active ? "#7A1E3C" : "#8a4c60ff",
-    borderBottom: active ? `2px solid ${"#5e142cff"}` : "2px solid transparent",
+    borderBottom: active ? `2px solid #5e142cff` : "2px solid transparent",
+    minWidth: "fit-content",   
+    flexShrink: 0,            
   })
-)
+);
 
-/* Table */
 export const Table = styled(Box)(() => ({
   border: `1px solid ${BORDER}`,
   borderRadius: 8,
