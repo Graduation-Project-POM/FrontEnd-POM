@@ -5,7 +5,7 @@ export const sliderContainerStyles: Record<string, SxProps<Theme>> = {
     backgroundColor:"#ffffff",
     position: "relative",
     px: { xs: 2, md: 8 },
-    py: 5,
+    py: 2,
   },
 
   slider: {
