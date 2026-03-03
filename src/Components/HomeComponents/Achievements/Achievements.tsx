@@ -81,6 +81,12 @@ const achievements = [
     center: "achievements.tenth_place_cnt",
     studentImage: "/P10.png",
     backgroundImage: "/secondBGAch.png",
+  }, {
+    title: "achievements.ninth_place",
+    name: "achievements.eleventh_place_name",
+    center: "achievements.eleventh_place_cnt",
+    studentImage: "/P11.png",
+    backgroundImage: "/secondBGAch.png",
   },
  
 ]

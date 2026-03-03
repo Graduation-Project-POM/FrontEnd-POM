@@ -1,10 +1,6 @@
 import { styled, keyframes } from "@mui/material/styles"
-import { Box, Button, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 
-const shimmer = keyframes`
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-`
 
 const fadeSlideUp = keyframes`
   from { opacity: 0; transform: translateY(24px); }

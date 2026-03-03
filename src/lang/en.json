@@ -29,6 +29,7 @@
     "sixth_place": "Sixth Place",
     "seventh_place": "Seventh Place",
     "eighth_place": "Eighth Place",
+    "ninth_place": "Ninth Place",
     "first_place_name": "Mohammad Rami Samara",
     "first_place_cnt": "Birzeit",
     "second_place_name": "Dina Obeidallah Neroukh",
@@ -48,7 +49,10 @@
     "ninth_place_name": "Yahya Ammar Jaradat",
     "ninth_place_cnt": "Jenin",
     "tenth_place_name": "Layan Ahmad Al-Arar",
-    "tenth_place_cnt": "North Hebron"
+    "tenth_place_cnt": "North Hebron",
+    "eleventh_place_name": "Khalil Shadi Jibran",
+    "eleventh_place_cnt": "Jerusalem",
+    "view_details": "View Details"
   },
   "partners": {
     "title": "Our Partners",
