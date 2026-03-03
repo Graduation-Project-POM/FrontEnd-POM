@@ -52,9 +52,8 @@ export const Card = styled(Box, {
   shouldForwardProp: (prop) => prop !== "bg",
 })<{ bg: string }>(({ theme, bg }) => ({
   position: "relative",
-  height: 210,
+  height: 200,
   borderRadius: "20px",
-  overflow: "hidden",
   backgroundImage: `url(${bg})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -97,9 +96,10 @@ const sharedImageStyle = {
 
 export const StudentImageLeft = styled("img")(({ theme }) => ({
   ...sharedImageStyle,
-  height: 205,
+  height: 225,
   width: "auto",
   left: theme.spacing(1),
+  overflow:"visible",
 
   [theme.breakpoints.down("md")]: {
     height: "165px",
@@ -113,9 +113,10 @@ export const StudentImageLeft = styled("img")(({ theme }) => ({
 
 export const StudentImageRight = styled("img")(({ theme }) => ({
   ...sharedImageStyle,
-  height: 185,
+  height: 225,
   width: "auto",
-  right: theme.spacing(2),
+  right: theme.spacing(1),
+  overflow:"visible",
 
   [theme.breakpoints.down("md")]: {
     height: "165px",
@@ -136,8 +137,8 @@ export const ActionWrapper = styled(Box)<{ align: "left" | "right" }>(({ theme, 
   zIndex: 3,
   position: "relative",
 
-  marginLeft: align === "right" ? "auto" : theme.spacing(20),
-  marginRight: align === "left" ? "auto" : theme.spacing(20),
+  marginLeft: align === "right" ? "auto" : theme.spacing(25),
+  marginRight: align === "left" ? "auto" : theme.spacing(25),
 
   [theme.breakpoints.down("md")]: {
     gap: theme.spacing(2),

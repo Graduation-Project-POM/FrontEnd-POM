@@ -21,16 +21,14 @@
   },
   "achievements": {
     "title": "Members of the National Team in the Palestinian Mathematics Olympiad",
-    "first_place": "first place",
-    "second_place": "Second Place",
-    "third_place": "Third Place",
+    "first_place": "first place 🥇 ",
+    "second_place": "Second Place 🥈 ",
+    "third_place": "Third Place 🥉",
     "fourth_place": "Fourth Place",
     "fifth_place": "Fifth Place",
     "sixth_place": "Sixth Place",
     "seventh_place": "Seventh Place",
     "eighth_place": "Eighth Place",
-    "ninth_place": "Ninth Place",
-    "tenth_place": "Tenth Place",
     "first_place_name": "Mohammad Rami Samara",
     "first_place_cnt": "Birzeit",
     "second_place_name": "Dina Obeidallah Neroukh",
@@ -50,10 +48,7 @@
     "ninth_place_name": "Yahya Ammar Jaradat",
     "ninth_place_cnt": "Jenin",
     "tenth_place_name": "Layan Ahmad Al-Arar",
-    "tenth_place_cnt": "North Hebron",
-    "eleventh_place_name": "Khalil Shadi Jibran",
-    "eleventh_place_cnt": "Jerusalem",
-    "view_details": "View Details"
+    "tenth_place_cnt": "North Hebron"
   },
   "partners": {
     "title": "Our Partners",

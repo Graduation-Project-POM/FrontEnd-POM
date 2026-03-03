@@ -21,16 +21,14 @@
   },
   "achievements": {
     "title": " اعضاء الفريق الوطني في الأولمبياد الفلسطيني للرياضيات ",
-    "first_place": "المركز الأول",
-    "second_place": "المركز الثاني",
-    "third_place": "المركز الثالث",
+    "first_place": "المركز الأول 🥇",
+    "second_place": "المركز الثاني 🥈 ",
+    "third_place": "المركز الثالث 🥉",
     "fourth_place": "المركز الرابع",
     "fifth_place": "المركز الخامس",
     "sixth_place": "المركز السادس",
     "seventh_place": "المركز السابع",
     "eighth_place": "المركز الثامن",
-    "ninth_place": "المركز التاسع",
-    "tenth_place": "المركز العاشر",
     "first_place_name": "محمد رامي سمارة",
     "first_place_cnt": "بيرزيت",
     "second_place_name": "دينه عبيد الله نيروخ",
@@ -50,10 +48,7 @@
     "ninth_place_name": "يحيى عمار جرادات",
     "ninth_place_cnt": "جنين",
     "tenth_place_name": "لين احمد العرعر",
-    "tenth_place_cnt": "شمال الخليل",
-    "eleventh_place_name": "خليل شادي جبران",
-    "eleventh_place_cnt": "القدس",
-    "view_details": "عرض التفاصيل"
+    "tenth_place_cnt": "شمال الخليل"
   },
   "partners": {
     "title": "شركاؤنا",
