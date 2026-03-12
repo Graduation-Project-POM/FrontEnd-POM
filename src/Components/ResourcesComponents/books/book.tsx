@@ -67,14 +67,14 @@ function Books() {
         {
             title: t("books.title9"),
             description: t("books.desc9"),
-            link: "https://drive.google.com/file/d/1sx9R2cN5eX_57Qrg-xGCjpEZwlSa2fcg/view?usp=sharing",
+            link: "https://drive.google.com/file/d/1UQlNfvtVsuRmZQBd8U7aXi0BSExciY6p/view?usp=sharing",
             color: "#7D1C48",
             icon: "📘",
         },
         {
             title: t("books.title10"),
             description: t("books.desc10"),
-            link: "https://drive.google.com/file/d/1UQlNfvtVsuRmZQBd8U7aXi0BSExciY6p/view?usp=sharing",
+            link: "https://drive.google.com/file/d/1sx9R2cN5eX_57Qrg-xGCjpEZwlSa2fcg/view?usp=sharing",
             color: "#6C4859",
             icon: "📘",
         },
