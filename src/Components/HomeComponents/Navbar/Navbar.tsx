@@ -58,6 +58,7 @@ export function Navbar() {
             <NavLink >{t("nav.program")}</NavLink>
             <NavLink >{t("nav.about")}</NavLink>
             <NavLink onClick={() => navigate("/winterPath")} active={location.pathname === "/winterPath"}>{t("nav.camp")}</NavLink>
+            <NavLink onClick={() => navigate("/Developers")} active={location.pathname === "/Developers"}>{t("nav.Developers")}</NavLink>
             <LoginButton variant="contained" sx={{ marginInlineStart: "auto" }}>{t("nav.login")}</LoginButton>
           </NavLinks>
 
@@ -119,6 +120,7 @@ export function Navbar() {
                 <SidebarNavLink active={location.pathname === "/program" ? true : false} onClick={() => { navigate("/program"); handleClose() }} >{t("nav.program")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/about" ? true : false} onClick={() => { navigate("/about"); handleClose() }} >{t("nav.about")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/winterPath" ? true : false} onClick={() => { navigate("/winterPath"); handleClose() }} >{t("nav.camp")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/Developers" ? true : false} onClick={() => { navigate("/Developers"); handleClose() }} >{t("nav.Developers")}</SidebarNavLink>
                 <MobileLoginButton onClick={handleClose}>{t("nav.login")}</MobileLoginButton>
               </Box>
 
