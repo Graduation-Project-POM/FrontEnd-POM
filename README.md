@@ -76,5 +76,4 @@ The platform is fully structured, scalable, and ready for deployment and future 
 ---
 
 ## 👥 Team
-Developed by university students as part of a web development project.
-
+This project was developed by students of Palestine Technical University – Kadoorie as part of their Graduation Project.

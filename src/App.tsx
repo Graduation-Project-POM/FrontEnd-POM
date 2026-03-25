@@ -6,6 +6,7 @@ import Exam1 from "./pages/Exam1";
 import WinterCamp from "./pages/winterCamp";
 import SignUp from "./pages/signup";
 import Login from "./pages/login";
+import Developers from "./pages/Developers";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/resources" element={<Resources/>}/>
         <Route path="/worksheets/all" element={<Exam1 />} />
         <Route path="/winterPath" element={<WinterCamp />} />
+        <Route path="/Developers" element={<Developers />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
       </Routes>

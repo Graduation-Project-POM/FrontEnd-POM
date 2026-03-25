@@ -5,7 +5,8 @@
     "program": "Program",
     "about": "About",
     "camp": "Training Camp",
-    "login": "Log In"
+    "login": "Log In",
+    "Developers": "Developers"
   },
   "hero": {
     "title1": "Where champions begin.",
@@ -758,5 +759,37 @@
   "gazaOlympiad": {
     "title": "Gaza Mathematics Olympiad",
     "description": "From beneath the rubble, and amidst pain and challenges, Gaza's champions rose to create hope anew. With an indomitable will and unbreakable faith, they continue their journey towards the Olympic dream, proudly carrying Gaza's name with determination."
+  },
+  "developers": {
+    "title": "Our Team",
+    "supervisors": {
+      "mohamed": {
+        "name": "Dr. Mohamed Khalil",
+        "role": "Academic Supervisor",
+        "bio": "Supervises the project academically"
+      },
+      "ahmed": {
+        "name": "Eng. Ahmed Abu Ghoza",
+        "role": "Technical advisor",
+        "bio": "Monitors technical progress of the project"
+      }
+    },
+    "team": {
+      "waad": {
+        "name": "Eng. Waad Amer",
+        "role": "Fullstack Developer",
+        "bio": "Builds complete web solutions"
+      },
+      "waed": {
+        "name": "Eng. Waed Sammar",
+        "role": "Frontend Developer + QA",
+        "bio": "Works on frontend development and ensures quality assurance"
+      },
+      "abdulrahman": {
+        "name": "Eng. Abdullrahman Badran",
+        "role": "Backend Developer",
+        "bio": "Server and database developer"
+      }
+    }
   }
 }
