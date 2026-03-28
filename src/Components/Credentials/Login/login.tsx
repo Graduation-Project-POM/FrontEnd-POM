@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Box,
   Button,
@@ -10,9 +10,9 @@ import {
   Link,
   InputAdornment,
   IconButton,
-} from '@mui/material';
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
+} from "@mui/material";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useTranslation } from "react-i18next";
 
 import {
   containerStyles,
@@ -23,28 +23,28 @@ import {
   textFieldStyles,
   buttonStyles,
   linkStyles,
-} from './loginStyle';
+} from "./loginStyle";
 
 export default function Login() {
-  const { t } = useTranslation();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const { t, i18n } = useTranslation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     if (!email || !password) {
-      setError('Email and password are required');
+      setError("Email and password are required");
       return;
     }
 
     try {
       console.log({ email, password });
     } catch (err) {
-      setError('Login failed');
+      setError("Login failed");
     }
   };
 
@@ -53,15 +53,19 @@ export default function Login() {
       <Box sx={containerStyles}>
         <Paper elevation={3} sx={paperStyles}>
           <Typography component="h1" variant="h4" sx={titleStyles}>
-            {t('login.welcomeBackTitle')}
+            {t("login.welcomeBackTitle")}
           </Typography>
 
-          <Typography variant="body2" color="text.secondary" sx={subtitleStyles}>
-            {t('login.welcomeBackSubtitle')}
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={subtitleStyles}
+          >
+            {t("login.welcomeBackSubtitle")}
           </Typography>
 
           {error && (
-            <Alert severity="error" sx={{ width: '100%', mb: 2 }}>
+            <Alert severity="error" sx={{ width: "100%", mb: 2 }}>
               {error}
             </Alert>
           )}
@@ -72,7 +76,7 @@ export default function Login() {
               required
               fullWidth
               id="email"
-              label={t('login.emailLabel')}
+              label={t("login.emailLabel")}
               name="email"
               autoComplete="email"
               autoFocus
@@ -86,25 +90,37 @@ export default function Login() {
               required
               fullWidth
               name="password"
-              label={t('login.passwordLabel')}
-              type={showPassword ? 'text' : 'password'}
+              label={t("login.passwordLabel")}
+              type={showPassword ? "text" : "password"}
               id="password"
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               sx={textFieldStyles}
               InputProps={{
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label={t('login.togglePasswordVisibility')}
-                      onClick={() => setShowPassword(!showPassword)}
-                      edge="end"
-                    >
-                      {showPassword ? <Visibility /> : <VisibilityOff />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
+                startAdornment:
+                  i18n.language === "ar" ? (
+                    <InputAdornment position="start">
+                      <IconButton
+                        onClick={() => setShowPassword(!showPassword)}
+                        edge="start"
+                      >
+                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton>
+                    </InputAdornment>
+                  ) : undefined,
+
+                endAdornment:
+                  i18n.language !== "ar" ? (
+                    <InputAdornment position="end">
+                      <IconButton
+                        onClick={() => setShowPassword(!showPassword)}
+                        edge="end"
+                      >
+                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton>
+                    </InputAdornment>
+                  ) : undefined,
               }}
             />
 
@@ -114,20 +130,20 @@ export default function Login() {
               variant="contained"
               sx={buttonStyles}
             >
-              {t('login.signInButton')}
+              {t("login.signInButton")}
             </Button>
 
-            <Box sx={{ textAlign: 'center', mt: 2 }}>
+            <Box sx={{ textAlign: "center", mt: 2 }}>
               <Typography variant="body2" color="text.secondary">
-                {t('login.noAccountQuestion')}{' '}
+                {t("login.noAccountQuestion")}{" "}
                 <Link
                   component="button"
                   type="button"
                   variant="body2"
-                  onClick={() => (window.location.href = '/credentials/signup')}
+                  onClick={() => (window.location.href = "/credentials/signup")}
                   sx={linkStyles}
                 >
-                  {t('login.signUpLink')}
+                  {t("login.signUpLink")}
                 </Link>
               </Typography>
             </Box>
