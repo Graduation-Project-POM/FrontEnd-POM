@@ -23,7 +23,7 @@ export const NavLinks = styled(Box, {
   shouldForwardProp: (prop) => prop !== "isrtl"
 })<{ isrtl?: boolean }>(({ isrtl }) => ({
   display: "flex",
-  gap: "3rem",
+  gap: "1rem",
   alignItems: "center",
   marginLeft: "auto",
   justifyContent: isrtl ? "flex-end" : "flex-start",
@@ -35,7 +35,7 @@ export const NavLink = styled(Button, {
 })<{ active?: boolean }>(({ active }) => ({
   color: active ? "#7A1E3C" : "#7A1E3C",
   fontWeight: active ? "900" : "700",
-  fontSize: "16px",
+  fontSize: "17px",
   textTransform: "none",
   "&:hover": {
     backgroundColor: "transparent",
@@ -51,6 +51,9 @@ export const LoginButton = styled(Button)({
   textTransform: "none",
   padding: "0.5rem 2rem",
   borderRadius: "10px",
+  "&:hover": {
+    backgroundColor: "#9b4561ff",
+  }
 })
 
 export const StyledMenu = styled(Box)({

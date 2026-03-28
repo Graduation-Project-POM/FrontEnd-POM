@@ -54,12 +54,9 @@ export function Navbar() {
 
           <NavLinks isrtl={isRTL} sx={{ display: { xs: "none", md: "flex" }, flex: 1 }}>
             <NavLink active={location.pathname === "/" ? true : false} onClick={() => navigate("/")}>{t("nav.home")}</NavLink>
-            <NavLink >{t("nav.services")}</NavLink>
-            <NavLink >{t("nav.program")}</NavLink>
-            <NavLink >{t("nav.about")}</NavLink>
             <NavLink onClick={() => navigate("/winterPath")} active={location.pathname === "/winterPath"}>{t("nav.camp")}</NavLink>
             <NavLink onClick={() => navigate("/Developers")} active={location.pathname === "/Developers"}>{t("nav.Developers")}</NavLink>
-            <LoginButton variant="contained" sx={{ marginInlineStart: "auto" }}>{t("nav.login")}</LoginButton>
+            <LoginButton onClick={() => navigate("/login")} variant="contained" sx={{ marginInlineStart: "auto" }}>{t("nav.login")}</LoginButton>
           </NavLinks>
 
           <Box sx={{ display: "flex", gap: 1, padding: "0.5rem", background: "#fff" }}>
@@ -116,12 +113,9 @@ export function Navbar() {
               </Box>
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem", padding: "0 1rem" }}>
                 <SidebarNavLink active={location.pathname === "/" ? true : false} onClick={() => { navigate("/"); handleClose() }} >{t("nav.home")}</SidebarNavLink>
-                <SidebarNavLink active={location.pathname === "/services" ? true : false} onClick={() => { navigate("/services"); handleClose() }} >{t("nav.services")}</SidebarNavLink>
-                <SidebarNavLink active={location.pathname === "/program" ? true : false} onClick={() => { navigate("/program"); handleClose() }} >{t("nav.program")}</SidebarNavLink>
-                <SidebarNavLink active={location.pathname === "/about" ? true : false} onClick={() => { navigate("/about"); handleClose() }} >{t("nav.about")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/winterPath" ? true : false} onClick={() => { navigate("/winterPath"); handleClose() }} >{t("nav.camp")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/Developers" ? true : false} onClick={() => { navigate("/Developers"); handleClose() }} >{t("nav.Developers")}</SidebarNavLink>
-                <MobileLoginButton onClick={handleClose}>{t("nav.login")}</MobileLoginButton>
+                <MobileLoginButton onClick={() => { navigate("/login"); handleClose(); }}>{t("nav.login")}</MobileLoginButton>
               </Box>
 
             </SidebarContent>

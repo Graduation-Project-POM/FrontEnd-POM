@@ -1,5 +1,5 @@
 import { Box, Container, Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Logo } from "../../HomeComponents/Navbar/NavbarStyle";
 import {
   PageWrapper,
@@ -15,6 +15,7 @@ import { useEffect } from "react";
 export function Header() {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.documentElement.dir = isRTL ? "rtl" : "ltr";
@@ -48,6 +49,11 @@ export function Header() {
                   borderColor: "#7A1E3C",
                   color: "#7A1E3C",
                   fontSize: { xs: "0.9rem", md: "1rem" },
+                  "&:hover": {
+                    color: "#fff",
+                    backgroundColor: "#9b4561ff",
+                    borderColor: "#9b4561ff",
+                  }
                 }}
               >
                 {t("externalResources.headerBack")}
@@ -70,7 +76,11 @@ export function Header() {
                   fontSize: "1rem",
                   px: 3,
                   borderRadius: "10px",
+                  ":hover": {
+                    bgcolor: "#9b4561ff",
+                  }
                 }}
+                onClick={() => navigate("/login")}
               >
                 {t("externalResources.login")}
               </Button>
@@ -90,6 +100,11 @@ export function Header() {
                   color: "#7A1E3C",
                   backgroundColor: "#fff",
                   textTransform: "none",
+                  "&:hover": {
+                    color: "#fff",
+                    backgroundColor: "#9b4561ff",
+                    borderColor: "#9b4561ff",
+                  }
                 }}
               >
                 {i18n.language === "ar" ? "English" : "العربية"}
