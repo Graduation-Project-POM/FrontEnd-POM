@@ -5,6 +5,7 @@ import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './theme/theme.ts'
 import "./utils/i18n.ts";
 
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>

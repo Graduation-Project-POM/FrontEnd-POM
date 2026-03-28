@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Resources from "./pages/resources";
 import Exam1 from "./pages/Exam1";
 import WinterCamp from "./pages/winterCamp";
-import SignUp from "./pages/signup";
-import Login from "./pages/login";
+import Credentials from "./pages/Credentials";
 import Developers from "./pages/Developers";
+import Login from "./Components/Credentials/Login/login";
+import SignUp from "./Components/Credentials/signup/signup";
 
 function App() {
 
@@ -19,8 +20,10 @@ function App() {
         <Route path="/worksheets/all" element={<Exam1 />} />
         <Route path="/winterPath" element={<WinterCamp />} />
         <Route path="/Developers" element={<Developers />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/credentials" element={<Credentials />} >
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+        </Route>
       </Routes>
     </BrowserRouter>
     </>
