@@ -1,10 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "services": "Services",
-    "program": "Program",
-    "about": "About",
     "camp": "Training Camp",
+    "news":"News",
     "login": "Log In",
     "Developers": "Developers"
   },
@@ -791,5 +789,9 @@
         "bio": "Server and database developer"
       }
     }
+  },
+  "news": {
+    "title": "Mathematics Supervisors Training within the Palestinian Mathematics Olympiad",
+    "description": "As part of the Palestinian Mathematics Olympiad activities, which is implemented in cooperation with the Cooperation Foundation, a training session for mathematics supervisors was held over two days (29–30 of last month).\nThe event took place physically at Al-Hilal Hotel in Ramallah, with the participation of 20 supervisors from the Ministry of Education, in addition to 8 supervisors from Gaza via video conferencing.\nThe training focused on empowering supervisors with methods to integrate Olympiad culture into classrooms and enhance mathematical thinking and problem-solving skills among students.\nNational team trainers, who are university professors specialized in mathematics, delivered training across the four Olympiad domains and explained the international training framework.\nDiscussions with supervisors helped define strategies to integrate Olympiad culture into school curricula.\nIn conclusion, Dr. Mohammed Khalil thanked all partners including the Ministry of Education and Palestine Academy for Science and Technology."
   }
 }

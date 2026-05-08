@@ -55,6 +55,7 @@ export function Navbar() {
           <NavLinks isrtl={isRTL} sx={{ display: { xs: "none", md: "flex" }, flex: 1 }}>
             <NavLink active={location.pathname === "/" ? true : false} onClick={() => navigate("/")}>{t("nav.home")}</NavLink>
             <NavLink onClick={() => navigate("/winterPath")} active={location.pathname === "/winterPath"}>{t("nav.camp")}</NavLink>
+            <NavLink onClick={() => navigate("/news")} active={location.pathname === "/news"}>{t("nav.news")}</NavLink>
             <NavLink onClick={() => navigate("/Developers")} active={location.pathname === "/Developers"}>{t("nav.Developers")}</NavLink>
             <LoginButton onClick={() => navigate("/credentials/login")} variant="contained" sx={{ marginInlineStart: "auto" }}>{t("nav.login")}</LoginButton>
           </NavLinks>
@@ -114,6 +115,7 @@ export function Navbar() {
               <Box sx={{ display: "flex", flexDirection: "column", gap: "0.5rem", padding: "0 1rem" }}>
                 <SidebarNavLink active={location.pathname === "/" ? true : false} onClick={() => { navigate("/"); handleClose() }} >{t("nav.home")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/winterPath" ? true : false} onClick={() => { navigate("/winterPath"); handleClose() }} >{t("nav.camp")}</SidebarNavLink>
+                <SidebarNavLink active={location.pathname === "/news" ? true : false} onClick={() => { navigate("/news"); handleClose() }} >{t("nav.news")}</SidebarNavLink>
                 <SidebarNavLink active={location.pathname === "/Developers" ? true : false} onClick={() => { navigate("/Developers"); handleClose() }} >{t("nav.Developers")}</SidebarNavLink>
                 <MobileLoginButton onClick={() => { navigate("/credentials/login"); handleClose(); }}>{t("nav.login")}</MobileLoginButton>
               </Box>

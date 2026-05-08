@@ -8,7 +8,7 @@ import Credentials from "./pages/Credentials";
 import Developers from "./pages/Developers";
 import Login from "./Components/Credentials/Login/login";
 import SignUp from "./Components/Credentials/signup/signup";
-
+import News from "./pages/news";
 function App() {
 
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/worksheets/all" element={<Exam1 />} />
         <Route path="/winterPath" element={<WinterCamp />} />
         <Route path="/Developers" element={<Developers />} />
+        <Route path="/news" element={<News />} />
         <Route path="/credentials" element={<Credentials />} >
           <Route path="login" element={<Login />} />
           <Route path="signup" element={<SignUp />} />
