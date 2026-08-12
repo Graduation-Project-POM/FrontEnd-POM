@@ -12,11 +12,6 @@ interface SearchResultsProps {
   onClear: () => void;
 }
 
-/**
- * Search mode. When the visitor types, the curated collections step aside and
- * the whole catalogue is queried at once — books, papers, worksheets, camp
- * material, playlists and external references in a single ranked list.
- */
 export function SearchResults({ query, onClear }: SearchResultsProps) {
   const { t } = useTranslation();
   const [collection, setCollection] = useState<Collection | "all">("all");

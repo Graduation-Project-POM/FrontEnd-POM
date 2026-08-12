@@ -4,18 +4,12 @@ import type { SxProps, Theme } from "@mui/material";
 
 interface MarqueeProps {
   children: ReactNode;
-  /** Seconds for one full pass. Lower = faster. */
   speed?: number;
   gap?: number;
-  /** Pause when the pointer is over the track. */
   pauseOnHover?: boolean;
   sx?: SxProps<Theme>;
 }
 
-/**
- * Seamless horizontal ticker. The track is rendered twice and translated by
- * exactly -50%, so the loop has no visible seam at any width.
- */
 export function Marquee({
   children,
   speed = 34,

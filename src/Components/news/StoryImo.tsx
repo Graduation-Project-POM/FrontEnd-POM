@@ -36,12 +36,6 @@ const FACTS = [
   { labelKey: "imoNews.facts.teamLabel", valueKey: "imoNews.facts.teamValue" },
 ];
 
-/**
- * Lead story: the film on a raised plate, a sticky fact column beside the text,
- * and the full media set as a rail underneath. Set on the same light ground as
- * the rest of the product — only the video player itself stays black, because
- * that is the letterbox behind the footage.
- */
 export function StoryImo() {
   const { t } = useTranslation();
 

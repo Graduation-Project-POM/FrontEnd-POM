@@ -5,11 +5,8 @@ import Reveal from "./Reveal";
 import useDirection from "./useDirection";
 
 interface ProseProps {
-  /** Raw copy. Blank lines *or* single newlines become paragraphs. */
   text: string;
-  /** Oversized first letter on the opening paragraph. */
   dropCap?: boolean;
-  /** Lead the first paragraph at a larger size. */
   leadFirst?: boolean;
   tone?: "light" | "dark";
   size?: "md" | "lg";
@@ -17,13 +14,6 @@ interface ProseProps {
   sx?: SxProps<Theme>;
 }
 
-/**
- * Long-form copy set as an article, not stuffed inside a shadowed box.
- *
- * A measured column (~66ch), a real paragraph rhythm and an optional drop cap
- * do more for readability than the rounded panel + border-inline accent the
- * old news/camp pages used.
- */
 export function Prose({
   text,
   dropCap = false,
@@ -41,7 +31,6 @@ export function Prose({
     .filter(Boolean);
 
   const dark = tone === "dark";
-  // Arabic is cursive: a drop cap would tear the first letter out of its word.
   const showDropCap = dropCap && !isRTL;
   const color = dark ? palette.textOnDarkMuted : palette.textSecondary;
 

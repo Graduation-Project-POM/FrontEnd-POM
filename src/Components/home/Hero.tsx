@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { MathBackdrop, StatStrip, Reveal, useDirection } from "../ui";
 
-/** The three propositions the old carousel rotated through — now one headline. */
 const ROTATING_KEYS = [
   "hero.rotate.0",
   "hero.rotate.1",
@@ -51,7 +50,6 @@ export function Hero() {
             alignItems: "center",
           }}
         >
-          {/* ------------------------------------------------ headline column */}
           <Box>
             <Reveal variant="fade">
               <Box
@@ -127,7 +125,6 @@ export function Hero() {
               </Typography>
             </Reveal>
 
-            {/* Rotating proposition — keeps all three carousel messages */}
             <Reveal variant="up" delay={120}>
               <Box
                 sx={{
@@ -248,13 +245,11 @@ export function Hero() {
             </Reveal>
           </Box>
 
-          {/* --------------------------------------------------- visual column */}
           <Reveal variant="scale" delay={220}>
             <HeroFigure />
           </Reveal>
         </Box>
 
-        {/* --------------------------------------------------------- stat rail */}
         <Box
           sx={{
             mt: { xs: 6, md: 9 },
@@ -277,11 +272,6 @@ export function Hero() {
   );
 }
 
-/**
- * The hero's right-hand composition: the national team photo held in a frame
- * that reads as a plate in a journal, with a floating "selection funnel"
- * annotation. Real data, arranged as a graphic.
- */
 function HeroFigure() {
   const { t } = useTranslation();
 
@@ -297,8 +287,6 @@ function HeroFigure() {
       sx={{
         position: "relative",
         pb: { xs: 0, md: 6 },
-        // Let the plate run a little past its column toward the page edge so
-        // the photograph reads at full size without squeezing the headline.
         marginInlineEnd: { lg: -3 },
       }}
     >
@@ -312,8 +300,6 @@ function HeroFigure() {
           backgroundColor: palette.surfaceSunken,
         }}
       >
-        {/* No forced aspect ratio and no crop — the frame takes the shape of
-            the photograph, so the whole team is in view. */}
         <Box
           component="img"
           src="/imoImgs/imo-01.jpeg"
@@ -334,7 +320,6 @@ function HeroFigure() {
             insetInlineStart: 20,
             bottom: 18,
             color: "#fff",
-            // Leaves the floating stats card its corner where it is shown.
             maxWidth: { xs: "calc(100% - 40px)", lg: "56%" },
           }}
         >
@@ -349,15 +334,10 @@ function HeroFigure() {
         </Box>
       </Box>
 
-      {/* Selection funnel, floating over the plate. Hidden on small screens,
-          where it would hang past the container edge. */}
       <Box
         sx={{
-          // From lg only: below that the plate is too narrow to carry both the
-          // caption and a 216px card without them crowding each other.
           display: { xs: "none", lg: "block" },
           position: "absolute",
-          // Hangs off the bottom-end corner; the caption keeps the start side.
           insetInlineEnd: -20,
           bottom: 0,
           width: 216,

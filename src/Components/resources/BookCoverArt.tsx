@@ -11,18 +11,6 @@ interface BookCoverArtProps {
 const W = 1.7; // primary stroke
 const H = 1.2; // secondary stroke
 
-/**
- * Cover artwork for the library.
- *
- * The project ships no cover scans, so each volume gets a drawn figure that
- * matches what is actually inside it: a compass-and-straightedge construction
- * for the geometry book, a plotted curve for algebra, an integer lattice for
- * number theory, a complete graph for combinatorics, meridians for the
- * international collections, ruled sheets for the lecture notes.
- *
- * Everything strokes in `currentColor`, so a single component serves the dark
- * plates, the light plates and the small list thumbnails.
- */
 export function BookCoverArt({ motif, sx, className }: BookCoverArtProps) {
   return (
     <Box
@@ -40,7 +28,6 @@ export function BookCoverArt({ motif, sx, className }: BookCoverArtProps) {
   );
 }
 
-/** Circumscribed circle, inscribed triangle, an altitude and a right-angle mark. */
 const Geometry = (
   <>
     <circle cx="50" cy="50" r="34" opacity="0.5" />
@@ -53,7 +40,6 @@ const Geometry = (
   </>
 );
 
-/** Axes with a plotted parabola and its vertex. */
 const Algebra = (
   <>
     <path d="M14 78 H86" opacity="0.45" />
@@ -65,7 +51,6 @@ const Algebra = (
   </>
 );
 
-/** Integer lattice with a highlighted subset and a modular ring. */
 const NumberTheory = (() => {
   const coords = [24, 37, 50, 63, 76];
   const marked = new Set(["37-24", "50-37", "24-50", "63-63", "76-37", "37-76"]);
@@ -94,7 +79,6 @@ const NumberTheory = (() => {
   );
 })();
 
-/** Complete graph on five vertices. */
 const Combinatorics = (() => {
   const pts = [
     [50, 16],
@@ -121,7 +105,6 @@ const Combinatorics = (() => {
   );
 })();
 
-/** Nested rotated squares in a circle — the all-round problem-solving figure. */
 const General = (
   <>
     <circle cx="50" cy="50" r="35" opacity="0.45" />
@@ -132,7 +115,6 @@ const General = (
   </>
 );
 
-/** Ruled sheets with a worked figure — the lecture notes. */
 const Notes = (
   <>
     <path d="M26 20 H74 V80 H26 Z" opacity="0.7" />
@@ -143,7 +125,6 @@ const Notes = (
   </>
 );
 
-/** Numbered problem set with an unfinished last line. */
 const Problems = (
   <>
     <path d="M22 28 h8 M22 46 h8 M22 64 h8" opacity="0.8" />
@@ -155,7 +136,6 @@ const Problems = (
   </>
 );
 
-/** Meridians — the international collections. */
 const World = (
   <>
     <circle cx="50" cy="50" r="34" />

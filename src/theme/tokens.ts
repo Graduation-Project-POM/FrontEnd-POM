@@ -1,17 +1,3 @@
-/**
- * Design tokens for the Palestine Math Olympiad platform.
- *
- * One source of truth for colour, type, space, radius, elevation and motion.
- * Components never invent their own hex values — they read from here (directly
- * or through the MUI theme built on top of these tokens in `theme.ts`).
- *
- * The brand identity (deep maroon) is preserved, but it is now expressed as a
- * proper ramp so it can carry hierarchy instead of being repeated flat
- * everywhere.
- */
-
-/* ------------------------------------------------------------------ colour */
-
 export const maroon = {
   50: "#FBF4F7",
   100: "#F5E3EA",
@@ -25,7 +11,6 @@ export const maroon = {
   900: "#2C0A16",
 } as const;
 
-/** Warm neutral ramp — paper, not grey plastic. */
 export const ink = {
   0: "#FFFFFF",
   25: "#FCFBFB",
@@ -42,7 +27,6 @@ export const ink = {
   950: "#0C070A",
 } as const;
 
-/** Medal / highlight accent. Used for achievements, featured flags, numerals. */
 export const gold = {
   100: "#FBF0D9",
   200: "#F4DCA8",
@@ -52,7 +36,6 @@ export const gold = {
   600: "#8C611C",
 } as const;
 
-/** Cool tertiary — data, tags, "informational" states. Used sparingly. */
 export const teal = {
   100: "#E0F0EE",
   200: "#B4DAD5",
@@ -79,43 +62,31 @@ export const palette = {
   teal,
   status,
 
-  /** Semantic surfaces. */
   canvas: ink[25], // page background
   surface: ink[0], // raised / content background
   surfaceMuted: ink[50],
   surfaceSunken: ink[100],
 
-  /** Dark ("night") surfaces for full-bleed editorial sections. */
   night: "#150F12",
   nightRaised: "#221A1E",
   nightLine: "rgba(255,255,255,0.10)",
 
-  /** Text. */
   text: ink[900],
   textSecondary: ink[600],
   textMuted: ink[500],
   textOnDark: "#F6F1F3",
   textOnDarkMuted: "rgba(246,241,243,0.66)",
 
-  /** Hairlines. */
   line: "rgba(21,15,18,0.10)",
   lineStrong: "rgba(21,15,18,0.18)",
 } as const;
 
-/* -------------------------------------------------------------- typography */
-
 export const fonts = {
-  /**
-   * Display: Lenos carries Latin. Readex Pro is listed right after so Arabic
-   * glyphs (which Lenos lacks) fall through automatically per-glyph.
-   */
   display: '"Lenos", "Readex Pro", "Segoe UI", sans-serif',
   body: '"Readex Pro", "Lenos", "Segoe UI", sans-serif',
-  /** Technical voice: eyebrows, counters, stat labels, tabular numerals. */
   mono: '"IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
 } as const;
 
-/** Fluid type ramp. `clamp()` keeps headlines proportional without breakpoints. */
 export const type = {
   display: "clamp(2.75rem, 1.6rem + 5.2vw, 6rem)",
   h1: "clamp(2.25rem, 1.4rem + 3.6vw, 4rem)",
@@ -131,8 +102,6 @@ export const type = {
   eyebrow: "0.6875rem",
 } as const;
 
-/* ------------------------------------------------- space / radius / shadow */
-
 export const radius = {
   xs: 4,
   sm: 8,
@@ -142,7 +111,6 @@ export const radius = {
   pill: 999,
 } as const;
 
-/** Soft, low-contrast elevation. Depth comes from layout, not drop shadows. */
 export const shadow = {
   none: "none",
   xs: "0 1px 2px rgba(21,15,18,0.05)",
@@ -152,7 +120,6 @@ export const shadow = {
   glow: `0 24px 70px -30px ${maroon[600]}80`,
 } as const;
 
-/** Section rhythm — the single knob for vertical page cadence. */
 export const rhythm = {
   sectionY: { xs: 8, md: 14, lg: 18 },
   sectionYTight: { xs: 6, md: 10 },
@@ -161,13 +128,7 @@ export const rhythm = {
   proseWidth: 68, // ch
 } as const;
 
-/* ------------------------------------------------------------------ motion */
-
 export const motion = {
-  /**
-   * Entrance curve — a long, expressive tail. Right for content arriving on
-   * screen, wrong for pointer feedback: at hover durations it reads as lag.
-   */
   ease: "cubic-bezier(0.16, 1, 0.3, 1)",
   easeInOut: "cubic-bezier(0.65, 0, 0.35, 1)",
   fast: "180ms",
@@ -175,17 +136,9 @@ export const motion = {
   slow: "620ms",
   slower: "900ms",
 
-  /**
-   * Pointer feedback. Hover states must resolve while the cursor is still
-   * there, so they get their own short durations and a curve that commits
-   * immediately and settles without overshoot.
-   */
   easeSnap: "cubic-bezier(0.25, 0.8, 0.25, 1)",
-  /** Colour, border, opacity — should feel instant. */
   snap: "140ms",
-  /** Transform and shadow — enough to read as motion, short enough to track. */
   snapSlow: "220ms",
-  /** Image scale inside a frame, where a little more travel is wanted. */
   snapMedia: "340ms",
 } as const;
 
@@ -196,7 +149,6 @@ export const zIndex = {
   lightbox: 1400,
 } as const;
 
-/** Convenience: hex + alpha (0–1) → rgba string. */
 export const alpha = (hex: string, a: number) => {
   const h = hex.replace("#", "");
   const full = h.length === 3 ? h.split("").map((c) => c + c).join("") : h;

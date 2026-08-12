@@ -4,11 +4,6 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import { palette } from "./theme/tokens";
 
-/**
- * Routes are split so the first paint only ships the shell plus the landing
- * page — the camp roster, the library catalogue and the news galleries load on
- * demand.
- */
 const Home = lazy(() => import("./pages/home"));
 const Resources = lazy(() => import("./pages/resources"));
 const Worksheets = lazy(() => import("./pages/worksheets"));
@@ -40,7 +35,6 @@ function App() {
           <Route path="/resources" element={<Resources />} />
           <Route path="/worksheets/all" element={<Worksheets />} />
           <Route path="/trainingPath" element={<TrainingCamp />} />
-          {/* The camp used to live at /winterPath — keep old links working. */}
           <Route path="/winterPath" element={<Navigate to="/trainingPath" replace />} />
           <Route path="/Developers" element={<Developers />} />
           <Route path="/news" element={<News />} />

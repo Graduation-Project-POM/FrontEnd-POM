@@ -4,11 +4,6 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, radius, motion } from "../../theme/tokens";
 import { Section, Reveal, Prose } from "../ui";
 
-/**
- * Editorial split: a sticky title column against a measured text column, with
- * the illustration escaping its frame. No card, no shadow box — the structure
- * itself carries the hierarchy.
- */
 export function Mission() {
   const { t } = useTranslation();
 
@@ -22,7 +17,6 @@ export function Mission() {
           alignItems: "start",
         }}
       >
-        {/* Title column — sticks while the copy scrolls past it */}
         <Box sx={{ position: { md: "sticky" }, top: { md: "calc(var(--pmo-header-h) + 48px)" } }}>
           <Reveal variant="up">
             <Typography variant="h2" component="h2" sx={{ mb: 3 }}>
@@ -72,7 +66,6 @@ export function Mission() {
           </Reveal>
         </Box>
 
-        {/* Copy column */}
         <Box>
           <Prose text={t("about.desc")} dropCap size="lg" />
 

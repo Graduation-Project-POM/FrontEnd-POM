@@ -7,12 +7,6 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, motion } from "../../theme/tokens";
 import { Reveal } from "../ui";
 
-/**
- * Full-bleed camp opener. The header runs transparently over it, the photo is
- * treated (desaturated + brand-tinted) so white type stays legible, and the
- * practical facts sit in a hairline band across the bottom instead of a
- * floating white "search box" that looked like a hotel booking widget.
- */
 export function CampHero() {
   const { t } = useTranslation();
 
@@ -51,7 +45,6 @@ export function CampHero() {
         color: "#fff",
         backgroundColor: palette.night,
         overflow: "hidden",
-        // The header is transparent over this hero, so pull the content up.
         mt: "calc(var(--pmo-header-h) * -1)",
         pt: "var(--pmo-header-h)",
       }}
@@ -64,15 +57,9 @@ export function CampHero() {
           backgroundImage: 'url("/all.jpg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
-          // Photograph shown essentially as shot — the previous desaturation
-          // plus a full-frame scrim had buried it.
           filter: "saturate(1) contrast(1.02)",
         }}
       />
-      {/* The overlay stays — it is just far lighter than it was. A flat tint
-          keeps the photograph reading as one treated image, then a slim band
-          under the transparent header and a gradient behind the headline give
-          the type the contrast it needs. */}
       <Box
         aria-hidden
         sx={{
@@ -146,7 +133,6 @@ export function CampHero() {
         </Reveal>
       </Container>
 
-      {/* Facts band */}
       <Box
         sx={{
           position: "relative",

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 interface Stage {
   key: string;
   image: string;
-  /** Where the stage sits in the season — pure editorial metadata. */
   marker: string;
 }
 
@@ -22,16 +21,6 @@ const STAGES: Stage[] = [
   { key: "finish", image: "/program5.png", marker: "stage.finish" },
 ];
 
-/**
- * The competition season as a timeline the visitor can walk.
- *
- * The six programmes used to be six identical cards in a grid, which said
- * nothing about the fact that they happen *in order*. A track with nodes,
- * a filling progress line and one detail panel says it directly.
- *
- * Set on paper with a soft brand wash — separation comes from the tint, the
- * hairlines and the raised detail panel rather than from a dark backdrop.
- */
 export function Journey() {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
@@ -75,7 +64,6 @@ export function Journey() {
           }
         />
 
-        {/* ------------------------------------------------------------- track */}
         <Box
           sx={{
             position: "relative",
@@ -89,13 +77,11 @@ export function Journey() {
           }}
         >
           <Box sx={{ position: "relative", minWidth: { xs: 660, md: "100%" }, pt: 4 }}>
-            {/* Base line + progress */}
             <Box
               sx={{
                 position: "absolute",
                 insetInline: 0,
                 top: 4 + 7,
-                // "1px", not 1 — MUI's sizing system reads a bare 1 as 100%.
                 height: "1px",
                 backgroundColor: palette.lineStrong,
               }}
@@ -186,7 +172,6 @@ export function Journey() {
           </Box>
         </Box>
 
-        {/* ------------------------------------------------------ detail panel */}
         <Box
           sx={{
             mt: { xs: 4, md: 6 },

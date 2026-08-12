@@ -8,10 +8,6 @@ import { ActionLink, MathBackdrop, Reveal, Section } from "../Components/ui";
 import { palette } from "../theme/tokens";
 import { WORKSHEETS, DIRECTORATES } from "../data/resources";
 
-/**
- * Dedicated route for the full exam archive. It reuses the same filtered list
- * component as the library section, so the two can never drift apart.
- */
 export default function WorksheetsPage() {
   const { t } = useTranslation();
 

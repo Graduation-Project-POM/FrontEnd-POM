@@ -9,11 +9,6 @@ const IMAGES: MediaItem[] = [
   94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108,
 ].map((n) => ({ type: "image" as const, src: `/${n}.png` }));
 
-/**
- * Gaza keeps a register of its own — but through warmth and typography rather
- * than a dark backdrop: a tinted wash, a raised quotation panel and generous
- * space around the headline.
- */
 export function GazaSection() {
   const { t } = useTranslation();
 
@@ -72,7 +67,6 @@ export function GazaSection() {
                 boxShadow: "0 30px 60px -48px rgba(21,15,18,0.4)",
               }}
             >
-              {/* Opening quotation mark as a graphic element */}
               <Typography
                 aria-hidden
                 sx={{

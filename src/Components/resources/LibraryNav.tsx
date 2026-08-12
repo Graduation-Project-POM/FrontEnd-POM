@@ -5,13 +5,6 @@ import { useTranslation } from "react-i18next";
 import { palette, motion, radius, zIndex } from "../../theme/tokens";
 import { COLLECTIONS, COUNTS } from "../../data/resources";
 
-/**
- * Sticky collection index with scroll-spy.
- *
- * It sits directly under the header and tracks which collection is in view, so
- * the visitor always knows where they are in a long library page — and can
- * jump between collections without scrolling back to the top.
- */
 export function LibraryNav() {
   const { t } = useTranslation();
   const [active, setActive] = useState<string>(COLLECTIONS[0]);

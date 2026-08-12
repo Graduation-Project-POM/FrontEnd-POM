@@ -11,17 +11,6 @@ interface Member {
   image: string;
 }
 
-/**
- * The eleven members of the national team.
- *
- * Every member gets the identical card: same size, same frame, same colours,
- * same interactions. Rank is carried as a small neutral counter — it orders the
- * list without ranking the people, so no one on this page is styled as more
- * important than anyone else.
- *
- * (The original data hard-coded a place label per row and had duplicates —
- * "seventh" twice, "eighth" twice. Rank is derived from position instead.)
- */
 const TEAM: Member[] = [
   { rank: 1, key: "first", image: "/P1.png" },
   { rank: 2, key: "second", image: "/P2.png" },
@@ -76,7 +65,6 @@ export function NationalTeam() {
   );
 }
 
-/** One card, used for every member without exception. */
 function MemberCard({ member }: { member: Member }) {
   const { t } = useTranslation();
 
@@ -119,7 +107,6 @@ function MemberCard({ member }: { member: Member }) {
           )} 100%)`,
         }}
       >
-        {/* Quiet concentric marks — texture, not decoration on a person */}
         <Box
           aria-hidden
           sx={{

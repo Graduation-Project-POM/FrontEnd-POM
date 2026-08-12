@@ -23,8 +23,12 @@ const PARTNER_LINKS = [
   { href: "https://www.palast.ps/ar", label: "partners.partner3" },
 ];
 
-const SOCIALS = [
-  { icon: <FacebookIcon fontSize="small" />, label: "Facebook" },
+const SOCIALS: { icon: React.ReactNode; label: string; href?: string }[] = [
+  {
+    icon: <FacebookIcon fontSize="small" />,
+    label: "Facebook",
+    href: "https://www.facebook.com/share/196A2fHVhS/?mibextid=wwXIfr",
+  },
   { icon: <InstagramIcon fontSize="small" />, label: "Instagram" },
   { icon: <YouTubeIcon fontSize="small" />, label: "YouTube" },
   { icon: <LinkedInIcon fontSize="small" />, label: "LinkedIn" },
@@ -55,7 +59,6 @@ export function Footer() {
         overflow: "hidden",
       }}
     >
-      {/* Ambient brand glow */}
       <Box
         aria-hidden
         sx={{
@@ -81,7 +84,6 @@ export function Footer() {
             gap: { xs: 5, md: 6 },
           }}
         >
-          {/* Brand */}
           <Box>
             <Box
               component="img"
@@ -120,6 +122,14 @@ export function Footer() {
                 <IconButton
                   key={s.label}
                   aria-label={s.label}
+                  {...(s.href
+                    ? {
+                        component: "a" as const,
+                        href: s.href,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                      }
+                    : {})}
                   sx={{
                     color: palette.textOnDarkMuted,
                     border: `1px solid ${palette.nightLine}`,
@@ -139,7 +149,6 @@ export function Footer() {
             </Box>
           </Box>
 
-          {/* Explore */}
           <FooterColumn title={t("footer.explore.title")}>
             {NAV_ITEMS.map((item) => (
               <Box key={item.to} component={Link} to={item.to} sx={linkSx}>
@@ -148,7 +157,6 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-          {/* Resources */}
           <FooterColumn title={t("footer.resourcesTitle")}>
             {RESOURCE_LINKS.map((item) => (
               <Box key={item.to} component={Link} to={item.to} sx={linkSx}>
@@ -157,7 +165,6 @@ export function Footer() {
             ))}
           </FooterColumn>
 
-          {/* Partners + contact */}
           <FooterColumn title={t("partners.title")}>
             {PARTNER_LINKS.map((item) => (
               <Box
@@ -183,7 +190,6 @@ export function Footer() {
         </Box>
       </Container>
 
-      {/* Oversized wordmark — the sign-off */}
       <Box
         aria-hidden
         sx={{

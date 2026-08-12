@@ -5,14 +5,11 @@ import { palette, fonts, alpha } from "../../theme/tokens";
 
 interface MathBackdropProps {
   tone?: "light" | "dark";
-  /** `hero` adds the construction drawing and drifting glyphs. */
   variant?: "hero" | "quiet";
-  /** Pointer parallax. Disabled automatically on coarse pointers. */
   parallax?: boolean;
   sx?: SxProps<Theme>;
 }
 
-/** Glyphs from the four Olympiad domains: algebra, geometry, number theory, combinatorics. */
 const GLYPHS = [
   { char: "∑", top: "12%", left: "8%", size: 74, delay: 0, depth: 26 },
   { char: "π", top: "68%", left: "5%", size: 58, delay: 1.4, depth: 18 },
@@ -24,14 +21,6 @@ const GLYPHS = [
   { char: "≡", top: "58%", left: "16%", size: 40, delay: 0.5, depth: 12 },
 ];
 
-/**
- * The platform's visual signature: an abstract "working surface" — squared
- * paper, a straight-edge-and-compass construction mid-draw, and drifting
- * notation.
- *
- * It gives the product a mathematical identity that generic gradients and
- * stock photography can't, and it costs one inline SVG.
- */
 export function MathBackdrop({
   tone = "light",
   variant = "hero",
@@ -81,7 +70,6 @@ export function MathBackdrop({
         ...sx,
       }}
     >
-      {/* Ambient light */}
       <Box
         sx={{
           position: "absolute",
@@ -96,7 +84,6 @@ export function MathBackdrop({
         }}
       />
 
-      {/* Squared paper */}
       <Box
         component="svg"
         aria-hidden
@@ -125,17 +112,16 @@ export function MathBackdrop({
 
       {variant === "hero" && (
         <>
-          {/* Straight-edge-and-compass construction, drawn on load */}
           <Box
             component="svg"
             viewBox="0 0 400 400"
             aria-hidden
             sx={{
               position: "absolute",
-              insetInlineEnd: { xs: "-22%", md: "3%" },
-              top: { xs: "auto", md: "8%" },
-              bottom: { xs: "-8%", md: "auto" },
-              width: { xs: 300, sm: 380, md: 460, lg: 520 },
+              insetInlineStart: { xs: -90, md: -268, lg: -230 },
+              top: { xs: "auto", md: "auto" },
+              bottom: { xs: "-8%", md: "-13%" },
+              width: { xs: 300, sm: 380, md: 420, lg: 470 },
               height: "auto",
               opacity: { xs: 0.45, md: 0.9 },
               transform: `translate3d(${pointer.x * 22}px, ${pointer.y * 22}px, 0)`,
@@ -185,7 +171,6 @@ export function MathBackdrop({
             />
           </Box>
 
-          {/* Drifting notation */}
           {GLYPHS.map((g) => (
             <Box
               key={g.char + g.top}

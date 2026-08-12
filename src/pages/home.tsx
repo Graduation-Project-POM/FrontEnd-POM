@@ -9,12 +9,6 @@ import GazaSection from "../Components/home/GazaSection";
 import ResourceIndex from "../Components/home/ResourceIndex";
 import ClosingCTA from "../Components/home/ClosingCTA";
 
-/**
- * Page rhythm alternates paper / muted only — hierarchy comes from spacing,
- * type scale, hairlines, brand-tinted washes and raised panels rather than from
- * dark backdrops. Partners sits directly after the vision, as it did
- * originally, so the institutional backing is stated early.
- */
 export default function Home() {
   return (
     <PageShell>

@@ -6,13 +6,6 @@ import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
 import { AGENDA, DAYS, type Day } from "../../data/camp";
 
-/**
- * Six days of schedule as a timeline rather than a three-column table.
- *
- * The rail makes the shape of a day visible at a glance — where the sessions
- * cluster, where the breaks fall — and breaks are visually demoted so the
- * training blocks read first.
- */
 export function CampAgenda() {
   const { t } = useTranslation();
   const [day, setDay] = useState<Day>("day1");
@@ -30,7 +23,6 @@ export function CampAgenda() {
         lede={t("agenda.description")}
       />
 
-      {/* Day selector */}
       <Box
         sx={{
           display: "flex",
@@ -99,7 +91,6 @@ export function CampAgenda() {
         {sessionCount} {t("camp.sessionsLabel")} · {items.length} {t("camp.blocksLabel")}
       </Typography>
 
-      {/* Timeline */}
       <Box key={day} sx={{ position: "relative" }}>
         {items.map((item, i) => {
           const isBreak = item.type === "break";
@@ -126,14 +117,12 @@ export function CampAgenda() {
                   {item.time}
                 </Typography>
 
-                {/* Rail */}
                 <Box sx={{ position: "relative", height: "100%", display: "flex", justifyContent: "center" }}>
                   <Box
                     sx={{
                       position: "absolute",
                       top: 0,
                       bottom: 0,
-                      // "1px", not 1 — MUI's sizing system reads a bare 1 as 100%.
                       width: "1px",
                       backgroundColor: palette.lineStrong,
                       ...(i === items.length - 1 && { bottom: "auto", height: 26 }),

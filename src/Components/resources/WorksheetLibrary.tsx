@@ -11,17 +11,9 @@ type KindFilter = "all" | "paper" | "answers";
 
 interface WorksheetLibraryProps {
   id?: string;
-  /** `page` drops the outer Section chrome so a dedicated route can own it. */
   variant?: "section" | "page";
 }
 
-/**
- * Eighteen exam papers from eleven directorates.
- *
- * As cards this was an undifferentiated 18-tile grid in eleven random colours.
- * As a filtered, grouped list it becomes usable: pick your directorate, pick
- * papers or answer keys, scan.
- */
 export function WorksheetLibrary({
   id = "worksheets",
   variant = "section",

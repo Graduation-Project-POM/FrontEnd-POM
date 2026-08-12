@@ -11,7 +11,6 @@ interface ActionLinkProps {
   to?: string;
   onClick?: () => void;
   component?: ElementType;
-  /** `external` swaps the arrow for a north-east glyph. */
   external?: boolean;
   tone?: "brand" | "dark" | "light";
   size?: "sm" | "md";
@@ -20,11 +19,6 @@ interface ActionLinkProps {
   rel?: string;
 }
 
-/**
- * The product's one "go somewhere" affordance: a text link with a rule that
- * wipes in and an arrow that steps forward. Used instead of scattering
- * secondary buttons everywhere.
- */
 export function ActionLink({
   children,
   component,
@@ -79,7 +73,6 @@ export function ActionLink({
             ? "translate(3px, -3px)"
             : "translateX(var(--pmo-arrow-shift, 5px))",
         },
-        // Mirror the arrow, and its travel, in RTL.
         '[dir="rtl"] & .action-arrow': external ? {} : { transform: "scaleX(-1)" },
         '[dir="rtl"] &:hover .action-arrow': external
           ? {}

@@ -7,10 +7,6 @@ import { CAMP_GALLERY } from "../../data/camp";
 
 const ITEMS: MediaItem[] = CAMP_GALLERY.map((src) => ({ type: "image", src }));
 
-/**
- * Camp memories. Set on paper with a soft brand wash so the photographs carry
- * the colour instead of a dark backdrop doing it for them.
- */
 export function CampGallery() {
   const { t } = useTranslation();
 

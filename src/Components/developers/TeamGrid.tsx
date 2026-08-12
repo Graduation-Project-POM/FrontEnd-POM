@@ -15,15 +15,6 @@ interface TeamMember {
   linkedin?: string;
 }
 
-/**
- * Credits page, restored to the layout it had before the redesign: one row of
- * identical cards covering the build team and both supervisors, portraits in
- * full colour inside a gradient ring.
- *
- * Kept verbatim from the original implementation — same order, same card
- * metrics, same hover. The only thing that changed around it is the shared
- * page shell (header and footer), which every route now uses.
- */
 const developersData: TeamMember[] = [
   {
     name: "developers.team.abdulrahman.name",
@@ -231,7 +222,6 @@ export function TeamGrid() {
 
   return (
     <>
-      {/* Page intro — kept from the redesign */}
       <Box
         component="section"
         sx={{

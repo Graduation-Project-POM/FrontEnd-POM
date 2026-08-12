@@ -13,20 +13,10 @@ interface DocumentSectionProps {
   lede?: string;
   items: ResourceItem[];
   tone?: SectionTone;
-  /** Extra label rendered on the start of each row (topic, source, format…). */
   tagFor?: (item: ResourceItem) => string | undefined;
-  /** Right-aligned metadata line. */
   metaFor?: (item: ResourceItem) => string | undefined;
 }
 
-/**
- * A collection rendered as a document list: rows, one line of metadata, an
- * arrow. Dense enough to scan twenty items, quiet enough that the page doesn't
- * shout.
- *
- * Hover moves an inner wrapper with `transform` instead of animating the row's
- * padding — the old version reflowed the whole list on every pointer enter.
- */
 export function DocumentSection({
   id,
   title,
@@ -153,8 +143,6 @@ export function DocumentSection({
                   {meta}
                 </Typography>
 
-                {/* The wrapper owns the motion; the glyph owns the RTL mirror,
-                    so the two never fight over `transform`. */}
                 <Box
                   className="doc-arrow"
                   sx={{

@@ -6,11 +6,6 @@ import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
 import { EXTERNALS } from "../../data/resources";
 
-/**
- * External competitions and references. Two entries, so they get room: a wide
- * image plate and a text column that alternate sides — an editorial spread
- * rather than two lonely cards in a two-column grid.
- */
 export function ExternalLibrary() {
   const { t } = useTranslation();
 
@@ -146,7 +141,6 @@ export function ExternalLibrary() {
                   }}
                 >
                   {t("resources.openDocument")}
-                  {/* Transform, not `gap` — animating gap relayouts the row. */}
                   <NorthEastIcon
                     className="ext-arrow"
                     sx={{

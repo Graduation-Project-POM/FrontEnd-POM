@@ -18,13 +18,6 @@ interface StudentRecord {
   school: string;
 }
 
-/**
- * The camp roster, back in its original card form: a portrait lifted out of
- * the top of the card, the school on a maroon badge and the directorate on a
- * pin. The search field and directorate filters added during the redesign stay
- * — a 49-name roster needs them — and the filter strip is now scrollable in
- * one row instead of silently cutting off past the fold.
- */
 export function CampRoster() {
   const { t } = useTranslation();
   const [query, setQuery] = useState("");
@@ -114,7 +107,6 @@ export function CampRoster() {
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
             columnGap: { xs: 2.5, md: 3 },
-            // Row gap carries the portrait that lifts out of each card.
             rowGap: { xs: 8, md: 9 },
             mt: { xs: 9, md: 10 },
             maxWidth: 1400,
@@ -163,7 +155,6 @@ function StudentCard({ student }: { student: StudentRecord }) {
         "&:hover .sc-name": { color: palette.maroon[700] },
       }}
     >
-      {/* Portrait, lifted out of the top of the card */}
       <Box
         className="sc-photo"
         sx={{

@@ -15,7 +15,6 @@ const FACTS = [
   { labelKey: "news.facts.attendeesLabel", valueKey: "news.facts.attendeesValue" },
 ];
 
-/** Second story: standard article treatment on paper. */
 export function StorySupervisors() {
   const { t } = useTranslation();
 

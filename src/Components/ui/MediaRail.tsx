@@ -13,7 +13,6 @@ interface MediaRailProps {
   items: MediaItem[];
   size?: RailSize;
   tone?: "light" | "dark";
-  /** Optional label rendered above the scroll progress bar. */
   label?: string;
 }
 
@@ -23,13 +22,6 @@ const dims: Record<RailSize, { w: Record<string, number>; h: Record<string, numb
   lg: { w: { xs: 280, sm: 400, md: 520 }, h: { xs: 360, sm: 480, md: 620 } },
 };
 
-/**
- * Horizontal media rail: snap scrolling, edge fades, keyboard-reachable
- * controls and a scroll-progress bar that doubles as a position indicator.
- *
- * Deliberately *not* a grid of cards — a rail keeps a gallery of 60+ photos
- * from swallowing the page, and reads as a designed strip rather than a dump.
- */
 export function MediaRail({ items, size = "md", tone = "light", label }: MediaRailProps) {
   const { isRTL } = useDirection();
   const railRef = useRef<HTMLDivElement | null>(null);
@@ -45,7 +37,6 @@ export function MediaRail({ items, size = "md", tone = "light", label }: MediaRa
       setProgress(1);
       return;
     }
-    // scrollLeft is negative in RTL on modern engines; abs() normalises it.
     setProgress(Math.min(1, Math.abs(el.scrollLeft) / max));
   }, []);
 
@@ -100,7 +91,6 @@ export function MediaRail({ items, size = "md", tone = "light", label }: MediaRa
           pb: 1,
           "&::-webkit-scrollbar": { display: "none" },
           scrollbarWidth: "none",
-          // Fade the strip into the section edges instead of cutting it off.
           maskImage: {
             xs: "none",
             md: "linear-gradient(to right, transparent 0, #000 5%, #000 95%, transparent 100%)",
@@ -211,7 +201,6 @@ export function MediaRail({ items, size = "md", tone = "light", label }: MediaRa
         ))}
       </Box>
 
-      {/* Controls + progress */}
       <Box
         sx={{
           display: "flex",

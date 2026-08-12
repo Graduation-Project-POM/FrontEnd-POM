@@ -13,13 +13,6 @@ const GROUP_LABEL: Record<PeopleGroup, string> = {
   supervisors: "sections.supervisors",
 };
 
-/**
- * The people behind the camp, as a roster.
- *
- * Sixteen identical bordered cards across four repeated headings became one
- * filtered list: portrait, name, role, one line of biography, separated by
- * hairlines. Reads like a programme, scans like a directory.
- */
 export function CampPeople() {
   const { t } = useTranslation();
   const [group, setGroup] = useState<PeopleGroup>("speakers");
@@ -79,8 +72,6 @@ export function CampPeople() {
                 className="person-photo"
                 sx={{
                   flexShrink: 0,
-                  // Portraits were too small to recognise anyone; roughly
-                  // 1.5× larger, with the row padding opened up to match.
                   width: { xs: 108, sm: 124, md: 140 },
                   height: { xs: 108, sm: 124, md: 140 },
                   borderRadius: "50%",

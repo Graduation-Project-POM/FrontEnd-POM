@@ -5,28 +5,17 @@ import { palette, motion } from "../../theme/tokens";
 import Reveal from "./Reveal";
 
 interface SectionHeadingProps {
-  /** Small mono label above the title — the section's "index entry". */
   eyebrow?: string;
   title: ReactNode;
-  /** Supporting sentence. Intentionally short. */
   lede?: ReactNode;
-  /** Right-hand slot: a link, a filter, a counter. */
   action?: ReactNode;
   align?: "start" | "center";
   tone?: "light" | "dark";
-  /** Sequence number rendered as a large ghost numeral. */
   index?: string;
   sx?: SxProps<Theme>;
   titleId?: string;
 }
 
-/**
- * The one heading pattern used across the whole product.
- *
- * It replaces the "centered title + 200×4px maroon bar" block that was
- * copy-pasted into eight different components with slightly different values.
- * Hierarchy now comes from type scale and a mono eyebrow, not from a divider.
- */
 export function SectionHeading({
   eyebrow,
   title,
@@ -87,7 +76,6 @@ export function SectionHeading({
                 <Box
                   sx={{
                     width: 26,
-                    // "1px", not 1 — MUI's sizing system reads a bare 1 as 100%.
                     height: "1px",
                     backgroundColor: dark
                       ? palette.nightLine

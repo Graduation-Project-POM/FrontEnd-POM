@@ -1,11 +1,3 @@
-/**
- * Winter Training Camp 2026 — Al-Istiqlal University, Jericho.
- *
- * Schedule, people and roster used to live inside the components that rendered
- * them. Pulling the data out means the roster can be searched, the schedule can
- * be summarised, and the same records can feed more than one view.
- */
-
 export type Day = "day1" | "day2" | "day3" | "day4" | "day5" | "day6";
 
 export interface AgendaItem {
@@ -94,8 +86,6 @@ export const AGENDA: Record<Day, AgendaItem[]> = {
 
 export const DAYS = Object.keys(AGENDA) as Day[];
 
-/* ------------------------------------------------------------------ people */
-
 export type PeopleGroup = "partners" | "speakers" | "trainers" | "supervisors";
 
 export interface Person {
@@ -134,21 +124,10 @@ export const PEOPLE: Record<PeopleGroup, Person[]> = {
 
 export const PEOPLE_GROUPS = Object.keys(PEOPLE) as PeopleGroup[];
 
-/* ------------------------------------------------------------------ roster */
-
 export interface CampStudent {
   id: number;
   image: string;
-  /** Index into the `students.studentN.*` translation block. */
   key: string;
-  /**
-   * CSS `object-position` for the square portrait crop.
-   *
-   * Most of these are phone photos with the head near the top, so the default
-   * of `top center` frames them well. A few are shot further back (or are
-   * letterboxed), which puts the face below the crop — those get an explicit
-   * focal point here rather than a magic number in the component.
-   */
   focus?: string;
 }
 
@@ -203,8 +182,6 @@ export const STUDENTS: CampStudent[] = [
   { id: 48, image: "/s20.jpg", key: "student47" },
   { id: 49, image: "/s30.jpg", key: "student48" },
 ];
-
-/* ----------------------------------------------------------------- gallery */
 
 export const CAMP_GALLERY: string[] = [
   "/1.png",

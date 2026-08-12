@@ -1,8 +1,6 @@
 import { createTheme } from "@mui/material/styles";
 import { palette, fonts, type, radius, shadow, motion, rhythm } from "./tokens";
 
-/* ---------------------------------------------- custom variant type support */
-
 declare module "@mui/material/styles" {
   interface TypographyVariants {
     display: React.CSSProperties;
@@ -26,8 +24,6 @@ declare module "@mui/material/Typography" {
     mono: true;
   }
 }
-
-/* ----------------------------------------------------------------- theme */
 
 export const theme = createTheme({
   breakpoints: {

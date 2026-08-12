@@ -7,14 +7,6 @@ import { palette, fonts, motion, radius, alpha } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
 import { PLAYLISTS } from "../../data/resources";
 
-/**
- * Training video collections.
- *
- * One featured playlist gets a full spread with a drawn "stack" of episodes;
- * the others sit in a compact table with their real length and language, so a
- * student can judge the commitment before clicking. Set on paper like every
- * other collection — the section used to be the one dark block on the page.
- */
 export function VideoLibrary() {
   const { t } = useTranslation();
   const [featured, ...rest] = PLAYLISTS;
@@ -30,7 +22,6 @@ export function VideoLibrary() {
         lede={t("playlist.exploreDesc")}
       />
 
-      {/* ------------------------------------------------------- featured */}
       <Reveal variant="up">
         <Box
           component="a"
@@ -115,7 +106,6 @@ export function VideoLibrary() {
             </Box>
           </Box>
 
-          {/* Drawn episode stack */}
           <Box sx={{ display: "flex", flexDirection: "column", gap: 1.25 }}>
             {Array.from({ length: 5 }).map((_, i) => (
               <Box
@@ -175,7 +165,6 @@ export function VideoLibrary() {
         </Box>
       </Reveal>
 
-      {/* ---------------------------------------------------------- others */}
       <Box sx={{ mt: { xs: 5, md: 7 }, borderTop: `1px solid ${palette.lineStrong}` }}>
         {rest.map((pl, i) => (
           <Reveal key={pl.id} variant="up" delay={i * 80}>

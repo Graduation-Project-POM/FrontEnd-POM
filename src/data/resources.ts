@@ -1,15 +1,3 @@
-/**
- * The library catalogue.
- *
- * Every resource in the product is described here once, in one shape, so the
- * page can search across all of them, count them per collection and render each
- * collection with the presentation that suits it. Previously each resource type
- * lived inside its own component as a hard-coded array of cards, which made a
- * cross-cutting search impossible.
- *
- * Text lives as i18n keys — the catalogue stays bilingual by construction.
- */
-
 export type Collection =
   | "books"
   | "problems"
@@ -18,7 +6,6 @@ export type Collection =
   | "videos"
   | "external";
 
-/** Olympiad domains, used as filters and as tags on individual entries. */
 export type Topic =
   | "algebra"
   | "geometry"
@@ -28,7 +15,6 @@ export type Topic =
 
 export type Level = "starter" | "advanced";
 
-/** Which figure the drawn book cover shows — chosen to match what is inside it. */
 export type BookMotif =
   | "geometry"
   | "algebra"
@@ -45,18 +31,13 @@ export interface ResourceItem {
   titleKey: string;
   descKey?: string;
   href: string;
-  /** External links open in a new tab and get the ↗ affordance. */
   external?: boolean;
   topic?: Topic;
   level?: Level;
-  /** Free-form display metadata (page counts, durations, directorate…). */
   meta?: Record<string, string | number>;
   featured?: boolean;
-  /** Books only: the cover figure drawn for this volume. */
   motif?: BookMotif;
 }
-
-/* ------------------------------------------------------------------ books */
 
 export const BOOKS: ResourceItem[] = [
   {
@@ -185,8 +166,6 @@ export const BOOKS: ResourceItem[] = [
   },
 ];
 
-/* --------------------------------------------------------------- problems */
-
 export const PROBLEMS: ResourceItem[] = [
   {
     id: "problems-1959-2018",
@@ -224,11 +203,8 @@ export const PROBLEMS: ResourceItem[] = [
   },
 ];
 
-/* ------------------------------------------------------------- worksheets */
-
 export interface Worksheet extends ResourceItem {
   directorate: string;
-  /** Question paper or its answer key. */
   kind: "paper" | "answers";
 }
 
@@ -257,8 +233,6 @@ export const DIRECTORATES = Array.from(
   new Set(WORKSHEETS.map((w) => w.directorate))
 );
 
-/* -------------------------------------------------------------- materials */
-
 export const MATERIALS: ResourceItem[] = [
   { id: "mat-1", collection: "materials", titleKey: "winterCamp.pdfs.title1", href: "https://drive.google.com/file/d/1D6vwVIeRmdyOQwO9Em99fEmNIKOonihZ/view?usp=sharing", external: true, topic: "algebra" },
   { id: "mat-2", collection: "materials", titleKey: "winterCamp.pdfs.title2", href: "https://drive.google.com/file/d/18DaDTu9hH0JFqndEW7luUnhpTHt-XkqF/view?usp=sharing", external: true, topic: "algebra" },
@@ -269,8 +243,6 @@ export const MATERIALS: ResourceItem[] = [
   { id: "mat-7", collection: "materials", titleKey: "winterCamp.pdfs.title7", href: "https://drive.google.com/file/d/1-DKa9SZ2RJESWvxitHpEmfOea0TErKIP/view?usp=sharing", external: true, topic: "geometry" },
   { id: "mat-8", collection: "materials", titleKey: "winterCamp.pdfs.title8", href: "https://drive.google.com/file/d/1Dvrg_3_bXYUu7wEovu_fd89dVzBLQ-Mp/view?usp=sharing", external: true, topic: "geometry" },
 ];
-
-/* ----------------------------------------------------------------- videos */
 
 export interface Playlist extends ResourceItem {
   videos?: number;
@@ -326,8 +298,6 @@ export const PLAYLISTS: Playlist[] = [
   },
 ];
 
-/* --------------------------------------------------------------- external */
-
 export interface ExternalResource extends ResourceItem {
   image: string;
   extraKey?: string;
@@ -353,8 +323,6 @@ export const EXTERNALS: ExternalResource[] = [
   },
 ];
 
-/* ------------------------------------------------------------- catalogue */
-
 export const ALL_RESOURCES: ResourceItem[] = [
   ...BOOKS,
   ...PROBLEMS,
@@ -378,7 +346,6 @@ export const COUNTS: Record<Collection, number> = COLLECTIONS.reduce(
   {} as Record<Collection, number>
 );
 
-/** Case-insensitive match over the *translated* title and description. */
 export function searchResources(
   query: string,
   translate: (key: string) => string,

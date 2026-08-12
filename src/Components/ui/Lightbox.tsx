@@ -14,7 +14,6 @@ export interface MediaItem {
 
 interface LightboxProps {
   items: MediaItem[];
-  /** `null` closes the dialog. */
   index: number | null;
   onIndexChange: (index: number) => void;
   onClose: () => void;
@@ -29,14 +28,6 @@ const control = {
   "&:hover": { backgroundColor: palette.maroon[600], borderColor: "transparent" },
 };
 
-/**
- * One media viewer for the whole product.
- *
- * The old codebase shipped three near-identical copies of this dialog (camp
- * gallery, Gaza rail, IMO news) that had already drifted apart. This is the
- * single implementation: images and video, keyboard navigation, RTL-correct
- * arrow mapping, and a counter.
- */
 export function Lightbox({ items, index, onIndexChange, onClose }: LightboxProps) {
   const { isRTL } = useDirection();
   const open = index !== null;

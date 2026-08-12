@@ -6,13 +6,6 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Reveal, MathBackdrop, useDirection } from "../ui";
 
-/**
- * Closing statement.
- *
- * The brand colour is held inside a rounded panel rather than run full-bleed,
- * so the page stays light end to end while the final call to action still
- * carries the most weight on the page.
- */
 export function ClosingCTA() {
   const { t } = useTranslation();
   const { isRTL } = useDirection();

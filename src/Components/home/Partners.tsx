@@ -10,11 +10,6 @@ const PARTNERS = [
   { key: "partner3", logo: "/Partner3.jpg", href: "https://www.palast.ps/ar" },
 ];
 
-/**
- * A quiet credit band. Logos used to be 290×290 blocks separated by thick
- * maroon bars; here they are set small and even, with the institution named —
- * partners read as endorsement, not as page furniture.
- */
 export function Partners() {
   const { t } = useTranslation();
 

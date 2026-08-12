@@ -16,14 +16,6 @@ const TOPICS: (Topic | "all")[] = [
   "combinatorics",
 ];
 
-/**
- * Books presented as books.
- *
- * There are no cover scans in the project, so the covers are drawn: a spine, a
- * stack of page edges and title typography sized to the plate. Three starter
- * volumes get full plates; the rest of the shelf is a scannable list, because
- * eleven identical cards were never the right answer.
- */
 export function BookShelf() {
   const { t } = useTranslation();
   const [topic, setTopic] = useState<Topic | "all">("all");
@@ -119,8 +111,6 @@ export function BookShelf() {
                   borderBottom: `1px solid ${palette.line}`,
                   textDecoration: "none",
                   color: "inherit",
-                  // Only the properties that actually change, and only ones the
-                  // compositor can handle — no `all`, no layout animation.
                   transition: `background-color ${motion.snap} ${motion.easeSnap}`,
                   "& .bk-inner": {
                     transition: `transform ${motion.snapSlow} ${motion.easeSnap}`,
@@ -137,7 +127,6 @@ export function BookShelf() {
                   className="bk-inner"
                   sx={{ display: "flex", alignItems: "flex-start", gap: 2, flex: 1, minWidth: 0 }}
                 >
-                  {/* Miniature of the drawn cover */}
                   <Box
                     sx={{
                       position: "relative",
@@ -247,8 +236,6 @@ export function BookShelf() {
   );
 }
 
-/* --------------------------------------------------------------- the plate */
-
 function BookPlate({
   title,
   description,
@@ -298,8 +285,6 @@ function BookPlate({
           pl: { xs: 3.5, md: 4.25 },
           display: "flex",
           flexDirection: "column",
-          // Transform + shadow only. The old 3D rotateY over 620ms was the
-          // main source of the "still moving after the cursor left" feeling.
           transition: `transform ${motion.snapSlow} ${motion.easeSnap}, box-shadow ${motion.snapSlow} ${motion.easeSnap}`,
           boxShadow: "0 16px 30px -24px rgba(21,15,18,0.55)",
           background: dark
@@ -309,7 +294,6 @@ function BookPlate({
           border: `1px solid ${dark ? "transparent" : palette.maroon[200]}`,
         }}
       >
-        {/* Spine */}
         <Box
           sx={{
             position: "absolute",
@@ -323,7 +307,6 @@ function BookPlate({
             borderInlineEnd: `1px solid ${dark ? "rgba(255,255,255,0.14)" : palette.maroon[200]}`,
           }}
         />
-        {/* Page edges */}
         <Box
           sx={{
             position: "absolute",
@@ -338,7 +321,6 @@ function BookPlate({
           }}
         />
 
-        {/* Drawn cover figure, matched to the book's subject */}
         <BookCoverArt
           motif={motif}
           className="plate-art"
@@ -381,7 +363,6 @@ function BookPlate({
           {title}
         </Typography>
 
-        {/* Rule that wipes in under the title on hover */}
         <Box
           className="plate-edge"
           sx={{

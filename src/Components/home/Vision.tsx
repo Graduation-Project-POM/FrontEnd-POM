@@ -8,13 +8,6 @@ import { Section, SectionHeading, Reveal } from "../ui";
 
 const STEPS = ["discover", "train", "compete"] as const;
 
-/**
- * The three-stage vision as an expandable list.
- *
- * Replaces three equal-weight cards where nothing was more important than
- * anything else: here one stage is open at a time, the numerals carry the
- * sequence, and the rule between rows does the work a border used to.
- */
 export function Vision() {
   const { t } = useTranslation();
   const [active, setActive] = useState(0);
@@ -118,7 +111,6 @@ export function Vision() {
                     </Box>
                   </Box>
 
-                  {/* Animated disclosure without measuring heights */}
                   <Box
                     sx={{
                       display: "grid",

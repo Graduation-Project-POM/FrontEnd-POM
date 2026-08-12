@@ -7,11 +7,8 @@ type Variant = "up" | "fade" | "left" | "right" | "scale" | "clip";
 
 interface RevealProps {
   children: ReactNode;
-  /** Entrance direction. */
   variant?: Variant;
-  /** Stagger, in ms. */
   delay?: number;
-  /** Fraction of the element that must be visible before it fires. */
   threshold?: number;
   duration?: number;
   sx?: SxProps<Theme>;
@@ -27,11 +24,6 @@ const from: Record<Variant, string> = {
   clip: "translate3d(0, 14px, 0)",
 };
 
-/**
- * Scroll-triggered entrance. Replaces the AOS dependency that was initialised
- * separately in four different components: one observer, no global config, and
- * it respects `prefers-reduced-motion` through the global stylesheet.
- */
 export function Reveal({
   children,
   variant = "up",
@@ -48,9 +40,6 @@ export function Reveal({
     const node = ref.current;
     if (!node) return;
 
-    // Anything already on screen at mount reveals straight away — the entrance
-    // is a flourish for content scrolled *into* view, never a gate on reading.
-    // Deferring a frame lets the "before" styles paint so the transition runs.
     const rect = node.getBoundingClientRect();
     const visibleNow = rect.top < window.innerHeight && rect.bottom > 0;
 
@@ -73,8 +62,6 @@ export function Reveal({
 
     observer.observe(node);
 
-    // Safety net: if the observer never delivers (throttled background tab,
-    // zero-height parent, exotic engine), show the content anyway.
     const failsafe = window.setTimeout(() => setShown(true), 2500);
 
     return () => {

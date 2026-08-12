@@ -5,13 +5,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import type { SxProps, Theme } from "@mui/material";
 import { palette, motion, fonts, radius } from "../../theme/tokens";
 
-/* ------------------------------------------------------------- filter pill */
-
 interface FilterPillProps {
   children: ReactNode;
   active?: boolean;
   onClick?: () => void;
-  /** Result count shown after the label. */
   count?: number;
   tone?: "light" | "dark";
 }
@@ -43,8 +40,6 @@ export function FilterPill({
         fontSize: "0.8125rem",
         fontWeight: 500,
         whiteSpace: "nowrap",
-        // Explicit properties, snap timing: a filter pill must answer the
-        // pointer immediately, and `all` made the browser watch everything.
         transition: `color ${motion.snap} ${motion.easeSnap}, background-color ${motion.snap} ${motion.easeSnap}, border-color ${motion.snap} ${motion.easeSnap}, transform ${motion.snapSlow} ${motion.easeSnap}`,
         border: `1px solid ${
           active ? "transparent" : dark ? palette.nightLine : palette.line
@@ -79,8 +74,6 @@ export function FilterPill({
     </Box>
   );
 }
-
-/* ----------------------------------------------------------- search field */
 
 interface SearchFieldProps {
   value: string;
@@ -135,15 +128,12 @@ export function SearchField({ value, onChange, placeholder, sx }: SearchFieldPro
   );
 }
 
-/* ------------------------------------------------------------ empty state */
-
 interface EmptyStateProps {
   title: string;
   hint?: string;
   action?: ReactNode;
 }
 
-/** Shown when a filter/search combination returns nothing. */
 export function EmptyState({ title, hint, action }: EmptyStateProps) {
   return (
     <Box

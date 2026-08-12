@@ -10,17 +10,9 @@ import { palette, motion, fonts, radius, zIndex } from "../../theme/tokens";
 import useDirection from "../ui/useDirection";
 import { NAV_ITEMS } from "./navItems";
 
-/**
- * Where the login button has always pointed. The page behind it was removed in
- * "remove sign up and login" — restoring it is a separate piece of work.
- */
 export const LOGIN_ROUTE = "/credentials/login";
 
 interface NavbarProps {
-  /**
-   * Sit on top of a dark hero: transparent until the user scrolls.
-   * Pages with a light hero leave this off and get the solid treatment.
-   */
   overlay?: boolean;
 }
 
@@ -35,7 +27,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
   const scrolled = useScrollTrigger({ disableHysteresis: true, threshold: 18 });
   const transparent = overlay && !scrolled;
 
-  /* Reading-progress hairline. Small, but it makes long pages feel navigable. */
   useEffect(() => {
     const onScroll = () => {
       const doc = document.documentElement;
@@ -50,7 +41,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
     };
   }, []);
 
-  /* Lock the page behind the mobile overlay. */
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -58,8 +48,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
     };
   }, [menuOpen]);
 
-  /* Close the overlay whenever the route changes — the render-time adjustment
-     React recommends over an effect for "reset state when a prop changes". */
   const [lastPath, setLastPath] = useState(pathname);
   if (pathname !== lastPath) {
     setLastPath(pathname);
@@ -95,7 +83,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
               gap: { xs: 1, md: 3 },
             }}
           >
-            {/* Brand */}
             <Box
               component={Link}
               to="/"
@@ -142,7 +129,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
               </Box>
             </Box>
 
-            {/* Desktop navigation */}
             <Box
               component="nav"
               sx={{
@@ -191,7 +177,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
               })}
             </Box>
 
-            {/* Utilities */}
             <Box
               sx={{
                 display: "flex",
@@ -200,9 +185,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
                 marginInlineStart: { xs: "auto", md: 2 },
               }}
             >
-              {/* Login sits where it always did — after the links, before the
-                  language toggle. Router navigation, not a hardcoded
-                  localhost URL as it was previously. */}
               <Box
                 component={Link}
                 to={LOGIN_ROUTE}
@@ -237,8 +219,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
                 component="button"
                 onClick={() => navigate("/resources")}
                 sx={{
-                  // Steps up at lg so the login button and the language
-                  // toggle keep their room on medium screens.
                   display: { xs: "none", lg: "inline-flex" },
                   alignItems: "center",
                   gap: 0.75,
@@ -284,7 +264,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
           </Box>
         </Container>
 
-        {/* Reading progress */}
         <Box
           sx={{
             position: "absolute",
@@ -310,8 +289,6 @@ export function Navbar({ overlay = false }: NavbarProps) {
     </>
   );
 }
-
-/* ------------------------------------------------------------- sub-parts */
 
 function LanguageToggle({
   onToggle,
@@ -486,7 +463,6 @@ function MobileMenu({
             borderTop: `1px solid ${palette.nightLine}`,
           }}
         >
-          {/* Login stays reachable on mobile, as it was in the old drawer. */}
           <Box
             component={Link}
             to={LOGIN_ROUTE}

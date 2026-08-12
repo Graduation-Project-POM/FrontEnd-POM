@@ -22,13 +22,6 @@ const ENTRIES: Entry[] = [
   { key: "videos", to: "/resources#videos", image: "/training2.png", count: 4 },
 ];
 
-/**
- * The learning library rendered as an index, not a shelf of tiles.
- *
- * Each row is a full-width target with its own counter; hovering brings the
- * matching illustration forward. It reads like a table of contents, which is
- * exactly what it is.
- */
 export function ResourceIndex() {
   const { t } = useTranslation();
   const { isRTL } = useDirection();
@@ -51,7 +44,6 @@ export function ResourceIndex() {
       />
 
       <Box sx={{ position: "relative" }}>
-        {/* Floating preview — desktop only */}
         <Box
           aria-hidden
           sx={{

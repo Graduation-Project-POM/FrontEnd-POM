@@ -11,10 +11,6 @@ interface LibraryHeroProps {
   resultCount: number;
 }
 
-/**
- * The library's front desk: what's here, how much of it, and one search field
- * that reaches every collection at once.
- */
 export function LibraryHero({ query, onQuery, resultCount }: LibraryHeroProps) {
   const { t } = useTranslation();
 

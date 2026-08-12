@@ -11,22 +11,6 @@ interface FilterRailProps {
   ariaLabel?: string;
 }
 
-/**
- * A single-row filter strip that stays fully reachable however many filters
- * there are.
- *
- * The previous version simply set `overflow-x: auto` and hid the scrollbar,
- * which left every filter past the fold unreachable on a desktop mouse. This
- * adds the three things that were missing:
- *
- *  - chevron buttons that appear only on the side with more content, so it is
- *    visible that the row continues;
- *  - an edge fade on that same side, again only when there is more to see;
- *  - vertical wheel → horizontal scroll, released back to the page once the
- *    row reaches its end so the page never feels stuck.
- *
- * Touch swipe is native and untouched.
- */
 export function FilterRail({ children, ariaLabel }: FilterRailProps) {
   const { isRTL } = useDirection();
   const ref = useRef<HTMLDivElement | null>(null);
@@ -37,7 +21,6 @@ export function FilterRail({ children, ariaLabel }: FilterRailProps) {
     const el = ref.current;
     if (!el) return;
     const max = el.scrollWidth - el.clientWidth;
-    // scrollLeft runs negative in RTL on modern engines; abs() normalises it.
     const pos = Math.abs(el.scrollLeft);
     setAtStart(pos <= 2);
     setAtEnd(max <= 2 || pos >= max - 2);
@@ -55,8 +38,6 @@ export function FilterRail({ children, ariaLabel }: FilterRailProps) {
     observer?.observe(el);
     window.addEventListener("resize", update);
 
-    // Turn a vertical wheel into horizontal travel, but only while the row
-    // still has somewhere to go — otherwise the page keeps scrolling.
     const onWheel = (e: WheelEvent) => {
       if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
       const max = el.scrollWidth - el.clientWidth;
@@ -131,8 +112,6 @@ export function FilterRail({ children, ariaLabel }: FilterRailProps) {
           scrollSnapType: "x proximity",
           WebkitOverflowScrolling: "touch",
           pb: 1,
-          // Bleed to the viewport edge on small screens so the strip reads as
-          // swipeable rather than clipped.
           mx: { xs: -2.5, sm: 0 },
           px: { xs: 2.5, sm: 0 },
           "&::-webkit-scrollbar": { display: "none" },

@@ -9,7 +9,6 @@ const STORIES = [
   { anchor: "supervisors", titleKey: "news.title", metaKey: "news.meta.supervisors" },
 ];
 
-/** Newsroom masthead plus a contents list of the stories on the page. */
 export function NewsHero() {
   const { t } = useTranslation();
 

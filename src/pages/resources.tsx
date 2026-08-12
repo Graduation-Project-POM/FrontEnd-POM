@@ -12,10 +12,6 @@ import VideoLibrary from "../Components/resources/VideoLibrary";
 import ExternalLibrary from "../Components/resources/ExternalLibrary";
 import { MATERIALS, PROBLEMS, searchResources } from "../data/resources";
 
-/**
- * The library has two states: browse (curated collections, each with the
- * presentation that fits it) and search (one flat, filterable result list).
- */
 export default function Resources() {
   const { t } = useTranslation();
   const [query, setQuery] = useState("");

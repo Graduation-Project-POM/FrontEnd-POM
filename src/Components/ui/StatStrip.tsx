@@ -5,7 +5,6 @@ import { palette, fonts, motion } from "../../theme/tokens";
 
 export interface Stat {
   value: number;
-  /** Rendered right after the animated number (e.g. "+", "%"). */
   suffix?: string;
   label: string;
   hint?: string;
@@ -14,13 +13,11 @@ export interface Stat {
 interface StatStripProps {
   stats: Stat[];
   tone?: "light" | "dark" | "brand";
-  /** `rule` draws hairline separators; `plain` relies on space alone. */
   variant?: "rule" | "plain";
   size?: "md" | "lg";
   sx?: SxProps<Theme>;
 }
 
-/** Eases toward the target so the count-up settles instead of stopping dead. */
 function useCountUp(target: number, active: boolean, duration = 1400) {
   const [value, setValue] = useState(0);
 
@@ -47,11 +44,6 @@ function useCountUp(target: number, active: boolean, duration = 1400) {
   return value;
 }
 
-/**
- * A band of live figures. The numbers are real project data (participants per
- * stage, directorates, camp days) — statistics are used as content, not
- * decoration.
- */
 export function StatStrip({
   stats,
   tone = "light",
