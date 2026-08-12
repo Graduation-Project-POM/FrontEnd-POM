@@ -1,287 +1,308 @@
-/* === PRIMARY FONT === */
-/* === Lenos Black === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-Black.otf") format("opentype");
-  font-weight: 900;
-  font-style: normal;
-}
+/* ==========================================================================
+   Palestine Math Olympiad — global stylesheet
+   Fonts, reset, and the few primitives that are cheaper as plain CSS than JS.
+   Everything else lives in the design tokens / MUI theme.
+   ========================================================================== */
 
-/* === Lenos Black Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-BlackItalic.otf") format("opentype");
-  font-weight: 900;
-  font-style: italic;
-}
+/* ------------------------------------------------------- Lenos (display) --
+   Latin display face. Only the weights the design system uses are declared.  */
 
-/* === Lenos Bold === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-Bold.otf") format("opentype");
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* === Lenos Bold Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-BoldItalic.otf") format("opentype");
-  font-weight: 700;
-  font-style: italic;
-}
-
-/* === Extra Bold === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-ExtraBold.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-/* === Extra Bold Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-ExtraBoldItalic.otf") format("opentype");
-  font-weight: 800;
-  font-style: italic;
-}
-
-/* === Extra Light === */
 @font-face {
   font-family: "Lenos";
   src: url("/fonts/Lenos-ExtraLight.otf") format("opentype");
   font-weight: 200;
-  font-style: normal;
+  font-display: swap;
 }
-
-/* === Extra Light Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-ExtraLightItalic.otf") format("opentype");
-  font-weight: 200;
-  font-style: italic;
-}
-
-/* === Light === */
 @font-face {
   font-family: "Lenos";
   src: url("/fonts/Lenos-Light.otf") format("opentype");
   font-weight: 300;
-  font-style: normal;
+  font-display: swap;
 }
-
-/* === Light Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-LightItalic.otf") format("opentype");
-  font-weight: 300;
-  font-style: italic;
-}
-
-/* === Medium === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-Medium.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-/* === Medium Italic === */
-@font-face {
-  font-family: "Lenos";
-  src: url("/fonts/Lenos-MediumItalic.otf") format("opentype");
-  font-weight: 500;
-  font-style: italic;
-}
-
-/* === Regular === */
 @font-face {
   font-family: "Lenos";
   src: url("/fonts/Lenos-Regular.otf") format("opentype");
   font-weight: 400;
-  font-style: normal;
+  font-display: swap;
 }
-
-/* === Regular Italic === */
 @font-face {
   font-family: "Lenos";
-  src: url("/fonts/Lenos-RegularItalic.otf") format("opentype");
-  font-weight: 400;
-  font-style: italic;
+  src: url("/fonts/Lenos-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
 }
-
-/* === Semi Bold === */
 @font-face {
   font-family: "Lenos";
   src: url("/fonts/Lenos-SemiBold.otf") format("opentype");
   font-weight: 600;
-  font-style: normal;
+  font-display: swap;
 }
-
-/* === Semi Bold Italic === */
 @font-face {
   font-family: "Lenos";
-  src: url("/fonts/Lenos-SemiBoldItalic.otf") format("opentype");
-  font-weight: 600;
-  font-style: italic;
+  src: url("/fonts/Lenos-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-display: swap;
 }
-
-/* === Thin === */
 @font-face {
   font-family: "Lenos";
-  src: url("/fonts/Lenos-Thin.otf") format("opentype");
-  font-weight: 100;
-  font-style: normal;
+  src: url("/fonts/Lenos-ExtraBold.otf") format("opentype");
+  font-weight: 800;
+  font-display: swap;
 }
-
-/* === Thin Italic === */
 @font-face {
   font-family: "Lenos";
-  src: url("/fonts/Lenos-ThinItalic.otf") format("opentype");
-  font-weight: 100;
-  font-style: italic;
+  src: url("/fonts/Lenos-Black.otf") format("opentype");
+  font-weight: 900;
+  font-display: swap;
 }
 
-/* === SECONDARY FONT === */
-/* ===== READDEX PRO — ARABIC ===== */
+/* ---------------------------------------------------- Readex Pro (body) --
+   Carries both Latin and Arabic. Ranges are split so a Latin visitor never
+   downloads the Arabic subset and vice versa.                              */
+
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-200-normal.ttf") format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-300-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-latin-300-normal.woff2") format("woff2");
   font-weight: 300;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-400-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-latin-400-normal.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-500-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-latin-500-normal.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-600-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-latin-600-normal.woff2") format("woff2");
   font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-arabic-700-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-latin-700-normal.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* ===== READDEX PRO — LATIN ===== */
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-200-normal.ttf") format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-300-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-arabic-300-normal.woff2") format("woff2");
   font-weight: 300;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+    U+0898-08E1, U+08E3-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-400-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-arabic-400-normal.woff2") format("woff2");
   font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+    U+0898-08E1, U+08E3-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-500-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-arabic-500-normal.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+    U+0898-08E1, U+08E3-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-600-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-arabic-600-normal.woff2") format("woff2");
   font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+    U+0898-08E1, U+08E3-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
 @font-face {
   font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-700-normal.ttf") format("truetype");
+  src: url("/fonts/readex/readex-pro-arabic-700-normal.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+    U+0898-08E1, U+08E3-08FF, U+FB50-FDFF, U+FE70-FEFF;
 }
 
-/* ===== READDEX PRO — LATIN EXT ===== */
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-200-normal.ttf") format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-300-normal.ttf") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-400-normal.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-500-normal.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-600-normal.ttf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-latin-ext-700-normal.ttf") format("truetype");
-  font-weight: 700;
+/* ------------------------------------------------------------------ base */
+
+:root {
+  --pmo-maroon: #7a1e3c;
+  --pmo-ink: #150f12;
+  --pmo-canvas: #fcfbfb;
+  --pmo-gold: #d9a441;
+  --pmo-header-h: 76px;
 }
 
-/* ===== READDEX PRO — VIETNAMESE ===== */
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-200-normal.ttf") format("truetype");
-  font-weight: 200;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-300-normal.ttf") format("truetype");
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-400-normal.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-500-normal.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-600-normal.ttf") format("truetype");
-  font-weight: 600;
-}
-@font-face {
-  font-family: "Readex Pro";
-  src: url("/fonts/readex/readex-pro-vietnamese-700-normal.ttf") format("truetype");
-  font-weight: 700;
-}
-
-body,.typography {
-  font-family: "Lenos Thin", sans-serif;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  /* keeps in-page anchors clear of the sticky header */
+  scroll-padding-top: calc(var(--pmo-header-h) + 24px);
+  -webkit-text-size-adjust: 100%;
 }
 
-.secondary-text {
-  font-family: "Readex Pro", sans-serif;
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--pmo-canvas);
+  color: var(--pmo-ink);
+  font-family: "Readex Pro", "Lenos", "Segoe UI", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--pmo-maroon);
+  color: #fff;
+}
+
+/* Visible, on-brand focus ring — keyboard only. */
+:focus-visible {
+  outline: 2px solid var(--pmo-maroon);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Slim, quiet scrollbar. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(122, 30, 60, 0.35) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(122, 30, 60, 0.28);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(122, 30, 60, 0.5);
+  background-clip: content-box;
+}
+
+/* Arabic typography has no italic tradition, and synthesising an oblique from
+   a cursive script looks wrong. The Latin layouts use italics as an accent, so
+   neutralise them wholesale while the document is in RTL. */
+[dir="rtl"] * {
+  font-style: normal !important;
+}
+
+/* ------------------------------------------------------------ animations */
+
+@keyframes pmo-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes pmo-drift {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(12px, -18px, 0) rotate(6deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}
+
+@keyframes pmo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pmo-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pmo-pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pmo-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Honour reduced-motion across the whole product. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

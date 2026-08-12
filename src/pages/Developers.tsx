@@ -1,11 +1,10 @@
-import { Navbar } from "../Components/HomeComponents/Navbar/Navbar";
-import { Developer } from "../Components/DevelopersComponents/Developer.tsx";
+import PageShell from "../Components/layout/PageShell";
+import TeamGrid from "../Components/developers/TeamGrid";
 
 export default function Developers() {
   return (
-    <>
-      <Navbar />
-      <Developer />
-    </>
+    <PageShell>
+      <TeamGrid />
+    </PageShell>
   );
 }

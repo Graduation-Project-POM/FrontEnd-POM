@@ -1,23 +1,20 @@
-import { Box } from "@mui/material";
-import Trainers from "../Components/WinterCampComponents/trainers/trainers.tsx";
-import Agenda from "../Components/WinterCampComponents/agenda/agenda.tsx";
-import Home from "../Components/WinterCampComponents/homepage/home.tsx";
-import {About} from "../Components/WinterCampComponents/about/about.tsx";
-import Galary from "../Components/WinterCampComponents/galary/galary.tsx";
-import CampFooter from "../Components/WinterCampComponents/footer/CampFooter.tsx";
-import StudentsGrid from "../Components/WinterCampComponents/campStudents/StudentsGrid.tsx";
-
+import PageShell from "../Components/layout/PageShell";
+import CampHero from "../Components/camp/CampHero";
+import CampAbout from "../Components/camp/CampAbout";
+import CampAgenda from "../Components/camp/CampAgenda";
+import CampPeople from "../Components/camp/CampPeople";
+import CampRoster from "../Components/camp/CampRoster";
+import CampGallery from "../Components/camp/CampGallery";
 
 export default function WinterCamp() {
   return (
-    <Box sx={{ background: "#f5f5f5" }}>
-      <Home />
-      <About />
-      <Agenda />
-      <Trainers /> 
-      <StudentsGrid />
-      <Galary />
-      <CampFooter/>
-    </Box>
-  )
+    <PageShell overlayHeader>
+      <CampHero />
+      <CampAbout />
+      <CampAgenda />
+      <CampPeople />
+      <CampRoster />
+      <CampGallery />
+    </PageShell>
+  );
 }

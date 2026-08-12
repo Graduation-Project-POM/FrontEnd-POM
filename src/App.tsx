@@ -1,27 +1,53 @@
-import "./App.css"
-import Home from './pages/index'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Resources from "./pages/resources";
-import Exam1 from "./pages/Exam1";
-import WinterCamp from "./pages/winterCamp";
-import Developers from "./pages/Developers";
-import News from "./pages/news";
-function App() {
+import { Suspense, lazy } from "react";
+import { Box, CircularProgress } from "@mui/material";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
+import { palette } from "./theme/tokens";
+
+/**
+ * Routes are split so the first paint only ships the shell plus the landing
+ * page — the camp roster, the library catalogue and the news galleries load on
+ * demand.
+ */
+const Home = lazy(() => import("./pages/home"));
+const Resources = lazy(() => import("./pages/resources"));
+const Worksheets = lazy(() => import("./pages/worksheets"));
+const TrainingCamp = lazy(() => import("./pages/trainingCamp"));
+const Developers = lazy(() => import("./pages/Developers"));
+const News = lazy(() => import("./pages/news"));
+
+function RouteFallback() {
   return (
-    <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/resources" element={<Resources/>}/>
-        <Route path="/worksheets/all" element={<Exam1 />} />
-        <Route path="/winterPath" element={<WinterCamp />} />
-        <Route path="/Developers" element={<Developers />} />
-        <Route path="/news" element={<News />} />
-      </Routes>
-    </BrowserRouter>
-    </>
-  )
+    <Box
+      sx={{
+        minHeight: "100dvh",
+        display: "grid",
+        placeItems: "center",
+        backgroundColor: palette.canvas,
+      }}
+    >
+      <CircularProgress size={26} thickness={4} sx={{ color: palette.maroon[600] }} />
+    </Box>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/worksheets/all" element={<Worksheets />} />
+          <Route path="/trainingPath" element={<TrainingCamp />} />
+          {/* The camp used to live at /winterPath — keep old links working. */}
+          <Route path="/winterPath" element={<Navigate to="/trainingPath" replace />} />
+          <Route path="/Developers" element={<Developers />} />
+          <Route path="/news" element={<News />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  );
+}
+
+export default App;
