@@ -42,8 +42,12 @@ export function Hero() {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", lg: "minmax(0, 1.25fr) minmax(0, 0.75fr)" },
-            gap: { xs: 5, lg: 8 },
+            gridTemplateColumns: {
+              xs: "minmax(0, 1fr)",
+              md: "minmax(0, 1fr) minmax(0, 1.05fr)",
+              lg: "minmax(0, 1fr) minmax(0, 1.1fr)",
+            },
+            gap: { xs: 5, md: 5, lg: 6 },
             alignItems: "center",
           }}
         >
@@ -245,7 +249,7 @@ export function Hero() {
           </Box>
 
           {/* --------------------------------------------------- visual column */}
-          <Reveal variant="scale" delay={220} sx={{ display: { xs: "none", lg: "block" } }}>
+          <Reveal variant="scale" delay={220}>
             <HeroFigure />
           </Reveal>
         </Box>
@@ -289,7 +293,15 @@ function HeroFigure() {
   ];
 
   return (
-    <Box sx={{ position: "relative", pb: 6 }}>
+    <Box
+      sx={{
+        position: "relative",
+        pb: { xs: 0, md: 6 },
+        // Let the plate run a little past its column toward the page edge so
+        // the photograph reads at full size without squeezing the headline.
+        marginInlineEnd: { lg: -3 },
+      }}
+    >
       <Box
         sx={{
           position: "relative",
@@ -297,15 +309,16 @@ function HeroFigure() {
           overflow: "hidden",
           border: `1px solid ${palette.line}`,
           boxShadow: "0 40px 80px -50px rgba(21,15,18,0.55)",
-          aspectRatio: "4 / 5",
           backgroundColor: palette.surfaceSunken,
         }}
       >
+        {/* No forced aspect ratio and no crop — the frame takes the shape of
+            the photograph, so the whole team is in view. */}
         <Box
           component="img"
           src="/imoImgs/imo-01.jpeg"
           alt={t("imoNews.title")}
-          sx={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+          sx={{ width: "100%", height: "auto", display: "block" }}
         />
         <Box
           sx={{
@@ -315,7 +328,16 @@ function HeroFigure() {
               "linear-gradient(to top, rgba(21,15,18,0.78) 0%, rgba(21,15,18,0.05) 52%)",
           }}
         />
-        <Box sx={{ position: "absolute", insetInline: 20, bottom: 18, color: "#fff" }}>
+        <Box
+          sx={{
+            position: "absolute",
+            insetInlineStart: 20,
+            bottom: 18,
+            color: "#fff",
+            // Leaves the floating stats card its corner where it is shown.
+            maxWidth: { xs: "calc(100% - 40px)", lg: "56%" },
+          }}
+        >
           <Typography variant="eyebrow" sx={{ color: palette.gold[300], display: "block", mb: 0.75 }}>
             {t("hero.figureEyebrow")}
           </Typography>
@@ -327,11 +349,16 @@ function HeroFigure() {
         </Box>
       </Box>
 
-      {/* Selection funnel, floating over the plate */}
+      {/* Selection funnel, floating over the plate. Hidden on small screens,
+          where it would hang past the container edge. */}
       <Box
         sx={{
+          // From lg only: below that the plate is too narrow to carry both the
+          // caption and a 216px card without them crowding each other.
+          display: { xs: "none", lg: "block" },
           position: "absolute",
-          insetInlineStart: -34,
+          // Hangs off the bottom-end corner; the caption keeps the start side.
+          insetInlineEnd: -20,
           bottom: 0,
           width: 216,
           p: 2.25,
