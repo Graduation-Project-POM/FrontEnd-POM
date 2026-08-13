@@ -56,8 +56,7 @@ export function CampHero() {
           inset: 0,
           backgroundImage: 'url("/all.jpg")',
           backgroundSize: "cover",
-          backgroundPosition: "center",
-          filter: "saturate(1) contrast(1.02)",
+          backgroundPosition: "center 38%",
         }}
       />
       <Box
@@ -65,7 +64,26 @@ export function CampHero() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundColor: "rgba(21,15,18,0.34)",
+          backgroundColor: "rgba(21,15,18,0.24)",
+        }}
+      />
+      <Box
+        aria-hidden
+        sx={{
+          position: "absolute",
+          insetInline: 0,
+          top: 0,
+          height: "calc(var(--pmo-header-h) * 2.6)",
+          background: `linear-gradient(to bottom,
+            rgba(21,15,18,0.52) 0%,
+            rgba(21,15,18,0.47) 12%,
+            rgba(21,15,18,0.4) 25%,
+            rgba(21,15,18,0.31) 38%,
+            rgba(21,15,18,0.23) 50%,
+            rgba(21,15,18,0.15) 63%,
+            rgba(21,15,18,0.09) 75%,
+            rgba(21,15,18,0.04) 88%,
+            rgba(21,15,18,0) 100%)`,
         }}
       />
       <Box
@@ -73,7 +91,24 @@ export function CampHero() {
         sx={{
           position: "absolute",
           inset: 0,
-          background: `linear-gradient(to bottom, rgba(21,15,18,0.42) 0%, rgba(21,15,18,0.10) 18%, rgba(21,15,18,0) 34%)`,
+          background: `linear-gradient(to right,
+            rgba(21,15,18,0.62) 0%,
+            rgba(21,15,18,0.55) 18%,
+            rgba(21,15,18,0.42) 34%,
+            rgba(21,15,18,0.26) 50%,
+            rgba(21,15,18,0.12) 66%,
+            rgba(21,15,18,0.04) 82%,
+            rgba(21,15,18,0) 100%)`,
+          '[dir="rtl"] &': {
+            background: `linear-gradient(to left,
+              rgba(21,15,18,0.62) 0%,
+              rgba(21,15,18,0.55) 18%,
+              rgba(21,15,18,0.42) 34%,
+              rgba(21,15,18,0.26) 50%,
+              rgba(21,15,18,0.12) 66%,
+              rgba(21,15,18,0.04) 82%,
+              rgba(21,15,18,0) 100%)`,
+          },
         }}
       />
       <Box
@@ -82,8 +117,16 @@ export function CampHero() {
           position: "absolute",
           insetInline: 0,
           bottom: 0,
-          height: "72%",
-          background: `linear-gradient(to top, rgba(21,15,18,0.86) 0%, rgba(21,15,18,0.6) 28%, rgba(21,15,18,0.24) 62%, rgba(21,15,18,0) 100%)`,
+          height: "82%",
+          background: `linear-gradient(to top,
+            rgba(21,15,18,0.9) 0%,
+            rgba(21,15,18,0.78) 16%,
+            rgba(21,15,18,0.62) 32%,
+            rgba(21,15,18,0.45) 48%,
+            rgba(21,15,18,0.29) 64%,
+            rgba(21,15,18,0.15) 79%,
+            rgba(21,15,18,0.06) 90%,
+            rgba(21,15,18,0) 100%)`,
         }}
       />
 
@@ -98,7 +141,12 @@ export function CampHero() {
           <Typography
             variant="display"
             component="h1"
-            sx={{ maxWidth: "14ch", mb: 2.5, fontSize: { xs: "2.75rem", md: "5rem" } }}
+            sx={{
+              maxWidth: "14ch",
+              mb: 2.5,
+              fontSize: { xs: "2.75rem", md: "5rem" },
+              textShadow: "0 2px 24px rgba(21,15,18,0.5)",
+            }}
           >
             {t("winterCamp.header1")}
             <Box
@@ -122,7 +170,8 @@ export function CampHero() {
           <Typography
             sx={{
               maxWidth: "54ch",
-              color: "rgba(255,255,255,0.76)",
+              color: "rgba(255,255,255,0.9)",
+              textShadow: "0 1px 14px rgba(21,15,18,0.55)",
               fontSize: { xs: "1rem", md: "1.125rem" },
               fontWeight: 300,
               lineHeight: 1.7,
