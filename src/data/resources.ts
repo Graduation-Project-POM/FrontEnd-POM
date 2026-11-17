@@ -4,6 +4,7 @@ export type Collection =
   | "worksheets"
   | "materials"
   | "videos"
+  | "guides"
   | "external";
 
 export type Topic =
@@ -244,6 +245,14 @@ export const MATERIALS: ResourceItem[] = [
   { id: "mat-8", collection: "materials", titleKey: "winterCamp.pdfs.title8", href: "https://drive.google.com/file/d/1Dvrg_3_bXYUu7wEovu_fd89dVzBLQ-Mp/view?usp=sharing", external: true, topic: "geometry" },
 ];
 
+export const GUIDES: ResourceItem[] = [
+  { id: "guide-counting", collection: "guides", titleKey: "resources.guides.items.counting.title", descKey: "resources.guides.items.counting.desc", href: "https://docs.google.com/document/d/1py-tjL03lkydxP3O3Z4s4Wv9dRtqGCLo/edit?usp=drive_link&ouid=101551722989977423329&rtpof=true&sd=true", external: true, topic: "combinatorics" },
+  { id: "guide-binomial", collection: "guides", titleKey: "resources.guides.items.binomial.title", descKey: "resources.guides.items.binomial.desc", href: "https://docs.google.com/document/d/1qd85mW3js5VJIbvEQPMRgHxIka4KuSqR/edit?usp=sharing&ouid=101551722989977423329&rtpof=true&sd=true", external: true, topic: "combinatorics" },
+  { id: "guide-pigeonhole", collection: "guides", titleKey: "resources.guides.items.pigeonhole.title", descKey: "resources.guides.items.pigeonhole.desc", href: "https://docs.google.com/document/d/18Hj4szHKQFbJuczOZu8LBljqR9hAhX4g/edit?usp=drive_link&ouid=101551722989977423329&rtpof=true&sd=true", external: true, topic: "combinatorics" },
+  { id: "guide-graph-theory", collection: "guides", titleKey: "resources.guides.items.graphTheory.title", descKey: "resources.guides.items.graphTheory.desc", href: "https://docs.google.com/document/d/1QPD4ULMrX8BnzPI2aqAS3L78yGcbA-l0/edit?usp=drive_link&ouid=101551722989977423329&rtpof=true&sd=true", external: true, topic: "combinatorics" },
+  { id: "guide-geometry", collection: "guides", titleKey: "resources.guides.items.geometry.title", descKey: "resources.guides.items.geometry.desc", href: "https://docs.google.com/document/d/1xD02vAN8l6FOmq95vtQWqTZyGLvA12vH/edit?usp=sharing&ouid=101551722989977423329&rtpof=true&sd=true", external: true, topic: "geometry" },
+];
+
 export interface Playlist extends ResourceItem {
   videos?: number;
   duration?: string;
@@ -329,6 +338,7 @@ export const ALL_RESOURCES: ResourceItem[] = [
   ...WORKSHEETS,
   ...MATERIALS,
   ...PLAYLISTS,
+  ...GUIDES,
   ...EXTERNALS,
 ];
 
@@ -338,6 +348,7 @@ export const COLLECTIONS: Collection[] = [
   "worksheets",
   "materials",
   "videos",
+  "guides",
   "external",
 ];
 

@@ -833,7 +833,7 @@
       },
       "ahmed": {
         "name": "Eng. Ahmed Abu Ghoza",
-        "role": "Consultants"
+        "role": "Consultant"
       }
     },
     "team": {
@@ -949,6 +949,33 @@
     "finish": "Next season"
   },
   "resources": {
+    "guides": {
+      "headline1": "Study guides",
+      "headline2": "by topic.",
+      "lede": "Reference notes and training guides, organised by Olympiad topic.",
+      "items": {
+        "counting": {
+          "title": "Permutations and Combinations",
+          "desc": "The fundamental counting principle, permutations and combinations, with worked examples and practice questions. Compiled by Rafiq Al-Saifi, North Gaza Directorate."
+        },
+        "binomial": {
+          "title": "Binomial and Multinomial Coefficients",
+          "desc": "Definitions, core properties and identities, and Olympiad-style problems, from simple examples to advanced ones."
+        },
+        "pigeonhole": {
+          "title": "Pigeonhole Principle Training Guide",
+          "desc": "From the basic statement and its generalisation to Olympiad problems."
+        },
+        "graphTheory": {
+          "title": "Graph Theory",
+          "desc": "Core terms and concepts of graph theory, with references."
+        },
+        "geometry": {
+          "title": "Geometry Definitions and Theorems by Topic",
+          "desc": "An English reference covering triangles, polygons, circles, coordinate geometry, trigonometry, solid geometry and constructions."
+        }
+      }
+    },
     "eyebrow": "Training library",
     "headline1": "Every resource,",
     "headline2": "in one library.",
@@ -967,6 +994,7 @@
       "worksheets": "Exam papers",
       "materials": "Camp material",
       "videos": "Video courses",
+      "guides": "Study guides",
       "external": "External"
     },
     "blurb": {
@@ -974,7 +1002,8 @@
       "problems": "Problem sets and solutions from national and international rounds.",
       "worksheets": "Past preparatory-stage exams from eleven directorates.",
       "materials": "Session handouts from the winter training camp.",
-      "videos": "Recorded training playlists in Arabic and English."
+      "videos": "Recorded training playlists in Arabic and English.",
+      "guides": "Topic-by-topic reference notes and training guides."
     },
     "topics": {
       "all": "All topics",

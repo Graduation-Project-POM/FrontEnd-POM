@@ -10,7 +10,7 @@ import DocumentSection from "../Components/resources/DocumentSection";
 import WorksheetLibrary from "../Components/resources/WorksheetLibrary";
 import VideoLibrary from "../Components/resources/VideoLibrary";
 import ExternalLibrary from "../Components/resources/ExternalLibrary";
-import { MATERIALS, PROBLEMS, searchResources } from "../data/resources";
+import { GUIDES, MATERIALS, PROBLEMS, searchResources } from "../data/resources";
 
 export default function Resources() {
   const { t } = useTranslation();
@@ -65,6 +65,21 @@ export default function Resources() {
           />
 
           <VideoLibrary />
+
+          <DocumentSection
+            id="guides"
+            title={
+              <>
+                {t("resources.guides.headline1")}{" "}
+                <em>{t("resources.guides.headline2")}</em>
+              </>
+            }
+            lede={t("resources.guides.lede")}
+            items={GUIDES}
+            tone="muted"
+            tagFor={(item) => t(`resources.topics.${item.topic ?? "general"}`)}
+            metaFor={() => "Google Docs"}
+          />
           <ExternalLibrary />
         </>
       )}

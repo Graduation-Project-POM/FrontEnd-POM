@@ -6,20 +6,21 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, ActionLink, useDirection } from "../ui";
+import { COUNTS, type Collection } from "../../data/resources";
 
 interface Entry {
-  key: string;
+  key: Collection;
   to: string;
   image: string;
-  count: number;
 }
 
 const ENTRIES: Entry[] = [
-  { key: "books", to: "/resources#books", image: "/training5.png", count: 11 },
-  { key: "problems", to: "/resources#problems", image: "/training3.png", count: 4 },
-  { key: "worksheets", to: "/worksheets/all", image: "/training1.png", count: 18 },
-  { key: "materials", to: "/resources#materials", image: "/training4.png", count: 8 },
-  { key: "videos", to: "/resources#videos", image: "/training2.png", count: 4 },
+  { key: "books", to: "/resources#books", image: "/training5.png" },
+  { key: "problems", to: "/resources#problems", image: "/training3.png" },
+  { key: "worksheets", to: "/worksheets/all", image: "/training1.png" },
+  { key: "materials", to: "/resources#materials", image: "/training4.png" },
+  { key: "videos", to: "/resources#videos", image: "/training2.png" },
+  { key: "guides", to: "/resources#guides", image: "/guides.svg" },
 ];
 
 export function ResourceIndex() {
@@ -174,7 +175,7 @@ export function ResourceIndex() {
                   whiteSpace: "nowrap",
                 }}
               >
-                {entry.count} {t("resources.itemsShort")}
+                {COUNTS[entry.key]} {t("resources.itemsShort")}
               </Typography>
 
               <ArrowForwardIcon

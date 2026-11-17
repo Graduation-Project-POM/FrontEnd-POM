@@ -10,7 +10,7 @@ export function ExternalLibrary() {
   const { t } = useTranslation();
 
   return (
-    <Section tone="muted" id="external">
+    <Section tone="paper" id="external">
       <SectionHeading
         title={
           <>
