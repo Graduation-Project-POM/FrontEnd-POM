@@ -1,25 +1,73 @@
-import { ExternalResources } from "../Components/ResourcesComponents/externalResources/external-resources.tsx"
-import { Header } from "../Components/ResourcesComponents/header/header.tsx"
-import Books from "../Components/ResourcesComponents/books/book.tsx"
-import Problems from "../Components/ResourcesComponents/problems/problems.tsx"
-import Worksheets from "../Components/ResourcesComponents/worksheets/worksheets.tsx"
-import Playlist from "../Components/ResourcesComponents/playlist/playlist.tsx"
-import { Box } from "@mui/material"
-import Material from "../Components/ResourcesComponents/trainingMaterial/material.tsx"
+import { useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 
-function Resources() {
+import PageShell from "../Components/layout/PageShell";
+import LibraryHero from "../Components/resources/LibraryHero";
+import LibraryNav from "../Components/resources/LibraryNav";
+import SearchResults from "../Components/resources/SearchResults";
+import BookShelf from "../Components/resources/BookShelf";
+import DocumentSection from "../Components/resources/DocumentSection";
+import WorksheetLibrary from "../Components/resources/WorksheetLibrary";
+import VideoLibrary from "../Components/resources/VideoLibrary";
+import ExternalLibrary from "../Components/resources/ExternalLibrary";
+import { MATERIALS, PROBLEMS, searchResources } from "../data/resources";
+
+export default function Resources() {
+  const { t } = useTranslation();
+  const [query, setQuery] = useState("");
+  const searching = query.trim().length > 0;
+
+  const resultCount = useMemo(
+    () => (searching ? searchResources(query, t, "all").length : 0),
+    [query, searching, t]
+  );
+
   return (
-    <Box sx={{ background: "#f5f5f5" }}>
-      <Header />
-      <Books />
-      <Problems />
-      <Worksheets />
-      <Material />
-      <Playlist />
-      <ExternalResources />
-      
-    </Box>
-  )
-}
+    <PageShell>
+      <LibraryHero query={query} onQuery={setQuery} resultCount={resultCount} />
 
-export default Resources
+      {searching ? (
+        <SearchResults query={query} onClear={() => setQuery("")} />
+      ) : (
+        <>
+          <LibraryNav />
+          <BookShelf />
+
+          <DocumentSection
+            id="problems"
+            title={
+              <>
+                {t("resources.problems.headline1")}{" "}
+                <em>{t("resources.problems.headline2")}</em>
+              </>
+            }
+            lede={t("problems.heroDesc")}
+            items={PROBLEMS}
+            tone="muted"
+            metaFor={(item) => String(item.meta?.source ?? "")}
+          />
+
+          <WorksheetLibrary />
+
+          <DocumentSection
+            id="materials"
+            title={
+              <>
+                {t("resources.materials.headline1")}{" "}
+                <em>{t("resources.materials.headline2")}</em>
+              </>
+            }
+            lede={t("resources.materials.lede")}
+            items={MATERIALS}
+            tone="muted"
+            tagFor={(item) => t(`resources.topics.${item.topic ?? "general"}`)}
+            metaFor={() => "PDF"}
+          />
+
+          <VideoLibrary />
+          <ExternalLibrary />
+        </>
+      )}
+    </PageShell>
+  );
+}

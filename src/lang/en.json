@@ -2,9 +2,13 @@
   "nav": {
     "home": "Home",
     "camp": "Training Camp",
-    "news":"News",
+    "news": "News",
     "login": "Log In",
-    "Developers": "Developers"
+    "Developers": "Developers",
+    "resources": "Resources",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "hero": {
     "title1": "Where champions begin.",
@@ -12,11 +16,25 @@
     "explore": "Explore",
     "start": "Start",
     "title2": "From Palestine's PMO to the World's IMO",
-    "title3": "Programs, camps, competitions all in one place"
+    "title3": "Programs, camps, competitions all in one place",
+    "badge": "IMO 2026 · Shanghai — read the story",
+    "line1": "Where champions",
+    "line2": "begin.",
+    "desc": "A national programme that finds, trains and backs Palestine's strongest young problem-solvers — from the first school round to the international stage.",
+    "rotate": {
+      "0": "From Palestine's PMO to the world's IMO.",
+      "1": "Programs, camps and competitions — all in one place.",
+      "2": "Students who solve the puzzle before the question is asked."
+    },
+    "figureEyebrow": "Closing ceremony",
+    "figureCaption": "Honoring the Olympiad students"
   },
   "about": {
     "title": "About Us",
-    "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine."
+    "desc": "The Palestine Math Olympiad is a national initiative dedicated to discovering, training, and empowering talented students in mathematics. Through a series of competitive stages, engaging workshops, and collaborative partnerships, we aim to strengthen mathematical excellence and inspire the next generation of problem-solvers and innovators across Palestine.",
+    "eyebrow": "About the Olympiad",
+    "headline1": "A national programme for",
+    "headline2": "mathematical talent."
   },
   "achievements": {
     "title": "Members of the National Team in the Palestinian Mathematics Olympiad",
@@ -51,7 +69,10 @@
     "tenth_place_cnt": "North Hebron",
     "eleventh_place_name": "Khalil Shadi Jibran",
     "eleventh_place_cnt": "Jerusalem",
-    "view_details": "View Details"
+    "view_details": "View Details",
+    "eyebrow": "National team",
+    "headline1": "The eleven who",
+    "headline2": "made it through."
   },
   "partners": {
     "title": "Our Partners",
@@ -87,7 +108,11 @@
         "title": "Finish Stage",
         "desc": "The competition concludes, results are published, and preparations begin for the next Olympiad."
       }
-    }
+    },
+    "eyebrow": "The season",
+    "headline1": "How the Olympiad",
+    "headline2": "unfolds.",
+    "lede": "Six stages, from the first classroom round to the medals — and straight into next year's preparation."
   },
   "slider": {
     "buttons": {
@@ -132,7 +157,11 @@
         "title": "Math",
         "subtitle": "Books"
       }
-    }
+    },
+    "eyebrow": "Library",
+    "headline1": "Everything you need to",
+    "headline2": "train.",
+    "lede": "Books, past papers, camp material and video courses — collected and organised in one place."
   },
   "vision": {
     "title": "Our Vision",
@@ -149,7 +178,12 @@
         "title": "Compete Globally",
         "text": "Students are prepared to proudly represent Palestine in international competitions like IMO and ARMO."
       }
-    }
+    },
+    "eyebrow": "Our vision",
+    "headline1": "Three stages, one",
+    "headline2": "trajectory.",
+    "lede": "Talent is found early, trained hard, and sent to compete with the best in the world.",
+    "caption": "Discover · Train · Compete"
   },
   "externalResources": {
     "bannerText1": "Push your limits",
@@ -216,8 +250,13 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Use",
       "legal": "Legal",
-      "sitemap": "Site Map"
-    }
+      "sitemap": "Site Map",
+      "builtBy": "Built by the graduation project team"
+    },
+    "explore": {
+      "title": "Explore"
+    },
+    "resourcesTitle": "Library"
   },
   "books": {
     "heroTitle": "Library",
@@ -283,7 +322,31 @@
     "nablusEng": "Nablus Math Olympiad Questions (English)",
     "nablusQuestions": "Nablus Math Olympiad Questions",
     "salfitAnswers": "Salfit Olympiad Answers",
-    "jericho2025": "Jericho 2025 Math Olympiad"
+    "jericho2025": "Jericho 2025 Math Olympiad",
+    "kinds": {
+      "all": "All",
+      "paper": "Paper",
+      "answers": "Answers"
+    },
+    "allDirectorates": "All directorates",
+    "directorates": {
+      "jenin": "Jenin",
+      "qabatiya": "Qabatiya",
+      "yatta": "Yatta",
+      "birzeit": "Birzeit",
+      "qalqilya": "Qalqilya",
+      "jerusalem": "Jerusalem",
+      "tulkarm": "Tulkarm",
+      "ramallah": "Ramallah & Al-Bireh",
+      "nablus": "Nablus",
+      "salfit": "Salfit",
+      "jericho": "Jericho"
+    },
+    "metrics": {
+      "papers": "Documents",
+      "directorates": "Directorates",
+      "answers": "Answer keys"
+    }
   },
   "playlist": {
     "headerBack": "Back to Resources Page",
@@ -756,7 +819,10 @@
   },
   "gazaOlympiad": {
     "title": "Gaza Mathematics Olympiad",
-    "description": "From beneath the rubble, and amidst pain and challenges, Gaza's champions rose to create hope anew. With an indomitable will and unbreakable faith, they continue their journey towards the Olympic dream, proudly carrying Gaza's name with determination."
+    "description": "From beneath the rubble, and amidst pain and challenges, Gaza's champions rose to create hope anew. With an indomitable will and unbreakable faith, they continue their journey towards the Olympic dream, proudly carrying Gaza's name with determination.",
+    "eyebrow": "From Gaza",
+    "pullquote": "Hope, rebuilt one problem at a time.",
+    "railLabel": "Scroll through the Gaza Olympiad"
   },
   "developers": {
     "title": "Our Team",
@@ -788,14 +854,233 @@
         "role": "Backend Developer",
         "bio": "Server and database developer"
       }
+    },
+    "eyebrow": "Credits",
+    "headline1": "The team behind",
+    "headline2": "the platform.",
+    "lede": "A graduation project built for the Palestine Math Olympiad.",
+    "buildEyebrow": "Build team",
+    "supervisionEyebrow": "Supervision",
+    "supervisionTitle": "Academic and technical supervision"
+  },
+  "closingNews": {
+    "title": "Closing Ceremony and Student Honoring Ceremony",
+    "description": "The Palestinian Mathematics Olympiad held its closing ceremony to celebrate the end of this season and to honor the distinguished students who took part in its stages.\nThe ceremony brought together students, their families, teachers, trainers, and partners of the Olympiad, in an atmosphere of pride in the achievements of Palestinian students in mathematics.\nDuring the ceremony, outstanding students were honored and received certificates of appreciation in recognition of their effort, perseverance, and excellence throughout the training and competition stages.\nThe Olympiad extends its thanks to all partners, including Taawon, the Ministry of Education and Higher Education, and Palestine Academy for Science and Technology, for their continuous support.\nBelow are moments from the ceremony, documented in photos.",
+    "railLabel": "Moments from the ceremony",
+    "facts": {
+      "eventLabel": "Event",
+      "eventValue": "Closing ceremony",
+      "honoreesLabel": "Honorees",
+      "honoreesValue": "Distinguished Olympiad students"
+    }
+  },
+  "gazaNews": {
+    "title": "Training Students from Gaza within the Palestinian Mathematics Olympiad",
+    "description": "As part of the Palestinian Mathematics Olympiad activities, a training program was held for students from the Gaza Strip, giving them the opportunity to develop their mathematical skills and prepare for the Olympiad stages.\nThe training sessions were delivered by the Olympiad trainers, who are university professors specialized in mathematics, and covered the Olympiad domains with a focus on mathematical thinking and problem-solving skills.\nDespite the difficult circumstances, the students showed remarkable commitment and enthusiasm, reflecting their determination to learn and excel.\nThis training reflects the Olympiad commitment to reaching all Palestinian students wherever they are, and to ensuring that students in Gaza remain an integral part of its programs.\nBelow are moments from the training, documented in videos and photos.",
+    "railLabel": "From the training sessions",
+    "facts": {
+      "programLabel": "Program",
+      "programValue": "Student training",
+      "participantsLabel": "Participants",
+      "participantsValue": "Students from the Gaza Strip"
     }
   },
   "imoNews": {
     "title": "Palestine at the 67th International Mathematical Olympiad — Shanghai, China 2026",
-    "description": "The Palestinian national mathematics team represented Palestine at the 67th International Mathematical Olympiad (IMO 2026), hosted by the city of Shanghai in the People's Republic of China, alongside teams of the world's most talented young mathematicians.\nThe team consisted of six students selected through the stages of the Palestinian Mathematics Olympiad, accompanied by team leaders from among the Palestinian university professors specialized in mathematics who supervised their preparation and training.\nDuring the opening ceremony, the Palestinian team took the stage and raised the flag of Palestine among the participating countries, in a moment that reflects the ability of Palestinian students to be present in the most prestigious international scientific forums.\nThe participation comes within the activities of the Palestinian Mathematics Olympiad, implemented in cooperation with Taawon, the Ministry of Education and Higher Education, and Palestine Academy for Science and Technology, as part of a continuous effort to sustain Palestine's representation in international competitions.\nBelow are moments from the journey, documented in photos and videos, from departure to the opening ceremony and the days of the Olympiad."
+    "description": "The Palestinian national mathematics team represented Palestine at the 67th International Mathematical Olympiad (IMO 2026), hosted by the city of Shanghai in the People's Republic of China, alongside teams of the world's most talented young mathematicians.\nThe team consisted of six students selected through the stages of the Palestinian Mathematics Olympiad, accompanied by team leaders from among the Palestinian university professors specialized in mathematics who supervised their preparation and training.\nDuring the opening ceremony, the Palestinian team took the stage and raised the flag of Palestine among the participating countries, in a moment that reflects the ability of Palestinian students to be present in the most prestigious international scientific forums.\nThe participation comes within the activities of the Palestinian Mathematics Olympiad, implemented in cooperation with Taawon, the Ministry of Education and Higher Education, and Palestine Academy for Science and Technology, as part of a continuous effort to sustain Palestine's representation in international competitions.\nBelow are moments from the journey, documented in photos and videos, from departure to the opening ceremony and the days of the Olympiad.",
+    "facts": {
+      "editionLabel": "Edition",
+      "editionValue": "67th IMO",
+      "hostLabel": "Host",
+      "hostValue": "Shanghai, China",
+      "teamLabel": "Team",
+      "teamValue": "6 students + team leaders"
+    }
   },
   "news": {
     "title": "Mathematics Supervisors Training within the Palestinian Mathematics Olympiad",
-    "description": "As part of the Palestinian Mathematics Olympiad activities, which is implemented in cooperation with the Cooperation Foundation, a training session for mathematics supervisors was held over two days (29–30 of last month).\nThe event took place physically at Al-Hilal Hotel in Ramallah, with the participation of 20 supervisors from the Ministry of Education, in addition to 8 supervisors from Gaza via video conferencing.\nThe training focused on empowering supervisors with methods to integrate Olympiad culture into classrooms and enhance mathematical thinking and problem-solving skills among students.\nNational team trainers, who are university professors specialized in mathematics, delivered training across the four Olympiad domains and explained the international training framework.\nDiscussions with supervisors helped define strategies to integrate Olympiad culture into school curricula.\nIn conclusion, Dr. Mohammed Khalil thanked all partners including the Ministry of Education and Palestine Academy for Science and Technology."
+    "description": "As part of the Palestinian Mathematics Olympiad activities, which is implemented in cooperation with the Cooperation Foundation, a training session for mathematics supervisors was held over two days (29–30 of last month).\nThe event took place physically at Al-Hilal Hotel in Ramallah, with the participation of 20 supervisors from the Ministry of Education, in addition to 8 supervisors from Gaza via video conferencing.\nThe training focused on empowering supervisors with methods to integrate Olympiad culture into classrooms and enhance mathematical thinking and problem-solving skills among students.\nNational team trainers, who are university professors specialized in mathematics, delivered training across the four Olympiad domains and explained the international training framework.\nDiscussions with supervisors helped define strategies to integrate Olympiad culture into school curricula.\nIn conclusion, Dr. Mohammed Khalil thanked all partners including the Ministry of Education and Palestine Academy for Science and Technology.",
+    "eyebrow": "Newsroom",
+    "headline1": "Latest from the",
+    "headline2": "Olympiad.",
+    "meta": {
+      "closing": "Closing ceremony · Student honoring",
+      "gaza": "Gaza · Student training",
+      "imo": "IMO 2026 · Shanghai",
+      "supervisors": "Ramallah · Supervisor training"
+    },
+    "mediaItems": "photos and videos",
+    "railLabel": "From departure to the opening ceremony",
+    "railLabelSupervisors": "From the training days",
+    "facts": {
+      "daysLabel": "Duration",
+      "daysValue": "Two days",
+      "venueLabel": "Venue",
+      "venueValue": "Al-Hilal Hotel, Ramallah",
+      "attendeesLabel": "Attendees",
+      "attendeesValue": "20 supervisors + 8 from Gaza online"
+    }
+  },
+  "brand": {
+    "short": "PMO",
+    "tagline": "Palestine Math Olympiad"
+  },
+  "cta": {
+    "startTraining": "Start training",
+    "exploreCamp": "Explore the camp",
+    "browseLibrary": "Browse the library",
+    "readNews": "Read the news",
+    "eyebrow": "Join the next round",
+    "headline1": "Every champion",
+    "headline2": "starts with one problem.",
+    "lede": "Train with the same books, past papers and coaching that carried the Palestinian team from school classrooms to the International Mathematical Olympiad.",
+    "footnote": "Palestine Math Olympiad · Taawon · Ministry of Education · PALAST"
+  },
+  "stats": {
+    "screened": "Students screened",
+    "directorates": "Directorates",
+    "finalists": "Camp finalists",
+    "imoEdition": "IMO edition",
+    "days": "Training days",
+    "domains": "Olympiad domains"
+  },
+  "funnel": {
+    "title": "Selection funnel",
+    "school": "School round",
+    "directorate": "Directorate round",
+    "preFinal": "Pre-final stage",
+    "camp": "Winter camp"
+  },
+  "domains": {
+    "algebra": {
+      "title": "Algebra",
+      "desc": "Inequalities, polynomials, functional equations."
+    },
+    "geometry": {
+      "title": "Geometry",
+      "desc": "Constructions, circles, synthetic and projective methods."
+    },
+    "numberTheory": {
+      "title": "Number theory",
+      "desc": "Divisibility, congruences, Diophantine equations."
+    },
+    "combinatorics": {
+      "title": "Combinatorics",
+      "desc": "Counting, graphs, invariants and extremal arguments."
+    }
+  },
+  "stage": {
+    "prep": "Schools",
+    "rounds": "Directorates",
+    "camp": "Jericho · 6 days",
+    "finals": "National final",
+    "awards": "Ceremony",
+    "finish": "Next season"
+  },
+  "resources": {
+    "eyebrow": "Training library",
+    "headline1": "Every resource,",
+    "headline2": "in one library.",
+    "lede": "Books, Olympiad problems, directorate exam papers, camp handouts and video courses — searchable across every collection.",
+    "searchPlaceholder": "Search books, papers, videos…",
+    "matches": "matches",
+    "itemsTotal": "resources in total",
+    "itemsShort": "items",
+    "indexLabel": "Collections",
+    "allCollections": "All",
+    "clearSearch": "Clear search",
+    "openDocument": "Open document",
+    "nav": {
+      "books": "Books",
+      "problems": "Problems",
+      "worksheets": "Exam papers",
+      "materials": "Camp material",
+      "videos": "Video courses",
+      "external": "External"
+    },
+    "blurb": {
+      "books": "Curated volumes across all four Olympiad domains.",
+      "problems": "Problem sets and solutions from national and international rounds.",
+      "worksheets": "Past preparatory-stage exams from eleven directorates.",
+      "materials": "Session handouts from the winter training camp.",
+      "videos": "Recorded training playlists in Arabic and English."
+    },
+    "topics": {
+      "all": "All topics",
+      "algebra": "Algebra",
+      "geometry": "Geometry",
+      "numberTheory": "Number theory",
+      "combinatorics": "Combinatorics",
+      "general": "General"
+    },
+    "levels": {
+      "starter": "Starter",
+      "advanced": "Advanced"
+    },
+    "languages": {
+      "ar": "Arabic",
+      "en": "English"
+    },
+    "empty": {
+      "title": "Nothing matches that search",
+      "hint": "Try a different term, or clear the filters to see the whole library."
+    },
+    "books": {
+      "headline1": "A shelf worth",
+      "headline2": "starting from.",
+      "restTitle": "The rest of the shelf"
+    },
+    "problems": {
+      "headline1": "Problems to",
+      "headline2": "wrestle with."
+    },
+    "worksheets": {
+      "headline1": "Past papers by",
+      "headline2": "directorate."
+    },
+    "materials": {
+      "headline1": "Handouts from the",
+      "headline2": "training camp.",
+      "lede": "The exact material used in the Jericho sessions, session by session."
+    },
+    "videos": {
+      "headline1": "Watch the",
+      "headline2": "training.",
+      "featured": "Featured playlist",
+      "episodes": "Episodes",
+      "episodesShort": "videos",
+      "runtime": "Runtime",
+      "language": "Language",
+      "channel": "Channel"
+    },
+    "external": {
+      "headline1": "Regional and",
+      "headline2": "international references."
+    }
+  },
+  "camp": {
+    "eyebrow": "Winter camp · January 2026",
+    "heroLede": "Six days at Al-Istiqlal University in Jericho: 53 students from 18 directorates, four Olympiad domains, and coaches from Palestinian and international universities.",
+    "participantsLabel": "Participants",
+    "participantsValue": "53 students · 18 directorates",
+    "aboutHeadline1": "Six days that",
+    "aboutHeadline2": "raised the level.",
+    "agendaHeadline1": "The daily",
+    "agendaHeadline2": "schedule.",
+    "sessionsLabel": "sessions",
+    "blocksLabel": "blocks",
+    "peopleEyebrow": "Faculty",
+    "peopleHeadline1": "The people who",
+    "peopleHeadline2": "taught it.",
+    "peopleLede": "Academics, national-team coaches and ministry supervisors who ran the camp.",
+    "rosterHeadline1": "Meet the",
+    "rosterHeadline2": "roster.",
+    "rosterSearch": "Search by name, school or directorate",
+    "rosterEmpty": "No students match those filters",
+    "allDirectorates": "All directorates",
+    "galleryLabel": "Scroll through the camp"
+  },
+  "team": {
+    "membersLabel": "members"
   }
 }
