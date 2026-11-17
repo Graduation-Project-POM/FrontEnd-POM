@@ -47,7 +47,7 @@ export function Footer() {
 
   const linkSx = {
     display: "inline-block",
-    py: 0.375,
+    py: 0.25,
     color: palette.textOnDarkMuted,
     textDecoration: "none",
     fontFamily: fonts.body,
@@ -81,33 +81,34 @@ export function Footer() {
         }}
       />
 
-      <Container sx={{ position: "relative", pt: { xs: 5, md: 7 }, pb: { xs: 3, md: 4 } }}>
+      <Container sx={{ position: "relative", pt: { xs: 3.5, md: 4.5 }, pb: { xs: 2.5, md: 3 } }}>
         <Box
           sx={{
             display: "grid",
             gridTemplateColumns: {
-              xs: "1fr",
-              sm: "repeat(2, 1fr)",
+              xs: "repeat(2, minmax(0, 1fr))",
+              sm: "repeat(3, minmax(0, 1fr))",
               md: "1.6fr repeat(3, 1fr)",
             },
-            gap: { xs: 3.5, md: 4 },
+            columnGap: { xs: 2.5, md: 4 },
+            rowGap: { xs: 2.5, md: 3 },
           }}
         >
-          <Box>
+          <Box sx={{ gridColumn: { xs: "1 / -1", md: "auto" } }}>
             <Box
               component="img"
               src="/olm pal math22.png"
               alt=""
-              sx={{ height: 38, width: "auto", filter: "brightness(0) invert(1)", mb: 1.75 }}
+              sx={{ height: 30, width: "auto", filter: "brightness(0) invert(1)", mb: 1.25 }}
             />
             <Typography
               sx={{
                 fontFamily: fonts.display,
-                fontSize: "1.125rem",
+                fontSize: "1rem",
                 fontWeight: 700,
                 letterSpacing: "-0.02em",
-                mb: 1,
-                maxWidth: "18ch",
+                mb: 0.75,
+                maxWidth: { xs: "none", md: "18ch" },
                 lineHeight: 1.15,
               }}
             >
@@ -119,9 +120,9 @@ export function Footer() {
                 fontFamily: fonts.body,
                 fontSize: "0.8125rem",
                 fontWeight: 300,
-                lineHeight: 1.65,
-                maxWidth: "38ch",
-                mb: 2.25,
+                lineHeight: 1.55,
+                maxWidth: { xs: "52ch", md: "38ch" },
+                mb: 1.5,
               }}
             >
               {t("footer.brand.description")}
@@ -144,9 +145,9 @@ export function Footer() {
                     color: palette.textOnDarkMuted,
                     border: `1px solid ${palette.nightLine}`,
                     borderRadius: 1.5,
-                    width: 32,
-                    height: 32,
-                    "& svg": { fontSize: "1rem" },
+                    width: 28,
+                    height: 28,
+                    "& svg": { fontSize: "0.9rem" },
                     "&:hover": {
                       color: "#fff",
                       backgroundColor: palette.maroon[600],
@@ -189,8 +190,8 @@ export function Footer() {
                 {t(item.label)}
               </Box>
             ))}
-            <Box sx={{ mt: 2 }}>
-              <Typography variant="eyebrow" sx={{ ...EYEBROW_SX, mb: 0.75 }}>
+            <Box sx={{ mt: 1.25 }}>
+              <Typography variant="eyebrow" sx={{ ...EYEBROW_SX, mb: 0.5 }}>
                 {t("footer.contact.title")}
               </Typography>
               <Box component="a" href={`mailto:${t("footer.contact.email")}`} sx={linkSx}>
@@ -207,7 +208,7 @@ export function Footer() {
           position: "relative",
           overflow: "hidden",
           borderTop: `1px solid ${palette.nightLine}`,
-          pt: { xs: 2, md: 2.5 },
+          pt: { xs: 1.25, md: 1.5 },
         }}
       >
         <Typography
@@ -218,7 +219,7 @@ export function Footer() {
             textAlign: "center",
             whiteSpace: "nowrap",
             lineHeight: 0.85,
-            fontSize: "clamp(2.25rem, 10vw, 8.5rem)",
+            fontSize: "clamp(1.75rem, 7vw, 5.5rem)",
             color: "transparent",
             WebkitTextStroke: `1px ${palette.nightLine}`,
             userSelect: "none",
@@ -232,10 +233,11 @@ export function Footer() {
       <Box sx={{ borderTop: `1px solid ${palette.nightLine}` }}>
         <Container
           sx={{
-            py: 1.5,
+            py: 1.25,
             display: "flex",
             flexWrap: "wrap",
-            gap: 1.25,
+            columnGap: 2,
+            rowGap: 0.5,
             alignItems: "center",
             justifyContent: "space-between",
           }}
@@ -271,7 +273,7 @@ export function Footer() {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <Box>
-      <Typography variant="eyebrow" sx={{ ...EYEBROW_SX, mb: 1.25 }}>
+      <Typography variant="eyebrow" sx={{ ...EYEBROW_SX, mb: 0.875 }}>
         {title}
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
