@@ -26,8 +26,8 @@
       "1": "Programs, camps and competitions — all in one place.",
       "2": "Students who solve the puzzle before the question is asked."
     },
-    "figureEyebrow": "IMO 2026 · Shanghai",
-    "figureCaption": "The Palestinian team at the opening ceremony"
+    "figureEyebrow": "Closing ceremony",
+    "figureCaption": "Honoring the Olympiad students"
   },
   "about": {
     "title": "About Us",
@@ -858,6 +858,28 @@
     "supervisionEyebrow": "Supervision",
     "supervisionTitle": "Academic and technical supervision"
   },
+  "closingNews": {
+    "title": "Closing Ceremony and Student Honoring Ceremony",
+    "description": "The Palestinian Mathematics Olympiad held its closing ceremony to celebrate the end of this season and to honor the distinguished students who took part in its stages.\nThe ceremony brought together students, their families, teachers, trainers, and partners of the Olympiad, in an atmosphere of pride in the achievements of Palestinian students in mathematics.\nDuring the ceremony, outstanding students were honored and received certificates of appreciation in recognition of their effort, perseverance, and excellence throughout the training and competition stages.\nThe Olympiad extends its thanks to all partners, including Taawon, the Ministry of Education and Higher Education, and Palestine Academy for Science and Technology, for their continuous support.\nBelow are moments from the ceremony, documented in photos.",
+    "railLabel": "Moments from the ceremony",
+    "facts": {
+      "eventLabel": "Event",
+      "eventValue": "Closing ceremony",
+      "honoreesLabel": "Honorees",
+      "honoreesValue": "Distinguished Olympiad students"
+    }
+  },
+  "gazaNews": {
+    "title": "Training Students from Gaza within the Palestinian Mathematics Olympiad",
+    "description": "As part of the Palestinian Mathematics Olympiad activities, a training program was held for students from the Gaza Strip, giving them the opportunity to develop their mathematical skills and prepare for the Olympiad stages.\nThe training sessions were delivered by the Olympiad trainers, who are university professors specialized in mathematics, and covered the Olympiad domains with a focus on mathematical thinking and problem-solving skills.\nDespite the difficult circumstances, the students showed remarkable commitment and enthusiasm, reflecting their determination to learn and excel.\nThis training reflects the Olympiad commitment to reaching all Palestinian students wherever they are, and to ensuring that students in Gaza remain an integral part of its programs.\nBelow are moments from the training, documented in videos and photos.",
+    "railLabel": "From the training sessions",
+    "facts": {
+      "programLabel": "Program",
+      "programValue": "Student training",
+      "participantsLabel": "Participants",
+      "participantsValue": "Students from the Gaza Strip"
+    }
+  },
   "imoNews": {
     "title": "Palestine at the 67th International Mathematical Olympiad — Shanghai, China 2026",
     "description": "The Palestinian national mathematics team represented Palestine at the 67th International Mathematical Olympiad (IMO 2026), hosted by the city of Shanghai in the People's Republic of China, alongside teams of the world's most talented young mathematicians.\nThe team consisted of six students selected through the stages of the Palestinian Mathematics Olympiad, accompanied by team leaders from among the Palestinian university professors specialized in mathematics who supervised their preparation and training.\nDuring the opening ceremony, the Palestinian team took the stage and raised the flag of Palestine among the participating countries, in a moment that reflects the ability of Palestinian students to be present in the most prestigious international scientific forums.\nThe participation comes within the activities of the Palestinian Mathematics Olympiad, implemented in cooperation with Taawon, the Ministry of Education and Higher Education, and Palestine Academy for Science and Technology, as part of a continuous effort to sustain Palestine's representation in international competitions.\nBelow are moments from the journey, documented in photos and videos, from departure to the opening ceremony and the days of the Olympiad.",
@@ -877,6 +899,8 @@
     "headline1": "Latest from the",
     "headline2": "Olympiad.",
     "meta": {
+      "closing": "Closing ceremony · Student honoring",
+      "gaza": "Gaza · Student training",
       "imo": "IMO 2026 · Shanghai",
       "supervisors": "Ramallah · Supervisor training"
     },
