@@ -10,7 +10,6 @@ interface TeamMember {
   name: string;
   role: string;
   img: string;
-  bio: string;
   github?: string;
   linkedin?: string;
 }
@@ -20,7 +19,6 @@ const developersData: TeamMember[] = [
     name: "developers.team.abdulrahman.name",
     role: "developers.team.abdulrahman.role",
     img: "/3.jpeg",
-    bio: "developers.team.abdulrahman.bio",
     github: "https://github.com/AbdulrahmanBadran",
     linkedin: "https://www.linkedin.com/in/abdullrahmanbadran",
   },
@@ -28,7 +26,6 @@ const developersData: TeamMember[] = [
     name: "developers.team.waed.name",
     role: "developers.team.waed.role",
     img: "/2.jpeg",
-    bio: "developers.team.waed.bio",
     github: "https://github.com/WaedSammar",
     linkedin: "https://www.linkedin.com/in/waed-sammar/",
   },
@@ -36,7 +33,6 @@ const developersData: TeamMember[] = [
     name: "developers.team.waad.name",
     role: "developers.team.waad.role",
     img: "/1.jpeg",
-    bio: "developers.team.waad.bio",
     github: "https://github.com/waadamer",
     linkedin: "https://www.linkedin.com/in/waad-amer/",
   },
@@ -44,14 +40,12 @@ const developersData: TeamMember[] = [
     name: "developers.supervisors.ahmed.name",
     role: "developers.supervisors.ahmed.role",
     img: "/sup2.jpeg",
-    bio: "developers.supervisors.ahmed.bio",
     linkedin: "https://www.linkedin.com/in/ahmad-abo-gozeh-824042206/",
   },
   {
     name: "developers.supervisors.mohamed.name",
     role: "developers.supervisors.mohamed.role",
     img: "/sup1.jpg",
-    bio: "developers.supervisors.mohamed.bio",
     linkedin: "https://www.linkedin.com/in/mohamed-khalil-52b0b2266/",
   },
 ];
@@ -138,11 +132,6 @@ const styles = {
     marginBottom: "10px",
   },
 
-  bio: {
-    fontSize: "12.5px",
-    color: "#666",
-    lineHeight: 1.6,
-  },
 
   socialButton: {
     width: "30px",
@@ -188,7 +177,6 @@ export function TeamGrid() {
 
         <Typography sx={styles.name}>{t(dev.name)}</Typography>
         <Typography sx={styles.role}>{t(dev.role)}</Typography>
-        <Typography sx={styles.bio}>{t(dev.bio)}</Typography>
 
         <Stack direction="row" spacing={1} justifyContent="center" mt={2.5}>
           {dev.github && (

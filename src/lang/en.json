@@ -829,30 +829,25 @@
     "supervisors": {
       "mohamed": {
         "name": "Dr. Mohamed Khalil",
-        "role": "Academic Supervisor",
-        "bio": "Supervises the project academically"
+        "role": "Supervisor"
       },
       "ahmed": {
         "name": "Eng. Ahmed Abu Ghoza",
-        "role": "Technical advisor",
-        "bio": "Monitors technical progress of the project"
+        "role": "Consultants"
       }
     },
     "team": {
       "waad": {
         "name": "Eng. Waad Amer",
-        "role": "Fullstack Developer",
-        "bio": "Builds complete web solutions"
+        "role": "Fullstack Engineer"
       },
       "waed": {
         "name": "Eng. Waed Sammar",
-        "role": "Frontend Developer + QA",
-        "bio": "Works on frontend development and ensures quality assurance"
+        "role": "Frontend Engineer + QA"
       },
       "abdulrahman": {
         "name": "Eng. Abdullrahman Badran",
-        "role": "Backend Developer",
-        "bio": "Server and database developer"
+        "role": "Backend Trainer"
       }
     },
     "eyebrow": "Credits",

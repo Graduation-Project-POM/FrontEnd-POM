@@ -95,7 +95,7 @@ export function Lightbox({ items, index, onIndexChange, onClose }: LightboxProps
         </IconButton>
 
         <IconButton
-          onClick={isRTL ? next : prev}
+          onClick={prev}
           aria-label="Previous"
           sx={{
             ...control,
@@ -106,7 +106,7 @@ export function Lightbox({ items, index, onIndexChange, onClose }: LightboxProps
             zIndex: 10,
           }}
         >
-          <ArrowBackIosNewIcon fontSize="small" />
+          {isRTL ? <ArrowForwardIosIcon fontSize="small" /> : <ArrowBackIosNewIcon fontSize="small" />}
         </IconButton>
 
         {active?.type === "video" ? (
@@ -140,7 +140,7 @@ export function Lightbox({ items, index, onIndexChange, onClose }: LightboxProps
         )}
 
         <IconButton
-          onClick={isRTL ? prev : next}
+          onClick={next}
           aria-label="Next"
           sx={{
             ...control,
@@ -151,7 +151,7 @@ export function Lightbox({ items, index, onIndexChange, onClose }: LightboxProps
             zIndex: 10,
           }}
         >
-          <ArrowForwardIosIcon fontSize="small" />
+          {isRTL ? <ArrowBackIosNewIcon fontSize="small" /> : <ArrowForwardIosIcon fontSize="small" />}
         </IconButton>
 
         <Box
