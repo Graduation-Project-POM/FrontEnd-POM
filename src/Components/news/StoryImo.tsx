@@ -9,7 +9,7 @@ const MEDIA: MediaItem[] = [
   { type: "image", src: "/imoImgs/imo-02.jpeg" },
   { type: "image", src: "/imoImgs/imo-03.jpeg" },
   { type: "image", src: "/imoImgs/imo-04.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-1.mp4" },
+  { type: "video", src: "/imoImgs/imo-video-5.mp4" },
   { type: "image", src: "/imoImgs/imo-05.jpeg" },
   { type: "image", src: "/imoImgs/imo-06.jpeg" },
   { type: "image", src: "/imoImgs/imo-07.jpeg" },
@@ -27,7 +27,7 @@ const MEDIA: MediaItem[] = [
   { type: "image", src: "/imoImgs/imo-16.jpeg" },
   { type: "image", src: "/imoImgs/imo-17.jpeg" },
   { type: "image", src: "/imoImgs/imo-18.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-5.mp4" },
+  { type: "video", src: "/imoImgs/imo-video-1.mp4" },
 ];
 
 const FACTS = [

@@ -286,7 +286,6 @@ function HeroFigure() {
     <Box
       sx={{
         position: "relative",
-        pb: { xs: 0, md: 6 },
         marginInlineEnd: { lg: -3 },
       }}
     >
@@ -302,8 +301,8 @@ function HeroFigure() {
       >
         <Box
           component="img"
-          src="/imoImgs/imo-01.jpeg"
-          alt={t("imoNews.title")}
+          src="/DSC03178.jpg"
+          alt={t("closingNews.title")}
           sx={{ width: "100%", height: "auto", display: "block" }}
         />
         <Box
@@ -337,9 +336,9 @@ function HeroFigure() {
       <Box
         sx={{
           display: { xs: "none", lg: "block" },
-          position: "absolute",
-          insetInlineEnd: -20,
-          bottom: 0,
+          mt: 2.5,
+          marginInlineStart: "auto",
+          marginInlineEnd: "-20px",
           width: 216,
           p: 2.25,
           borderRadius: `${radius.md}px`,

@@ -6,6 +6,8 @@ import { MathBackdrop, Reveal } from "../ui";
 
 const STORIES = [
   { anchor: "imo-2026", titleKey: "imoNews.title", metaKey: "news.meta.imo" },
+  { anchor: "closing-ceremony", titleKey: "closingNews.title", metaKey: "news.meta.closing" },
+  { anchor: "gaza-training", titleKey: "gazaNews.title", metaKey: "news.meta.gaza" },
   { anchor: "supervisors", titleKey: "news.title", metaKey: "news.meta.supervisors" },
 ];
 
