@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { palette, motion, fonts, radius, zIndex } from "../../theme/tokens";
 import useDirection from "../ui/useDirection";
 import { NAV_ITEMS } from "./navItems";
+import { asset } from "../../utils/asset";
 
 export const LOGIN_ROUTE = "/credentials/login";
 
@@ -98,7 +99,7 @@ export function Navbar({ overlay = false }: NavbarProps) {
             >
               <Box
                 component="img"
-                src="/olm pal math22.png"
+                src={asset("/olm pal math22.png")}
                 alt=""
                 sx={{
                   height: { xs: 40, md: 48 },

@@ -1,3 +1,5 @@
+import { asset } from "../utils/asset";
+
 export type Collection =
   | "books"
   | "problems"
@@ -320,7 +322,7 @@ export const EXTERNALS: ExternalResource[] = [
     descKey: "externalResources.card1.desc",
     extraKey: "externalResources.card1.extra",
     href: "/secPDF.pdf",
-    image: "/images.png",
+    image: asset("/images.png"),
   },
   {
     id: "ext-arab-2020",
@@ -328,7 +330,7 @@ export const EXTERNALS: ExternalResource[] = [
     titleKey: "externalResources.card2.title",
     descKey: "externalResources.card2.desc",
     href: "/educ_olymp.pdf",
-    image: "/secRes.png",
+    image: asset("/secRes.png"),
   },
 ];
 

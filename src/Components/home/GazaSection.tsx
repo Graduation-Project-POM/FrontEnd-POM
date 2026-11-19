@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, radius, alpha } from "../../theme/tokens";
 import { MediaRail, Reveal, type MediaItem } from "../ui";
+import { asset } from "../../utils/asset";
 
 const IMAGES: MediaItem[] = [
   74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93,
   94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108,
-].map((n) => ({ type: "image" as const, src: `/${n}.png` }));
+].map((n) => ({ type: "image" as const, src: asset(`/${n}.png`) }));
 
 export function GazaSection() {
   const { t } = useTranslation();

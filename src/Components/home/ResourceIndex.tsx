@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, ActionLink, useDirection } from "../ui";
 import { COUNTS, type Collection } from "../../data/resources";
+import { asset } from "../../utils/asset";
 
 interface Entry {
   key: Collection;
@@ -15,12 +16,12 @@ interface Entry {
 }
 
 const ENTRIES: Entry[] = [
-  { key: "books", to: "/resources#books", image: "/training5.png" },
-  { key: "problems", to: "/resources#problems", image: "/training3.png" },
-  { key: "worksheets", to: "/worksheets/all", image: "/training1.png" },
-  { key: "materials", to: "/resources#materials", image: "/training4.png" },
-  { key: "videos", to: "/resources#videos", image: "/training2.png" },
-  { key: "guides", to: "/resources#guides", image: "/guides.svg" },
+  { key: "books", to: "/resources#books", image: asset("/training5.png") },
+  { key: "problems", to: "/resources#problems", image: asset("/training3.png") },
+  { key: "worksheets", to: "/worksheets/all", image: asset("/training1.png") },
+  { key: "materials", to: "/resources#materials", image: asset("/training4.png") },
+  { key: "videos", to: "/resources#videos", image: asset("/training2.png") },
+  { key: "guides", to: "/resources#guides", image: asset("/guides.svg") },
 ];
 
 export function ResourceIndex() {

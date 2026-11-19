@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette } from "../../theme/tokens";
 import { MathBackdrop, Reveal } from "../ui";
+import { asset } from "../../utils/asset";
 
 interface TeamMember {
   name: string;
@@ -18,34 +19,34 @@ const developersData: TeamMember[] = [
   {
     name: "developers.team.abdulrahman.name",
     role: "developers.team.abdulrahman.role",
-    img: "/3.jpeg",
+    img: asset("/3.jpeg"),
     github: "https://github.com/AbdulrahmanBadran",
     linkedin: "https://www.linkedin.com/in/abdullrahmanbadran",
   },
   {
     name: "developers.team.waed.name",
     role: "developers.team.waed.role",
-    img: "/2.jpeg",
+    img: asset("/2.jpeg"),
     github: "https://github.com/WaedSammar",
     linkedin: "https://www.linkedin.com/in/waed-sammar/",
   },
   {
     name: "developers.team.waad.name",
     role: "developers.team.waad.role",
-    img: "/1.jpeg",
+    img: asset("/1.jpeg"),
     github: "https://github.com/waadamer",
     linkedin: "https://www.linkedin.com/in/waad-amer/",
   },
   {
     name: "developers.supervisors.ahmed.name",
     role: "developers.supervisors.ahmed.role",
-    img: "/sup2.jpeg",
+    img: asset("/sup2.jpeg"),
     linkedin: "https://www.linkedin.com/in/ahmad-abo-gozeh-824042206/",
   },
   {
     name: "developers.supervisors.mohamed.name",
     role: "developers.supervisors.mohamed.role",
-    img: "/sup1.jpg",
+    img: asset("/sup1.jpg"),
     linkedin: "https://www.linkedin.com/in/mohamed-khalil-52b0b2266/",
   },
 ];

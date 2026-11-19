@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius, alpha } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
+import { asset } from "../../utils/asset";
 
 interface Member {
   rank: number;
@@ -12,17 +13,17 @@ interface Member {
 }
 
 const TEAM: Member[] = [
-  { rank: 1, key: "first", image: "/P1.png" },
-  { rank: 2, key: "second", image: "/P2.png" },
-  { rank: 3, key: "third", image: "/P3.png" },
-  { rank: 4, key: "fourth", image: "/P4.png" },
-  { rank: 5, key: "fifth", image: "/P5.png" },
-  { rank: 6, key: "sixth", image: "/P6.png" },
-  { rank: 7, key: "seventh", image: "/P7.png" },
-  { rank: 8, key: "eighth", image: "/P8.png" },
-  { rank: 9, key: "ninth", image: "/P9.png" },
-  { rank: 10, key: "tenth", image: "/P10.png" },
-  { rank: 11, key: "eleventh", image: "/P11.png" },
+  { rank: 1, key: "first", image: asset("/P1.png") },
+  { rank: 2, key: "second", image: asset("/P2.png") },
+  { rank: 3, key: "third", image: asset("/P3.png") },
+  { rank: 4, key: "fourth", image: asset("/P4.png") },
+  { rank: 5, key: "fifth", image: asset("/P5.png") },
+  { rank: 6, key: "sixth", image: asset("/P6.png") },
+  { rank: 7, key: "seventh", image: asset("/P7.png") },
+  { rank: 8, key: "eighth", image: asset("/P8.png") },
+  { rank: 9, key: "ninth", image: asset("/P9.png") },
+  { rank: 10, key: "tenth", image: asset("/P10.png") },
+  { rank: 11, key: "eleventh", image: asset("/P11.png") },
 ];
 
 export function NationalTeam() {

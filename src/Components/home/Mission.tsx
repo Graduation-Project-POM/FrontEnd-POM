@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, radius, motion } from "../../theme/tokens";
 import { Section, Reveal, Prose } from "../ui";
+import { asset } from "../../utils/asset";
 
 export function Mission() {
   const { t } = useTranslation();
@@ -51,7 +52,7 @@ export function Mission() {
             >
               <Box
                 component="img"
-                src="/image-removebg-preview 1.png"
+                src={asset("/image-removebg-preview 1.png")}
                 alt=""
                 sx={{
                   position: "relative",

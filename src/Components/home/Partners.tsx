@@ -3,11 +3,12 @@ import { useTranslation } from "react-i18next";
 
 import { palette, motion, radius, fonts } from "../../theme/tokens";
 import { Section, Reveal } from "../ui";
+import { asset } from "../../utils/asset";
 
 const PARTNERS = [
-  { key: "partner1", logo: "/Partner1.png", href: "https://www.taawon.org/en" },
-  { key: "partner2", logo: "/Partner2.png", href: "https://moe.edu.ps" },
-  { key: "partner3", logo: "/Partner3.jpg", href: "https://www.palast.ps/ar" },
+  { key: "partner1", logo: asset("/Partner1.png"), href: "https://www.taawon.org/en" },
+  { key: "partner2", logo: asset("/Partner2.png"), href: "https://moe.edu.ps" },
+  { key: "partner3", logo: asset("/Partner3.jpg"), href: "https://www.palast.ps/ar" },
 ];
 
 export function Partners() {

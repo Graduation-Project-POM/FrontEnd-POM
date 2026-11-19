@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts } from "../../theme/tokens";
 import { MediaRail, Prose, Reveal, type MediaItem } from "../ui";
+import { asset } from "../../utils/asset";
 
 const VIDEOS = [
   "WhatsApp Video 2026-02-08 at 15.14.50.mp4",
@@ -31,7 +32,7 @@ const IMAGES = [
 
 const MEDIA: MediaItem[] = [
   ...VIDEOS.map((name) => ({ type: "video" as const, src: encodeURI(`/${name}`) })),
-  ...IMAGES.map((name) => ({ type: "image" as const, src: encodeURI(`/${name}`) })),
+  ...IMAGES.map((name) => ({ type: "image" as const, src: asset(`/${name}`) })),
 ];
 
 const FACTS = [

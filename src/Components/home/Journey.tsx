@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { palette, fonts, motion, radius, alpha } from "../../theme/tokens";
 import { SectionHeading, ActionLink } from "../ui";
 import { Link } from "react-router-dom";
+import { asset } from "../../utils/asset";
 
 interface Stage {
   key: string;
@@ -13,12 +14,12 @@ interface Stage {
 }
 
 const STAGES: Stage[] = [
-  { key: "prep", image: "/program1.png", marker: "stage.prep" },
-  { key: "rounds", image: "/program2.png", marker: "stage.rounds" },
-  { key: "camp", image: "/program6.png", marker: "stage.camp" },
-  { key: "finals", image: "/program3.png", marker: "stage.finals" },
-  { key: "awards", image: "/program4.png", marker: "stage.awards" },
-  { key: "finish", image: "/program5.png", marker: "stage.finish" },
+  { key: "prep", image: asset("/program1.png"), marker: "stage.prep" },
+  { key: "rounds", image: asset("/program2.png"), marker: "stage.rounds" },
+  { key: "camp", image: asset("/program6.png"), marker: "stage.camp" },
+  { key: "finals", image: asset("/program3.png"), marker: "stage.finals" },
+  { key: "awards", image: asset("/program4.png"), marker: "stage.awards" },
+  { key: "finish", image: asset("/program5.png"), marker: "stage.finish" },
 ];
 
 export function Journey() {

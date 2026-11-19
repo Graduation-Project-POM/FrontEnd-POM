@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
+import { asset } from "../../utils/asset";
 
 const STEPS = ["discover", "train", "compete"] as const;
 
@@ -168,7 +169,7 @@ export function Vision() {
           >
             <Box
               component="img"
-              src="/vision.png"
+              src={asset("/vision.png")}
               alt=""
               sx={{
                 position: "relative",
