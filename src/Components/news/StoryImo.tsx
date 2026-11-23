@@ -3,31 +3,32 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, radius, motion, alpha } from "../../theme/tokens";
 import { MediaRail, Prose, Reveal, type MediaItem } from "../ui";
+import { s3Url } from "../../utils/media";
 
 const MEDIA: MediaItem[] = [
-  { type: "image", src: "/imoImgs/imo-01.jpeg" },
-  { type: "image", src: "/imoImgs/imo-02.jpeg" },
-  { type: "image", src: "/imoImgs/imo-03.jpeg" },
-  { type: "image", src: "/imoImgs/imo-04.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-5.mp4" },
-  { type: "image", src: "/imoImgs/imo-05.jpeg" },
-  { type: "image", src: "/imoImgs/imo-06.jpeg" },
-  { type: "image", src: "/imoImgs/imo-07.jpeg" },
-  { type: "image", src: "/imoImgs/imo-08.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-2.mp4" },
-  { type: "image", src: "/imoImgs/imo-09.jpeg" },
-  { type: "image", src: "/imoImgs/imo-10.jpeg" },
-  { type: "image", src: "/imoImgs/imo-11.jpeg" },
-  { type: "image", src: "/imoImgs/imo-12.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-3.mp4" },
-  { type: "image", src: "/imoImgs/imo-13.jpeg" },
-  { type: "image", src: "/imoImgs/imo-14.jpeg" },
-  { type: "image", src: "/imoImgs/imo-15.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-4.mp4" },
-  { type: "image", src: "/imoImgs/imo-16.jpeg" },
-  { type: "image", src: "/imoImgs/imo-17.jpeg" },
-  { type: "image", src: "/imoImgs/imo-18.jpeg" },
-  { type: "video", src: "/imoImgs/imo-video-1.mp4" },
+  { type: "image", src: s3Url("imoImgs/imo-01.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-02.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-03.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-04.jpeg") },
+  { type: "video", src: s3Url("imoImgs/imo-video-5.mp4") },
+  { type: "image", src: s3Url("imoImgs/imo-05.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-06.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-07.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-08.jpeg") },
+  { type: "video", src: s3Url("imoImgs/imo-video-2.mp4") },
+  { type: "image", src: s3Url("imoImgs/imo-09.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-10.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-11.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-12.jpeg") },
+  { type: "video", src: s3Url("imoImgs/imo-video-3.mp4") },
+  { type: "image", src: s3Url("imoImgs/imo-13.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-14.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-15.jpeg") },
+  { type: "video", src: s3Url("imoImgs/imo-video-4.mp4") },
+  { type: "image", src: s3Url("imoImgs/imo-16.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-17.jpeg") },
+  { type: "image", src: s3Url("imoImgs/imo-18.jpeg") },
+  { type: "video", src: s3Url("imoImgs/imo-video-1.mp4") },
 ];
 
 const FACTS = [
@@ -93,7 +94,7 @@ export function StoryImo() {
           >
             <Box
               component="video"
-              src="/imoImgs/introVedeo.mp4"
+              src={s3Url("imoImgs/introVedeo.mp4")}
               controls
               playsInline
               preload="metadata"

@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { MathBackdrop, StatStrip, Reveal, useDirection } from "../ui";
+import { s3Url } from "../../utils/media";
 
 const ROTATING_KEYS = [
   "hero.rotate.0",
@@ -301,7 +302,7 @@ function HeroFigure() {
       >
         <Box
           component="img"
-          src="/DSC03178.jpg"
+          src={s3Url("DSC03178.jpg")}
           alt={t("closingNews.title")}
           sx={{ width: "100%", height: "auto", display: "block" }}
         />

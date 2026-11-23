@@ -1,3 +1,5 @@
+import { s3Url } from "../utils/media";
+
 export type Collection =
   | "books"
   | "problems"
@@ -182,7 +184,7 @@ export const PROBLEMS: ResourceItem[] = [
     collection: "problems",
     titleKey: "problems.title2",
     descKey: "problems.desc2",
-    href: "/pdfs/problems1.pdf",
+    href: s3Url("pdfs/problems1.pdf"),
     meta: { source: "PDF" },
   },
   {
@@ -190,7 +192,7 @@ export const PROBLEMS: ResourceItem[] = [
     collection: "problems",
     titleKey: "problems.title3",
     descKey: "problems.desc3",
-    href: "/pdfs/problems2.pdf",
+    href: s3Url("pdfs/problems2.pdf"),
     meta: { source: "PDF" },
   },
   {
@@ -319,16 +321,16 @@ export const EXTERNALS: ExternalResource[] = [
     titleKey: "externalResources.card1.title",
     descKey: "externalResources.card1.desc",
     extraKey: "externalResources.card1.extra",
-    href: "/secPDF.pdf",
-    image: "/images.png",
+    href: s3Url("secPDF.pdf"),
+    image: s3Url("images.png"),
   },
   {
     id: "ext-arab-2020",
     collection: "external",
     titleKey: "externalResources.card2.title",
     descKey: "externalResources.card2.desc",
-    href: "/educ_olymp.pdf",
-    image: "/secRes.png",
+    href: s3Url("educ_olymp.pdf"),
+    image: s3Url("secRes.png"),
   },
 ];
 

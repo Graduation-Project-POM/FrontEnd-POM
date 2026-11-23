@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion } from "../../theme/tokens";
 import { Reveal } from "../ui";
+import { s3Url } from "../../utils/media";
 
 export function CampHero() {
   const { t } = useTranslation();
@@ -54,7 +55,7 @@ export function CampHero() {
         sx={{
           position: "absolute",
           inset: 0,
-          backgroundImage: 'url("/all.jpg")',
+          backgroundImage: `url("${s3Url("all.jpg")}")`,
           backgroundSize: "cover",
           backgroundPosition: "center 38%",
         }}

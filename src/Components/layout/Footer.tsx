@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, motion, fonts } from "../../theme/tokens";
 import { NAV_ITEMS } from "./navItems";
+import { s3Url } from "../../utils/media";
 
 const RESOURCE_LINKS = [
   { to: "/resources#books", label: "resources.nav.books" },
@@ -97,7 +98,7 @@ export function Footer() {
           <Box sx={{ gridColumn: { xs: "1 / -1", md: "auto" } }}>
             <Box
               component="img"
-              src="/olm pal math22.png"
+              src={s3Url("olm pal math22.png")}
               alt=""
               sx={{ height: 30, width: "auto", filter: "brightness(0) invert(1)", mb: 1.25 }}
             />

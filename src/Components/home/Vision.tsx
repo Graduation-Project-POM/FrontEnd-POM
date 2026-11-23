@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
+import { s3Url } from "../../utils/media";
 
 const STEPS = ["discover", "train", "compete"] as const;
 
@@ -168,7 +169,7 @@ export function Vision() {
           >
             <Box
               component="img"
-              src="/vision.png"
+              src={s3Url("vision.png")}
               alt=""
               sx={{
                 position: "relative",

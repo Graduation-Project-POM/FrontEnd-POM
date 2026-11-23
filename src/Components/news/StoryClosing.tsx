@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts } from "../../theme/tokens";
 import { MediaRail, Prose, Reveal, type MediaItem } from "../ui";
+import { s3Url } from "../../utils/media";
 
 const IMAGES = [
   "DSC02811",
@@ -21,7 +22,7 @@ const IMAGES = [
 
 const MEDIA: MediaItem[] = IMAGES.map((name) => ({
   type: "image" as const,
-  src: `/${name}.jpg`,
+  src: s3Url(`${name}.jpg`),
 }));
 
 const FACTS = [

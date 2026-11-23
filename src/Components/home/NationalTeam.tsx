@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts, motion, radius, alpha } from "../../theme/tokens";
 import { Section, SectionHeading, Reveal } from "../ui";
+import { s3Url } from "../../utils/media";
 
 interface Member {
   rank: number;
@@ -12,17 +13,17 @@ interface Member {
 }
 
 const TEAM: Member[] = [
-  { rank: 1, key: "first", image: "/P1.png" },
-  { rank: 2, key: "second", image: "/P2.png" },
-  { rank: 3, key: "third", image: "/P3.png" },
-  { rank: 4, key: "fourth", image: "/P4.png" },
-  { rank: 5, key: "fifth", image: "/P5.png" },
-  { rank: 6, key: "sixth", image: "/P6.png" },
-  { rank: 7, key: "seventh", image: "/P7.png" },
-  { rank: 8, key: "eighth", image: "/P8.png" },
-  { rank: 9, key: "ninth", image: "/P9.png" },
-  { rank: 10, key: "tenth", image: "/P10.png" },
-  { rank: 11, key: "eleventh", image: "/P11.png" },
+  { rank: 1, key: "first", image: s3Url("P1.png") },
+  { rank: 2, key: "second", image: s3Url("P2.png") },
+  { rank: 3, key: "third", image: s3Url("P3.png") },
+  { rank: 4, key: "fourth", image: s3Url("P4.png") },
+  { rank: 5, key: "fifth", image: s3Url("P5.png") },
+  { rank: 6, key: "sixth", image: s3Url("P6.png") },
+  { rank: 7, key: "seventh", image: s3Url("P7.png") },
+  { rank: 8, key: "eighth", image: s3Url("P8.png") },
+  { rank: 9, key: "ninth", image: s3Url("P9.png") },
+  { rank: 10, key: "tenth", image: s3Url("P10.png") },
+  { rank: 11, key: "eleventh", image: s3Url("P11.png") },
 ];
 
 export function NationalTeam() {

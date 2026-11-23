@@ -3,10 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import { palette, fonts } from "../../theme/tokens";
 import { MediaRail, Prose, Reveal, type MediaItem } from "../ui";
+import { s3Url } from "../../utils/media";
 
 const MEDIA: MediaItem[] = Array.from({ length: 18 }, (_, i) => ({
   type: "image" as const,
-  src: `/N${i + 1}.png`,
+  src: s3Url(`N${i + 1}.png`),
 }));
 
 const FACTS = [
